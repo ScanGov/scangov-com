@@ -30,8 +30,11 @@ collections:
 # Defaults
 defaults:
   - scope:
-      path: "_pages"
-      type: "pages"
+      path: _pages
+      type: pages
+    values:
+      layout: default
+
 
 # Exclude
 exclude:
