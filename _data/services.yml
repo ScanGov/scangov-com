@@ -1,0 +1,11 @@
+docs_list_title: services
+docs:
+
+- title: Consulting
+  icon: fa-solid fa-brain
+  description: Homepage, full site scans
+
+- title: Training
+  icon: fa-solid fa-graduation-cap
+  description: Email status updates
+

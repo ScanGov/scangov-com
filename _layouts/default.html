@@ -1,0 +1,230 @@
+---
+layout: default
+---
+{% include header.html %}
+{% include nav.html %}
+<main>
+  {% include jumbotron.html %}
+  <div class="container border-bottom mb-5 pb-4">
+    <div class="row">
+      <div class="card-group">
+        <div class="col-6 d-flex align-items-stretch">
+          <div class="card p-4 m-1">
+            <h2 class="">Problem</h2>
+            <p class="">No government-specific tool to help:
+            </p>
+            <ul class="">
+              <li>Monitor and support ‘big picture’ digital experience
+              </li>
+              <li>Conform to web protocol, guidelines, best practices</li>
+              <li>Baseline for public sector standards and expectations</li>
+              <li>‘Know what it doesn’t know’</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-6 d-flex align-items-stretch">
+          <div class="card p-4 m-1">
+            <h2 class="">Solution</h2>
+            <p class="">Platform that supports government digital experience:</p>
+            <ul class="">
+              <li>Conformance dashboards
+              </li>
+              <li>Remediation documentation</li>
+              <li>Research / reporting tools</li>
+              <li>Public sector standards</li>
+              <li>Landscape analysis</li>
+              <li>Status alerts</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container border-bottom mb-5 pb-4">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="mb-3">Who it's for</h2>
+        <div class="card-group">
+          {% for item in site.data.who.docs %}
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex align-items-stretch">
+              <div class="card p-4 text-center m-2">
+                <i class="{{ item.icon }} fa-xl mt-2" aria-label="hidden"></i>
+                <h3 class="h5 mt-3 mb-1">{{ item.title }}</h3>
+                {% if item.description %}
+                  <p class="card-text mt-1 mb-4">{{ item.description }}</p>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container border-bottom mb-5 pb-4">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="mb-3">Features</h2>
+        <p class="lead">Track, manage, share digital experience status and progress.</p>
+        <div class="card-group">
+          {% for item in site.data.features.docs %}
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 d-flex align-items-stretch">
+              <div class="card p-4 text-center m-2">
+                <i class="{{ item.icon }} fa-3x mt-2" aria-label="hidden"></i>
+                <h3 class="mt-4 mb-1">{{ item.title }}</h3>
+                {% if item.description %}
+                  <p class="card-text mt-1 mb-4">{{ item.description }}</p>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="card-group">
+          {% for item in site.data.features2.docs %}
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 d-flex align-items-stretch">
+              <div class="card p-2 m-2">
+                <img
+                  src="/assets/img/{{ item.img }}"
+                  class="img-fluid border rounded shadow"
+                  alt="{{ item.title }}">
+                <h3 class="h6 mt-3 mb-3">{{ item.title }}</h3>
+                {% if item.description %}
+                  <p class="card-text mt-1 mb-3">{{ item.description }}</p>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container border-bottom mb-5 pb-4">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="mb-3">Standards</h2>
+        <p class="lead">Status insights into holistic digital experience.</p>
+        <div class="card-group">
+          {% for item in site.data.standards.docs %}
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 d-flex align-items-stretch">
+              <div class="card p-4 text-center m-1">
+                <i class="{{ item.icon }} fa-xl" aria-label="hidden"></i>
+                <h3 class="h5 mt-3">{{ item.title }}</h3>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container border-bottom mb-5 pb-4">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="mb-3">Guidance</h2>
+        <p class="lead">Based on established web protocol, guidelines and best practices.</p>
+        <div class="card-group">
+          {% for item in site.data.guidance.docs %}
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex align-items-stretch">
+              <div class="card px-4 py-3 m-1">
+                <p class="m-0 p-0">
+                  <i class="fa-solid fa-circle-check" aria-label="hidden"></i>
+                  {{ item.title }}</p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container border-bottom mb-5 pb-4">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="mb-3" id="plans">Plans</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 d-flex">
+        <div class="card mb-4 shadow">
+          <div class="card-header">
+            <h2 class="my-2 fw-normal h4">Starter (coming soon)</h2>
+          </div>
+          <div class="card-body pt-2">
+            <ul class="list-unstyled mt-3 mb-4">
+              <li class="fs-5 mb-2">
+                <i class="fa-solid fa-check" aria-label="hidden"></i>
+                1 domain</li>
+              <li class="fs-5 mb-2">
+                <i class="fa-solid fa-check" aria-label="hidden"></i>
+                Homepage scan</li>
+              <li class="fs-5 mb-2">
+                <i class="fa-solid fa-check" aria-label="hidden"></i>
+                Monthly alerts</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="{{ site.baseurl }}/subscribe" class="w-100 btn btn-lg btn-primary">Subscribe for updates</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 d-flex">
+        <div class="card mb-4 shadow">
+          <div class="card-header">
+            <h2 class="my-2 fw-normal h4">Enterprise</h2>
+          </div>
+          <div class="card-body pt-2">
+            <ul class="list-unstyled mt-3 mb-4">
+              <li class="fs-5 mb-2">
+                <i class="fa-solid fa-check" aria-label="hidden"></i>
+                Multiple domains</li>
+              <li class="fs-5 mb-2">
+                <i class="fa-solid fa-check" aria-label="hidden"></i>
+                Full site scans</li>
+              <li class="fs-5 mb-2">
+                <i class="fa-solid fa-check" aria-label="hidden"></i>
+                Weekly alerts</li>
+              <li class="fs-5 mb-2">
+                <i class="fa-solid fa-check" aria-label="hidden"></i>
+                Custom reports</li>
+              <li class="fs-5 mb-2">
+                <i class="fa-solid fa-check" aria-label="hidden"></i>
+                Data downloads</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="{{ site.baseurl }}/contact" class="w-100 btn btn-lg btn-primary">Contact us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container border-bottom mb-5 pb-4">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="mb-3">Services</h2>
+        <p class="lead">We're here to support you on your government digital experience journey.</p>
+        <div class="card-group">
+          {% for item in site.data.services.docs %}
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-stretch">
+              <div class="card p-4 text-center m-1">
+                <i class="{{ item.icon }} fa-3x mt-2" aria-label="hidden"></i>
+                <h3 class="h3 mt-3">{{ item.title }}</h3>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="mb-3">Questions?</h2>
+        <p class="lead">Let's get started.</p>
+        <a href="https://docs.scangov.org/contact" class="btn btn-primary btn-lg">Contact us</a>
+      </div>
+    </div>
+  </div>
+</main>
+{% include footer.html %}

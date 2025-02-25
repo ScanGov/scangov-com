@@ -1,0 +1,67 @@
+docs_list_title: nav-footer
+docs:
+
+- 
+
+  - title: About
+    url: https://docs.scangov.org/about
+
+  - title: People
+    url: https://docs.scangov.org/people
+
+  - title: News
+    url: https://docs.scangov.org/news
+
+  - title: Press
+    url: https://docs.scangov.org/press
+
+  - title: Brand
+    url: https://docs.scangov.org/brand
+
+  - title: Contact
+    url: https://docs.scangov.org/contact
+
+  - title: Feedback
+    url: https://docs.scangov.org/feedback
+
+-
+
+  - title: Standards
+    url: https://docs.scangov.org/standards
+
+  - title: Guidance
+    url: https://docs.scangov.org/guidance
+
+  - title: Topics
+    url: https://docs.scangov.org/topics
+
+  - title: Data
+    url: https://docs.scangov.org/data
+
+-
+
+  - title: Discord
+    url: https://
+
+  - title: Substack
+    url: https:https://docs.scangov.org/subscribe
+
+  - title: LinkedIn
+    url: https://linkedin.com/company/scangov
+
+  - title: GitHub
+    url: https://github.com/scangov
+
+  - title: RSS
+    url: https://docs.scangov.org/feed.xml
+
+-
+
+  - title: Accessibility statement
+    url: https://docs.scangov.org/scangov-accessibility-statement
+
+  - title: Privacy statement
+    url: https://docs.scangov.org/scangov-privacy-statement
+
+  - title: Code of conduct
+    url: https://docs.scangov.org/conduct

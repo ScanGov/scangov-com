@@ -1,0 +1,19 @@
+docs_list_title: features
+docs:
+
+- title: Monitoring
+  icon: fa-solid fa-dashboard
+  description: Homepage, full site scans
+
+- title: Alerts
+  icon: fa-solid fa-bell
+  description: Email status updates
+
+- title: Reports
+  icon: fa-solid fa-file
+  description: Customizable reports
+
+- title: Data
+  icon: fa-solid fa-chart-line
+  description: Machine-readable formats
+

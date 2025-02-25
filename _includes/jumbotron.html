@@ -1,0 +1,21 @@
+<div id="main-content">
+  <div class="container py-5 mb-4 border-bottom">
+    <div class="row">
+      <div class="col-5">
+        {% if page.title %}
+          <h1 class="display-4 pb-0 mb-4">{{ page.title }}</h1>
+        {% endif %}
+        {% if page.description %}
+          <p class="lead mb-5">{{ page.description }}</p>
+          <a href="#plans" class="btn btn-primary btn-lg shadow-md">Get started
+          </a>
+        {% endif %}
+      </div>
+      <div class="col-7"><img
+          src="/assets/img/screenshot.png"
+          class="img-fluid border rounded shadow"
+          alt="Screenshot of ScanGov">
+      </div>
+    </div>
+  </div>
+</div>
