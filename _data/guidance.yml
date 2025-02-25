@@ -2,20 +2,20 @@ docs_list_title: guidance
 docs:
 
 - title: Web content accessibility guidelines (WCAG)
-  icon: fa-solid fa-dashboard
+
+- title: 28 CFR Part 35 (U.S. DOJ)
 
 - title: OWASP Top 10
-  icon: fa-solid fa-file
+
+- title: 21st Century IDEA 
+
+- title: OMB Memo M-23-22 
 
 - title: The Web Robots Pages
-  icon: fa-solid fa-bell
 
 - title: sitemaps.org
-  icon: fa-solid fa-bell
 
 - title: securitytxt.org
-  icon: fa-solid fa-bell
 
-- title: + more
-  icon: fa-solid fa-database
+- title: More
 

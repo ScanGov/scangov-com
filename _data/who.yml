@@ -8,13 +8,13 @@ docs:
   icon: fa-solid fa-laptop
 
 - title: IT staff
-  icon: fa-solid fa-server
+  icon: fa-solid fa-code
 
-- title: Website vendors
-  icon: fa-solid fa-building
+- title: Third-party vendors
+  icon: fa-solid fa-arrows-rotate
+
+- title: Hosting providers
+  icon: fa-solid fa-server
 
 - title: Journalists
   icon: fa-solid fa-newspaper
-
-- title: Public
-  icon: fa-solid fa-people-group
