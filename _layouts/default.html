@@ -32,6 +32,7 @@ layout: default
     <div class="row">
       <div class="col-12">
         <h2 class="mb-3">Who it's for</h2>
+        <p class="lead">Everyone responsible for serving the public.</p>
         <div class="card-group">
           {% for item in site.data.who.docs %}
             <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex align-items-stretch">
@@ -41,6 +42,24 @@ layout: default
                 {% if item.description %}
                   <p class="card-text mt-1 mb-4">{{ item.description }}</p>
                 {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container border-bottom mb-5 pb-4">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="mb-3">Digital experience</h2>
+        <p class="lead">A holistic approach to service delivery.</p>
+        <div class="card-group">
+          {% for item in site.data.standards.docs %}
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 d-flex align-items-stretch">
+              <div class="card p-4 text-center m-1">
+                <i class="{{ item.icon }} fa-xl" aria-label="hidden"></i>
+                <h3 class="h5 mt-3">{{ item.title }}</h3>
               </div>
             </div>
           {% endfor %}
@@ -122,24 +141,6 @@ layout: default
     <div class="row">
       <div class="col-12">
         <h2 class="mb-3">Standards</h2>
-        <p class="lead">Status insights into holistic digital experience.</p>
-        <div class="card-group">
-          {% for item in site.data.standards.docs %}
-            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 d-flex align-items-stretch">
-              <div class="card p-4 text-center m-1">
-                <i class="{{ item.icon }} fa-xl" aria-label="hidden"></i>
-                <h3 class="h5 mt-3">{{ item.title }}</h3>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container border-bottom mb-5 pb-4">
-    <div class="row">
-      <div class="col-12">
-        <h2 class="mb-3">Guidance</h2>
         <p class="lead">Based on established web protocol, guidelines and best practices.</p>
         <div class="card-group">
           {% for item in site.data.guidance.docs %}
