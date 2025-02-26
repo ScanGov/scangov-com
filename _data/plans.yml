@@ -1,0 +1,23 @@
+docs_list_title: plans
+docs:
+
+- title: Starter (coming soon)
+  icon: 
+  cta-text: Subscribe for updates
+  cta-url: https://docs.scangov.org/subscribe
+  checks:
+    - 1 domain
+    - Homepage scan
+    - Monthly alerts
+
+- title: Enterprise
+  icon: 
+  cta-text: Contact us
+  cta-url: https://docs.google.com/forms/d/e/1FAIpQLSeKiSG0f07leAwW1QqIMSoDIgTA92m0jVy6NADtiaoPhg4rww/viewform
+  checks:
+    - Multiple domains
+    - Full site scans
+    - Weekly alerts
+    - Custom reports
+    - Data downloads
+
