@@ -2,8 +2,8 @@ docs_list_title: features
 docs:
 
 - title: Monitoring
-  icon: fa-solid fa-dashboard
-  description: Homepage, full site scans
+  icon: fa-solid fa-wave-square
+  description: Full site scans
 
 - title: Alerts
   icon: fa-solid fa-bell
