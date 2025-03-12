@@ -38,9 +38,6 @@
       feedbackButton.style.opacity = '0';
   });
 </script>
-{% if jekyll.environment == 'production' %}
-  {% include analytics.html %}
-{% endif %}
 {% include js.html %}
 <script>
   document.addEventListener("DOMContentLoaded", function() {
