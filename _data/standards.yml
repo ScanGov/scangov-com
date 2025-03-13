@@ -21,3 +21,6 @@ docs:
 
 - title: SEO
   icon: fa-solid fa-magnifying-glass
+
+- title: AI
+  icon: fa-solid fa-robot
