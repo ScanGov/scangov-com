@@ -7,7 +7,7 @@ layout: default
   {% include jumbotron.html %}
   <div class="container border-bottom mb-5 pb-5 pt-3">
     <div class="row">
-      <div class="col-5">
+      <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
         <h2 class="mb-3">Awards</h2>
         <p class="lead">Supporting the Center for Digital Government's Government Experience Awards.</p>
         <blockquote>
@@ -17,7 +17,7 @@ layout: default
           </p>
         </blockquote>
       </div>
-      <div class="col-7"><img
+      <div class="col-7 col-sm-12 col-md-7 col-lg-7 col-xl-7"><img
           src="{{ site.baseurl }}/assets/img/government-experience-awards.jpg"
           class="img-fluid border rounded shadow"
           alt="Government Experience Awards">
@@ -49,7 +49,7 @@ layout: default
     <div class="row">
       <div class="col-12">
         <h2 class="mb-3">Digital experience</h2>
-        <p class="lead">Holistic monitoring, reporting and remediation documentation.</p>
+        <p class="lead">Holistic monitoring, reporting and remediation tools.</p>
         <div class="card-group">
           {% for item in site.data.standards.docs %}
             <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 d-flex align-items-stretch">
@@ -160,8 +160,8 @@ layout: default
         </div>
       </div>
       <div class="row">
-        <div class="col-2"></div>
-        <div class="col-8">
+        <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+        <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
           {% for item in site.data.quotes.docs %}
             <div class="mt-3">
               <blockquote>
@@ -177,7 +177,7 @@ layout: default
             </div>
           {% endfor %}
         </div>
-        <div class="col-2"></div>
+        <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
       </div>
     </div>
   {% endif %}
@@ -271,6 +271,28 @@ layout: default
             </div>
           {% endfor %}
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="container border-bottom mb-5 pb-5 pt-3 d-none d-md-block">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="mb-3">Learn more</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+        <iframe
+          src="https://docs.google.com/presentation/d/e/2PACX-1vTRSjumzQbS8A92vKjVwTQ075-in-Ase0QqXk4AanDFVKwXxvagg_ulXTa4Tn9OzwUWSSQXPSR_R4Mf/embed?start=false&loop=false&delayms=3000"
+          frameborder="0"
+          width="100%"
+          height="500"
+          allowfullscreen="true"
+          mozallowfullscreen="true"
+          webkitallowfullscreen="true"></iframe>
+      </div>
+      <div class="col-4 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+        <a href="https://docs.google.com/presentation/d/e/2PACX-1vTRSjumzQbS8A92vKjVwTQ075-in-Ase0QqXk4AanDFVKwXxvagg_ulXTa4Tn9OzwUWSSQXPSR_R4Mf/pub?start=false&loop=false&delayms=3000" class="btn btn-primary btn-lg">Download deck</a>
       </div>
     </div>
   </div>
