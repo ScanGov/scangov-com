@@ -1,7 +1,7 @@
 docs_list_title: guidance
 docs:
 
-- title: Web content accessibility guidelines (WCAG)
+- title: WCAG (W3C)
 
 - title: 28 CFR Part 35 (U.S. DOJ)
 
@@ -24,6 +24,10 @@ docs:
 - title: securitytxt.org
 
 - title: Cybersecurity Performance Goals (CISA)
+
+- title: Web Vitals / Core Web Vitals
+
+- title: Google Search Central
 
 - title: More
 

@@ -7,24 +7,27 @@ layout: default
   {% include jumbotron.html %}
   <div class="container border-bottom mb-5 pb-5 pt-3">
     <div class="row">
-      <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+      <div class="col-12">
         <h2 class="mb-3">Awards</h2>
         <p class="lead">Supporting the Center for Digital Government's Government Experience Awards.</p>
+        </div>
+        </div>
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
         <img
-          src="{{ site.baseurl }}/assets/img/government-experience-awards.jpg"
-          class="img-fluid border rounded shadow d-block d-md-none"
+          src="{{ site.baseurl }}/assets/img/pages/government-experience-awards.jpg"
+          class="my-4 img-fluid border rounded shadow d-block d-md-none"
           alt="Government Experience Awards">
         <blockquote>
-          <p class="lead my-5">
-            <strong>To assist in the quantitative scoring process, CDG utilized ScanGov</strong>
-            — an open-source evaluation tool that monitors official government website health.
+          <p class="lead my-4">
+           “The Government Experience Awards celebrate innovation that directly impacts how the public engages with government. By incorporating ScanGov’s expanded data capabilities into our evaluation process, we’re deepening our understanding of what defines a leading digital government experience—from accessibility to laying the foundation for AI, this layer of insight is invaluable in identifying the jurisdictions setting the gold standard for service delivery.”
           </p>
         </blockquote>
       </div>
-      <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 d-none d-md-block">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-none d-md-block">
         <img
-          src="{{ site.baseurl }}/assets/img/government-experience-awards.jpg"
-          class="img-fluid border rounded shadow"
+          src="{{ site.baseurl }}/assets/img/pages/government-experience-awards.jpg"
+          class="my-4 img-fluid border rounded shadow"
           alt="Government Experience Awards">
       </div>
     </div>
@@ -68,6 +71,7 @@ layout: default
       </div>
     </div>
   </div>
+  <!--
   <div class="container border-bottom mb-5 pb-5">
     <div class="row">
       <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
@@ -97,40 +101,23 @@ layout: default
       </div>
     </div>
   </div>
+  -->
   <div class="container border-bottom mb-5 pb-5">
     <div class="row">
       <div class="col-12">
         <h2 class="mb-3">Features</h2>
-        <p class="lead">Track, manage, share digital experience status and progress.</p>
         <div class="card-group">
           {% for item in site.data.features.docs %}
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 d-flex align-items-stretch">
-              <div class="card p-4 text-center m-2">
-                <i class="{{ item.icon }} fa-3x mt-2" aria-label="hidden"></i>
-                <h3 class="h4 mt-4 mb-1">{{ item.title }}</h3>
-                {% if item.description %}
-                  <p class="card-text mt-1 mb-4">{{ item.description }}</p>
-                {% endif %}
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-12">
-        <div class="card-group">
-          {% for item in site.data.features2.docs %}
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 d-flex align-items-stretch">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-stretch">
               <div class="card p-2 m-2">
+                <h3 class="h5 mt-3 mb-2">{{ item.title }}</h3>
+                {% if item.description %}
+                  <p class="card-text">{{ item.description }}</p>
+                {% endif %}
                 <img
-                  src="/assets/img/{{ item.img }}"
+                  src="{{ site.baseurl }}/assets/img/pages/{{ item.img }}"
                   class="img-fluid border rounded shadow"
                   alt="{{ item.title }}">
-                <h3 class="h6 mt-3 mb-3">{{ item.title }}</h3>
-                {% if item.description %}
-                  <p class="card-text mt-1 mb-3">{{ item.description }}</p>
-                {% endif %}
               </div>
             </div>
           {% endfor %}

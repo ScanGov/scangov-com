@@ -1,19 +1,27 @@
 docs_list_title: features
 docs:
 
+- title: Dashboards
+  description: Top-level overview
+  img: dashboards.png
+
 - title: Monitoring
-  icon: fa-solid fa-wave-square
-  description: Full site scans
+  description: Status by indicator
+  img: monitoring.png
 
-- title: Alerts
-  icon: fa-solid fa-bell
-  description: Email status updates
+- title: Pages
+  description: Page-level analysis
+  img: page.png
 
-- title: Reports
-  icon: fa-solid fa-file
-  description: Customizable reports
+- title: Tasks
+  description: Prioritized by ROI
+  img: tasks.png
 
-- title: Data
-  icon: fa-solid fa-chart-line
-  description: Machine-readable formats
+- title: Bug reports
+  description: Pre-populated bug reports
+  img: bug-report.png
+
+- title: Changelog
+  description: Timeline of changes
+  img: changelog.png
 
