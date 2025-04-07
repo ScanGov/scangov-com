@@ -35,7 +35,6 @@ defaults:
     values:
       layout: default
 
-
 # Exclude
 exclude:
   - gemfiles/
@@ -44,3 +43,4 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+  - google1234567890abcdef.html
