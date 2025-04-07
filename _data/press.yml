@@ -1,6 +1,10 @@
 docs_list_title: press
 docs:
 
+- title: "Houston-area cities and counties want you to go to their websites. How useful are they?"
+  url: https://houstonlanding.org/houston-area-cities-and-counties-want-you-to-go-to-their-websites-how-useful-are-they/
+  source: Houston Landing
+
 - title: "Government websites are failing at the basics: How to fix them"
   url: https://podcasts.apple.com/ca/podcast/government-websites-are-failing-at-the-basics-how-to/id1547149248?i=1000656553713
   source: The Future in Context
@@ -21,6 +25,6 @@ docs:
   url: https://statescoop.com/state-government-websites-metadata-accessibility/
   source: StateScoop
   
-- title: "On some basic metadata practices, US government gets an ‘F,’ per new online tracker"
-  url: https://fedscoop.com/on-some-basic-metadata-practices-us-government-gets-an-f-per-new-online-tracker/
-  source: FedScoop
+#- title: "On some basic metadata practices, US government gets an ‘F,’ per new online tracker"
+#  url: https://fedscoop.com/on-some-basic-metadata-practices-us-government-gets-an-f-per-new-online-tracker/
+#  source: FedScoop
