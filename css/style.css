@@ -186,6 +186,12 @@ blockquote {
     padding: 0 0 0 1.5rem;
 }
 
+blockquote p {
+    font-family: var(--bs-font-light) !important;
+    font-size: 1.15rem !important;
+    line-height: 1.6;
+}
+
 .lead {
     font-family: var(--bs-font-regular) !important;
 }

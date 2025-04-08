@@ -19,8 +19,8 @@ layout: default
           class="my-4 img-fluid border rounded shadow d-block d-md-none"
           alt="Government Experience Awards">
         <blockquote>
-          <p class="lead my-4">
-           “The Government Experience Awards celebrate innovation that directly impacts how the public engages with government. By incorporating ScanGov’s expanded data capabilities into our evaluation process, we’re deepening our understanding of what defines a leading digital government experience—from accessibility to laying the foundation for AI, this layer of insight is invaluable in identifying the jurisdictions setting the gold standard for service delivery.”
+          <p class="my-4">
+           “The Government Experience Awards celebrate innovation that directly impacts how the public engages with government. <strong>ScanGov has been instrumental in helping us identify the best digital government experiences.</strong> By incorporating ScanGov’s expanded data capabilities into our evaluation process, we’re deepening our understanding of what defines a leading digital government experience—from accessibility to laying the foundation for AI, this layer of insight is invaluable in identifying the jurisdictions setting the gold standard for service delivery.”
           </p>
         </blockquote>
       </div>
@@ -129,7 +129,7 @@ layout: default
     <div class="row">
       <div class="col-12">
         <h2 class="mb-3">Standards</h2>
-        <p class="lead">Based on established web protocol, guidelines and best practices.</p>
+        <p class="lead">Based on public policy and established web protocol, guidelines and best practices.</p>
         <div class="card-group">
           {% for item in site.data.guidance.docs %}
             <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex align-items-stretch">
@@ -152,8 +152,8 @@ layout: default
         </div>
       </div>
       <div class="row">
-        <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
-        <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+        <div class="col-2 col-sm-12 col-md-1 col-lg-1 col-xl-1"></div>
+        <div class="col-8 col-sm-12 col-md-10 col-lg-10 col-xl-10">
           {% for item in site.data.quotes.docs %}
             <div class="mt-3">
               <blockquote>
@@ -162,14 +162,14 @@ layout: default
               {% if item.name %}
                 <p class="text-end">
                   {% if item.name %}- {{ item.name }}{% endif %}
-                  {% if item.title %}, {{ item.title }}{% endif %}
-                  {% if item.org %}, {{ item.org }}{% endif %}
+                  {% if item.title %}, {{ item.title }}, {% endif %}
+                  {% if item.org %}{{ item.org }}{% endif %}
                 </p>
               {% endif %}
             </div>
           {% endfor %}
         </div>
-        <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+        <div class="col-2 col-sm-12 col-md-1 col-lg-1 col-xl-1"></div>
       </div>
     </div>
   {% endif %}
