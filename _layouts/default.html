@@ -109,16 +109,16 @@ layout: default
         <div class="card-group">
           {% for item in site.data.features.docs %}
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-stretch">
-              <div class="card p-2 m-2">
-                <h3 class="h5 mt-3 mb-2">{{ item.title }}</h3>
-                {% if item.description %}
-                  <p class="card-text">{{ item.description }}</p>
-                {% endif %}
+              <div class="card p-3 m-2">
+                <h3>{{ item.title }}</h3>
                 <img
                   src="{{ site.baseurl }}/assets/img/pages/{{ item.img }}"
-                  class="img-fluid border rounded shadow"
+                  class="mt-2 mb-3 img-fluid border rounded shadow"
                   alt="{{ item.title }}">
-              </div>
+                  {% if item.description %}
+                    <p class="card-text">{{ item.description }}</p>
+                  {% endif %}
+                </div>
             </div>
           {% endfor %}
         </div>

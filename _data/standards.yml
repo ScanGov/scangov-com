@@ -1,14 +1,11 @@
 docs_list_title: standards
 docs:
 
-- title: Performance
-  icon: fa-solid fa-dashboard
+- title: AI friendly
+  icon: fa-solid fa-robot
 
 - title: Accessibility
   icon: fa-solid fa-universal-access
-
-- title: Security
-  icon: fa-solid fa-lock
 
 - title: Content
   icon: fa-solid fa-file-lines
@@ -16,11 +13,14 @@ docs:
 - title: Domain
   icon: fa-solid fa-link
 
-- title: Social
-  icon: fa-solid fa-share-nodes
+- title: Performance
+  icon: fa-solid fa-dashboard
+
+- title: Security
+  icon: fa-solid fa-lock
 
 - title: SEO
   icon: fa-solid fa-magnifying-glass
 
-- title: AI
-  icon: fa-solid fa-robot
+- title: Social
+  icon: fa-solid fa-share-nodes
