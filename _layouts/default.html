@@ -3,24 +3,26 @@ layout: default
 ---
 {% include header.html %}
 {% include nav.html %}
-<main>
+  <main>
   {% include jumbotron.html %}
   <div class="container border-bottom mb-5 pb-5 pt-3">
     <div class="row">
       <div class="col-12">
         <h2 class="mb-3">Awards</h2>
         <p class="lead">Supporting the Center for Digital Government's Government Experience Awards.</p>
-        </div>
-        </div>
+      </div>
+    </div>
     <div class="row">
       <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
         <img
-          src="{{ site.baseurl }}/assets/img/pages/government-experience-awards.jpg"
+          src="{{ site.baseurl }}/assets/img/pages/government-experience-awards.png"
           class="my-4 img-fluid border rounded shadow d-block d-md-none"
           alt="Government Experience Awards">
         <blockquote>
           <p class="my-4">
-           “The Government Experience Awards celebrate innovation that directly impacts how the public engages with government. <strong>ScanGov has been instrumental in helping us identify the best digital government experiences.</strong> By incorporating ScanGov’s expanded data capabilities into our evaluation process, we’re deepening our understanding of what defines a leading digital government experience—from accessibility to laying the foundation for AI, this layer of insight is invaluable in identifying the jurisdictions setting the gold standard for service delivery.”
+            “The Government Experience Awards celebrate innovation that directly impacts how the public engages with government.
+            <strong>ScanGov has been instrumental in helping us identify the best digital government experiences.</strong>
+            By incorporating ScanGov’s expanded data capabilities into our evaluation process, we’re deepening our understanding of what defines a leading digital government experience—from accessibility to laying the foundation for AI, this layer of insight is invaluable in identifying the jurisdictions setting the gold standard for service delivery.”
           </p>
         </blockquote>
       </div>
@@ -72,8 +74,7 @@ layout: default
     </div>
   </div>
   <!--
-  <div class="container border-bottom mb-5 pb-5">
-    <div class="row">
+    <div class="container border-bottom mb-5 pb-5">  <div class="row">
       <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
         <h2>Problem</h2>
         <p>No government-specific tool to help:
@@ -115,10 +116,10 @@ layout: default
                   src="{{ site.baseurl }}/assets/img/pages/{{ item.img }}"
                   class="mt-2 mb-3 img-fluid border rounded shadow"
                   alt="{{ item.title }}">
-                  {% if item.description %}
-                    <p class="card-text">{{ item.description }}</p>
-                  {% endif %}
-                </div>
+                {% if item.description %}
+                  <p class="card-text">{{ item.description }}</p>
+                {% endif %}
+              </div>
             </div>
           {% endfor %}
         </div>
@@ -162,8 +163,10 @@ layout: default
               {% if item.name %}
                 <p class="text-end">
                   {% if item.name %}- {{ item.name }}{% endif %}
-                  {% if item.title %}, {{ item.title }}, {% endif %}
-                  {% if item.org %}{{ item.org }}{% endif %}
+                  {% if item.title %}, {{ item.title }},
+                  {% endif %}
+                  {% if item.org %}
+                    {{ item.org }}{% endif %}
                 </p>
               {% endif %}
             </div>
