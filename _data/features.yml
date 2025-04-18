@@ -1,6 +1,10 @@
 docs_list_title: features
 docs:
 
+- title: Sites
+  description: Multi-site management
+  img: sites.png
+
 - title: Dashboards
   description: Top-level overview
   img: dashboards.png
@@ -20,6 +24,10 @@ docs:
 - title: Bug reports
   description: Pre-populated bug reports
   img: bug-report.png
+
+- title: Alerts
+  description: Timed reminders
+  img: alerts.png
 
 - title: Changelog
   description: Timeline of changes
