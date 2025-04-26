@@ -1,6 +1,18 @@
 docs_list_title: nav
 docs:
 
-#- title: Docs
-#  icon: fa-solid fa-file-lines
-#  url: https://docs.scangov.org
+- title: News
+  icon: fa-solid fa-satellite-dish
+  url: https://docs.scangov.org/news
+
+- title: Standards
+  icon: fa-solid fa-certificate
+  url: https://standards.scangov.org
+
+- title: Project ScanGov
+  icon: fa-solid fa-diagram-project
+  url: https://scangov.org
+
+- title: Docs
+  icon: fa-solid fa-file-lines
+  url: https://docs.scangov.org
