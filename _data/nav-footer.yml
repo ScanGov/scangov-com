@@ -26,17 +26,17 @@ docs:
 
 -
 
+  - title: Project ScanGov
+    url: https://scangov.org
+
   - title: Standards
-    url: https://docs.scangov.org/standards
+    url: https://standards.scangov.org
 
   - title: Guidance
-    url: https://docs.scangov.org/guidance
-
-  - title: Topics
-    url: https://docs.scangov.org/topics
+    url: https://standards.scangov.org/guidance
 
   - title: Data
-    url: https://docs.scangov.org/data
+    url: https://data.scangov.org
 
 -
 
