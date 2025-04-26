@@ -1,3 +1,4 @@
+{% if page.layout == "home" %}
 <div id="main-content">
   <div class="container py-5 mb-4 border-bottom">
     <div class="row">
@@ -13,7 +14,7 @@
         </div>
         {% if page.description %}
           <p class="lead mb-5">{{ page.description }}</p>
-          <a href="#plans" class="btn btn-primary btn-lg shadow-md">Get started
+          <a href="{{ site.baseurl }}/meet" class="btn btn-primary btn-lg shadow-md">Schedule demo
           </a>
         {% endif %}
       </div>
@@ -25,4 +26,23 @@
       </div>
     </div>
   </div>
-</div></div>
+</div>
+{%  else %}
+<div id="main-content">
+  <div class="container py-5 mb-4 border-bottom">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        {% if page.title %}
+          <h1 class="display-5 pb-0 mb-4">{{ page.title }}</h1>
+        {% endif %}
+        {% if page.description %}
+          <p class="lead mb-5">{{ page.description }}</p>
+          </a>
+        {% endif %}
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-none d-md-block">
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}

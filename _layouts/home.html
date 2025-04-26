@@ -1,0 +1,301 @@
+---
+layout: home
+---
+{% include header.html %}
+{% include nav.html %}
+  <main>
+  {% include jumbotron.html %}
+  <div class="container border-bottom mb-5 pb-5 pt-3">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="mb-3">Awards</h2>
+        <p class="lead">Supporting the Center for Digital Government's Government Experience Awards.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <img
+          src="{{ site.baseurl }}/assets/img/pages/government-experience-awards.png"
+          class="my-4 img-fluid border rounded shadow d-block d-md-none"
+          alt="Government Experience Awards">
+        <blockquote>
+          <p class="my-4">
+            “The Government Experience Awards celebrate innovation that directly impacts how the public engages with government.
+            <strong>ScanGov has been instrumental in helping us identify the best digital government experiences.</strong>
+            By incorporating ScanGov’s expanded data capabilities into our evaluation process, we’re deepening our understanding of what defines a leading digital government experience—from accessibility to laying the foundation for AI, this layer of insight is invaluable in identifying the jurisdictions setting the gold standard for service delivery.”
+          </p>
+        </blockquote>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-none d-md-block">
+        <img
+          src="{{ site.baseurl }}/assets/img/pages/government-experience-awards.png"
+          class="my-4 img-fluid border rounded shadow"
+          alt="Government Experience Awards">
+      </div>
+    </div>
+  </div>
+  <div class="container border-bottom mb-5 pb-5">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="mb-3">Who it's for</h2>
+        <p class="lead">Everyone responsible for serving the public.</p>
+        <div class="card-group">
+          {% for item in site.data.who.docs %}
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex align-items-stretch">
+              <div class="card p-4 text-center m-2">
+                <i class="{{ item.icon }} fa-xl mt-2" aria-label="hidden"></i>
+                <h3 class="h5 mt-3 mb-1">{{ item.title }}</h3>
+                {% if item.description %}
+                  <p class="card-text mt-1 mb-4">{{ item.description }}</p>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container border-bottom mb-5 pb-5">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="mb-3">Digital experience</h2>
+        <p class="lead">Holistic monitoring, reporting and remediation tools.</p>
+        <div class="card-group">
+          {% for item in site.data.standards.docs %}
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 d-flex align-items-stretch">
+              <div class="card p-4 text-center m-1">
+                <i class="{{ item.icon }} fa-3x mt-2 mb-2" aria-label="hidden"></i>
+                <h3 class="h5 mt-3">{{ item.title }}</h3>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--
+    <div class="container border-bottom mb-5 pb-5">  <div class="row">    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">      <h2>Problem</h2>
+        <p>No government-specific tool to help:
+        </p>
+        <ul>
+          <li>Monitor and support ‘big picture’ digital experience
+          </li>
+          <li>Conform to web protocol, guidelines, best practices</li>
+          <li>Baseline for public sector standards and expectations</li>
+          <li>‘Know what it doesn’t know’</li>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <h2>Solution</h2>
+        <p>Platform that supports government digital experience:</p>
+        <ul>
+          <li>Conformance dashboards
+          </li>
+          <li>Remediation documentation</li>
+          <li>Research / reporting tools</li>
+          <li>Public sector standards</li>
+          <li>Landscape analysis</li>
+          <li>Status alerts</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  -->
+  <div class="container border-bottom mb-5 pb-5">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="mb-3">Features</h2>
+        <div class="card-group">
+          {% for item in site.data.features.docs %}
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-stretch">
+              <div class="card p-3 m-2">
+                <h3>{{ item.title }}</h3>
+                <img
+                  src="{{ site.baseurl }}/assets/img/pages/{{ item.img }}"
+                  class="mt-2 mb-3 img-fluid border rounded shadow"
+                  alt="{{ item.title }}">
+                {% if item.description %}
+                  <p class="card-text">{{ item.description }}</p>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container border-bottom mb-5 pb-5">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="mb-3">Standards</h2>
+        <p class="lead">Based on public policy and established web protocol, guidelines and best practices.</p>
+        <div class="card-group">
+          {% for item in site.data.guidance.docs %}
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex align-items-stretch">
+              <div class="card px-4 py-3 m-1">
+                <p class="m-0 p-0">
+                  <i class="fa-solid fa-circle-check" aria-label="hidden"></i>
+                  {{ item.title }}</p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% if site.data.quotes.docs %}
+    <div class="container border-bottom mb-5 pb-5">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="mb-3">What they say</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2 col-sm-12 col-md-1 col-lg-1 col-xl-1"></div>
+        <div class="col-8 col-sm-12 col-md-10 col-lg-10 col-xl-10">
+          {% for item in site.data.quotes.docs %}
+            <div class="my-4">
+              <blockquote>
+                <p>&ldquo;{{ item.quote }}&rdquo;</p>
+              </blockquote>
+              {% if item.name %}
+                <p class="text-end">
+                  {% if item.name %}- {{ item.name }}{% endif %}
+                  {% if item.title %}, {{ item.title }},
+                  {% endif %}
+                  {% if item.org %}
+                    {{ item.org }}{% endif %}
+                </p>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+        <div class="col-2 col-sm-12 col-md-1 col-lg-1 col-xl-1"></div>
+      </div>
+    </div>
+  {% endif %}
+  <div class="container border-bottom mb-5 pb-5">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="mb-3">Press</h2>
+        <p class="lead">ScanGov in the news.</p>
+        <div class="card-group">
+          {% for item in site.data.press.docs limit: limitVar %}
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
+              <div class="card mx-2 my-2 pt-2">
+                <div class="card-body">
+                  <h2 class="h5 mb-3">
+                    <a href="{{ site.baseurl }}{{ item.url }}">
+                      {{ item.title }}
+                    </a>
+                  </h2>
+                </div>
+                <div class="card-footer small">
+                  {{ item.source }}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container border-bottom mb-5 pb-5">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="mb-3" id="plans">Plans</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card-group">
+        {% for item in site.data.plans.docs %}
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-stretch">
+            <div class="card m-1">
+              <div class="card-header">
+                <h3 class="my-2 h4">{{ item.title }}</h3>
+              </div>
+              <div class="card-body pt-4 text-center">
+                <ul class="list-unstyled mt-3 mb-3">
+                  {% for check in item.checks %}
+                    <li class="fs-5 mb-2">
+                      <i class="fa-solid fa-check" aria-label="hidden"></i>
+                      {{ check }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+              {% if item.cta-url %}
+                <div class="card-footer">
+                  <a href="{{ item.cta-url }}" class="w-100 btn btn-lg btn-primary">{{ item.cta-text }}</a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="container border-bottom mb-5 pb-5">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="mb-3">Services</h2>
+        <p class="lead">We're here to support you on your government digital experience journey.</p>
+        <div class="card-group">
+          {% for item in site.data.services.docs %}
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-stretch">
+              <div class="card m-1">
+                <div class="card-header">
+                  <h3 class="my-2 h4">{{ item.title }}</h3>
+                </div>
+                <div class="card-body pt-4 text-center">
+                  <ul class="list-unstyled mt-3 mb-3">
+                    {% for check in item.checks %}
+                      <li class="fs-5 mb-2">
+                        <i class="fa-solid fa-check" aria-label="hidden"></i>
+                        {{ check }}</li>
+                    {% endfor %}
+                  </ul>
+                </div>
+                {% if item.cta-url %}
+                  <div class="card-footer">
+                    <a href="{{ item.cta-url }}" class="w-100 btn btn-lg btn-primary">{{ item.cta-text }}</a>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container border-bottom mb-5 pb-5 pt-3 d-none d-md-block">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="mb-3">Learn more</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+        <iframe
+          src="https://docs.google.com/presentation/d/e/2PACX-1vTRSjumzQbS8A92vKjVwTQ075-in-Ase0QqXk4AanDFVKwXxvagg_ulXTa4Tn9OzwUWSSQXPSR_R4Mf/embed?start=false&loop=false&delayms=3000"
+          frameborder="0"
+          width="100%"
+          height="500"
+          allowfullscreen="true"
+          mozallowfullscreen="true"
+          webkitallowfullscreen="true"></iframe>
+      </div>
+      <div class="col-4 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+        <a href="https://docs.google.com/presentation/d/e/2PACX-1vTRSjumzQbS8A92vKjVwTQ075-in-Ase0QqXk4AanDFVKwXxvagg_ulXTa4Tn9OzwUWSSQXPSR_R4Mf/pub?start=false&loop=false&delayms=3000" class="btn btn-primary btn-lg">Download deck</a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="mb-4">Questions?</h2>
+        <a href="https://docs.scangov.org/contact" class="btn btn-primary btn-lg">Contact us</a>
+      </div>
+    </div>
+  </div>
+</main>
+{% include footer.html %}
