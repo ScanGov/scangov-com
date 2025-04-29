@@ -37,6 +37,24 @@ layout: home
   <div class="container border-bottom mb-5 pb-5">
     <div class="row">
       <div class="col-12">
+        <h2 class="mb-3">Digital experience</h2>
+        <p class="lead">Holistically addressing government digital experience.</p>
+        <div class="card-group">
+          {% for item in site.data.standards.docs %}
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 d-flex align-items-stretch">
+              <div class="card p-4 text-center m-1">
+                <i class="{{ item.icon }} fa-3x mt-2 mb-2" aria-label="hidden"></i>
+                <h3 class="h5 mt-3">{{ item.title }}</h3>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container border-bottom mb-5 pb-5">
+    <div class="row">
+      <div class="col-12">
         <h2 class="mb-3">Who it's for</h2>
         <p class="lead">Everyone responsible for serving the public.</p>
         <div class="card-group">
@@ -48,24 +66,6 @@ layout: home
                 {% if item.description %}
                   <p class="card-text mt-1 mb-4">{{ item.description }}</p>
                 {% endif %}
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container border-bottom mb-5 pb-5">
-    <div class="row">
-      <div class="col-12">
-        <h2 class="mb-3">Digital experience</h2>
-        <p class="lead">Holistic monitoring, reporting and remediation tools.</p>
-        <div class="card-group">
-          {% for item in site.data.standards.docs %}
-            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 d-flex align-items-stretch">
-              <div class="card p-4 text-center m-1">
-                <i class="{{ item.icon }} fa-3x mt-2 mb-2" aria-label="hidden"></i>
-                <h3 class="h5 mt-3">{{ item.title }}</h3>
               </div>
             </div>
           {% endfor %}
@@ -250,11 +250,7 @@ layout: home
     </div>
   </div>
   <!--
-    <div class="container border-bottom mb-5 pb-5 pt-3 d-none d-md-block">    <div class="row">
-        <div class="col-12">
-          <h2 class="mb-3">Learn more</h2>
-        </div>
-      </div>
+    <div class="container border-bottom mb-5 pb-5 pt-3 d-none d-md-block">    <div class="row">      <div class="col-12">        <h2 class="mb-3">Learn more</h2>      </div>    </div>
       <div class="row">
         <div class="col-8 col-sm-12 col-md-8 col-lg-8 col-xl-8">
           <iframe
