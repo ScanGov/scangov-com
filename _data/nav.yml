@@ -1,6 +1,10 @@
 docs_list_title: nav
 docs:
 
+- title: Schedule
+  icon: fa-solid fa-calendar
+  url: /schedule
+
 - title: What they say
   icon: fa-solid fa-comment
   url: /what-they-say
