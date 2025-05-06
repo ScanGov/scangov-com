@@ -1,26 +1,34 @@
 docs_list_title: standards
 docs:
 
-- title: AI friendly
+- title: AI-friendly
   icon: fa-solid fa-robot
+  color: "#e6e6e6"
 
 - title: Accessibility
   icon: fa-solid fa-universal-access
+  color: "#a8f2ff"
 
 - title: Content
   icon: fa-solid fa-file-lines
+  color: "#d5bfff"
 
 - title: Domain
   icon: fa-solid fa-link
+  color: "#7efbe1"
 
 - title: Performance
   icon: fa-solid fa-dashboard
+  color: "#ffbc78"
 
 - title: Security
   icon: fa-solid fa-lock
+  color: "#ff8d7b"
 
 - title: SEO
   icon: fa-solid fa-magnifying-glass
+  color: "#ffe396"
 
 - title: Social
   icon: fa-solid fa-share-nodes
+  color: "#e7f434"
