@@ -6,27 +6,12 @@ docs:
   url: /schedule
   color: "#f8b9c5"
 
+- title: Training
+  icon: fa-solid fa-graduation-cap
+  url: /training
+  color: "#c7efe2"
+
 - title: What they say
   icon: fa-solid fa-comment
   url: /what-they-say
   color: "#f5f6f7"
-
-- title: News
-  icon: fa-solid fa-satellite-dish
-  url: https://docs.scangov.org/news
-  color: "#f4b2ff"
-
-- title: Standards
-  icon: fa-solid fa-certificate
-  url: https://standards.scangov.org
-  color: "#face00"
-
-- title: Project ScanGov
-  icon: fa-solid fa-diagram-project
-  url: https://scangov.org
-  color: "#7efbe1"
-
-- title: Docs
-  icon: fa-solid fa-file-lines
-  url: https://docs.scangov.org
-  color: "#a8f2ff"

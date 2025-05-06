@@ -1,20 +1,21 @@
 docs_list_title: services
 docs:
 
+- title: Training
+  icon: fa-solid fa-graduation-cap
+  color: "#c7efe2"
+  cta-text: Get training
+  cta-url: https://forms.gle/n8WHYWPemr1N4F2M8
+  checks:
+    - Topical
+    - Curriculum
+
 - title: Consulting
   icon: fa-solid fa-brain
-  cta-text: Contact us
+  color: "#fdb8ae"
+  cta-text: Schedule consulting
   cta-url: https://docs.google.com/forms/d/e/1FAIpQLSeKiSG0f07leAwW1QqIMSoDIgTA92m0jVy6NADtiaoPhg4rww/viewform
   checks:
     - Hourly
     - Project
     - Retainer
-
-- title: Training
-  icon: fa-solid fa-graduation-cap
-  cta-text: Contact us
-  cta-url: https://docs.google.com/forms/d/e/1FAIpQLSeKiSG0f07leAwW1QqIMSoDIgTA92m0jVy6NADtiaoPhg4rww/viewform
-  checks:
-    - Topical
-    - Curriculum
-
