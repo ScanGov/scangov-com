@@ -9,6 +9,7 @@
     --scangov-color-news: #f4b2ff;
     --scangov-color-pages: #b7f5bd;
     --scangov-color-project: #7efbe1;
+    --scangov-color-satellite-dish: #c3ebfa;
     --scangov-color-schedule: #f8b9c5;
     --scangov-color-sites: #ffcdd5;
     --scangov-color-standards: #ffbe2e;
@@ -18,6 +19,10 @@
 
 .fa-certificate {
     color: var(--scangov-color-certificate) !important;
+}
+
+.fa-satellite-dish {
+    color: var(--scangov-color-satellite-dish) !important;
 }
 
 .fa-scroll {
