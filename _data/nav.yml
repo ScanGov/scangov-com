@@ -4,14 +4,11 @@ docs:
 - title: Schedule
   icon: fa-solid fa-calendar
   url: /schedule
-  color: "#f8b9c5"
 
 - title: Training
   icon: fa-solid fa-graduation-cap
   url: /training
-  color: "#c7efe2"
 
 - title: What they say
   icon: fa-solid fa-comment
   url: /what-they-say
-  color: "#f5f6f7"

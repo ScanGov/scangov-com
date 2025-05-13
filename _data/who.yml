@@ -2,7 +2,7 @@ docs_list_title: who
 docs:
 
 - title: Government leaders
-  icon: fa-solid fa-landmark
+  icon: fa-solid fa-check-to-slot
 
 - title: Digital service teams
   icon: fa-solid fa-laptop

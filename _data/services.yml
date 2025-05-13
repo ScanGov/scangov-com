@@ -3,7 +3,6 @@ docs:
 
 - title: Training
   icon: fa-solid fa-graduation-cap
-  color: "#c7efe2"
   cta-text: Get training
   cta-url: https://forms.gle/n8WHYWPemr1N4F2M8
   checks:
@@ -12,7 +11,6 @@ docs:
 
 - title: Consulting
   icon: fa-solid fa-brain
-  color: "#fdb8ae"
   cta-text: Schedule consulting
   cta-url: https://docs.google.com/forms/d/e/1FAIpQLSeKiSG0f07leAwW1QqIMSoDIgTA92m0jVy6NADtiaoPhg4rww/viewform
   checks:
