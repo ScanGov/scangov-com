@@ -235,12 +235,12 @@ a:hover {
 
 a.btn-primary, a.btn-primary:visited, .btn-primary {
     background-color: var(--bs-link-color);
-    color: var(--bs-body-bg) !important;
+    color: var(--bs-body-bg);
     border-radius: var(--bs-border-radius);
     border: 1px solid var(--bs-border-color);
     box-shadow: var(--bs-card-shadow);
     cursor: pointer;
-    font-family: var(--bs-font-bold) !important;
+    font-family: var(--bs-font-bold);
     padding: .55rem;
     transition: opacity 0.5s ease-in-out;
 }
@@ -257,11 +257,10 @@ a.btn-primary-outline {
     transition: opacity 0.5s ease-in-out;
 }
 
-a.btn-primary-outline:hover, .btn-primary-outline:hover {
+a.btn-primary-outline:not(.active):hover, .btn-primary-outline:not(.active):hover {
     background-color: var(--bs-btn-bg) !important;
     color: var(--bs-body-bg);
     border: 1px solid var(--bs-border-color);
-    box-shadow: var(--bs-box-shadow-md) !important;
 }
 
 #feedback-container {
@@ -589,4 +588,17 @@ h1::before {
 
 h1::after {
     content: "";
+}
+
+.active {
+    --bs-nav-pills-link-active-bg: var(--bs-btn-primary-bg) !important;
+    color: var(--bs-body-bg) !important;
+}
+
+.active i, .active svg {
+    color: var(--bs-body-bg) !important;
+}
+
+.nav-pills .active {
+    --bs-link-color: var(--bs-body-bg);
 }
