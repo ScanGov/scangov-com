@@ -1,13 +1,9 @@
 docs_list_title: nav
 docs:
 
-- title: Schedule
-  icon: fa-solid fa-calendar
-  url: /schedule
-
-- title: Training
-  icon: fa-solid fa-graduation-cap
-  url: /training
+- title: Plans
+  icon: fa-solid fa-crown
+  url: /plans
 
 - title: What they say
   icon: fa-solid fa-comment

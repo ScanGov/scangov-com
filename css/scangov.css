@@ -60,6 +60,10 @@
     color: #c5c5f3 !important;
 }
 
+.fa-crown {
+    color: #ffe396 !important;
+}
+
 .fa-dashboard {
     color: #ffbc78;
 }
@@ -173,6 +177,10 @@
 }
 
 .fa-spray-can-sparkles {
+    color: #f8b9c5;
+}
+
+.fa-square-caret-right {
     color: #f8b9c5;
 }
 

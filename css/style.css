@@ -578,10 +578,6 @@ h1 {
     margin-bottom: 1em;
 }
 
-h1 {
-    white-space: pre-wrap;
-}
-
 h1::before {
     content: "";
 }
@@ -590,15 +586,17 @@ h1::after {
     content: "";
 }
 
+/* add to components */
+
 .active {
     --bs-nav-pills-link-active-bg: var(--bs-btn-primary-bg) !important;
     color: var(--bs-body-bg) !important;
 }
 
-.active i, .active svg {
+.nav-pills .active i, .nav-pills .active svg {
     color: var(--bs-body-bg) !important;
 }
 
-.nav-pills .active {
+.nav-pills .active, .nav-pills .active i, .nav-pills .active svg {
     --bs-link-color: var(--bs-body-bg);
 }

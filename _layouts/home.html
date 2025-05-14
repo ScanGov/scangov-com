@@ -75,9 +75,9 @@ layout: home
         <h2 class="mb-3">Features</h2>
         <div class="card-group">
           {% for item in site.data.features.docs %}
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-stretch">
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 d-flex align-items-stretch">
               <div class="card p-3 m-2">
-                <h3>{{ item.title }}</h3>
+                <h3 class="h4">{{ item.title }}</h3>
                 <img
                   src="{{ site.baseurl }}/assets/img/pages/{{ item.img }}"
                   class="mt-2 mb-3 img-fluid border rounded shadow"
@@ -95,44 +95,144 @@ layout: home
   <div class="container border-bottom mb-5 pb-5">
     <div class="row">
       <div class="col-12">
-        <h2 class="mb-3" id="plans">Plans</h2>
+        <h2 class="mb-3">Plans</h2>
       </div>
     </div>
     <div class="row">
-      <div class="card-group">
-        {% for item in site.data.plans.docs %}
-          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-stretch">
-            <div class="card m-1">
-              <div class="card-header">
-                <h3 class="my-2 h4">{{ item.title }}</h3>
-              </div>
-              <div class="card-body pt-4 text-center">
-                <ul class="list-unstyled mt-3 mb-3">
-                  {% for check in item.checks %}
-                    <li class="fs-5 mb-2">
-                      <i class="fa-solid fa-check" aria-label="hidden"></i>
-                      {{ check }}</li>
-                  {% endfor %}
-                </ul>
-              </div>
-              {% if item.cta-url %}
-                <div class="card-footer">
-                  <a href="{{ item.cta-url }}" class="w-100 btn btn-lg btn-primary">{{ item.cta-text }}</a>
-                </div>
-              {% endif %}
-            </div>
+      <div class="col-lg-3 d-flex">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+            <h2 class="my-0 fw-normal h5">Starter</h2>
           </div>
-        {% endfor %}
+          <div class="card-body pt-4">
+            <h3 class="card-title h2 pb-3">Free
+            </h3>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                One domain</li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Homepage scan</li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Unlimited users</li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Documentation</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKiSG0f07leAwW1QqIMSoDIgTA92m0jVy6NADtiaoPhg4rww/viewform" class="w-100 btn btn-lg btn-primary">Contact us</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 d-flex">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+            <h2 class="my-0 fw-normal h5">Basic</h2>
+          </div>
+          <div class="card-body pt-4">
+            <h3 class="card-title h2 pb-3">$49/mo
+            </h3>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                One domain</li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                5,000 page scans / month (total)</li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Unlimited users</li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Documentation</li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                GitHub integration</li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Public dashboard</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKiSG0f07leAwW1QqIMSoDIgTA92m0jVy6NADtiaoPhg4rww/viewform" class="w-100 btn btn-lg btn-primary">Contact us</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 d-flex">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+            <h2 class="my-0 fw-normal h5">Team</h2>
+          </div>
+          <div class="card-body pt-4">
+            <h3 class="card-title h2 pb-3">$199/mo
+            </h3>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                5 domains</li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                20,000 page scans / month (total)</li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Unlimited users</li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Documentation</li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                GitHub integration</li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Public dashboard</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKiSG0f07leAwW1QqIMSoDIgTA92m0jVy6NADtiaoPhg4rww/viewform" class="w-100 btn btn-lg btn-primary">Contact us</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 d-flex">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+            <h2 class="my-0 fw-normal h5">Enterprise</h2>
+          </div>
+          <div class="card-body pt-4">
+            <h3 class="card-title h2 pb-3">$499/mo
+            </h3>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Unlimited domains</li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                50,000 page scans / month (total)</li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Unlimited users</li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Documentation</li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                GitHub integration</li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Public dashboard</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKiSG0f07leAwW1QqIMSoDIgTA92m0jVy6NADtiaoPhg4rww/viewform" class="w-100 btn btn-lg btn-primary">Contact us</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
   <!--
-    <div class="container border-bottom mb-5 pb-5">  <div class="row">
-      <div class="col-12">
-        <h2 class="mb-3">Services</h2>
-        <p class="lead">We're here to support you on your government digital experience journey.</p>
-        <div class="card-group">
-          {% for item in site.data.services.docs %}
+    <div class="container border-bottom mb-5 pb-5">  <div class="row">    <div class="col-12">      <h2 class="mb-3">Services</h2>      <p class="lead">We're here to support you on your government digital experience journey.</p>      <div class="card-group">        {% for item in site.data.services.docs %}
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-stretch">
               <div class="card m-1">
                 <div class="card-header">
