@@ -14,7 +14,7 @@ docs:
   icon: fa-solid fa-link
 
 - title: Performance
-  icon: fa-solid fa-gauge-simple
+  icon: fa-solid fa-gauge-high
 
 - title: Security
   icon: fa-solid fa-lock
