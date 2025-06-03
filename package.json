@@ -1,8 +1,15 @@
 {
+	"name": "scangov.com",
+	"version": "1.0.0",
+	"type": "module",
+	"scripts": {
+		"build": "npx @11ty/eleventy --quiet",
+		"build-ghpages": "npx @11ty/eleventy --pathprefix=/scangov/",
+		"start": "npx @11ty/eleventy --serve --quiet"
+	},
   "dependencies": {
     "@11ty/eleventy": "^3.1.0",
     "@11ty/eleventy-navigation": "^1.0.4",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.1"
-  },
-  "type": "module"
+  }
 }
