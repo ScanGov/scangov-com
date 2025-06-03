@@ -1,3 +1,9 @@
 _site
+<<<<<<< Updated upstream
 node_modules
 Gemfile.lock
+=======
+Gemfile.lock
+package-lock.json
+node_modules/
+>>>>>>> Stashed changes
