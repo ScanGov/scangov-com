@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Demo",
+    "description": "45-minute ScanGov demo + Q&A",
+    "link": "https://calendly.com/scangov/30min",
+    "icon": "fa-solid fa-wand-magic-sparkles"
+  },
+  {
+    "title": "Consultation",
+    "description": "30-minute ScanGov advisory session",
+    "link": "https://calendly.com/scangov/new-meeting",
+    "icon": "fa-solid fa-brain"
+  },
+  {
+    "title": "Chat",
+    "description": "30-minute conversation with ScanGov",
+    "link": "https://calendly.com/scangov/scangov-chat",
+    "icon": "fa-solid fa-comment"
+  }
+]
