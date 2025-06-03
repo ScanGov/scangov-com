@@ -1,0 +1,30 @@
+[
+  {
+    "title": "About",
+    "url": "https://docs.scangov.org/about"
+  },
+  {
+    "title": "People",
+    "url": "https://docs.scangov.org/people"
+  },
+  {
+    "title": "News",
+    "url": "https://docs.scangov.org/news"
+  },
+  {
+    "title": "Press",
+    "url": "https://docs.scangov.org/press"
+  },
+  {
+    "title": "Brand",
+    "url": "https://docs.scangov.org/brand"
+  },
+  {
+    "title": "Contact",
+    "url": "https://docs.scangov.org/contact"
+  },
+  {
+    "title": "Feedback",
+    "url": "https://docs.scangov.org/feedback"
+  }
+]

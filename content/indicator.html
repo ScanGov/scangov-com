@@ -1,0 +1,14 @@
+---
+layout: "layouts/default"
+
+pagination:
+    data: indicators
+    size: 1
+    alias: indicator
+
+eleventyComputed:
+    title: "{{ indicator.name }}"
+    permalink: "/{{ indicator.url }}/"
+    description: "{{ indicator.description }}"
+---
+

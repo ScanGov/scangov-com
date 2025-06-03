@@ -1,7 +1,7 @@
 <div class="container">
   <footer class="mt-5 pt-5 border-top">
     <div class="row">
-      {% for col in site.data.nav-footer.docs %}
+      {% for col in nav-footer %}
         <div class="col-6 col-sm-6 col-md-3 mb-3">
           <ul class="nav flex-column">
             {% for item in col %}
@@ -16,7 +16,7 @@
     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
       <p class="small">
         <a href="{{ site.org-url }}" style="text-decoration: none;">ScanGov</a>
-        {{ "now" | date: "%Y" }}
+        2025
       </p>
     </div>
   </footer>
@@ -39,10 +39,8 @@
       feedbackButton.style.opacity = '0';
   });
 </script>
-{% if jekyll.environment == 'production' %}
-  {% include analytics.html %}
-{% endif %}
-{% include js.html %}
+{% include "analytics.html" %}
+{% include "js.html" %}
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll("h1").forEach(h1 => {

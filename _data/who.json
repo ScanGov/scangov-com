@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Government leaders",
+    "icon": "fa-solid fa-check-to-slot"
+  },
+  {
+    "title": "Digital service teams",
+    "icon": "fa-solid fa-laptop"
+  },
+  {
+    "title": "Website managers",
+    "icon": "fa-solid fa-window-maximize"
+  },
+  {
+    "title": "IT staff",
+    "icon": "fa-solid fa-code"
+  },
+  {
+    "title": "Third-party vendors",
+    "icon": "fa-solid fa-arrows-rotate"
+  },
+  {
+    "title": "Hosting providers",
+    "icon": "fa-solid fa-server"
+  }
+]

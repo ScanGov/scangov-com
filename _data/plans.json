@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Starter",
+    "icon": null,
+    "cta-text": "Contact us",
+    "cta-url": "https://docs.google.com/forms/d/e/1FAIpQLSeKiSG0f07leAwW1QqIMSoDIgTA92m0jVy6NADtiaoPhg4rww/viewform",
+    "checks": [
+      "1 domain"
+    ]
+  },
+  {
+    "title": "Enterprise",
+    "icon": null,
+    "cta-text": "Contact us",
+    "cta-url": "https://docs.google.com/forms/d/e/1FAIpQLSeKiSG0f07leAwW1QqIMSoDIgTA92m0jVy6NADtiaoPhg4rww/viewform",
+    "checks": [
+      "Multiple domains"
+    ]
+  }
+]
