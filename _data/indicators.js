@@ -10,6 +10,9 @@ export default async () => {
         indicators.push({
             url: key,
             name: value.displayName,
+            icon: value.icon,
+            link: key,
+            color: value.color,
             description: value.displayName
         })
     };
