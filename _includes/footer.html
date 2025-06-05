@@ -1,12 +1,12 @@
 <div class="container">
   <footer class="mt-5 pt-5 border-top">
     <div class="row">
-      {% for col in nav-footer %}
+      {% for col in nav_footer %}
         <div class="col-6 col-sm-6 col-md-3 mb-3">
           <ul class="nav flex-column">
             {% for item in col %}
               <li class="small mb-1">
-                <a href="{{ site.baseurl }}{{ item.url }}" class="nav-link p-0 text-body-secondary">{{ item.title }}</a>
+                <a href="{{ item.url }}" class="nav-link p-0 text-body-secondary">{{ item.title }}</a>
               </li>
             {% endfor %}
           </ul>
@@ -47,4 +47,4 @@
         h1.innerHTML = h1.innerHTML.replace(/\. +/g, ".<br>");
     });
   });
-</script></body></html>
+</script>
