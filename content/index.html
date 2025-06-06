@@ -6,28 +6,11 @@ modified: 2025-04-07
 author: ScanGov
 description: "Monitoring, reporting, remediation and certification."
 permalink: /
+home: true
 ---
 
 <div class="container border-bottom mb-5 pb-5">
-    <div class="row">
-        <div class="col-12">
-            <h2 class="mb-3">Indicators</h2>
-            <p class="lead">Holistically addressing government digital experience.</p>
-            <div class="card-group">
-                {% for item in indicators %}
-                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 d-flex align-items-stretch">
-                    <div class="card p-4 text-center m-1">
-                        <a href="/{{ item.link }}"><i
-                            class="fa-solid fa-{{ item.icon }} fa-3x mt-2 mb-2"
-                            aria-label="hidden"
-                            style="color: {{ item.color }}"></i>
-                        <h3 class="h5 mt-3">{{ item.name }}</h3></a>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
+    {% include "indicator_list.html" %}
 </div>
 <div class="container border-bottom mb-5 pb-5">
     <div class="row">
@@ -53,21 +36,14 @@ permalink: /
 <div class="container border-bottom mb-5 pb-5">
     <div class="row">
         <div class="col-12">
-            <h2 class="mb-3">Standards</h2>
-            <p class="lead">Based on public policy and established web protocol, guidelines and best practices.</p>
-            <div class="card-group">
-                {% for item in guidance %}
-                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex align-items-stretch">
-                    <div class="card px-4 py-3 m-1">
-                        <p class="m-0 p-0">
-                            <i class="fa-solid fa-circle-check" aria-label="hidden"></i>
-                            {{ item.title }}</p>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
+            <h2 class="mb-3">Guidance</h2>
+            <p class="lead">Public policy, web protocol, guidelines and best practices used to develop the ScanGov Standards.</p>
+            {% set standards_list = guidance %}
+            {{ guidance[0].url }}
+            {% set standards_list_type = "guidance" %}
+            {% include "standards_list.html" %}
             <p class="small mt-3">
-                <a href="https://standards.scangov.org">Standards</a>
+                <a href="https://standards.scangov.org/guidance/">Guidance</a>
             </p>
         </div>
     </div>

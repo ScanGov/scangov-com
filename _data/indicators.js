@@ -7,16 +7,23 @@ export default async () => {
     for (const key in data) {
         const value = data[key];
 
+        // Create list of all guidance under indicator
+        let guidance = [];
+        for (const standard of value.attributes) {
+            guidance = guidance.concat(standard.guidance);
+        }
+
         indicators.push({
             url: key,
             name: value.displayName,
             icon: value.icon,
             link: key,
             color: value.color,
-            description: value.displayName
+            description: value.description,
+            standards: value.attributes,
+            guidance
         })
     };
 
-    console.log(indicators)
     return indicators;
 };

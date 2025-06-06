@@ -4,6 +4,7 @@ export async function getData(url, local = false) {
     return new Promise(async (resolve) => {
         let fileLoc = url.replace('https://github.com/ScanGov/data/raw/refs/heads/main/', '');
         if (local && fs.existsSync('../data/' + fileLoc)) {
+            console.log('local', fileLoc)
             resolve(JSON.parse(fs.readFileSync('../data/' + fileLoc, 'utf8')));
         } else {
             try {
