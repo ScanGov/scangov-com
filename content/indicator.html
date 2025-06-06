@@ -16,7 +16,7 @@ eleventyComputed:
     <div class="row">
         <div class="col-12">
             <h2>Standards</h2>
-            <p>Our {{ indicator.name }} standards.</p>
+            <p>Our {{ indicator.url }} standards.</p>
             {% set standards_list = indicator.standards %}
             {% include "standards_list.html" %}
         </div>
@@ -27,7 +27,7 @@ eleventyComputed:
     <div class="row">
         <div class="col-12">
             <h2>Guidance</h2>
-            <p>Guidance we use to build our standards.</p>
+            <p>Guidance we use to build our {{ indicator.url }} standards.</p>
             {% set standards_list = indicator.guidance %}
             {% set standards_list_type = "guidance" %}
             {% include "standards_list.html" %}

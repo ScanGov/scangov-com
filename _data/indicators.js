@@ -8,10 +8,14 @@ export default async () => {
         const value = data[key];
 
         // Create list of all guidance under indicator
-        let guidance = [];
-        for (const standard of value.attributes) {
-            guidance = guidance.concat(standard.guidance);
-        }
+        const guidanceNames = [];
+        const guidance = [];
+        for (const standard of value.attributes)
+            for (const guide of standard.guidance)
+                if (!guidanceNames.includes(guide.displayName)) {
+                    guidanceNames.push(guide.displayName);
+                    guidance.push(guide);
+                }
 
         indicators.push({
             url: key,
@@ -22,7 +26,7 @@ export default async () => {
             description: value.description,
             standards: value.attributes,
             guidance
-        })
+        });
     };
 
     return indicators;
