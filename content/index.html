@@ -10,6 +10,8 @@ home: true
 ---
 
 <div class="container border-bottom mb-5 pb-5">
+    <h2 class="mb-3">Indicators</h2>
+    <p class="lead">Holistically addressing government digital experience.</p>
     {% include "indicator_list.html" %}
 </div>
 <div class="container border-bottom mb-5 pb-5">
@@ -39,7 +41,6 @@ home: true
             <h2 class="mb-3">Guidance</h2>
             <p class="lead">Public policy, web protocol, guidelines and best practices used to develop the ScanGov Standards.</p>
             {% set standards_list = guidance %}
-            {{ guidance[0].url }}
             {% set standards_list_type = "guidance" %}
             {% include "standards_list.html" %}
             <p class="small mt-3">

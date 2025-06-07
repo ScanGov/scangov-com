@@ -12,11 +12,11 @@ eleventyComputed:
     description: "{{ indicator.description }}"
 ---
 
-<div class="container border-bottom mb-5 pb-5">
+<div class="container border-bottom mt-5 mb-5 pb-5">
     <div class="row">
         <div class="col-12">
             <h2>Standards</h2>
-            <p>Our {{ indicator.url }} standards.</p>
+            <p>Our {{ indicator.name }} standards.</p>
             {% set standards_list = indicator.standards %}
             {% include "standards_list.html" %}
         </div>
@@ -27,7 +27,7 @@ eleventyComputed:
     <div class="row">
         <div class="col-12">
             <h2>Guidance</h2>
-            <p>Guidance we use to build our {{ indicator.url }} standards.</p>
+            <p class=>Guidance we use to build our {{ indicator.name }} standards.</p>
             {% set standards_list = indicator.guidance %}
             {% set standards_list_type = "guidance" %}
             {% include "standards_list.html" %}
@@ -36,5 +36,7 @@ eleventyComputed:
 </div>
 
 <div class="container">
+    <h2 class="mb-3">Indicators</h2>
+    <p>Holistically addressing government digital experience.</p>
     {% include "indicator_list.html" %}
 </div>

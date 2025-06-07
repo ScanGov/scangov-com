@@ -1,6 +1,6 @@
 <div class="card-group">
     {% for item in standards_list %}
-    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex align-items-stretch">
+    <div class="col-12 col-sm-12 col-md-6 {% if standards_list_type != "guidance" %}col-lg-4 col-xl-4{% endif %} d-flex align-items-stretch">
         <div class="card px-4 py-3 m-1">
             <p class="m-0 p-0">
                 {% if item.title %}
