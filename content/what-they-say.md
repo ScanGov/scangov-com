@@ -15,7 +15,7 @@ description: "What people say about ScanGov."
             <div class="card-quote border-bottom my-2 py-4">
                 <div class="card-body px-2">
                     <blockquote>
-                        <p>&ldquo;{{ item.quote }}&rdquo;</p>
+                        <p>&ldquo;{{ item.quote | safe }}&rdquo;</p>
                     </blockquote>
                     <footer class="text-secondary text-end">
                         {{ item.name }}<br>{{ item.title }}<br>{{ item.org }}</footer>
