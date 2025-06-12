@@ -76,6 +76,14 @@ export default async function (eleventyConfig) {
         })
     })
 
+    eleventyConfig.addFilter('dateFormat', (time) => {
+        return new Date(time).toLocaleString('en-US', {
+            month: 'long',
+            day: 'numeric',
+            year: 'numeric'
+        });
+    });
+
     eleventyConfig.addFilter('logger', (obj) => {
         console.log('logger output:', obj);
         return '';
