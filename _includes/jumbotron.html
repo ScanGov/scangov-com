@@ -14,15 +14,16 @@
                 </div>
                 {% if description %}
                 <p class="lead mb-4">{{ description }}</p>
-                <a href="/meet" class="btn btn-primary btn-lg shadow-md">Schedule demo
-                </a>
+                <a href="/plans/" class="btn btn-primary btn-lg shadow-md">Get started</a>
                 {% endif %}
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-none d-md-block">
-                <img
-                    src="/assets/img/pages/screenshot.png"
-                    class="img-fluid border rounded shadow mb-4"
-                    alt="Screenshot of ScanGov">
+                <a href="/plans/">
+                    <img
+                        src="/assets/img/pages/screenshot.png"
+                        class="img-fluid border rounded shadow mb-4"
+                        alt="Screenshot of ScanGov">
+                </a>
             </div>
         </div>
     </div>
@@ -33,7 +34,7 @@
         <h1 class="display-5 pb-2 mb-0">{{ title }}</h1>
         <p class="lead fs-4">{{ description }}</p>
         <p class="small text-secondary">
-            By <a href="https://scangov.com/">Scangov</a> /
+            By <a href="https://scangov.com/">ScanGov</a> /
             {{ date | dateFormat }}
         </p>
     </div>

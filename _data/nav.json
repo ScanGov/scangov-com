@@ -5,6 +5,11 @@
     "url": "/plans"
   },
   {
+    "title": "Meet",
+    "icon": "fa-solid fa-calendar",
+    "url": "/meet/"
+  },
+  {
     "title": "What they say",
     "icon": "fa-solid fa-comment",
     "url": "/what-they-say"
