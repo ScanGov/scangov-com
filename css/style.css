@@ -354,6 +354,7 @@ a.list-group-item:hover {
     border: var(--bs-border-color) solid 1px;
     box-shadow: var(--bs-card-shadow);
     width: 100%;
+    transition: background-color 0.5s, box-shadow 0.5s;
 }
 
 a.card {
@@ -364,9 +365,6 @@ a.card {
 .card:hover {
     background-color: var(--bs-body-secondary-bg) !important;
     box-shadow: var(--bs-box-shadow-md) !important;
-    /* Add shadow on hover */
-    transition: all 0.5s ease-in-out;
-    /* Smooth transition */
 }
 
 /* Badge */
