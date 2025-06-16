@@ -1,0 +1,10 @@
+docs_list_title: nav
+docs:
+
+- title: Plans
+  icon: fa-solid fa-crown
+  url: /plans
+
+- title: What they say
+  icon: fa-solid fa-comment
+  url: /what-they-say
