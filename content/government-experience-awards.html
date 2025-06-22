@@ -1,0 +1,53 @@
+---
+layout: "layouts/default"
+title: "Government Experience Awards"
+description: "How ScanGov supports the Center for Digital Government's GovX Awards."
+---
+
+<div class="container border-bottom mb-5 pb-5 pt-3">
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+      <img
+        src="{{ site.baseurl }}/assets/img/pages/government-experience-awards.png"
+        class="my-4 img-fluid border rounded shadow d-block d-md-none"
+        alt="Government Experience Awards">
+      <blockquote>
+        <p class="my-4">
+          “The Government Experience Awards celebrate innovation that directly impacts how the public engages with government.
+          <strong>ScanGov has been instrumental in helping us identify the best digital government experiences.</strong>
+          By incorporating ScanGov’s expanded data capabilities into our evaluation process, we’re deepening our understanding of what defines a leading digital government experience—from accessibility to laying the foundation for AI, this layer of insight is invaluable in identifying the jurisdictions setting the gold standard for service delivery.”
+        </p>
+      </blockquote>
+    </div>
+    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-none d-md-block">
+      <img
+        src="{{ site.baseurl }}/assets/img/pages/government-experience-awards.png"
+        class="my-4 img-fluid border rounded shadow"
+        alt="Government Experience Awards">
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <h2 class="mb-3">News</h2>
+    <p class="lead">ScanGov and GovX news.</p>
+    <div class="card-group">
+      {% for post in collections.posts | reverse %}
+        {% if post.data.topics | length > 0 and "GovX" in post.data.topics %}
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-stretch">
+            <div class="card mx-2 my-2 pt-2">
+              <div class="card-body">
+                <h2 class="h3 mb-3">
+                  <a href="{{ post.url }}" class="stretched-link">{{ post.data.title }}</a>
+                </h2>
+                <p class="card-text small">{{ post.data.description }}</p>
+              </div>
+              <div class="card-footer text-muted small">{{ post.data.date | dateFormat }}</div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

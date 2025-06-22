@@ -1,8 +1,3 @@
-# scangov-docs
-ScanGov documentation
+# ScanGov
 
-Run:
-
-```
-bundle exec jekyll serve
-```
+- https://scangov.com

@@ -6,6 +6,7 @@ img_og: government-experience-awards-2024.png
 img_alt: 
 topics:
   - ScanGov
+  - GovX
 ---
 
 [ScanGov](https://scangov.com) supported e.Republic’s [Center for Digital Government](https://www.govtech.com/cdg) 2024 [Government Experience Awards](https://www.govtech.com/cdg/government-experience) (GovX) judging with quantitative website scan data from [Project ScanGov](https://scangov.org).

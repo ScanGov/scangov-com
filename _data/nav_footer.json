@@ -10,11 +10,11 @@
     },
     {
       "title": "News",
-      "url": "https://docs.scangov.org/news"
+      "url": "https://scangov.com/news"
     },
     {
       "title": "Press",
-      "url": "https://docs.scangov.org/press"
+      "url": "https://scangov.com/press"
     },
     {
       "title": "Brand",
@@ -39,8 +39,8 @@
       "url": "https://standards.scangov.org"
     },
     {
-      "title": "Guidance",
-      "url": "https://standards.scangov.org/guidance"
+      "title": "Docs",
+      "url": "https://docs.scangov.org/"
     },
     {
       "title": "Data",

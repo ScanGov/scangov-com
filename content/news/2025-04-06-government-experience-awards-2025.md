@@ -9,6 +9,7 @@ img_alt: "2025 Government Experience Awards"
 #img_link: 
 topics:
   - ScanGov
+  - GovX
 ---
 
 [ScanGov](https://scangov.com) will again provide essential data support for e.Republic’s [Center for Digital Government](https://www.govtech.com/cdg)  **2025** [Government Experience Awards](https://www.govtech.com/cdg/government-experience), contributing critical quantitative metrics to the judging process.
