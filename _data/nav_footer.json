@@ -49,10 +49,6 @@
   ],
   [
     {
-      "title": "Discord",
-      "url": "https://discord.gg/aTCrf8HD"
-    },
-    {
       "title": "Substack",
       "url": "https://docs.scangov.org/subscribe"
     },
@@ -61,8 +57,16 @@
       "url": "https://linkedin.com/company/scangov"
     },
     {
+      "title": "YouTube",
+      "url": "https://www.youtube.com/@scangov"
+    },
+    {
       "title": "GitHub",
       "url": "https://github.com/scangov"
+    },
+    {
+      "title": "Discord",
+      "url": "https://discord.gg/aTCrf8HD"
     },
     {
       "title": "RSS",
