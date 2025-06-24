@@ -1,0 +1,7 @@
+{
+    "layout": "layouts/post.html",
+    "eleventyComputed": {
+        "permalink": "/news/{{ title | lower | replace(' ', '-') }}/index.html"
+    },
+    "tags": "posts"
+}
