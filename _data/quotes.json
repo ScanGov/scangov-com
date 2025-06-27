@@ -3,21 +3,21 @@
     "name": "Teri Takai",
     "title": "Chief Program Officer",
     "org": "e.Republic Center for Digital Government",
-    "url": "https://www.govtech.com/cdg",
+    "org-link": "https://www.govtech.com/cdg",
     "quote": "The Government Experience Awards celebrate innovation that directly impacts how the public engages with government. <strong>ScanGov has been instrumental in helping us identify the best digital government experiences.</strong>  By incorporating ScanGov’s expanded data capabilities into our evaluation process, we’re deepening our understanding of what defines a leading digital government experience—from accessibility to laying the foundation for AI, this layer of insight is invaluable in identifying the jurisdictions setting the gold standard for service delivery"
   },
   {
     "name": "Angelica Quirarte",
     "title": "Senior Advisor (former)",
     "org": "White House Office of Management and Budget",
-    "url": null,
+    "org-link": null,
     "quote": "<strong>ScanGov brings immediate value to governments</strong> based on the principles of accessibility, performance, and security. Any practitioner and policymaker can clearly see how their government website performs against others, while giving the teams practical ways to solve those issues and connecting them to the baseline law, rule, or standard that governs it. ScanGov takes governments beyond digital compliance. It gives decision-makers and practitioners transparency and incentivizes collaboration to immediately solve for solvable issues."
   },
   {
     "name": "David Burns",
     "title": "VP of Extended Support",
     "org": "Lullabot",
-    "url": "https://lullabot.com",
+    "org-link": "https://lullabot.com",
     "quote": "<strong>ScanGov has been a game-changer for our work on government websites.</strong> Their standards give us exactly what we need to make informed decisions. When we're prioritizing which security and accessibility issues to address, their unbiased metrics provide clear direction. I've found myself pulling up their reports during client meetings to back up our recommendations—it's much more convincing than just saying 'trust us.' Their focus on making government sites work better for everyone completely aligns with values of our team.",
     "feature": true
   },
@@ -25,7 +25,14 @@
     "name": "Rebecca Woodbury",
     "title": "CEO",
     "org": "Department of Civic Things",
-    "url": "https://deptofcivicthings.com",
+    "org-link": "https://deptofcivicthings.com",
     "quote": "<strong>ScanGov gives you a big picture view of your agency’s website</strong> as well as the ability to drill down into specific, actionable tasks. It’s more than a dashboard. It’s a to-do list for making your site accessible, findable, shareable, and secure. With the new accessibility law going into effect for state and local governments, this is an excellent tool for pinpointing your accessibility issues. ScanGov will not only help you see what’s wrong–it also gives guidance on the standards you need to meet."
+  },
+  {
+    "name": "Thao Hill",
+    "title": "CEO",
+    "org": "Govinity",
+    "org-link": "https://govinity.com",
+    "quote": "<strong>ScanGov is addressing a critical need in the govtech space by giving agencies easy-to-digest insights to systematically make their online presence more accessible.</strong> The combination of compliance monitoring with actionable prioritization is exactly what government leaders need to make informed decisions about their digital investments."
   }
 ]
