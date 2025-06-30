@@ -7,11 +7,13 @@ import pluginSyntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight'
 import pluginNavigation from '@11ty/eleventy-navigation'
 import { EleventyRenderPlugin } from '@11ty/eleventy'
 import pluginFilters from './_config/filters.js'
+import fontAwesomePlugin from "@11ty/font-awesome";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function (eleventyConfig) {
+    
+    eleventyConfig.addPlugin(fontAwesomePlugin);
     // let audits = JSON.parse(fs.readFileSync('./_data/audits.json'))
-    // eleventyConfig.addPlugin(fontAwesomePlugin)
 
     // Drafts, see also _data/eleventyDataSchema.js
     eleventyConfig.addPreprocessor('drafts', '*', (data, content) => {
