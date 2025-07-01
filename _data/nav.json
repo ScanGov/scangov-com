@@ -1,5 +1,10 @@
 [
   {
+    "title": "About",
+    "icon": "fa-solid fa-info-circle",
+    "url": "/about"
+  },
+  {
     "title": "Plans",
     "icon": "fa-solid fa-crown",
     "url": "/plans"
