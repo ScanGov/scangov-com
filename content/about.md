@@ -7,9 +7,11 @@ author: ScanGov
 description: "About ScanGov."
 ---
 
+## ScanGov
+
 [ScanGov](https://scangov.com/) is a government digital experience platform that helps public agencies monitor, improve, and maintain their websites. The service combines automated scanning with clear guidance to help government teams deliver better online services to the public through standards-based improvements.
 
-## Problem
+## The problem
 
 - Government websites often fail to meet basic accessibility, security, and performance standards
 - IT teams lack tools to monitor multiple sites and prioritize fixes effectively
@@ -17,7 +19,7 @@ description: "About ScanGov."
 - Agencies spend resources on low-impact improvements while critical issues remain unaddressed
 - Manual website audits are time-consuming and inconsistent across organizations
 
-## Solution
+## The solution
 
 - Automated scanning across eight key areas: accessibility, security, performance, SEO, content, AI-readiness, domain management, and social media
 - Real-time monitoring with letter grades (A-F) based on measurable standards
