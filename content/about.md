@@ -19,69 +19,65 @@ Digital experience teams and government leaders want to deliver great digital se
 
 ## The problem
 
-- Government digital services often fail to meet basic [accessibility](https://scangov.com/indicators/accessibility/), [security](https://scangov.com/indicators/security/), and [performance](https://scangov.com/indicators/performance/) standards
-- IT teams lack tools to monitor multiple sites and prioritize fixes effectively
-- Citizens struggle to access government services online due to poor digital experiences
-- Agencies spend resources on low-impact improvements while critical issues remain unaddressed
-- Manual audits of digital services are time-consuming and inconsistent across organizations
+- Citizens struggle with poor experiences
+- Government sites fail basic standards
+- Digital/IT teams lack holistic monitoring tools 
+- Agencies focus on low-impact improvements
+- Manual audits are time-consuming
 
 ## The solution
 
-- Automated scanning across eight key areas: [accessibility](https://scangov.com/indicators/accessibility/), [security](https://scangov.com/indicators/security/), [performance](https://scangov.com/indicators/performance/), [SEO](https://scangov.com/indicators/seo/), [content](https://scangov.com/indicators/content/), [AI-readiness](https://scangov.com/indicators/ai-friendly/), [domain management](https://scangov.com/indicators/domain/), and [social media](https://scangov.com/indicators/social/)
-- Real-time monitoring with [letter grades (A-F)](https://docs.scangov.org/grades) based on measurable standards
-- [Impact-based task prioritization](https://docs.scangov.org/impact) that focuses effort where it matters most
-- Pre-built bug reports and GitHub integration for streamlined development workflows
-- Public dashboards that provide transparency and accountability for digital services
+- Automated scanning across eight key areas
+- Real-time monitoring with letter grades
+- Impact-based task prioritization
+- Pre-built bug reports and GitHub integration
+- Public dashboards for transparency
 
 ## Why it matters
 
-- Better government digital services mean citizens can access services more easily and efficiently
-- Standardized metrics help agencies make data-driven decisions about digital improvements
-- Accessibility compliance ensures equal access to government services for all citizens
-- Security standards protect both agencies and the public from cyber threats
-- Performance improvements reduce costs and increase user satisfaction
+- Better services mean easier citizen access
+- Standardized metrics enable data-driven decisions
+- Accessibility compliance ensures equal access
+- Security standards protect agencies and public
+- Performance improvements reduce costs
 
 ## How it's going
 
 The average government digital service receives a [C grade with a 73% score](https://scangov.org/) across more than 1,100 monitored sites. This reveals significant room for improvement in serving the public effectively online.
-
-## Key features
-
-- Multi-site management: Monitor and manage multiple government websites from a single dashboard
-- Top-level overview dashboards: Get clear, high-level views of website performance across all indicators
-- Status monitoring by indicator: Track real-time progress in accessibility, security, performance, and other key areas
-- Page-level analysis: Drill down to specific page issues with detailed scanning and reporting
-- Prioritized task lists: Focus on fixes that deliver the highest return on investment for digital experience improvements
-- Pre-populated bug reports: Get ready-to-use technical reports that speed up development workflows
-- Alert system: Receive timed reminders and notifications about critical issues that need attention
-- Change tracking: View timeline of improvements and modifications across your digital properties
 
 ## Holistic digital experience
 
 [ScanGov indicators](https://scangov.com/indicators/) provide comprehensive measurement across eight essential areas that define effective government digital experiences:
 
-- [AI-friendly](https://scangov.com/indicators/ai-friendly/): Ensures content is structured so artificial intelligence systems can read and understand it properly.
-- [Accessibility](https://scangov.com/indicators/accessibility/): Measures compliance with standards that make websites usable for people with disabilities.
-- [Content](https://scangov.com/indicators/content/): Evaluates how well information is organized, labeled, and presented to users.
-- [Domain](https://scangov.com/indicators/domain/): Checks proper domain configuration and security settings for government websites.
-- [Performance](https://scangov.com/indicators/performance/): Measures how quickly pages load and respond to user interactions.
-- [SEO](https://scangov.com/indicators/seo/): Tests whether search engines can find, crawl, and index website content effectively.
-- [Security](https://scangov.com/indicators/security/): Assesses protection against common cyber threats and vulnerabilities.
-- [Social](https://scangov.com/indicators/social/): Verifies proper metadata for sharing content on social media platforms.
+- [AI-friendly](https://scangov.com/indicators/ai-friendly/): Content structured for AI systems
+- [Accessibility](https://scangov.com/indicators/accessibility/): Standards for disability compliance
+- [Content](https://scangov.com/indicators/content/): Information organization and presentation
+- [Domain](https://scangov.com/indicators/domain/): Proper domain configuration and security
+- [Performance](https://scangov.com/indicators/performance/): Page loading and response speed
+- [SEO](https://scangov.com/indicators/seo/): Search engine findability and indexing
+- [Security](https://scangov.com/indicators/security/): Protection against cyber threats
+- [Social](https://scangov.com/indicators/social/): Metadata for social media sharing
 
-## How it's going
+## Key features
 
-The average government digital service receives a [C grade with a 73% score](https://scangov.org/) across more than 1,100 monitored sites. This reveals significant room for improvement in serving the public effectively online.
+- Multi-site management from single dashboard
+- Top-level overview dashboards
+- Status monitoring by indicator
+- Page-level analysis with detailed scanning
+- Prioritized task lists for high-impact fixes
+- Pre-populated bug reports for development
+- Alert system for critical issues
+- Change tracking across digital properties
 
 ## Industry recognition
 
-ScanGov supports the [Center for Digital Government's Government Experience Awards](https://scangov.com/government-experience-awards/), providing the data foundation for identifying leading digital government experiences. As one industry professional noted, the platform's unbiased metrics provide clear direction when prioritizing security and accessibility issues.
+ScanGov supports the [Center for Digital Government's GovX Awards](https://scangov.com/government-experience-awards/), providing the data foundation for identifying leading digital government experiences. As one industry professional noted, the platform's unbiased metrics provide clear direction when prioritizing security and accessibility issues.
 
 ## Multi-tiered approach
 
 The platform operates on two levels:
-- [ScanGov commercial platform](https://scangov.com/): Paid service offering comprehensive management tools, multi-site monitoring, and development integration
-- [Project ScanGov](https://scangov.org/): Free public monitor that tracks and grades government websites for transparency
+- [ScanGov commercial platform](https://scangov.com/): Paid service with comprehensive tools
+- [Project ScanGov](https://scangov.org/): Free public monitor for transparency
 
 ## Standards by guidance
 
@@ -101,11 +97,11 @@ All measurements are based on established [guidance](https://standards.scangov.o
 
 ## Get started
 
-- [Try the free starter plan](https://scangov.com/): Scan your homepage and get basic prioritization guidance
-- [Review your current grade](https://scangov.org/): Check your site's performance on the public monitor
-- [Read the standards](https://standards.scangov.org/): Understand what gets measured and why it matters
-- [Learn about grading](https://docs.scangov.org/grades): See how scores convert to letter grades
-- [Explore indicators](https://scangov.com/indicators/): Dive into the eight measurement areas
-- [Understand impact ratings](https://docs.scangov.org/impact): Learn how to prioritize fixes
-- [View all press coverage](https://scangov.com/press/): See complete media mentions
-- [Get in touch](https://docs.scangov.org/contact): Reach out to the ScanGov team
+- [Try the free starter plan](https://scangov.com/): Basic homepage scanning
+- [Review your current grade](https://scangov.org/): Check public monitor performance
+- [Read the standards](https://standards.scangov.org/): Understand measurements and importance
+- [Learn about grading](https://docs.scangov.org/grades): Score to letter grade conversion
+- [Explore indicators](https://scangov.com/indicators/): Review eight measurement areas
+- [Understand impact ratings](https://docs.scangov.org/impact): Learn fix prioritization
+- [View all press coverage](https://scangov.com/press/): Complete media mentions
+- [Get in touch](https://docs.scangov.org/contact): Contact the ScanGov team
