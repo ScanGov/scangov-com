@@ -15,7 +15,7 @@ description: "About ScanGov."
 
 Government digital services face unique challenges that private sector tools don't address. Unlike commercial websites, government sites must serve everyone equally, follow strict [accessibility requirements](https://standards.scangov.org/), and maintain high [security standards](https://standards.scangov.org/) while operating under budget constraints.
 
-Digital experience teams and government leaders want to deliver great digital services to the public. However, there's a lot to understand and stay on top of when it comes to technical implementation. ScanGov was built by people who experienced this pain point firsthand. Even though they have years of experience building websites and applications, they weren't holistically versed on all of the key digital experience indicators and had no easy, seamless way to monitor their progress across multiple sites and standards.
+Digital experience teams and government leaders want to deliver great digital services to the public. However, there's a lot to understand and stay on top of when it comes to technical implementation. ScanGov was built by people who experienced this pain point firsthand. Even teams with years of experience building websites and applications may have blind spots. A seamless way to monitor  progress across multiple sites and standards helps keep the team on top of all aspects of digital service delivery.
 
 ## The problem
 
@@ -68,6 +68,39 @@ The average government digital service receives a [C grade with a 73% score](htt
 - Pre-populated bug reports for development
 - Alert system for critical issues
 - Change tracking across digital properties
+
+## Who it's for
+
+Everyone responsible for serving the public.
+
+### Government leaders
+- Make data-driven decisions about digital services
+- Get clear metrics to prioritize investments
+- Track progress on citizen experience improvements
+
+### Digital service teams
+- Build better user experiences with insights
+- Identify accessibility barriers and performance issues
+- Find optimization opportunities across digital properties
+
+### Website managers
+- Streamline site management with automated monitoring
+- Track compliance and manage content quality
+- Coordinate improvements across multiple websites
+
+### IT staff
+- Monitor technical performance and security standards
+- Get alerts about issues before users affected
+- Maintain consistent infrastructure standards
+
+### Third-party vendors
+- Deliver services that meet government standards
+- Access clear requirements and benchmarks
+- Ensure solutions align with public sector needs
+
+### Hosting providers
+- Support government clients with specialized expertise
+- Understand compliance requirements and performance standards
 
 ## Industry recognition
 
