@@ -5,6 +5,11 @@
     "url": "/about"
   },
   {
+    "title": "Features",
+    "icon": "fa-solid fa-fire",
+    "url": "/features"
+  },
+  {
     "title": "Plans",
     "icon": "fa-solid fa-crown",
     "url": "/plans"

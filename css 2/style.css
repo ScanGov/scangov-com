@@ -354,7 +354,6 @@ a.list-group-item:hover {
     border: var(--bs-border-color) solid 1px;
     box-shadow: var(--bs-card-shadow);
     width: 100%;
-    transition: background-color 0.5s, box-shadow 0.5s, border 0.5s;
 }
 
 a.card {
@@ -365,12 +364,9 @@ a.card {
 .card:hover {
     background-color: var(--bs-body-secondary-bg) !important;
     box-shadow: var(--bs-box-shadow-md) !important;
-}
-
-.card-plans:hover {
-    background-color: var(--bs-body-secondary-bg) !important;
-    border: var(--bs-link-color) solid 1px;
-    box-shadow: var(--bs-box-shadow-md) !important;
+    /* Add shadow on hover */
+    transition: all 0.5s ease-in-out;
+    /* Smooth transition */
 }
 
 /* Badge */
@@ -582,6 +578,10 @@ h1 {
     margin-bottom: 1em;
 }
 
+h1 {
+    white-space: pre-wrap;
+}
+
 h1::before {
     content: "";
 }
@@ -590,17 +590,15 @@ h1::after {
     content: "";
 }
 
-/* add to components */
-
 .active {
     --bs-nav-pills-link-active-bg: var(--bs-btn-primary-bg) !important;
     color: var(--bs-body-bg) !important;
 }
 
-.nav-pills .active i, .nav-pills .active svg {
+.active i, .active svg {
     color: var(--bs-body-bg) !important;
 }
 
-.nav-pills .active, .nav-pills .active i, .nav-pills .active svg {
+.nav-pills .active {
     --bs-link-color: var(--bs-body-bg);
 }

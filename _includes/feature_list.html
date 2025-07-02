@@ -1,0 +1,16 @@
+<div class="card-group">
+  {% for item in features %}
+    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
+      <div class="card p-3 m-2">
+        <h3 class="h4">{{ item.title }}</h3>
+        <a href="/features/{{ item.title | slugify }}"><img
+            src="{{ site.baseurl }}/assets/img/pages/{{ item.img }}"
+            class="mt-2 mb-3 img-fluid border rounded shadow"
+            alt="{{ item.title }}"></a>
+        {% if item.description %}
+          <p class="card-text">{{ item.description }}</p>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</div>

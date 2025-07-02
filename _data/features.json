@@ -1,42 +1,121 @@
 [
   {
-    "title": "Sites",
+    "title": "Sites dashboard",
     "description": "Multi-site management",
-    "img": "sites.png"
+    "img": "sites.png",
+    "video": "-THbBQxi-FY",
+    "items": [
+      {
+        "title": "Add multiple domains"
+      },
+      {
+        "title": "Quick view of overall grades/scores"
+      },
+      {
+        "title": "Drill down to individual domains"
+      }
+    ]
   },
   {
-    "title": "Dashboards",
+    "title": "Domain dashboards",
     "description": "Top-level overview",
-    "img": "dashboards.png"
+    "img": "dashboards.png",
+    "video": "-THbBQxi-FY",
+    "items": [
+      {
+        "title": "Top-level view of domain indicator grades/scores"
+      },
+      {
+        "title": "Drill down to individual indicator grades/scores"
+      }
+    ]
   },
   {
     "title": "Monitoring",
     "description": "Status by indicator",
-    "img": "monitoring.png"
+    "img": "monitoring.png",
+    "video": "-THbBQxi-FY",
+    "items": [
+      {
+        "title": "Domain indicator grade/score"
+      },
+      {
+        "title": "Number of indicator tasks"
+      },
+      {
+        "title": "List of indicator standards"
+      },
+      {
+        "title": "Indicator standards impact scores"
+      }
+    ]
   },
   {
     "title": "Pages",
     "description": "Page-level analysis",
-    "img": "page.png"
+    "img": "page.png",
+    "video": "-THbBQxi-FY",
+    "items": [
+      {
+        "title": "List of site pages"
+      },
+      {
+        "title": "Number of issues per page"
+      },
+      {
+        "title": "Filter pages issues byindicator"
+      }
+    ]
   },
   {
-    "title": "Tasks",
+    "title": "Tasklist",
     "description": "Prioritized by ROI",
-    "img": "tasks.png"
+    "img": "tasks.png",
+    "video": "-THbBQxi-FY",
+    "items": [
+      {
+        "title": "Tasks prioritized by impact"
+      },
+      {
+        "title": "Number of issues per standard"
+      },
+      {
+        "title": "Filter tasks by indicator"
+      }
+    ]
   },
   {
-    "title": "Bug reports",
-    "description": "Pre-populated bug reports",
-    "img": "bug-report.png"
+    "title": "Issue reports",
+    "description": "Pre-populated issue reports",
+    "img": "bug-report.png",
+    "video": "-THbBQxi-FY",
+    "items": [
+      {
+        "title": "Comprehensive, pre-populated issue reports"
+      },
+      {
+        "title": "Copy issue details to clipboard"
+      },
+      {
+        "title": "Submit issues to GitHub"
+      }
+    ]
   },
   {
-    "title": "Alerts",
-    "description": "Timed reminders",
-    "img": "alerts.png"
-  },
-  {
-    "title": "Changelog",
-    "description": "Timeline of changes",
-    "img": "changelog.png"
+    "title": "Scorecards",
+    "description": "Public view of domain digital experience grades/scores",
+    "img": "scorecards.png",
+    "video": "-THbBQxi-FY",
+    "items": [
+      {
+        "title": "Public view of domain digital experience grades"
+      },
+      {
+        "title": "Share status with the public"
+      },
+      {
+        "title": "Create a culture of transparency/accountability"
+      }
+    ]
   }
 ]
