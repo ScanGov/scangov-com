@@ -45,6 +45,28 @@ Digital experience teams and government leaders want to deliver great digital se
 
 The average government digital service receives a [C grade with a 73% score](https://scangov.org/) across more than 1,100 monitored sites. This reveals significant room for improvement in serving the public effectively online.
 
+## Guidance
+
+The [ScanGov guidance](https://standards.scangov.org/guidance/) draws from established public policy, web protocols, and industry best practices to create actionable standards for government websites. This evidence-based approach ensures that recommendations align with government requirements and proven methods rather than generic web advice.
+
+Examples:
+- [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/WCAG21/quickref/) - Rules for making websites accessible
+- [U.S. Web Design System](https://designsystem.digital.gov/) - Improves accessibility, consistency and user experience
+- [Google Search Console](https://developers.google.com/search) - Resources to improve site search rankings
+- [Cybersecurity and Infrastructure Security Agency (CISA)](https://www.cisa.gov/cybersecurity-best-practices) - Voluntary, high-impact security practices
+- [Core Web Vitals](https://web.dev/vitals/) - Google's speed, interaction, and stability metrics
+
+## Standards
+
+The [ScanGov standards](https://standards.scangov.org/) translate established guidance into specific, measurable requirements for government websites. These standards provide clear benchmarks that help agencies understand exactly what needs to be implemented to improve their digital services.
+
+Examples:
+- [Site allows indexing by AI agents](https://standards.scangov.org/) - Makes content available for search engines and AI systems
+- [Page content loads within 2.5 seconds](https://standards.scangov.org/) - Ensures fast loading times for better user experience
+- [Text has sufficient color contrast](https://standards.scangov.org/) - Improves readability for users with visual impairments
+- [Site uses HTTPS encryption](https://standards.scangov.org/) - Protects user data with secure connections
+- [Links have descriptive text](https://standards.scangov.org/) - Helps users understand where links lead before clicking
+
 ## Holistic digital experience
 
 [ScanGov indicators](https://scangov.com/indicators/) provide comprehensive measurement across eight essential areas that define effective government digital experiences:
@@ -111,10 +133,6 @@ ScanGov supports the [Center for Digital Government's GovX Awards](https://scang
 The platform operates on two levels:
 - [ScanGov commercial platform](https://scangov.com/): Paid service with comprehensive tools
 - [Project ScanGov](https://scangov.org/): Free public monitor for transparency
-
-## Standards by guidance
-
-All measurements are based on established [guidance](https://standards.scangov.org/guidance), [public policy, web protocols, and industry best practices](https://standards.scangov.org/). This ensures recommendations align with government requirements rather than generic web advice.
 
 ## Pricing accessibility
 
