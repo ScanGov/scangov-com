@@ -3,7 +3,7 @@
     "title": "Sites dashboard",
     "description": "Multi-site management",
     "img": "sites.png",
-    "video": "-THbBQxi-FY",
+    "video": "",
     "items": [
       {
         "title": "Add multiple domains"
@@ -20,7 +20,7 @@
     "title": "Domain dashboards",
     "description": "Top-level overview",
     "img": "dashboards.png",
-    "video": "-THbBQxi-FY",
+    "video": "",
     "items": [
       {
         "title": "Top-level view of domain indicator grades/scores"
@@ -31,10 +31,10 @@
     ]
   },
   {
-    "title": "Monitoring",
+    "title": "Indicator monitoring",
     "description": "Status by indicator",
     "img": "monitoring.png",
-    "video": "-THbBQxi-FY",
+    "video": "",
     "items": [
       {
         "title": "Domain indicator grade/score"
@@ -54,7 +54,7 @@
     "title": "Pages",
     "description": "Page-level analysis",
     "img": "page.png",
-    "video": "-THbBQxi-FY",
+    "video": "",
     "items": [
       {
         "title": "List of site pages"
@@ -71,7 +71,7 @@
     "title": "Tasklist",
     "description": "Prioritized by ROI",
     "img": "tasks.png",
-    "video": "-THbBQxi-FY",
+    "video": "",
     "items": [
       {
         "title": "Tasks prioritized by impact"
@@ -88,7 +88,7 @@
     "title": "Issue reports",
     "description": "Pre-populated issue reports",
     "img": "bug-report.png",
-    "video": "-THbBQxi-FY",
+    "video": "",
     "items": [
       {
         "title": "Comprehensive, pre-populated issue reports"
@@ -105,7 +105,7 @@
     "title": "Scorecards",
     "description": "Public view of domain digital experience grades/scores",
     "img": "scorecards.png",
-    "video": "-THbBQxi-FY",
+    "video": "",
     "items": [
       {
         "title": "Public view of domain digital experience grades"
