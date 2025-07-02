@@ -5,11 +5,8 @@
         <h3 class="h4">{{ item.title }}</h3>
         <a href="/features/{{ item.title | slugify }}"><img
             src="{{ site.baseurl }}/assets/img/pages/{{ item.img }}"
-            class="mt-2 mb-3 img-fluid border rounded shadow"
+            class="mt-2 mb-3 img-fluid border rounded shadow stretched-link"
             alt="{{ item.title }}"></a>
-        {% if item.description %}
-          <p class="card-text">{{ item.description }}</p>
-        {% endif %}
       </div>
     </div>
   {% endfor %}
