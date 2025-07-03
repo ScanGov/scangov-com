@@ -1,11 +1,15 @@
-<!-- Bootstrap -->
-<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
-  <!-- Custom CSS -->
-<link href="/css/style.css" rel="stylesheet">
-<link href="/css/scangov.css" rel="stylesheet">
-<link href="/css/plyr.css" rel="stylesheet">
-  <!-- Font Awesome -->
+<!-- capture the CSS content as a Nunjucks variable -->
+{% set css %}
+  {% include "public/css/code.css" %} 
+  {% include "public/css/plyr.css" %} 
+  {% include "public/css/scangov.css" %} 
+  {% include "public/css/style.css" %} 
+{% endset %}
+<!-- feed it through our cssmin filter to minify -->
+<style>
+	{{ css | cssmin | safe }}
+</style>
 <link
   rel="stylesheet"
-  href="/assets/font-awesome/css/all.min.css"
+  href="/purged.css"
   crossorigin="anonymous">
