@@ -26,7 +26,8 @@ export default async () => {
             description: value.description,
             standards: value.attributes,
             guidance,
-            videos: value.videos
+            videos: value.videos,
+            ogImage: value.ogImage
         });
     };
 
