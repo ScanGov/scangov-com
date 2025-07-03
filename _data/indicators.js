@@ -25,7 +25,8 @@ export default async () => {
             color: value.color,
             description: value.description,
             standards: value.attributes,
-            guidance
+            guidance,
+            videos: value.videos
         });
     };
 

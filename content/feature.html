@@ -17,16 +17,14 @@ eleventyComputed:
     <div class="row">
       <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
       <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-        {% if feature.video %}
-          <h2 class="mb-3">Watch</h2>
-          <p class="">Learn more about ScanGov {{ feature.title }}:</p>
-          <div class="ratio ratio-16x9 mb-4 border">
-            <iframe
-              src="https://www.youtube.com/embed/{{ feature.video }}?modestbranding=1&rel=0"
-              title="{{ feature.title }}"
-              allowfullscreen></iframe>
-          </div>
-        {% endif %}
+        <h2 class="mb-3">Watch</h2>
+        <p class="">Learn more about ScanGov {{ feature.title }}:</p>
+        <div class="ratio ratio-16x9 mb-4 border">
+          <iframe
+            src="https://www.youtube.com/embed/{{ feature.video }}?modestbranding=1&rel=0"
+            title="{{ feature.title }}"
+            allowfullscreen></iframe>
+        </div>
       </div>
       <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
     </div>
