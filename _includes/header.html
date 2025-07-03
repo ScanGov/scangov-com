@@ -56,8 +56,8 @@
         {% else %}
         <meta property="twitter:image" content="{{ site.url }}/assets/img/avatar-twitter.png">
         {% endif %}
-        {% if img-og %}
-        <meta property="og:image" content="{{ site.url }}/assets/img/{{ img-path }}/{{ img-og }}">
+        {% if ogImage %}
+        <meta property="og:image" content="{{ ogImage }}">
         {% else %}
         <meta property="og:image" content="{{ site.url }}/assets/img/avatar-og.png">
         {% endif %}

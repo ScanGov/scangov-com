@@ -10,6 +10,7 @@ eleventyComputed:
     title: "{{ indicator.name }}"
     permalink: "/{{ indicator.url }}/"
     description: "{{ indicator.description }}"
+    ogImage: "{{ indicator.ogImage }}"
 ---
 
 {% for item in indicator.videos %}
