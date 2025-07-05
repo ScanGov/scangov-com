@@ -11,6 +11,8 @@
 		"@11ty/eleventy": "^3.1.0",
 		"@11ty/eleventy-navigation": "^1.0.4",
 		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.1",
-		"@11ty/font-awesome": "github:aaronhans/eleventy-plugin-font-awesome"
+		"@11ty/font-awesome": "github:aaronhans/eleventy-plugin-font-awesome",
+		"clean-css": "^5.3.3",
+		"purgecss": "^7.0.2"
 	}
 }

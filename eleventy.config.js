@@ -8,6 +8,9 @@ import pluginNavigation from '@11ty/eleventy-navigation'
 import { EleventyRenderPlugin } from '@11ty/eleventy'
 import pluginFilters from './_config/filters.js'
 import fontAwesomePlugin from "@11ty/font-awesome";
+import { PurgeCSS } from 'purgecss'
+import * as fs from 'fs';
+import CleanCSS from "clean-css";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function (eleventyConfig) {
@@ -104,6 +107,10 @@ export default async function (eleventyConfig) {
         return encodeURIComponent(param.trim());
     })
 
+    eleventyConfig.addFilter("cssmin", function (code) {
+		return new CleanCSS({}).minify(code).styles;
+	});
+
     // Features to make your build faster (when you need them)
 
     // If your passthrough copy gets heavy and cumbersome, add this line
@@ -111,6 +118,28 @@ export default async function (eleventyConfig) {
     // https://www.11ty.dev/docs/copy/#emulate-passthrough-copy-during-serve
 
     // eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
+
+    // this can only take a single css file as an arg to pull from so concatenate all used css files in 11ty before
+    // then use that as source for this purge
+    eleventyConfig.on(
+        'eleventy.after',
+        async ({ dir, results, runMode, outputMode }) => {
+            console.log('writing purge css file')
+            const purgeCSSResults = await new PurgeCSS().purge({
+                content: [
+                    '_site/index.html',
+                    '_site/**/index.html',
+                ],
+                css: ['_site/bundle.css'],
+            })
+
+            fs.writeFileSync(
+                './_site/purged.css',
+                purgeCSSResults[0].css,
+                'utf8',
+            )
+        },
+    )
 }
 
 export const config = {
