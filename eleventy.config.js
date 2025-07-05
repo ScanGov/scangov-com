@@ -119,16 +119,18 @@ export default async function (eleventyConfig) {
 
     // eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
 
-        eleventyConfig.on(
+    // this can only take a single css file as an arg to pull from so concatenate all used css files in 11ty before
+    // then use that as source for this purge
+    eleventyConfig.on(
         'eleventy.after',
         async ({ dir, results, runMode, outputMode }) => {
+            console.log('writing purge css file')
             const purgeCSSResults = await new PurgeCSS().purge({
                 content: [
                     '_site/index.html',
                     '_site/**/index.html',
                 ],
-                css: ['public/assets/bootstrap/css/bootstrap.min.css',
-                    'public/assets/font-awesome/css/all.min.css'],
+                css: ['_site/bundle.css'],
             })
 
             fs.writeFileSync(

@@ -1,14 +1,3 @@
-<!-- capture the CSS content as a Nunjucks variable -->
-{% set css %}
-  {% include "public/css/code.css" %} 
-  {% include "public/css/plyr.css" %} 
-  {% include "public/css/scangov.css" %} 
-  {% include "public/css/style.css" %} 
-{% endset %}
-<!-- feed it through our cssmin filter to minify -->
-<style>
-	{{ css | cssmin | safe }}
-</style>
 <link
   rel="stylesheet"
   href="/purged.css"
