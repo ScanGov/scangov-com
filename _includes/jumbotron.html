@@ -8,7 +8,9 @@
           {% endif %}
           <div class="d-block d-md-none">
             <a href="#plans"><img
-                src="/assets/img/pages/screenshot.png"
+                fetchpriority="high"
+                eleventy:widths="634"
+                src="/../public/assets/img/pages/screenshot.png"
                 class="img-fluid border rounded shadow"
                 alt="Screenshot of ScanGov"></a>
           </div>
@@ -20,7 +22,8 @@
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-none d-md-block">
           <a href="/plans/">
             <img
-              src="/assets/img/pages/screenshot.png"
+              eleventy:widths="634"
+              src="/../public/assets/img/pages/screenshot.png"
               class="img-fluid border rounded shadow mb-4"
               alt="Screenshot of ScanGov">
           </a>
@@ -56,7 +59,7 @@
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
           <img
-            src="{{ site.baseurl }}/assets/img/pages/{{ feature.img }}"
+            src="/../public/assets/img/pages/{{ feature.img }}"
             class="img-fluid border rounded shadow"
             alt="{{ feature.title }}">
         </div>
