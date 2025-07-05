@@ -127,7 +127,8 @@ export default async function (eleventyConfig) {
                 css: ['_site/bundle.css'],
             })
 
-			return content.replace('<!--put inlined css here-->',`<style>${purgeCSSResults[0].css}</style>`);
+            let minifiedCSS = new CleanCSS({}).minify(purgeCSSResults[0].css).styles;
+			return content.replace('<!--put inlined css here-->',`<style>${minifiedCSS}</style>`);
 		}
 
 		// If not an HTML output, return content as-is
@@ -156,29 +157,7 @@ export default async function (eleventyConfig) {
     // to emulate the file copy on the dev server. Learn more:
     // https://www.11ty.dev/docs/copy/#emulate-passthrough-copy-during-serve
 
-    // eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
-
-    // this can only take a single css file as an arg to pull from so concatenate all used css files in 11ty before
-    // then use that as source for this purge
-    eleventyConfig.on(
-        'eleventy.after',
-        async ({ dir, results, runMode, outputMode }) => {
-            console.log('writing purge css file')
-            const purgeCSSResults = await new PurgeCSS().purge({
-                content: [
-                    '_site/index.html',
-                    '_site/**/index.html',
-                ],
-                css: ['_site/bundle.css'],
-            })
-
-            fs.writeFileSync(
-                './_site/purged.css',
-                purgeCSSResults[0].css,
-                'utf8',
-            )
-        },
-    )
+    // eleventyConfig.setServerPassthroughCopyBehavior("passthrough");    
 }
 
 export const config = {
