@@ -1,47 +1,54 @@
-@import url('code.css');
-
 @font-face {
     font-family: "Public Sans ExtraBold";
+    font-display: swap;
     src: url("/assets/fonts/public-sans/ttf/PublicSans-ExtraBold.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Public Sans Bold";
+    font-display: swap;
     src: url("/assets/fonts/public-sans/ttf/PublicSans-Bold.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Public Sans Regular";
+    font-display: swap;
     src: url("/assets/fonts/public-sans/ttf/PublicSans-Regular.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Public Sans Light";
+    font-display: swap;
     src: url("/assets/fonts/public-sans/ttf/PublicSans-Light.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Public Sans Thin";
+    font-display: swap;
     src: url("/assets/fonts/public-sans/ttf/PublicSans-Thin.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "JetBrains Mono Medium";
+    font-display: swap;
     src: url("/assets/fonts/jetbrains-mono/JetBrainsMono-Medium.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "JetBrains Mono ExtraBold";
+    font-display: swap;
     src: url("/assets/fonts/jetbrains-mono/JetBrainsMono-ExtraBold.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Playfair Display Regular";
+    font-display: swap;
     src: url("/assets/fonts/playfair-display/PlayfairDisplay-Regular.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Source Serif Regular";
+    font-display: swap;
     src: url("/assets/fonts/source-serif/SourceSerifPro-Regular.ttf") format("truetype");
 }
 
