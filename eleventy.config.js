@@ -11,12 +11,15 @@ import fontAwesomePlugin from "@11ty/font-awesome";
 import { PurgeCSS } from 'purgecss'
 import * as fs from 'fs';
 import CleanCSS from "clean-css";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import htmlmin from "html-minifier-terser";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function (eleventyConfig) {
     
     eleventyConfig.addPlugin(fontAwesomePlugin);
     // let audits = JSON.parse(fs.readFileSync('./_data/audits.json'))
+    eleventyConfig.addPlugin(eleventyImageTransformPlugin);
 
     // Drafts, see also _data/eleventyDataSchema.js
     eleventyConfig.addPreprocessor('drafts', '*', (data, content) => {
@@ -109,6 +112,42 @@ export default async function (eleventyConfig) {
 
     eleventyConfig.addFilter("cssmin", function (code) {
 		return new CleanCSS({}).minify(code).styles;
+	});
+
+    eleventyConfig.addTransform("cssinliner", async function (content) {
+		if ((this.page.outputPath || "").endsWith(".html")) {
+
+            const purgeCSSResults = await new PurgeCSS().purge({
+                content: [
+                    {
+                        raw: content,
+                        extension: 'html' // Indicate the content type
+                    }
+                ],
+                css: ['_site/bundle.css'],
+            })
+
+			return content.replace('<!--put inlined css here-->',`<style>${purgeCSSResults[0].css}</style>`);
+		}
+
+		// If not an HTML output, return content as-is
+		return content;
+	});
+
+    eleventyConfig.addTransform("htmlmin", async function (content) {
+		if ((this.page.outputPath || "").endsWith(".html")) {
+
+			let minified = htmlmin.minify(content, {
+				useShortDoctype: true,
+				removeComments: true,
+				collapseWhitespace: true,
+			});
+
+			return minified;
+		}
+
+		// If not an HTML output, return content as-is
+		return content;
 	});
 
     // Features to make your build faster (when you need them)
