@@ -38,15 +38,13 @@
     else
       feedbackButton.style.opacity = '0';
   });
+
+  document.querySelector('button.navbar-toggler').addEventListener('click',function(e) {
+    let el = document.querySelector(this.dataset.target);
+    console.log(el)
+    el.classList.toggle('show');
+  })
 </script>
 {% include "analytics.html" %}
-{% include "js.html" %}
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll("h1").forEach(h1 => {
-        h1.innerHTML = h1.innerHTML.replace(/\. +/g, ".<br>");
-    });
-  });
-</script>
 <!-- outputs all the icons used on the page -->
 {% getBundle "fontawesome" %}

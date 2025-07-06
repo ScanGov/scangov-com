@@ -110,6 +110,11 @@ export default async function (eleventyConfig) {
         return encodeURIComponent(param.trim());
     })
 
+    eleventyConfig.addFilter('breakAllWords', (param) => {
+        return param.replace(/\. +/g, ".<br>");
+    })
+    
+
     eleventyConfig.addFilter("cssmin", function (code) {
 		return new CleanCSS({}).minify(code).styles;
 	});
