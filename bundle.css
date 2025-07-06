@@ -1998,7 +1998,7 @@ a.plyr__control {
     --bs-font-monospace: "JetBrains Mono Medium", monospace;
     --bs-font-light: "Public Sans Light", sans-serif;
     --bs-heading-font-family: "Public Sans Bold", sans-serif;
-    --bs-font-bold: "Public Sans Bold", sans-serif;
+    --bs-font-bold: "Public Sans Bold", Helvetica;
     --bs-font-regular: "Public Sans Regular", sans-serif;
     --bs-font-serif: "Source Serif Regular", serif;
     --bs-font-thin: "Public Sans Thin", sans-serif;
