@@ -54,31 +54,31 @@ eleventyComputed:
     </div>
   </div>
 </div>
-
 <div class="container border-bottom mb-5 pb-5">
   <div class="row">
     <div class="col-12">
-      <h2>Related videos</h2>
-      
+      <h2>Videos</h2>
       <div class="card-group">
         {% for item in indicator.standards %}
           {% for vid in item.videos %}
             <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
               <div class="card p-3 m-2">
-                <h3 class="h4">{{ vid.title }}</h3>
                 <a href="/topic/{{ indicator.url }}/scan/{{ item.key }}/">
-                  <img width="360" src="/../public/{{ vid.thumb }}" alt="graphic containing the words {{ vid.title }}">
+                  <img
+                    width="360"
+                    src="/../public/{{ vid.thumb }}"
+                    alt="Image containing the words {{ vid.title }}"
+                    class="border img-fluid">
                 </a>
+                <h3 class="h5 mt-3">{{ vid.title }}</h3>
               </div>
-            </div>        
+            </div>
           {% endfor %}
         {% endfor %}
-      </div>    
+      </div>
     </div>
   </div>
 </div>
-
-
 <div class="container">
   <h2 class="mb-3">Indicators</h2>
   <p>Holistically addressing government digital experience.</p>
