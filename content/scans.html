@@ -1,0 +1,41 @@
+---
+layout: "layouts/default"
+
+pagination:
+    data: scans
+    size: 1
+    alias: scan
+
+eleventyComputed:
+    title: "{{ scan.displayName }}"
+    permalink: "/topic/{{ scan.topic }}/scan/{{ scan.key }}/"
+    description: "{{ scan.description }}"
+    ogImage: "{{ scan.ogImage }}"
+---
+
+{% for item in scan.videos %}
+  <div class="container border-bottom mb-5 pb-5">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
+      <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+        <h2 class="mb-3">{{ item.title }}</h2>
+        <p class="">{{ item.description }}:</p>
+        <div class="ratio ratio-16x9 mb-4 border">
+          <iframe
+            src="https://www.youtube.com/embed/{{ item.id }}?modestbranding=1&rel=0"
+            title="{{ item.title }}"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
+    </div>
+  </div>
+
+  <div class="container border-bottom mb-5 pb-5">
+    <div class="row">      
+      <h2>Transcript</h2>
+      {% set includeFile = "transcripts/"+scan.key+".html" %}
+      {% include includeFile %}
+    </div>
+  </div>
+{% endfor %}

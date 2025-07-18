@@ -1,0 +1,21 @@
+<p>I'm gonna go over aspects of performance being tracked and show you how we use our own tools to discover performance issues and how we fix them on our sites.</p> 
+  
+<p>One of the reasons you should care about performance is that good core web vital scores are a Google search ranking factor. Performance is also directly correlated with improved conversion metrics. People use your web application successfully more often when it performs well. I love how people in government are deeply committed to meeting web accessibility standards, so their online services work for everybody. Performance is also an equity issue because if you're using a cheap, less powerful device, you have a radically different experience than someone on the latest hardware. A few years ago, when I loaded the state's new benefits portal on a cheap Android phone, even though I was on a high bandwidth connection, it took a whole minute to become fully interactive. There was a bunch of code being delivered to the client, which really taxed the device. This is an extreme example of poor performance, but there's a natural tendency for front-end bundle sizes to grow as features are added, and if you aren't monitoring performance, it probably degrades over time.</p>
+
+<h3>Open source data on scangov.org</h3>
+
+<p>Performance failures are pretty common in all the sites we track. This is the performance tab of scangov.org. We run regular scans on thousands of sites, and you can see that on average they're failing one of the 5 performance metrics. The aspects being measured are time to first byte, first contentful paint, largest contentful paint, cumulative layout shift, and interaction to next paint. I'll review our site's performance on time to first byte in this video and cover the other metrics later.</p>
+
+<h3>Measurement methodolofy</h3>
+
+<p>When ScanGov is measuring performance, the process we use is first to query the Chrome user experience report. If if we can't get any real metrics from there, we'll run our own performance audit. The CrUX is an open data set Google provides containing real user measurements from people visiting sites on mobile and desktop. When we do deep scans of sites, we find CrUX data on the top pages, but end up having to run our own lab tests on the rest of the URLs.</p>
+
+<h3>TTFB</h3>
+<p>So time to first byte. This is how long it takes your server to respond to the URL request and deliver the initial document. This metric isn't listed as part of the latest core web vitals, but it is a critical metric because if this is slow, you're in trouble for all subsequent measurements. It's also a great illustration of where your performance problems lie. A slow TTFB implicates your server side infrastructure. We need to figure out the bottleneck that's preventing the initial document composition and delivery. So you need more caching, more servers, more efficient database connection. These type of issues are separate from the subsequent metrics, which all deal with slowdowns caused by asset delivery and execution on the client. We want to see time to first byte complete in 0.8 seconds.</p>
+
+<h3>Static site generation with 11ty</h3>
+
+<p>In the case of scan sites like scanov.com or standards.scangov.org, we're using static site generation with 11ty, so we aren't seeing any issues with time to first byte. I love the 11ty project. It's so developer friendly and performance conscious. Static site generation is perfect for simple sites, and when combined with web components and clean APIs, can be a great part of more complex applications. CA.gov is an example of a high traffic site that uses 11ty. It is consistently at the top of our scangov.org leaderboards. You can see it's number one overall, and it has a really good performance score. Also, when I was working for the state of California, we used 11ty for the COVID response site. So, we didn't have to worry about all the traffic spikes during shutdown announcements.</p>
+  
+<h3>What is next</h3>
+<p>TTFB is one of the 5 performance metrics for tracking for all sites at Skanga. Next, I'll go over the contentful paint performance metrics. These are measurements where our sites were failing, so I'll go over what changes we made to improve. Check out scangov.com to get a free evaluation of the entire digital experience of your site.</p>

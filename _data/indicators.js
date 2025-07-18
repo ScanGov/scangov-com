@@ -10,6 +10,7 @@ export default async () => {
         // Create list of all guidance under indicator
         const guidanceNames = [];
         const guidance = [];
+        
         for (const standard of value.attributes)
             for (const guide of standard.guidance)
                 if (!guidanceNames.includes(guide.displayName)) {
@@ -30,6 +31,7 @@ export default async () => {
             ogImage: value.ogImage
         });
     };
+    console.log(indicators)
 
     return indicators;
 };
