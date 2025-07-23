@@ -15,9 +15,9 @@
     "url": "/plans"
   },
   {
-    "title": "Meet",
-    "icon": "fa-solid fa-calendar",
-    "url": "/meet/"
+    "title": "Services",
+    "icon": "fa-solid fa-spray-can-sparkles",
+    "url": "/services/"
   },
   {
     "title": "What they say",
