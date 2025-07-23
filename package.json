@@ -6,7 +6,7 @@
 		"build": "npm run concat:css && npx @11ty/eleventy --quiet",
 		"build-ghpages": "npm run concat:css && npx @11ty/eleventy --pathprefix=/scangov/",
 		"concat:css": "cat public/css/code.css public/css/plyr.css public/css/scangov.css public/assets/bootstrap/css/bootstrap.css public/assets/font-awesome/css/all.css > scripts/bundle.css",
-		"start": "npm run concat:css && npx @11ty/eleventy --serve --quiet"
+		"start": "node scripts/getcomponents.js && npm run concat:css && npx @11ty/eleventy --serve --quiet"
 	},
 	"dependencies": {
 		"@11ty/eleventy": "^3.1.0",

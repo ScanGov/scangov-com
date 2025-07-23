@@ -13,6 +13,53 @@
     --bs-link-hover-color-rgb: 112, 225, 123;
     --bs-selection-bg: var(--bs-link-color);
     --bs-selection-color: var(--bs-body-bg);
+    --bs-font-monospace: "JetBrains Mono Medium", monospace;
+    --bs-font-light: "Public Sans Light", sans-serif;
+    --bs-font-bold: "Public Sans Bold", sans-serif;
+    --bs-font-regular: "Public Sans Regular", sans-serif;
+    --bs-font-serif: "Merriweather Light", sans-serif;
+    --bs-font-thin: "Public Sans Thin", sans-serif;
+    --bs-font-extra-bold: "Public Sans ExtraBold", sans-serif;
+    --bs-font-sans-serif: "Public Sans Regular", sans-serif;
+}
+
+/* General */
+
+body {
+    color: var(--bs-body-color);
+    background: var(--bs-body-bg);
+    background-color: var(--bs-body-bg);
+    font-family: var(--bs-font-sans-serif);
+}
+
+strong {
+    font-family: var(--bs-font-bold);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+    font-family: var(--bs-font-bold);
+}
+
+/* Selection */
+
+::selection {
+    background-color: var(--bs-selection-bg);
+    color: var(--bs-selection-color);
 }
 
 /* Navbar */
@@ -21,6 +68,14 @@
     max-width: 35px;
     width: 100%;
     height: 100%;
+}
+
+/* Breadcrumb */
+
+.breadcrumb-item a, .breadcrumb-item a:visited {
+    color: var(--bs-link-color);
+    font-family: var(--bs-font-bold);
+    text-decoration: none;
 }
 
 /* Icons */
@@ -61,8 +116,16 @@
     color: #face00 !important;
 }
 
+.fa-book-open-reader {
+    color: #c3ebfa !important;
+}
+
 .fa-brain {
     color: #fdb8ae !important;
+}
+
+.fa-building {
+    color: #b7f5bd !important;
 }
 
 .fa-bullhorn {
@@ -75,6 +138,10 @@
 
 .fa-certificate {
     color: #ffbe2e !important;
+}
+
+.fa-check {
+    color: #e7f434 !important;
 }
 
 .fa-check-to-slot {
@@ -119,6 +186,10 @@
     color: #7efbe1 !important;
 }
 
+.fa-dolly {
+    color: #f5fbc1 !important;
+}
+
 .fa-envelope-open-text {
     color: #7efbe1 !important;
 }
@@ -141,6 +212,10 @@
 
 .fa-filter {
     color: #cbc4f2;
+}
+
+.fa-filter-circle-xmark {
+    color: #f8b9c5;
 }
 
 .fa-fire {
@@ -173,6 +248,14 @@
 
 .fa-heart {
     color: #ff8d7b;
+}
+
+.fa-heart-crack {
+    color: #ff8d7b;
+}
+
+.fa-house {
+    color: #f4b2ff;
 }
 
 .fa-laptop {
@@ -219,6 +302,10 @@
     color: #a8f2ff;
 }
 
+.fa-plug-circle-bolt {
+    color: #fff5c2;
+}
+
 .fa-ranking-star {
     color: #83fcd4;
 }
@@ -232,7 +319,7 @@
 }
 
 .fa-robot {
-    color: #e6e6e6;
+    color: #e7f434;
 }
 
 .fa-rocket {
@@ -321,31 +408,98 @@
     filter: brightness(1.3);
 }
 
-/* experimental svg size fixing after 11ty font awesome sprite switch */
-.nav-item svg {
-    max-width: 1rem;
-    display: inline-block;
-    height: 1em;
-    overflow: visible;
-    vertical-align: -.125em;
+/* iframe */
+
+iframe {
+    border: 1px solid var(--bs-border-color) !important;
 }
-
-.fa-solid {
-    height: 1em;
-}
-
-/* above doesn't assign width because it messes up the who it's for section on homepage */
-.nav-link .fa-solid, .fa-circle-check, .fa-5x.fa-solid {
-    height: 1em;
-    width: 1em;
-}
-
-/* this covers indicators section on homepage, circle checks on plans and h1 on topic pages */
-/* end experiment */
-
 
 /* Forms */
 
 .form-control:focus {
     border-color: var(--bs-link-color);
+}
+
+/* Anchor links */
+
+h2 a#heading-hashtag,
+h3 a#heading-hashtag {
+    display: none;
+}
+
+h2:hover a#heading-hashtag,
+h3:hover a#heading-hashtag {
+    display: revert;
+}
+
+/* News posts */
+
+.post-content h2 {
+    margin-top: 2.75rem;
+}
+
+.post-content ul, .post-content p {
+    margin-bottom: 1.75rem;
+}
+
+/* File types */
+a[href$=".doc"]::after,
+a[href$=".docx"]::after,
+a[href$=".ppt"]::after,
+a[href$=".pptx"]::after,
+a[href$=".xls"]::after,
+a[href$=".xlsx"]::after,
+a[href$=".pdf"]::after,
+a[href$=".mp3"]::after,
+a[href$=".mp4"]::after,
+a[href$=".avi"]::after,
+a[href$=".mpg"]::after,
+a[href$=".mpeg"]::after,
+a[href$=".mov"]::after,
+a[href$=".wmv"]::after,
+a[href$=".mkv"]::after,
+a[href$=".jpg"]::after,
+a[href$=".jpeg"]::after,
+a[href$=".png"]::after,
+a[href$=".gif"]::after {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-left: 0.5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Doc */
+a[href$=".doc"]::after,
+a[href$=".docx"]::after {
+    background-image: url(/assets/font-awesome/svgs/solid/file-word.svg);
+}
+
+/* PowerPoint */
+a[href$=".ppt"]::after,
+a[href$=".pptx"]::after {
+    background-image: url(/assets/font-awesome/svgs/solid/file-powerpoint.svg);
+}
+
+/* Excel */
+a[href$=".xls"]::after,
+a[href$=".xlsx"]::after {
+    background-image: url(/assets/font-awesome/svgs/solid/file-excel.svg);
+}
+
+/* PDF */
+a[href$=".pdf"]::after {
+    background-image: url(/assets/font-awesome/svgs/solid/file-pdf.svg);
+}
+
+/* MP3 */
+a[href$=".mp3"]::after {
+    background-image: url(/assets/font-awesome/svgs/solid/file-audio.svg);
+}
+
+/* MP4 */
+a[href$=".mp4"]::after {
+    background-image: url(/assets/font-awesome/svgs/solid/file-video.svg);
 }
