@@ -46,16 +46,6 @@
         {% endif %}
         <!-- Meta site -->
         <meta property="linkedin:site" content="{{ site.linkedin-url }}">
-        <!-- Twitter -->
-        <meta name="twitter:site" content="{{ site.twitter }}">
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="{{ page.title }}">
-        <meta name="twitter:description" content="{{ description }}">
-        {% if img-twitter %}
-        <meta property="twitter:image" content="{{ site.url }}/assets/img/{{ img-path }}/{{ img-twitter }}">
-        {% else %}
-        <meta property="twitter:image" content="{{ site.url }}/assets/img/avatar-twitter.png">
-        {% endif %}
         {% if ogImage %}
         <meta property="og:image" content="{{ ogImage }}">
         {% else %}
