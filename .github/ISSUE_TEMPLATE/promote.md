@@ -2,7 +2,7 @@
 name: Promote
 about: Share to community.
 title: Promote
-labels: outreach
+labels: ''
 assignees: ''
 
 ---

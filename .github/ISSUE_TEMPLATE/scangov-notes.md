@@ -2,7 +2,7 @@
 name: ScanGov notes
 about: Updates from ScanGov.
 title: ScanGov notes YYYY.MM.DD
-labels: content
+labels: ''
 assignees: ''
 
 ---
