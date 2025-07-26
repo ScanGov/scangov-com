@@ -5,6 +5,11 @@
     "url": "/about"
   },
   {
+    "title": "Demo",
+    "icon": "fa-solid fa-wand-magic-sparkles",
+    "url": "/demo"
+  },
+  {
     "title": "Features",
     "icon": "fa-solid fa-fire",
     "url": "/features"
