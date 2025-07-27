@@ -28,6 +28,7 @@ export default async () => {
             standards: value.attributes,
             guidance,
             videos: value.videos,
+            why: value.why,
             ogImage: value.ogImage
         });
     };
