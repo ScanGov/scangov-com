@@ -155,4 +155,4 @@ The platform operates on two levels:
 - [Explore indicators](https://scangov.com/indicators/): Review eight measurement areas
 - [Understand impact ratings](https://docs.scangov.org/impact): Learn fix prioritization
 - [View all press coverage](https://scangov.com/press/): Complete media mentions
-- [Get in touch](https://docs.scangov.org/contact): Contact the ScanGov team
+- [Get in touch](/contact): Contact the ScanGov team
