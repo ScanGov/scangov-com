@@ -18,7 +18,9 @@ eleventyComputed:
     <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
     <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8  pt-3 pb-4 mb-5 border-bottom">
       <h2 class="mb-3">Why it matters</h2>
-      <div class="lead">{{ indicator.why }}</p>
+      <blockquote>
+        <p class="lead">{{ indicator.why }}</p>
+      </blockquote>
     </div>
     <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
   </div>
@@ -51,7 +53,6 @@ eleventyComputed:
     </div>
   </div>
 </div>
-
 <div class="container border-bottom mb-5 pb-5">
   <div class="row">
     <div class="col-12">
@@ -63,31 +64,39 @@ eleventyComputed:
     </div>
   </div>
 </div>
-<div class="container border-bottom mb-5 pb-5">
-  <div class="row">
-    <div class="col-12">
-      <h2>Videos</h2>
-      <div class="card-group">
-        {% for item in indicator.standards %}
-          {% for vid in item.videos %}
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
-              <div class="card p-3 m-2">
-                <a href="/topic/{{ indicator.url }}/scan/{{ item.key }}/">
-                  <img
-                    width="360"
-                    src="/../public/{{ vid.thumb }}"
-                    alt="Image containing the words {{ vid.title }}"
-                    class="border img-fluid">
-                </a>
-                <h3 class="h5 mt-3">{{ vid.title }}</h3>
+{% if videos %}
+  {% set videos = false %}
+  {% for item in indicator.standards %}
+    {% if item.videos and item.videos.length > 0 %}
+      {% set videos = true %}
+    {% endif %}
+  {% endfor %}
+  <div class="container border-bottom mb-5 pb-5">
+    <div class="row">
+      <div class="col-12">
+        <h2>Videos</h2>
+        <div class="card-group">
+          {% for item in indicator.standards %}
+            {% for vid in item.videos %}
+              <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
+                <div class="card p-3 m-2">
+                  <a href="/topic/{{ indicator.url }}/scan/{{ item.key }}/">
+                    <img
+                      width="360"
+                      src="/../public/{{ vid.thumb }}"
+                      alt="Image containing the words {{ vid.title }}"
+                      class="border img-fluid">
+                  </a>
+                  <h3 class="h5 mt-3">{{ vid.title }}</h3>
+                </div>
               </div>
-            </div>
+            {% endfor %}
           {% endfor %}
-        {% endfor %}
+        </div>
       </div>
     </div>
   </div>
-</div>
+{% endif %}
 <div class="container">
   <h2 class="mb-3">Indicators</h2>
   <p>Holistically addressing government digital experience.</p>
