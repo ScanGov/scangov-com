@@ -31,9 +31,7 @@ type: Organization
                     <li>{{ output }}</li>
                   {% endfor %}
                 </ul>
-              <!--
-                <p class="card-text">Price: ${{ service.offers.priceSpecification.minPrice.toLocaleString() }} - ${{ service.offers.priceSpecification.maxPrice.toLocaleString() }}</p>
-              -->
+                <p class="card-text border-top mt-4 mb-2 pt-3">Duration: {{ service.additionalProperty.value }}</p>
               </div>
             </div>
             <div class="card-footer">
