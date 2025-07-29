@@ -3,7 +3,7 @@
     "title": "Sites dashboard",
     "description": "Multi-site management",
     "img": "sites.png",
-    "video": "-THbBQxi-FY",
+    "video": "zAGistF44Ag",
     "items": [
       {
         "title": "Add multiple domains"
@@ -20,7 +20,7 @@
     "title": "Domain dashboards",
     "description": "Top-level overview",
     "img": "dashboards.png",
-    "video": "",
+    "video": "xMA7KLnLvng",
     "items": [
       {
         "title": "Top-level view of domain indicator grades/scores"
@@ -34,7 +34,7 @@
     "title": "Indicator monitoring",
     "description": "Status by indicator",
     "img": "monitoring.png",
-    "video": "",
+    "video": "4RxwszK3K34",
     "items": [
       {
         "title": "Domain indicator grade/score"
@@ -54,7 +54,7 @@
     "title": "Pages",
     "description": "Page-level analysis",
     "img": "page.png",
-    "video": "",
+    "video": "6CCHn7DqBjU",
     "items": [
       {
         "title": "List of site pages"
@@ -63,7 +63,7 @@
         "title": "Number of issues per page"
       },
       {
-        "title": "Filter pages issues byindicator"
+        "title": "Filter pages issues by indicator"
       }
     ]
   },
@@ -71,7 +71,7 @@
     "title": "Tasklist",
     "description": "Prioritized by ROI",
     "img": "tasks.png",
-    "video": "",
+    "video": "gH2d_a7n8oo",
     "items": [
       {
         "title": "Tasks prioritized by impact"
@@ -88,7 +88,7 @@
     "title": "Issue reports",
     "description": "Pre-populated issue reports",
     "img": "bug-report.png",
-    "video": "",
+    "video": "ncIBUxnX7vc",
     "items": [
       {
         "title": "Comprehensive, pre-populated issue reports"
