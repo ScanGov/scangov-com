@@ -1,23 +1,548 @@
-[
-  {
-    "title": "Training",
-    "icon": "fa-solid fa-graduation-cap",
-    "cta-text": "Get training",
-    "cta-url": "https://forms.gle/n8WHYWPemr1N4F2M8",
-    "checks": [
-      "Topical",
-      "Curriculum"
-    ]
-  },
-  {
-    "title": "Consulting",
-    "icon": "fa-solid fa-brain",
-    "cta-text": "Schedule consulting",
-    "cta-url": "https://docs.google.com/forms/d/e/1FAIpQLSeKiSG0f07leAwW1QqIMSoDIgTA92m0jVy6NADtiaoPhg4rww/viewform",
-    "checks": [
-      "Hourly",
-      "Project",
-      "Retainer"
-    ]
-  }
-]
+{
+  "services": [
+    {
+      "@type": "Service",
+      "name": "Initial Government Digital Audit",
+      "category": "Digital Experience Assessment & Strategy",
+      "description": "Comprehensive multi-site digital experience baseline assessment",
+      "serviceOutput": [
+        "Gap analysis against ScanGov standards and industry best practices",
+        "Comparison of public facing web applications compliance with peer organizations",
+        "Strategic roadmap development with prioritized recommendations",
+        "Executive summary with ROI projections for digital improvements"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "15000-35000",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": 15000,
+          "maxPrice": 35000,
+          "priceCurrency": "USD"
+        }
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "ScanGov Services"
+      },
+      "serviceType": "Consulting",
+      "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Duration",
+        "value": "2-4 weeks"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Digital Transformation Strategy",
+      "category": "Digital Experience Assessment & Strategy",
+      "description": "Long-term digital experience strategy aligned with citizen service goals",
+      "serviceOutput": [
+        "Feedback processing and categorization analysis",
+        "Web application fragmentation comparison with peer organizations",
+        "Change management strategy for digital transformation initiatives",
+        "Success metrics and KPI framework development"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "25000-45000",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": 25000,
+          "maxPrice": 45000,
+          "priceCurrency": "USD"
+        }
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "ScanGov Services"
+      },
+      "serviceType": "Consulting",
+      "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Duration",
+        "value": "4-6 weeks"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "ScanGov Platform Onboarding",
+      "category": "Implementation & Optimization Services",
+      "description": "Custom platform configuration and setup",
+      "serviceOutput": [
+        "Team training and workflow optimization",
+        "Custom focus on specific digital experience facets (readability, accessibility, performance)",
+        "Integration with existing tools (GitHub, ticketing systems, SSO)",
+        "Custom dashboard creation and reporting setup"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "5000-12000",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": 5000,
+          "maxPrice": 12000,
+          "priceCurrency": "USD"
+        }
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "ScanGov Services"
+      },
+      "serviceType": "Implementation",
+      "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Duration",
+        "value": "1-2 weeks"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Accessibility Compliance Acceleration",
+      "category": "Implementation & Optimization Services",
+      "description": "Complete WCAG compliance beyond automated audits",
+      "serviceOutput": [
+        "WCAG 2.1 AA manual review for complete compliance",
+        "Screen reader testing using common tools on real hardware",
+        "Color contrast and visual accessibility analysis",
+        "Mouseless navigation review",
+        "Focus highlighting analysis",
+        "Zoom, font size customization review",
+        "Accessibility training for internal teams",
+        "Assistive technology training for team self-audits"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "18000-40000",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": 18000,
+          "maxPrice": 40000,
+          "priceCurrency": "USD"
+        }
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "ScanGov Services"
+      },
+      "serviceType": "Compliance",
+      "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Duration",
+        "value": "3-6 weeks"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Performance Optimization Sprint",
+      "category": "Implementation & Optimization Services",
+      "description": "Core Web Vitals improvement and performance optimization",
+      "serviceOutput": [
+        "Core Web Vitals improvement (LCP, FID, CLS)",
+        "Performance comparison with peer organizations",
+        "Site speed optimization and caching implementation",
+        "Mobile responsiveness and cross-browser testing",
+        "Full performance bottleneck analysis",
+        "Personalized site architecture recommendations",
+        "Build system performance review integration"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "20000-40000",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": 20000,
+          "maxPrice": 40000,
+          "priceCurrency": "USD"
+        }
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "ScanGov Services"
+      },
+      "serviceType": "Optimization",
+      "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Duration",
+        "value": "2-4 weeks"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Security Hardening Implementation",
+      "category": "Implementation & Optimization Services",
+      "description": "Comprehensive security review and hardening",
+      "serviceOutput": [
+        "Public facing systems security review",
+        "URL review for XSS detection",
+        "Public error logging review",
+        "Content Security Policy and security headers configuration",
+        "Security.txt setup and vulnerability disclosure process",
+        "Site generator and frontend library security patch compliance",
+        "Security audit integration in build pipelines"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "18000-28000",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": 18000,
+          "maxPrice": 28000,
+          "priceCurrency": "USD"
+        }
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "ScanGov Services"
+      },
+      "serviceType": "Security",
+      "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Duration",
+        "value": "1-3 weeks"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Multi-Jurisdiction Digital Standardization",
+      "category": "Specialized Government Services",
+      "description": "Standardization across departments, agencies, or municipalities",
+      "serviceOutput": [
+        "Shared governance model development",
+        "Cross-jurisdictional best practice sharing",
+        "Unified branding and user experience guidelines"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "35000-75000",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": 35000,
+          "maxPrice": 75000,
+          "priceCurrency": "USD"
+        }
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "ScanGov Services"
+      },
+      "serviceType": "Standardization",
+      "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Duration",
+        "value": "6-12 weeks"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Procurement & Vendor Management Support",
+      "category": "Specialized Government Services",
+      "description": "RFP development and vendor management",
+      "serviceOutput": [
+        "RFP development with ScanGov standards integration",
+        "Vendor evaluation and selection criteria",
+        "Contract negotiation support for digital services",
+        "Ongoing vendor performance monitoring setup"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "20000-40000",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": 20000,
+          "maxPrice": 40000,
+          "priceCurrency": "USD"
+        }
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "ScanGov Services"
+      },
+      "serviceType": "Procurement Support",
+      "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Duration",
+        "value": "4-8 weeks"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Digital Accessibility Legal Compliance",
+      "category": "Specialized Government Services",
+      "description": "ADA compliance and legal defensibility",
+      "serviceOutput": [
+        "ADA compliance assessment and remediation planning",
+        "Documentation for legal defensibility",
+        "Accessibility testing protocol development",
+        "Staff training on accessibility requirements"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "15000-35000",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": 15000,
+          "maxPrice": 35000,
+          "priceCurrency": "USD"
+        }
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "ScanGov Services"
+      },
+      "serviceType": "Legal Compliance",
+      "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Duration",
+        "value": "3-6 weeks"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Digital Experience Managed Services",
+      "category": "Ongoing Support & Optimization",
+      "description": "Continuous monitoring and optimization",
+      "serviceOutput": [
+        "Monthly ScanGov analysis and reporting",
+        "Quarterly optimization recommendations",
+        "Priority issue resolution support",
+        "Continuous monitoring and alerts management"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "2500-5000",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": 2500,
+          "maxPrice": 5000,
+          "priceCurrency": "USD",
+          "billingIncrement": "MONTHLY"
+        }
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "ScanGov Services"
+      },
+      "serviceType": "Managed Services"
+    },
+    {
+      "@type": "Service",
+      "name": "Retainer-Based Consulting",
+      "category": "Ongoing Support & Optimization",
+      "description": "Ongoing advisory support",
+      "serviceOutput": [
+        "Ongoing advisory support for digital initiatives",
+        "Monthly strategic check-ins and guidance",
+        "Priority access to ScanGov experts",
+        "Flexible project support as needed"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "5000-15000",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": 5000,
+          "maxPrice": 15000,
+          "priceCurrency": "USD",
+          "billingIncrement": "MONTHLY"
+        }
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "ScanGov Services"
+      },
+      "serviceType": "Consulting"
+    }
+  ],
+  "packages": [
+    {
+      "@type": "Service",
+      "name": "State Government Package",
+      "description": "Complete digital transformation for state-level organizations",
+      "serviceOutput": [
+        "Multi-agency coordination and standardization",
+        "Large-scale accessibility compliance",
+        "Enterprise security implementation"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "75000-150000",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": 75000,
+          "maxPrice": 150000,
+          "priceCurrency": "USD"
+        }
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "ScanGov Services"
+      },
+      "serviceType": "Enterprise Package"
+    },
+    {
+      "@type": "Service",
+      "name": "Municipal Government Package",
+      "description": "City and county digital experience optimization",
+      "serviceOutput": [
+        "Citizen service portal optimization",
+        "Public information accessibility",
+        "Local government compliance focus"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "25000-65000",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": 25000,
+          "maxPrice": 65000,
+          "priceCurrency": "USD"
+        }
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "ScanGov Services"
+      },
+      "serviceType": "Municipal Package"
+    }
+  ],
+  "process": [
+    {
+      "@type": "HowToStep",
+      "name": "Phase 1: Assessment",
+      "text": "Current state analysis using ScanGov platform, stakeholder interviews and requirements gathering, priority setting and resource allocation planning",
+      "position": 1,
+      "totalTime": "P2W"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Phase 2: Implementation",
+      "text": "Systematic improvement implementation, regular progress reviews and adjustments, team training and knowledge transfer",
+      "position": 2,
+      "totalTime": "P6W"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Phase 3: Optimization",
+      "text": "Performance monitoring and fine-tuning, success measurement against baseline, long-term sustainability planning",
+      "position": 3,
+      "totalTime": "P4W"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Phase 4: Ongoing Success",
+      "text": "Continuous improvement cycles, advanced feature implementation, strategic advisory support",
+      "position": 4,
+      "totalTime": "P4M"
+    }
+  ],
+  "serviceDeliveryModel": [
+    {
+      "@type": "ServiceChannel",
+      "name": "Professional Services",
+      "description": "Project-based engagements with defined deliverables",
+      "availableLanguage": "en",
+      "serviceType": [
+        "Project-based engagements with defined deliverables",
+        "Fixed-price or time-and-materials options",
+        "Remote, on-site, or hybrid delivery",
+        "30-90 day typical project duration"
+      ]
+    },
+    {
+      "@type": "ServiceChannel",
+      "name": "Managed Services",
+      "description": "Ongoing monthly or quarterly engagements",
+      "availableLanguage": "en",
+      "serviceType": [
+        "Ongoing monthly or quarterly engagements",
+        "Dedicated account management",
+        "Proactive monitoring and optimization",
+        "Scalable based on organization size"
+      ]
+    }
+  ],
+  "businessFunction": [
+    {
+      "@type": "QualitativeValue",
+      "name": "Accessibility",
+      "value": "95%+ WCAG 2.1 AA compliance across all indicators"
+    },
+    {
+      "@type": "QualitativeValue",
+      "name": "Performance",
+      "value": "Core Web Vitals in 'Good' range for 90%+ of pages"
+    },
+    {
+      "@type": "QualitativeValue",
+      "name": "Security",
+      "value": "100% compliance with ScanGov security indicators"
+    },
+    {
+      "@type": "QualitativeValue",
+      "name": "User Experience",
+      "value": "25%+ improvement in citizen satisfaction scores"
+    },
+    {
+      "@type": "QualitativeValue",
+      "name": "Cost Efficiency",
+      "value": "40%+ reduction in manual remediation time"
+    }
+  ],
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "name": "Discovery Call",
+      "description": "30-minute assessment of current digital experience maturity",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Discovery Call",
+        "serviceOutput": [
+          "Assess current digital experience maturity",
+          "Identify immediate opportunities and challenges",
+          "Recommend appropriate service packages",
+          "Discuss timeline and investment requirements"
+        ]
+      },
+      "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Duration",
+        "value": "30 minutes"
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "Pilot Program Option",
+      "description": "4-week pilot engagement on subset of sites",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Pilot Program",
+        "serviceOutput": [
+          "Proof of concept for larger implementation",
+          "Risk-free evaluation of ScanGov Services value"
+        ]
+      },
+      "price": "8000-15000",
+      "priceCurrency": "USD",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": 8000,
+        "maxPrice": 15000,
+        "priceCurrency": "USD"
+      }
+    }
+  ]
+}
