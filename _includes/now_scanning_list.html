@@ -1,8 +1,8 @@
 <div class="card-group">
-  {% for item in features %}
+  {% for item in now_scanning %}
     <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
       <div class="card p-3 m-2">
-        <a href="/features/{{ item.title | slugify }}"><img
+        <a href="/now-scanning/{{ item.title | slugify }}"><img
             loading="lazy"
             src="/../public/assets/img/pages/{{ item.img }}"
             class="mt-2 mb-3 img-fluid border rounded shadow stretched-link"
