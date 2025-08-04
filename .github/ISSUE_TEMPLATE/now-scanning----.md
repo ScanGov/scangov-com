@@ -1,7 +1,7 @@
 ---
 name: Now scanning ...
 about: New 'Now scanning ...' video
-title: ''
+title: 'Now scanning ... '
 labels: ''
 assignees: ''
 
