@@ -13,7 +13,7 @@ description: "About ScanGov."
 
 ## Context
 
-Government digital services face unique challenges that private sector tools don't address. Unlike commercial websites, government sites must serve everyone equally, follow strict [accessibility requirements](https://standards.scangov.org/), and maintain high [security standards](https://standards.scangov.org/) while operating under budget constraints.
+[Government digital experience](/government-digital-experience) faces unique challenges that private sector tools don't address. Unlike commercial websites, government sites must serve everyone equally, follow strict [accessibility requirements](https://standards.scangov.org/), and maintain high [security standards](https://standards.scangov.org/) while operating under budget constraints.
 
 Digital experience teams and government leaders want to deliver great digital services to the public. However, there's a lot to understand and stay on top of when it comes to technical implementation. ScanGov was built by people who experienced this pain point firsthand. Even teams with years of experience building websites and applications may have blind spots. A seamless way to monitor  progress across multiple sites and standards helps keep the team on top of all aspects of digital service delivery.
 
