@@ -1,10 +1,12 @@
 ---
 layout: "layouts/default"
+tags: feature
 
 pagination:
     data: features
     size: 1
     alias: feature
+    addAllPagesToCollections: true
 
 eleventyComputed:
     title: "{{ feature.title }}"

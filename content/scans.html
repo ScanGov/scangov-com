@@ -1,10 +1,12 @@
 ---
 layout: "layouts/video"
+tags: scan
 
 pagination:
     data: scans
     size: 1
     alias: scan
+    addAllPagesToCollections: true
 
 eleventyComputed:
     title: "{{ scan.displayName }}"
