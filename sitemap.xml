@@ -1,224 +1,312 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
-    <url>
-        <loc>https://scangov.com/news/hello-scangov/</loc>
-        <lastmod>2024-05-14T00:00:00.000Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/news/hello-scangov/</loc>
+                <lastmod>2024-05-14T00:00:00.000Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/news/release-notes-(june-2024)/</loc>
-        <lastmod>2024-06-25T00:00:00.000Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/news/release-notes-(june-2024)/</loc>
+                <lastmod>2024-06-25T00:00:00.000Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/news/scangov-supports-judging-for-2024-government-experience-awards/</loc>
-        <lastmod>2024-09-18T00:00:00.000Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/news/scangov-supports-judging-for-2024-government-experience-awards/</loc>
+                <lastmod>2024-09-18T00:00:00.000Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/news/new-scangov-government-website-security-report-cards/</loc>
-        <lastmod>2024-10-17T00:00:00.000Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/news/new-scangov-government-website-security-report-cards/</loc>
+                <lastmod>2024-10-17T00:00:00.000Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/news/welcome-aaron-hans/</loc>
-        <lastmod>2025-02-12T00:00:00.000Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/news/welcome-aaron-hans/</loc>
+                <lastmod>2025-02-12T00:00:00.000Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/news/connect-with-scangov/</loc>
-        <lastmod>2025-02-13T00:00:00.000Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/news/connect-with-scangov/</loc>
+                <lastmod>2025-02-13T00:00:00.000Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/</loc>
-        <lastmod>2025-02-23T00:00:00.000Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/</loc>
+                <lastmod>2025-02-23T00:00:00.000Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/news/scangov-to-support-judging-for-2025-government-experience-awards/</loc>
-        <lastmod>2025-04-06T00:00:00.000Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/news/scangov-to-support-judging-for-2025-government-experience-awards/</loc>
+                <lastmod>2025-04-06T00:00:00.000Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/news/scangov-notes-(2025.04.09)/</loc>
-        <lastmod>2025-04-09T00:00:00.000Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/news/scangov-notes-(2025.04.09)/</loc>
+                <lastmod>2025-04-09T00:00:00.000Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/news/government-digital-experience-map/</loc>
-        <lastmod>2025-04-21T00:00:00.000Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/news/government-digital-experience-map/</loc>
+                <lastmod>2025-04-21T00:00:00.000Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/meet/</loc>
-        <lastmod>2025-04-25T00:00:00.000Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/meet/</loc>
+                <lastmod>2025-04-25T00:00:00.000Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/what-they-say/</loc>
-        <lastmod>2025-04-26T00:00:00.000Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/what-they-say/</loc>
+                <lastmod>2025-04-26T00:00:00.000Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/news/standards-for-government-digital-experience/</loc>
-        <lastmod>2025-05-14T00:00:00.000Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/news/standards-for-government-digital-experience/</loc>
+                <lastmod>2025-05-14T00:00:00.000Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/plans/</loc>
-        <lastmod>2025-05-14T00:00:00.000Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/plans/</loc>
+                <lastmod>2025-05-14T00:00:00.000Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/about/</loc>
-        <lastmod>2025-07-01T00:00:00.000Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/about/</loc>
+                <lastmod>2025-07-01T00:00:00.000Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/contact/</loc>
-        <lastmod>2025-07-26T00:00:00.000Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/contact/</loc>
+                <lastmod>2025-07-26T00:00:00.000Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/demo/</loc>
-        <lastmod>2025-07-26T00:00:00.000Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/demo/</loc>
+                <lastmod>2025-07-26T00:00:00.000Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/features/sites-dashboard/</loc>
-        <lastmod>2025-08-07T05:00:15.007Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/features/sites-dashboard/</loc>
+                <lastmod>2025-08-07T05:07:03.621Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/features/domain-dashboards/</loc>
-        <lastmod>2025-08-07T05:00:15.007Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/features/domain-dashboards/</loc>
+                <lastmod>2025-08-07T05:07:03.621Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/features/indicator-monitoring/</loc>
-        <lastmod>2025-08-07T05:00:15.007Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/features/indicator-monitoring/</loc>
+                <lastmod>2025-08-07T05:07:03.621Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/features/pages/</loc>
-        <lastmod>2025-08-07T05:00:15.007Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/features/pages/</loc>
+                <lastmod>2025-08-07T05:07:03.621Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/features/tasklist/</loc>
-        <lastmod>2025-08-07T05:00:15.007Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/features/tasklist/</loc>
+                <lastmod>2025-08-07T05:07:03.621Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/features/issue-reports/</loc>
-        <lastmod>2025-08-07T05:00:15.007Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/features/issue-reports/</loc>
+                <lastmod>2025-08-07T05:07:03.621Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/features/scorecards/</loc>
-        <lastmod>2025-08-07T05:00:15.007Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/features/scorecards/</loc>
+                <lastmod>2025-08-07T05:07:03.621Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/features/</loc>
-        <lastmod>2025-08-07T05:00:15.007Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/features/</loc>
+                <lastmod>2025-08-07T05:07:03.621Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/government-digital-experience/</loc>
-        <lastmod>2025-08-07T05:00:15.007Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/government-digital-experience/</loc>
+                <lastmod>2025-08-07T05:07:03.621Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/government-experience-awards/</loc>
-        <lastmod>2025-08-07T05:00:15.007Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/government-experience-awards/</loc>
+                <lastmod>2025-08-07T05:07:03.621Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/aifriendly/</loc>
-        <lastmod>2025-08-07T05:00:15.007Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/aifriendly/</loc>
+                <lastmod>2025-08-07T05:07:03.621Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/accessibility/</loc>
-        <lastmod>2025-08-07T05:00:15.007Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/accessibility/</loc>
+                <lastmod>2025-08-07T05:07:03.621Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/content/</loc>
-        <lastmod>2025-08-07T05:00:15.007Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/content/</loc>
+                <lastmod>2025-08-07T05:07:03.621Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/domain/</loc>
-        <lastmod>2025-08-07T05:00:15.007Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/domain/</loc>
+                <lastmod>2025-08-07T05:07:03.621Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/performance/</loc>
-        <lastmod>2025-08-07T05:00:15.007Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/performance/</loc>
+                <lastmod>2025-08-07T05:07:03.621Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/seo/</loc>
-        <lastmod>2025-08-07T05:00:15.007Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/seo/</loc>
+                <lastmod>2025-08-07T05:07:03.621Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/security/</loc>
-        <lastmod>2025-08-07T05:00:15.007Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/security/</loc>
+                <lastmod>2025-08-07T05:07:03.621Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/social/</loc>
-        <lastmod>2025-08-07T05:00:15.007Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/social/</loc>
+                <lastmod>2025-08-07T05:07:03.621Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/indicators/</loc>
-        <lastmod>2025-08-07T05:00:15.007Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/indicators/</loc>
+                <lastmod>2025-08-07T05:07:03.621Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/news/</loc>
-        <lastmod>2025-08-07T05:00:15.007Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/news/</loc>
+                <lastmod>2025-08-07T05:07:03.621Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/now-scanning/</loc>
-        <lastmod>2025-08-07T05:00:15.007Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/now-scanning/</loc>
+                <lastmod>2025-08-07T05:07:03.622Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/now-scanning/texas-gov/</loc>
-        <lastmod>2025-08-07T05:00:15.007Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/now-scanning/texas-gov/</loc>
+                <lastmod>2025-08-07T05:07:03.622Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/press/</loc>
-        <lastmod>2025-08-07T05:00:15.008Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/press/</loc>
+                <lastmod>2025-08-07T05:07:03.622Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/indicators/performance/fcp/</loc>
-        <lastmod>2025-08-07T05:00:15.008Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/indicators/performance/fcp/</loc>
+                <lastmod>2025-08-07T05:07:03.622Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/indicators/performance/ttfb/</loc>
-        <lastmod>2025-08-07T05:00:15.008Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/indicators/performance/ttfb/</loc>
+                <lastmod>2025-08-07T05:07:03.622Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/schedule-confirm/</loc>
-        <lastmod>2025-08-07T05:00:15.008Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/schedule-confirm/</loc>
+                <lastmod>2025-08-07T05:07:03.622Z</lastmod>
+            </url>
+        
     
-    <url>
-        <loc>https://scangov.com/services/</loc>
-        <lastmod>2025-08-07T05:00:15.008Z</lastmod>
-    </url>
+        
+            <url>
+                <loc>https://scangov.com/services/</loc>
+                <lastmod>2025-08-07T05:07:03.622Z</lastmod>
+            </url>
+        
     
 </urlset>
