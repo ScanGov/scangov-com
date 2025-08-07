@@ -1,10 +1,12 @@
 ---
 layout: "layouts/default"
+tags: indicator
 
 pagination:
     data: indicators
     size: 1
     alias: indicator
+    addAllPagesToCollections: true
 
 eleventyComputed:
     title: "{{ indicator.name }}"
