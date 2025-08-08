@@ -1,10 +1,12 @@
 ---
 layout: "layouts/video"
+tags: now-scanning
 
 pagination:
     data: now_scanning
     size: 1
     alias: website
+    addAllPagesToCollections: true
 
 eleventyComputed:
     title: "{{ website.page_title }}"
