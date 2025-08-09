@@ -8,40 +8,52 @@ description: "An introduction to government digital experience."
 
 Government digital experience is how people interact with public services online—from filling out forms to applying for benefits to getting answers. A strong digital experience means services are easy to use, fast, secure, and work for everyone, across all levels of government.
 
+It ensures government online services are:
+
+- Accessible and usable
+- Based around user needs and tasks
+- Consistent in appearance
+- Securely hosted and connected
+- Original, not duplicating existing content
+- Searchable
+- Mobile-friendly
+
 ## Problem
 
-- Outdated, hard-to-use websites  
-- Too many paper forms and manual steps  
-- Mobile-unfriendly services  
-- Digital experiences lack accessibility  
-- Inconsistent service delivery across agencies  
-- No common standards or accountability  
+- Outdated, hard-to-use websites
+- Too many paper forms and manual steps
+- Mobile-unfriendly services
+- Digital experiences lack accessibility
+- Inconsistent service delivery across agencies
+- No common standards or accountability
 
 ## Solution
 
-- Design services based on real user needs  
-- Adopt shared design, accessibility, and tech standards  
-- Digitize forms and workflows, including e-signatures  
-- Create mobile-first, accessible tools  
-- Test with users and improve continuously  
-- Coordinate across agencies for consistency  
+- Design services based on real user needs
+- Adopt shared design, accessibility, and tech standards
+- Digitize forms and workflows, including e-signatures
+- Create mobile-first, accessible tools
+- Test with users and improve continuously
+- Coordinate across agencies for consistency
 
 ## Why it matters
 
-- Improves access to essential services  
-- Reduces costs and inefficiencies  
-- Builds trust in public institutions  
-- Expands equity and inclusion  
-- Supports better policy through user data  
+The public relies on online government services more than ever. These services must be accessible and secure for all people. 
+
+- Improves access to essential services
+- Reduces costs and inefficiencies
+- Builds trust in public institutions
+- Expands equity and inclusion
+- Supports better policy through user data
 
 ## Who it's for
 
-- Government executives and administrators  
-- IT and cybersecurity teams  
-- Policymakers and legal advisors  
-- Digital service and delivery teams  
-- Procurement and acquisition staff  
-- Communications and outreach teams  
+- Government executives and administrators
+- IT and cybersecurity teams
+- Policymakers and legal advisors
+- Digital service and delivery teams
+- Procurement and acquisition staff
+- Communications and outreach teams
 
 ## Context
 
@@ -57,20 +69,22 @@ This isn’t just a tech challenge—it’s a shift in how government operates t
 
 ## Dive deeper
 
-- [U.S. Web Design System principles](https://designsystem.digital.gov/design-principles/)  
-- [GSA digital experience initiatives](https://www.gsa.gov/technology/government-it-initiatives/digital-experience)  
-- [U.S. Digital Service Playbook](https://playbook.usds.gov/)  
-- [Executive Order on customer experience](https://www.federalregister.gov/documents/2021/12/16/2021-27380/transforming-federal-customer-experience-and-service-delivery-to-rebuild-trust-in-government)  
-- [Digital.gov resources](https://digital.gov/resources/delivering-digital-first-public-experience)  
-- [Transforming the American digital experience (PDF)](https://designsystem.digital.gov/files/next/Transforming-the-American-digital-experience.pdf)  
-- [OMB M‑23‑22 digital-first memo](https://bidenwhitehouse.archives.gov/wp-content/uploads/2023/09/M-23-22-Delivering-a-Digital-First-Public-Experience.pdf)  
-- [21st Century IDEA Act (H.R. 5759)](https://www.congress.gov/bill/115th-congress/house-bill/5759/text)  
-- [ScanGov Standards](https://standards.scangov.org/)  
+- [U.S. Web Design System principles](https://designsystem.digital.gov/design-principles/)
+- [GSA digital experience initiatives](https://www.gsa.gov/technology/government-it-initiatives/digital-experience)
+- [U.S. Digital Service Playbook](https://playbook.usds.gov/)
+- [Executive Order on customer experience](https://www.federalregister.gov/documents/2021/12/16/2021-27380/transforming-federal-customer-experience-and-service-delivery-to-rebuild-trust-in-government)
+- [Digital.gov resources](https://digital.gov/resources/delivering-digital-first-public-experience)
+- [Transforming the American digital experience (PDF)](https://designsystem.digital.gov/files/next/Transforming-the-American-digital-experience.pdf)
+- [OMB M‑23‑22 digital-first memo](https://bidenwhitehouse.archives.gov/wp-content/uploads/2023/09/M-23-22-Delivering-a-Digital-First-Public-Experience.pdf)
+- [21st Century IDEA Act (H.R. 5759)](https://www.congress.gov/bill/115th-congress/house-bill/5759/text)
+- [ Nondiscrimination on the Basis of Disability; Accessibility of Web Information and Services of State and Local Government Entities](https://www.ada.gov/resources/2024-03-08-web-rule/) (U.S. Department of Justice)
+- [Requirements for delivering a digital-first public experience](https://digital.gov/resources/delivering-digital-first-public-experience/) (Digital.gov)
+* [Plainlanguage.gov](http://Plainlanguage.gov): plain language tools, resources, and examples
+* [Section508.gov](http://Section508.gov): create accessible products and services
+* [Usability.gov](http://usability.gov): tools and resources for a better user experience
+- [ScanGov Standards](https://standards.scangov.org/)
 
 ## Get started
 
-- Read the [USDS Playbook](https://playbook.usds.gov/)  
-- Use the [U.S. Web Design System](https://designsystem.digital.gov/)  
-- Explore [ScanGov’s digital experience standards](https://standards.scangov.org/)  
-- Check out [GSA’s digital experience tools](https://www.gsa.gov/technology/government-it-initiatives/digital-experience)  
-- Pilot a user-tested, mobile-first service update  
+- Explore [ScanGov’s digital experience standards](https://standards.scangov.org/)
+- Learn more about [ScanGov Plans](/plans)

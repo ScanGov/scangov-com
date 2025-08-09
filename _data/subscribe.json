@@ -1,0 +1,14 @@
+[
+    {
+        "title": "ScanGov news",
+        "description": "Latest news from ScanGov.",
+        "link": "https://scangov.substack.com",
+        "image": "scangov-newsletter.png"
+    },
+    {
+        "title": ".gov Pulse",
+        "description": "Technical analysis of government digital experience standards.",
+        "link": "https://www.linkedin.com/newsletters/gov-pulse-7358545152514146304/",
+        "image": "dotgov-pulse.png"
+    }
+]
