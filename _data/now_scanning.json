@@ -1,5 +1,15 @@
 [
     {
+        "title": "ms.gov",
+        "page_title": "Now scanning ... ms.gov",
+        "description": "A ScanGov government digital experience review of ms.gov.",
+        "url": "https://ms.gov",
+        "img": "ms-gov.png",
+        "video": "xUgSk4JGPX8",
+        "scorecard": "https://my.scangov.com/public/key4343-1754059868813/ms-gov/report",
+        "ogImage": "https://scangov.com/assets/img/pages/ms-gov.png"
+    },
+    {
         "title": "texas.gov",
         "page_title": "Now scanning ... texas.gov",
         "description": "A ScanGov government digital experience review of texas.gov.",
