@@ -53,17 +53,8 @@
   ],
   [
     {
-<<<<<<< Updated upstream
       "title": "Newsletters",
       "url": "/subscribe/"
-=======
-      "title": "Subscribe",
-      "url": "/subscribe"
-    },
-    {
-      "title": "Substack",
-      "url": "https://docs.scangov.org/subscribe"
->>>>>>> Stashed changes
     },
     {
       "title": "LinkedIn",
