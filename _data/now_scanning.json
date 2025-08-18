@@ -1,5 +1,15 @@
 [
     {
+        "title": "georgia.gov",
+        "page_title": "Now scanning ... georgia.gov",
+        "description": "A ScanGov government digital experience review of georgia.gov.",
+        "url": "https://georgia.gov",
+        "img": "georgia-gov.png",
+        "video": "X0uFodvibPw",
+        "scorecard": "https://my.scangov.com/public/key4343-1754059868813/georgia-gov/report",
+        "ogImage": "https://scangov.com/assets/img/pages/georgia-gov.png"
+    },
+    {
         "title": "ms.gov",
         "page_title": "Now scanning ... ms.gov",
         "description": "A ScanGov government digital experience review of ms.gov.",
