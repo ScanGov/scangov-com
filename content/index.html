@@ -69,32 +69,6 @@ home: true
     </div>
   </div>
 </div>
-<div class="container border-bottom mb-5 pb-5">
-  <div class="row">
-    <div class="col-12">
-      <h2 class="mb-3">Plans</h2>
-    </div>
-  </div>
-  {% include "plans.html" %}
-</div>
-<!--
-  <div class="container border-bottom mb-5 pb-5">  <div class="row">    <div class="col-12">      <h2 class="mb-3">Services</h2>      <p class="lead">We're here to support you on your government digital experience journey.</p>      <div class="card-group">        {% for item in services %}          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-stretch">            <div class="card m-1">              <div class="card-header">                <h3 class="my-2 h4">{{ item.title }}</h3></div><div class="card-body pt-4 text-center"><iclass="{{ item.icon }} fa-3x mt-2"aria-label="hidden"style="color: {{ item.color }}"></i><ul class="list-unstyled mt-3 mb-3">{% for check in item.checks %}<li class="fs-5 mb-2"><i class="fa-solid fa-check" aria-label="hidden"></i>{{ check }}</li>{% endfor %}</ul></div>{% if item.cta-url %}<div class="card-footer"><a href="{{ item.cta-url }}" class="w-100 btn btn-lg btn-primary">{{ item.cta-text }}</a></div>{% endif %}</div></div>{% endfor %}</div></div></div></div>
--->
-<div class="container border-bottom mb-5 pb-5">
-  <div class="row">
-    <div class="col-12">
-      <h2 class="mb-3">Guidance</h2>
-      <p class="lead">Public policy, web protocol, guidelines and best practices used to develop the ScanGov Standards.</p>
-      {% set standards_list = guidance %}
-      {% set standards_list_type = "guidance" %}
-      {% include "standards_list.html" %}
-      <p class="small mt-3">
-        <a href="https://standards.scangov.org/guidance/">Guidance</a>
-      </p>
-    </div>
-  </div>
-</div>
-
 <div class="container border-bottom mb-5 pb-5 pt-3">
   <div class="row">
     <div class="col-12">
@@ -127,8 +101,28 @@ home: true
     </div>
   </div>
 </div>
-{% if quotes %}
-  <div class="container border-bottom mb-5 pb-5">
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="mb-3">Plans</h2>
+    </div>
+  </div>
+  {% include "plans.html" %}
+</div><!--
+  <div class="container border-bottom mb-5 pb-5">  <div class="row">    <div class="col-12">      <h2 class="mb-3">Services</h2>      <p class="lead">We're here to support you on your government digital experience journey.</p>      <div class="card-group">        {% for item in services %}          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-stretch">            <div class="card m-1">              <div class="card-header">                <h3 class="my-2 h4">{{ item.title }}</h3></div><div class="card-body pt-4 text-center"><iclass="{{ item.icon }} fa-3x mt-2"aria-label="hidden"style="color: {{ item.color }}"></i><ul class="list-unstyled mt-3 mb-3">{% for check in item.checks %}<li class="fs-5 mb-2"><i class="fa-solid fa-check" aria-label="hidden"></i>{{ check }}</li>{% endfor %}</ul></div>{% if item.cta-url %}<div class="card-footer"><a href="{{ item.cta-url }}" class="w-100 btn btn-lg btn-primary">{{ item.cta-text }}</a></div>{% endif %}</div></div>{% endfor %}</div></div></div></div><div class="container border-bottom mb-5 pb-5">  <div class="row">
+    <div class="col-12">
+      <h2 class="mb-3">Guidance</h2>
+      <p class="lead">Public policy, web protocol, guidelines and best practices used to develop the ScanGov Standards.</p>
+      {% set standards_list = guidance %}
+      {% set standards_list_type = "guidance" %}
+      {% include "standards_list.html" %}
+      <p class="small mt-3">
+        <a href="https://standards.scangov.org/guidance/">Guidance</a>
+      </p>
+    </div>
+  </div>
+</div>
+  {% if quotes %}  <div class="container border-bottom mb-5 pb-5">
     <div class="row">
       <div class="col-12">
         <h2 class="mb-3">What they say</h2>
@@ -164,8 +158,7 @@ home: true
     </div>
   </div>
 {% endif %}
-<div class="container border-bottom mb-5 pb-5">
-  <div class="row">
+  <div class="container border-bottom mb-5 pb-5">  <div class="row">
     <div class="col-12">
       <h2 class="mb-3">News</h2>
       <p class="lead">ScanGov updates.</p>
@@ -192,8 +185,7 @@ home: true
     </div>
   </div>
 </div>
-<div class="container border-bottom mb-5 pb-5">
-  <div class="row">
+  <div class="container border-bottom mb-5 pb-5">  <div class="row">
     <div class="col-12">
       <h2 class="mb-3">Press</h2>
       <p class="lead">ScanGov in the news.</p>
@@ -222,12 +214,5 @@ home: true
       </p>
     </div>
   </div>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col-12">
-      <h2 class="mb-4">Questions?</h2>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKiSG0f07leAwW1QqIMSoDIgTA92m0jVy6NADtiaoPhg4rww/viewform" class="btn btn-primary btn-lg">Contact us</a>
-    </div>
-  </div>
+-->
 </div>

@@ -31,9 +31,10 @@ type: Organization
                     <li>{{ output }}</li>
                   {% endfor %}
                 </ul>
-                {% if service.additionalProperty %}
-                <p class="card-text border-top mt-4 mb-2 pt-3">Duration: {{ service.additionalProperty.value }}</p>
-                {% endif %}
+              <!--
+                {% if service.additionalProperty %}<p class="card-text border-top mt-4 mb-2 pt-3">Duration: {{ service.additionalProperty.value }}</p>
+              {% endif %}
+              -->
               </div>
             </div>
             <div class="card-footer">

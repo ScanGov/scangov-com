@@ -5,8 +5,16 @@
       "url": "https://docs.scangov.org/about"
     },
     {
-      "title": "Meet",
-      "url": "/meet"
+      "title": "Plans",
+      "url": "/plans"
+    },
+    {
+      "title": "Services",
+      "url": "/services"
+    },
+    {
+      "title": "Demo",
+      "url": "/demo"
     },
     {
       "title": "People",
