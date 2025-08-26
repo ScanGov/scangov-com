@@ -2,7 +2,7 @@
   [
     {
       "title": "About",
-      "url": "https://docs.scangov.org/about"
+      "url": "/about"
     },
     {
       "title": "Plans",
@@ -22,15 +22,15 @@
     },
     {
       "title": "News",
-      "url": "https://scangov.com/news"
+      "url": "/news"
     },
     {
       "title": "Press",
-      "url": "https://scangov.com/press"
+      "url": "/press"
     },
     {
       "title": "Primer",
-      "url": "https://scangov.com/government-digital-experience"
+      "url": "/government-digital-experience"
     },
     {
       "title": "Contact",
@@ -88,11 +88,11 @@
   [
     {
       "title": "Accessibility statement",
-      "url": "https://docs.scangov.org/scangov-accessibility-statement"
+      "url": "https://docs.scangov.org/accessibility-statement"
     },
     {
       "title": "Privacy statement",
-      "url": "https://docs.scangov.org/scangov-privacy-statement"
+      "url": "https://docs.scangov.org/privacy-statement"
     },
     {
       "title": "Code of conduct",

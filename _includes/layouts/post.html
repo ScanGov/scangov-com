@@ -1,83 +1,82 @@
 {% include "header.html" %}
 {% include "nav.html" %}
 <main>
-    <div class="pt-5 pb-4 mb-5 border-bottom">
-        <div class="container">
-            <div class="row">
-                {% include "jumbotron.html" %}
-            </div>
-        </div>
-    </div>
-    {% if img_og %}
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
-                    <figure class="mb-5">
-                        <img
-                        src="/../public/assets/img/posts/{{ img_og }}"
-                        alt="{{ img_alt }}"
-                        class="border img-fluid">
-                        {% if img_caption %}
-                            <figcaption>
-                                <p class="small mt-3 mb-4 pb-3 border-bottom">
-                                {% if img_link %}
-                                    <a href="{{ img_link }}" class="nav-link text-body-secondary link-body-emphasis link-offset-3">
-                                {% endif %}
-                                {{ img_caption }}
-                                {% if img_link %}
-                                    </a>
-                                {% endif %}
-                                </p>
-                            </figcaption>
-                        {% endif %}
-                    </figure>
-                    <div class="post-content">
-                        {{ content | safe }}
-                        <div class="border-top mt-5 pt-4 social fs-3">
-                            <h2 class="h4">Connect with ScanGov</h2>
-                            <nav aria-label="Social media links">
-                                <ul class="list-unstyled d-flex gap-3 mt-3">
-                                    <li>
-                                        <a href="https://scangov.substack.com" aria-label="Subscribe to ScanGov on Substack">
-                                            <i class="fa-solid fa-envelope-open-text"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://linkedin.com/company/scangov" aria-label="Follow ScanGov on LinkedIn">
-                                            <i class="fa-brands fa-linkedin"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://youtube.com/@scangov" aria-label="Follow ScanGov on YouTube">
-                                            <i class="fa-brands fa-youtube"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://discord.gg/EPCXEMAX5y" aria-label="Join ScanGov on Discord">
-                                            <i class="fa-brands fa-discord"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/scangov" aria-label="Visit ScanGov on GitHub">
-                                            <i class="fa-brands fa-github"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://docs.scangov.org/feed.xml" aria-label="Subscribe to ScanGov RSS feed">
-                                            <i class="fa-solid fa-rss"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
-            </div>
-        </div>
-    {% endif %}
+  <div class="pt-5 pb-4 mb-5 border-bottom">
     <div class="container">
+      <div class="row">
+        {% include "jumbotron.html" %}
+      </div>
     </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+        {% if img_og %}
+          <figure class="mb-5">
+            <img
+              src="/../public/assets/img/posts/{{ img_og }}"
+              alt="{{ img_alt }}"
+              class="border img-fluid">
+            {% if img_caption %}
+              <figcaption>
+                <p class="small mt-3 mb-4 pb-3 border-bottom">
+                  {% if img_link %}
+                    <a href="{{ img_link }}" class="nav-link text-body-secondary link-body-emphasis link-offset-3">
+                  {% endif %}
+                  {{ img_caption }}
+                  {% if img_link %}
+                    </a>
+                  {% endif %}
+                </p>
+              </figcaption>
+            {% endif %}
+          </figure>
+        {% endif %}
+        <div class="post-content">
+          {{ content | safe }}
+          <div class="border-top mt-5 pt-4 social fs-3">
+            <h2 class="h4">Connect with ScanGov</h2>
+            <nav aria-label="Social media links">
+              <ul class="list-unstyled d-flex gap-3 mt-3">
+                <li>
+                  <a href="https://scangov.substack.com" aria-label="Subscribe to ScanGov on Substack">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://linkedin.com/company/scangov" aria-label="Follow ScanGov on LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://youtube.com/@scangov" aria-label="Follow ScanGov on YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://discord.gg/EPCXEMAX5y" aria-label="Join ScanGov on Discord">
+                    <i class="fa-brands fa-discord"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/scangov" aria-label="Visit ScanGov on GitHub">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.scangov.org/feed.xml" aria-label="Subscribe to ScanGov RSS feed">
+                    <i class="fa-solid fa-rss"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
+    </div>
+  </div>
+  <div class="container"></div>
 </main>
 {% include "footer.html" %}

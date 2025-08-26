@@ -31,7 +31,7 @@ GovX showcases “the latest trends, best practices and ideas around the evolvin
 
 Teri Takai, Chief Program Officer for the Center for Digital Government, said, “The Government Experience Awards celebrate innovation that directly impacts how the public engages with government. By incorporating ScanGov’s expanded data capabilities into our evaluation process, we’re deepening our understanding of what defines a leading digital government experience—from accessibility to laying the foundation for AI, this layer of insight is invaluable in identifying the jurisdictions setting the gold standard for service delivery.”
 
-[Awards call for entries](https://www.govtech.com/call-for-entries-digital-government-experience-awards-2025) are now open. Deadline for submissions is May 8, 2025\. A virtual awards event will be held September 25, 2025\.
+Awards call for entries are now open. Deadline for submissions is May 8, 2025\. A virtual awards event will be held September 25, 2025\.
 
 ## About Center for Digital Government (CDG)
 

@@ -11,7 +11,7 @@ topics:
   - ScanGov
 ---
 
-[Project ScanGov](https://scangov.org) now has a [map](https://scangov.org/map) that visualizes how U.S. states fare on government digital experience. Each state on the map is clickable to a full government digital experience report card.
+[Project ScanGov](https://scangov.org) now has a [map](https://scangov.org/map/states/overall/) that visualizes how U.S. states fare on government digital experience. Each state on the map is clickable to a full government digital experience report card.
 
 The grades are based on scans of state government website homepages and how each fares on key indicators. Indicators are based on [government digital experience standards](https://standards.scangov.org) that account for:
 
@@ -23,4 +23,4 @@ The grades are based on scans of state government website homepages and how each
 - Security
 - Social media
 
-[View the government digital experience map.](https://scangov.org/map)
+[View the government digital experience map.](https://scangov.org/map/states/overall/)
