@@ -642,12 +642,12 @@ h1::after {
     vertical-align: -.125em;
 }
 
-.fa-solid {
+.fa-solid, .fa-brands {
     height: 1em;
 }
 
 /* above doesn't assign width because it messes up the who it's for section on homepage */
-.nav-link .fa-solid, .fa-circle-check, .fa-5x.fa-solid {
+.nav-link .fa-solid, .fa-circle-check, .fa-5x.fa-solid, .fa-brands {
     height: 1em;
     width: 1em;
 }
