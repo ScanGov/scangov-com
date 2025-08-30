@@ -15,6 +15,11 @@
     "url": "/features"
   },
   {
+    "title": "Showcase",
+    "icon": "fa-solid fa-star",
+    "url": "/showcase"
+  },
+  {
     "title": "Plans",
     "icon": "fa-solid fa-crown",
     "url": "/plans"

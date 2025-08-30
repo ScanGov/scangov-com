@@ -1,0 +1,30 @@
+---
+layout: "layouts/default"
+date: 2025-08-30
+modified: 
+author: ScanGov
+title: "Showcase"
+description: "Featured digital experience scorecards."
+---
+
+<div class="container">
+  <div class="row">
+    <div class="card-group">
+      {% for item in showcase %}
+        <div class="col-12 col sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-stretch">
+          <div class="card mb-2 p-1">
+            <div class="card-body">
+              <h2 class="h5 p-0 m-0">
+                <i class="fa-solid fa-star"></i>
+                <a
+                  href="{{ item.url }}"
+                  class="stretched-link"
+                  target="_blank">{{ item.title }}</a>
+              </h2>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

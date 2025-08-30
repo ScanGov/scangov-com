@@ -1,0 +1,27 @@
+[
+    {
+        "title": "scangov.com",
+        "url": "https://my.scangov.com/public/key5279-1751598352407/scangov-com/report",
+        "feature": true
+    },
+    {
+        "title": "scangov.org",
+        "url": "https://my.scangov.com/public/key5279-1751598352407/scangov-org/report",
+        "feature": true
+    },
+    {
+        "title": "standards.scangov.org",
+        "url": "https://my.scangov.com/public/key5279-1751598352407/standards-scangov-org/report",
+        "feature": true
+    },
+    {
+        "title": "docs.scangov.org",
+        "url": "https://my.scangov.com/public/key5279-1751598352407/docs-scangov-org/report",
+        "feature": true
+    },
+    {
+        "title": "data.scangov.org",
+        "url": "https://my.scangov.com/public/key5279-1751598352407/data-scangov-org/report",
+        "feature": false
+    }
+]
