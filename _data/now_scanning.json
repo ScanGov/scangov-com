@@ -7,7 +7,7 @@
         "img": "nyc-gov.png",
         "video": "OZpvU2CHWME",
         "scorecard": "https://my.scangov.com/public/key4343-1754059868813/nyc-gov/report",
-        "ogImage": "https://scangov.com/assets/img/pages/nyc-gov.png"
+        "ogImage": "pages/nyc-gov.png"
     },
     {
         "title": "georgia.gov",
@@ -17,7 +17,7 @@
         "img": "georgia-gov.png",
         "video": "X0uFodvibPw",
         "scorecard": "https://my.scangov.com/public/key4343-1754059868813/georgia-gov/report",
-        "ogImage": "https://scangov.com/assets/img/pages/georgia-gov.png"
+        "ogImage": "pages/georgia-gov.png"
     },
     {
         "title": "ms.gov",
@@ -27,7 +27,7 @@
         "img": "ms-gov.png",
         "video": "xUgSk4JGPX8",
         "scorecard": "https://my.scangov.com/public/key4343-1754059868813/ms-gov/report",
-        "ogImage": "https://scangov.com/assets/img/pages/ms-gov.png"
+        "ogImage": "pages/ms-gov.png"
     },
     {
         "title": "texas.gov",
@@ -37,6 +37,6 @@
         "img": "texas-gov.png",
         "video": "8q3cMnGfPgY",
         "scorecard": "https://my.scangov.com/public/key4343-1754059868813/texas-gov/report",
-        "ogImage": "https://scangov.com/assets/img/pages/texas-gov.png"
+        "ogImage": "pages/texas-gov.png"
     }
 ]

@@ -1,6 +1,7 @@
 ---
 layout: "layouts/video"
 tags: now-scanning
+author: ScanGov
 
 pagination:
     data: now_scanning
@@ -13,6 +14,7 @@ eleventyComputed:
     permalink: "/now-scanning/{{ website.title | slugify }}/"
     description: "{{ website.description }}"
     ogImage: "{{ website.ogImage }}"
+    ogImageAlt: "{{ scan.ogImageAlt }}"
 ---
 
 {% for item in now_scanning %}

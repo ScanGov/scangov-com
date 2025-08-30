@@ -1,9 +1,9 @@
 ---
 layout: layouts/default
-title: "Plans"
 date: 2025-05-14
 modified: 
 author: ScanGov
+title: "Plans"
 description: "ScanGov pricing."
 ---
 

@@ -1,14 +1,17 @@
 ---
-title: "Standards for government digital experience"
-description: "Building a community approach that holistically delivers for the people."
 date: 2025-05-14
 #modified: 
-img_og: certificate-og.png
-img_alt: "Certificate icon"
+author: ScanGov
+title: "Standards for government digital experience"
+description: "Building a community approach that holistically delivers for the people."
+ogImage: posts/certificate-og.png
+ogImageAlt: "Certificate icon"
 img_caption: "Icon by Font Awesome"
 img_link: https://fontawesome.com/
-topics:
-  - ScanGov
+keywords:
+ - digital experience
+ - government websites
+ - government digital experience
 ---
 
 We’re excited to officially launch [ScanGov Standards](https://standards.scangov.org), government digital experience standards based on guidance from public policy, web protocol, guidelines and best practices.

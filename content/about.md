@@ -1,9 +1,9 @@
 ---
 layout: layouts/default-plain
-title: "About"
 date: 2025-07-01
 modified: 
 author: ScanGov
+title: "About"
 description: "About ScanGov."
 ---
 

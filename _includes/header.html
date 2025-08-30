@@ -47,19 +47,19 @@
         <!-- Meta site -->
         <meta property="linkedin:site" content="{{ site.linkedin-url }}">
         {% if ogImage %}
-        <meta property="og:image" content="{{ ogImage }}">
+        <meta property="og:image" content="{{ site.url }}/assets/img/{{ ogImage }}">
         {% else %}
         <meta property="og:image" content="{{ site.url }}/assets/img/avatar-og.png">
+        {% endif %}
+        {% if ogImageAlt %}
+        <meta property="og:image:alt" content="{{ ogImageAlt }}">
+        {% else %}
+        <meta property="og:image:alt" content="ScanGov logo">
         {% endif %}
         {% if img-feat %}
         <!-- Featured image -->
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="630">
-        {% if img-alt %}
-        <meta property="og:image:alt" content="{{ title }} logo">
-        {% else %}
-        <meta property="og:image:alt" content="ScanGov image">
-        {% endif %}
         {% endif %}
         <!-- Favicon -->
         {% include "favicon.html" %}

@@ -1,15 +1,17 @@
 ---
+date: 2025-04-06
+#modified: 
+author: ScanGov
 title: "ScanGov to support judging for 2025 Government Experience Awards"
 description: "Will provide holistic, quantitative website scan data to e.Republic’s Center for Digital Government annual GovX awards program."
-date: 2025-04-06
-modified: 
-img_og: government-experience-awards-2025.png
-img_alt: "2025 Government Experience Awards"
+ogImage: posts/government-experience-awards-2025.png
+ogImageAlt: "2025 Government Experience Awards"
 #img_caption: ""
 #img_link: 
-topics:
-  - ScanGov
-  - GovX
+keywords:
+ - Government Experience Awards
+ - GovX
+ - Center for Digital Government
 ---
 
 [ScanGov](https://scangov.com) will again provide essential data support for e.Republic’s [Center for Digital Government](https://www.govtech.com/cdg)  **2025** [Government Experience Awards](https://www.govtech.com/cdg/government-experience), contributing critical quantitative metrics to the judging process.
