@@ -1,8 +1,13 @@
 [
   {
-    "title": "About",
-    "icon": "fa-solid fa-info-circle",
-    "url": "/about"
+    "title": "Features",
+    "icon": "fa-solid fa-fire",
+    "url": "/features"
+  },
+  {
+    "title": "Plans",
+    "icon": "fa-solid fa-crown",
+    "url": "/plans"
   },
   {
     "title": "Demo",
@@ -10,19 +15,9 @@
     "url": "/demo"
   },
   {
-    "title": "Features",
-    "icon": "fa-solid fa-fire",
-    "url": "/features"
-  },
-  {
     "title": "Showcase",
     "icon": "fa-solid fa-star",
     "url": "/showcase"
-  },
-  {
-    "title": "Plans",
-    "icon": "fa-solid fa-crown",
-    "url": "/plans"
   },
   {
     "title": "Services",
@@ -33,5 +28,10 @@
     "title": "What they say",
     "icon": "fa-solid fa-comment",
     "url": "/what-they-say"
+  },
+  {
+    "title": "About",
+    "icon": "fa-solid fa-info-circle",
+    "url": "/about"
   }
 ]

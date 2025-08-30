@@ -5,18 +5,6 @@
       "url": "/about"
     },
     {
-      "title": "Plans",
-      "url": "/plans"
-    },
-    {
-      "title": "Services",
-      "url": "/services"
-    },
-    {
-      "title": "Demo",
-      "url": "/demo"
-    },
-    {
       "title": "People",
       "url": "/people"
     },
@@ -43,20 +31,24 @@
   ],
   [
     {
-      "title": "Project ScanGov",
-      "url": "https://scangov.org"
+      "title": "Features",
+      "url": "/features"
     },
     {
-      "title": "Standards",
-      "url": "https://standards.scangov.org"
+      "title": "Plans",
+      "url": "/plans"
     },
     {
-      "title": "Docs",
-      "url": "https://docs.scangov.org/"
+      "title": "Demo",
+      "url": "/demo"
     },
     {
-      "title": "Data",
-      "url": "https://data.scangov.org"
+      "title": "Services",
+      "url": "/services"
+    },
+    {
+      "title": "What they say",
+      "url": "/what-they-say/"
     }
   ],
   [
@@ -86,6 +78,22 @@
     }
   ],
   [
+    {
+      "title": "Project ScanGov",
+      "url": "https://scangov.org"
+    },
+    {
+      "title": "Standards",
+      "url": "https://standards.scangov.org"
+    },
+    {
+      "title": "Docs",
+      "url": "https://docs.scangov.org/"
+    },
+    {
+      "title": "Data",
+      "url": "https://data.scangov.org"
+    },
     {
       "title": "Accessibility statement",
       "url": "https://docs.scangov.org/accessibility-statement"
