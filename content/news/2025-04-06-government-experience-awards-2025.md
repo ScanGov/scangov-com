@@ -8,6 +8,9 @@ ogImage: posts/government-experience-awards-2025.png
 ogImageAlt: "2025 Government Experience Awards"
 #img_caption: ""
 #img_link: 
+topics:
+  - ScanGov
+  - GovX
 keywords:
  - Government Experience Awards
  - GovX

@@ -15,23 +15,18 @@
     "url": "/demo"
   },
   {
-    "title": "Showcase",
-    "icon": "fa-solid fa-star",
-    "url": "/showcase"
-  },
-  {
     "title": "Services",
     "icon": "fa-solid fa-puzzle-piece",
     "url": "/services/"
   },
   {
+    "title": "Showcase",
+    "icon": "fa-solid fa-star",
+    "url": "/showcase"
+  },
+  {
     "title": "What they say",
     "icon": "fa-solid fa-comment",
     "url": "/what-they-say"
-  },
-  {
-    "title": "About",
-    "icon": "fa-solid fa-info-circle",
-    "url": "/about"
   }
 ]

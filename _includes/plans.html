@@ -1,147 +1,24 @@
 <div class="row">
-  <div class="col-lg-3 d-flex">
-    <div class="card card-plans mb-4 shadow-sm">
-      <div class="card-header">
-        <h2 class="my-0 fw-normal h5">Starter</h2>
-      </div>
-      <div class="card-body pt-4">
-        <h3 class="card-title h2 pb-3">Free
-        </h3>
-        <ul class="list-unstyled mt-3 mb-4">
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            One domain</li>
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            Homepage scan</li>
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            Unlimited users</li>
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            Support documentation</li>
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            Prioritization tasklist</li>
-        </ul>
-      </div>
-      <div class="card-footer">
-        <a href="https://my.scangov.com/scan" class="w-100 btn btn-lg btn-primary">Get started</a>
+  {% for item in plans %}
+    <div class="col-lg-3 d-flex">
+      <div class="card card-plans mb-4 shadow-sm">
+        <div class="card-header">
+          <h2 class="my-0 fw-normal h5">{{ item.title }}</h2>
+        </div>
+        <div class="card-body pt-4">
+          <h3 class="card-title h2 pb-3">{{ item.price }}</h3>
+          <ul class="list-unstyled mt-3 mb-4">
+            {% for check in item.checks %}
+              <li class="mb-2">
+                <i class="fa-solid fa-circle-check" aria-label="hidden"></i>
+                {{ check }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="card-footer">
+          <a href="{{ item.ctaUrl }}" class="w-100 btn btn-lg btn-primary stretched-link">{{ item.ctaText }}</a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col-lg-3 d-flex">
-    <div class="card card-plans mb-4 shadow-sm">
-      <div class="card-header">
-        <h2 class="my-0 fw-normal h5">Basic</h2>
-      </div>
-      <div class="card-body pt-4">
-        <h3 class="card-title h2 pb-3">$49/mo
-        </h3>
-        <ul class="list-unstyled mt-3 mb-4">
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            One domain</li>
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            5,000 page scans / month (total)</li>
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            Unlimited users</li>
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            Support documentation</li>
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            Prioritization tasklist</li>
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            GitHub integration</li>
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            Public dashboard</li>
-        </ul>
-      </div>
-      <div class="card-footer">
-        <a href="https://buy.stripe.com/aFafZh9gFbmx5s6bT73Nm00" class="w-100 btn btn-lg btn-primary">Get started</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-3 d-flex">
-    <div class="card card-plans mb-4 shadow-sm">
-      <div class="card-header">
-        <h2 class="my-0 fw-normal h5">Team</h2>
-      </div>
-      <div class="card-body pt-4">
-        <h3 class="card-title h2 pb-3">$199/mo
-        </h3>
-        <ul class="list-unstyled mt-3 mb-4">
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            5 domains</li>
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            20,000 page scans / month (total)</li>
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            Unlimited users</li>
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            Ticketing support</li>
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            Prioritization tasklist</li>
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            GitHub integration</li>
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            Public dashboard</li>
-        </ul>
-      </div>
-      <div class="card-footer">
-        <a href="https://buy.stripe.com/3cI3cv50p1LXdYCaP33Nm01" class="w-100 btn btn-lg btn-primary">Get started</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-3 d-flex">
-    <div class="card card-plans mb-4 shadow-sm">
-      <div class="card-header">
-        <h2 class="my-0 fw-normal h5">Enterprise</h2>
-      </div>
-      <div class="card-body pt-4">
-        <h3 class="card-title h2 pb-3">$499/mo
-        </h3>
-        <ul class="list-unstyled mt-3 mb-4">
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            Unlimited domains</li>
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            50,000 page scans / month (total)</li>
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            Unlimited users</li>
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            Single sign-on</li>
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            Ticketing support</li>
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            Prioritization tasklist</li>
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            GitHub integration</li>
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            Public dashboard</li>
-        </ul>
-      </div>
-      <div class="card-footer">
-        <a href="https://buy.stripe.com/8x2fZh0K9bmx6wa1et3Nm02" class="w-100 btn btn-lg btn-primary">Get started</a>
-      </div>
-    </div>
-  </div>
+  {% endfor %}
 </div>

@@ -3,8 +3,8 @@
     "title": "Starter",
     "icon": null,
     "price": "Free",
-    "cta-text": "Get started",
-    "cta-url": "https://my.scangov.com/scan",
+    "ctaText": "Start",
+    "ctaUrl": "https://my.scangov.com/scan",
     "checks": [
       "1 domain",
       "Homepage scan",
@@ -18,8 +18,8 @@
     "title": "Basic",
     "icon": null,
     "price": "$49/mo",
-    "cta-text": "Get started",
-    "cta-url": "https://my.scangov.com/scan",
+    "ctaText": "Start",
+    "ctaUrl": "https://buy.stripe.com/aFafZh9gFbmx5s6bT73Nm00",
     "checks": [
       "1 domain",
       "5,000 page scans / month (total)",
@@ -35,8 +35,8 @@
     "title": "Team",
     "icon": null,
     "price": "$199/mo",
-    "cta-text": "Get started",
-    "cta-url": "https://my.scangov.com/scan",
+    "ctaText": "Start",
+    "ctaUrl": "https://buy.stripe.com/3cI3cv50p1LXdYCaP33Nm01",
     "checks": [
       "5 domains",
       "20,000 page scans / month (total)",
@@ -52,8 +52,8 @@
     "title": "Enterprise",
     "icon": null,
     "price": "$499/mo",
-    "cta-text": "Get started",
-    "cta-url": "https://my.scangov.com/scan",
+    "ctaText": "Start",
+    "ctaUrl": "https://buy.stripe.com/8x2fZh0K9bmx6wa1et3Nm02",
     "checks": [
       "Unlimited domains",
       "50,000 page scans / month (total)",
