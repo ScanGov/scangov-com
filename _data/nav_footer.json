@@ -51,6 +51,14 @@
       "url": "/what-they-say/"
     },
     {
+      "title": "Showcase",
+      "url": "/showcase"
+    },
+    {
+      "title": "Now scanning ...",
+      "url": "/now-scanning"
+    },
+    {
       "title": "Tools",
       "url": "/tools"
     }

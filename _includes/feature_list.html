@@ -1,14 +1,17 @@
 {% if home %}
   <div class="card-group">
-    {% for item in features.slice(0 , 6) %}
+    {% for item in features.slice(0
+      , 6) %}
       <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
         <div class="card p-3 m-2">
-          <a href="/features/{{ item.title | slugify }}"><img
-              loading="lazy"
-              src="/../public/assets/img/pages/{{ item.img }}"
-              class="mt-2 mb-3 img-fluid border rounded shadow stretched-link"
-              alt="{{ item.title }}"></a>
-          <h3 class="h5">{{ item.title }}</h3>
+          <img
+            loading="lazy"
+            src="/../public/assets/img/pages/{{ item.img }}"
+            class="mt-2 mb-3 img-fluid border rounded shadow"
+            alt="{{ item.title }}">
+          <h3 class="h5">
+            <a href="/features/{{ item.title | slugify }}" class="stretched-link nav-link">{{ item.title }}</a>
+          </h3>
         </div>
       </div>
     {% endfor %}
