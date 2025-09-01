@@ -25,10 +25,11 @@ home: true
       <div class="card-group">
         {% for item in why %}
           <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-stretch">
-            <div class="card px-4 py-3 m-1 text-center">
-              <i class="fa-solid fa-check fa-2x mt-1 mb-3" aria-label="hidden"></i>
+            <div class="card px-4 py-3 m-1">
               <p class="m-0 p-0">
-                {{ item.title }}</p>
+                <i class="fa-solid fa-check fa-2x mt-1 mb-3" aria-label="hidden"></i>
+                <span class="mx-2">{{ item.title }}</span>
+              </p>
             </div>
           </div>
         {% endfor %}
@@ -44,13 +45,16 @@ home: true
       <p class="lead">Everyone responsible for serving the public.</p>
       <div class="card-group">
         {% for item in who %}
-          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex align-items-stretch">
-            <div class="card p-4 text-center m-2">
-              <i class="{{ item.icon }} fa-xl mt-2" aria-label="hidden"></i>
-              <h3 class="h5 mt-3 mb-1">{{ item.title }}</h3>
-              {% if item.description %}
-                <p class="card-text mt-1 mb-4">{{ item.description }}</p>
-              {% endif %}
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
+            <div class="card p-4 text-center m-1">
+              <div class="stretched-link">
+                <!-- required to center the icon -->
+                <i
+                  class="fa-solid {{ item.icon }} fa-3x mt-2 mb-2"
+                  aria-label="hidden"
+                  style="color: {{ item.color }}"></i>
+                <h3 class="h5 mt-3">{{ item.title }}</h3>
+              </div>
             </div>
           </div>
         {% endfor %}
