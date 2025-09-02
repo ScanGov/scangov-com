@@ -6,6 +6,12 @@
         "url": "https://my.scangov.com/scan"
     },
     {
+        "title": "RFP builder",
+        "description": "Create a website RFP.",
+        "icon": "file-contract",
+        "url": "https://scangov.com/rfp-builder"
+    },
+    {
         "title": "Readability scanner",
         "description": "Test web page readability.",
         "icon": "book-open-reader",
