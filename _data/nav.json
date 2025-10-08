@@ -20,13 +20,8 @@
     "url": "/services/"
   },
   {
-    "title": "Showcase",
-    "icon": "fa-solid fa-star",
-    "url": "/showcase"
-  },
-  {
-    "title": "What they say",
-    "icon": "fa-solid fa-comment",
-    "url": "/what-they-say"
+    "title": "Login",
+    "icon": "fa-solid fa-right-from-bracket",
+    "url": "https://my.scangov.com/login"
   }
 ]
