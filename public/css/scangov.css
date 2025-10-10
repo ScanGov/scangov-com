@@ -115,7 +115,7 @@ h6,
 
 /* General */
 
-.fa-arrows-rotate {
+.fa-rotate, .fa-arrows-rotate {
     color: #c5ee93 !important;
 }
 
@@ -163,8 +163,24 @@ h6,
     color: #ffb4cf !important;
 }
 
+.fa-circle {
+    color: #97d4ea !important;
+}
+
 .fa-circle-check {
     color: #70e17b !important;
+}
+
+.fa-circle-exclamation {
+    color: #f8b9c5 !important;
+}
+
+.fa-circle-plus {
+    color: #70e17b !important;
+}
+
+.fa-circle-dot {
+    color: #f3bf90 !important;
 }
 
 .fa-circle-down {
