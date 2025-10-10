@@ -1,9 +1,15 @@
 ---
 layout: "layouts/default"
+date: 2025-08-30
+modified: 
+author: ScanGov
 title: Services
 description: "Supporting government digital transformation."
-ogImage: "https://scangov.com/assets/img/pages/services-og.png"
-type: Organization
+ogImage: pages/services-og.png
+ogImageAlt: "Puzzle piece icon centered with ScanGov logo bottom right"
+img_caption: "File icon by Font Awesome"
+img_link: https://fontawesome.com
+type: 
 ---
 
 <div class="container">
@@ -31,9 +37,9 @@ type: Organization
                     <li>{{ output }}</li>
                   {% endfor %}
                 </ul>
-                {% if service.additionalProperty %}
-                <p class="card-text border-top mt-4 mb-2 pt-3">Duration: {{ service.additionalProperty.value }}</p>
-                {% endif %}
+              <!--
+                {% if service.additionalProperty %}<p class="card-text border-top mt-4 mb-2 pt-3">Duration: {{ service.additionalProperty.value }}</p>{% endif %}
+              -->
               </div>
             </div>
             <div class="card-footer">

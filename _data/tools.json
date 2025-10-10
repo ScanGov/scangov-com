@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Site scanner",
+        "description": "Scan website for standards compliance.",
+        "icon": "window-maximize",
+        "url": "https://my.scangov.com/scan"
+    },
+    {
+        "title": "RFP builder",
+        "description": "Create a website request for proposal.",
+        "icon": "file-contract",
+        "url": "https://scangov.com/rfp-builder"
+    },
+    {
+        "title": "Readability scanner",
+        "description": "Test web page readability.",
+        "icon": "book-open-reader",
+        "url": "https://my.scangov.com/tools/readability"
+    }
+]

@@ -89,6 +89,10 @@ h6,
 
 /* Brands */
 
+.fa-bluesky {
+    color: #96abee !important;
+}
+
 .fa-github {
     color: #96abee !important;
 }
@@ -99,6 +103,10 @@ h6,
 
 .fa-linkedin {
     color: #c3ebfa !important;
+}
+
+.fa-mastodon {
+    color: #f8b9c5 !important;
 }
 
 .fa-youtube {
@@ -225,6 +233,10 @@ h6,
     color: #a8f2ff;
 }
 
+.fa-file-contract {
+    color: #fee685;
+}
+
 .fa-filter {
     color: #cbc4f2;
 }
@@ -323,6 +335,10 @@ h6,
 
 .fa-plug-circle-bolt {
     color: #fff5c2;
+}
+
+.fa-puzzle-piece {
+    color: #98D035;
 }
 
 .fa-ranking-star {
@@ -426,37 +442,37 @@ h6,
 .btn-primary,
 a.btn-primary,
 a.btn-primary:visited {
-  background-color: var(--bs-link-color);
-  color: var(--bs-body-bg);
-  border-radius: var(--bs-border-radius);
-  border: 1px solid var(--bs-border-color);
-  box-shadow: var(--bs-card-shadow);
-  cursor: pointer;
-  font-family: var(--bs-font-bold);
-  padding: 0.55rem;
+    background-color: var(--bs-link-color);
+    color: var(--bs-body-bg);
+    border-radius: var(--bs-border-radius);
+    border: 1px solid var(--bs-border-color);
+    box-shadow: var(--bs-card-shadow);
+    cursor: pointer;
+    font-family: var(--bs-font-bold);
+    padding: 0.55rem;
 }
 
 a.btn-primary-outline {
-  background-color: var(--bs-body-bg);
-  color: var(--bs-body-color);
-  border-radius: var(--bs-border-radius-sm);
-  border: 1px solid var(--bs-border-color);
-  box-shadow: var(--bs-card-shadow);
-  cursor: pointer;
-  font-family: var(--bs-font-sans-serif);
-  padding: 0.55rem;
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    border-radius: var(--bs-border-radius-sm);
+    border: 1px solid var(--bs-border-color);
+    box-shadow: var(--bs-card-shadow);
+    cursor: pointer;
+    font-family: var(--bs-font-sans-serif);
+    padding: 0.55rem;
 }
 
 .btn-primary-outline:not(.active):hover,
 a.btn-primary-outline:not(.active):hover {
-  background-color: var(--bs-btn-bg)!important;
-  color: var(--bs-body-bg);
-  border: 1px solid var(--bs-border-color);
-  box-shadow: var(--bs-box-shadow-md)!important
+    background-color: var(--bs-btn-bg) !important;
+    color: var(--bs-body-bg);
+    border: 1px solid var(--bs-border-color);
+    box-shadow: var(--bs-box-shadow-md) !important
 }
 
 a.btn:not(.active):hover svg, .nav-link:not(.active):hover svg {
-  color: var(--bs-link-color) !important;
+    color: var(--bs-link-color) !important;
 }
 
 /* Cards */

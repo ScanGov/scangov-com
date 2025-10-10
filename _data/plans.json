@@ -2,19 +2,68 @@
   {
     "title": "Starter",
     "icon": null,
-    "cta-text": "Contact us",
-    "cta-url": "https://docs.google.com/forms/d/e/1FAIpQLSeKiSG0f07leAwW1QqIMSoDIgTA92m0jVy6NADtiaoPhg4rww/viewform",
+    "price": "Free",
+    "ctaText": "Start",
+    "ctaUrl": "https://my.scangov.com/scan",
     "checks": [
-      "1 domain"
+      "1 domain",
+      "Homepage scan",
+      "Continuous monitoring",
+      "Unlimited users",
+      "Support documentation",
+      "Prioritization tasklist"
+    ]
+  },
+  {
+    "title": "Basic",
+    "icon": null,
+    "price": "$49/mo",
+    "ctaText": "Start",
+    "ctaUrl": "https://buy.stripe.com/aFafZh9gFbmx5s6bT73Nm00",
+    "checks": [
+      "1 domain",
+      "5,000 page scans / month (total)",
+      "Continuous monitoring",
+      "Unlimited users",
+      "Support documentation",
+      "Prioritization tasklist",
+      "GitHub integration",
+      "Public dashboard"
+    ]
+  },
+  {
+    "title": "Team",
+    "icon": null,
+    "price": "$199/mo",
+    "ctaText": "Start",
+    "ctaUrl": "https://buy.stripe.com/3cI3cv50p1LXdYCaP33Nm01",
+    "checks": [
+      "5 domains",
+      "20,000 page scans / month (total)",
+      "Continuous monitoring",
+      "Unlimited users",
+      "Ticketing support",
+      "Prioritization tasklist",
+      "GitHub integration",
+      "Public dashboards"
     ]
   },
   {
     "title": "Enterprise",
     "icon": null,
-    "cta-text": "Contact us",
-    "cta-url": "https://docs.google.com/forms/d/e/1FAIpQLSeKiSG0f07leAwW1QqIMSoDIgTA92m0jVy6NADtiaoPhg4rww/viewform",
+    "price": "$499/mo",
+    "ctaText": "Start",
+    "ctaUrl": "https://buy.stripe.com/8x2fZh0K9bmx6wa1et3Nm02",
     "checks": [
-      "Multiple domains"
+      "Unlimited domains",
+      "50,000 page scans / month (total)",
+      "Continuous monitoring",
+      "Unlimited users",
+      "Single sign-on",
+      "Ticketing support",
+      "Prioritization tasklist",
+      "GitHub integration",
+      "Public dashboards"
     ]
   }
 ]

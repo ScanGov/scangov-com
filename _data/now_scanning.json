@@ -1,5 +1,25 @@
 [
     {
+        "title": "nyc.gov",
+        "page_title": "Now scanning ... nyc.gov",
+        "description": "A ScanGov government digital experience review of nyc.gov.",
+        "url": "https://nyc.gov",
+        "img": "nyc-gov.png",
+        "video": "OZpvU2CHWME",
+        "scorecard": "https://my.scangov.com/public/key4343-1754059868813/nyc-gov/report",
+        "ogImage": "pages/nyc-gov.png"
+    },
+    {
+        "title": "georgia.gov",
+        "page_title": "Now scanning ... georgia.gov",
+        "description": "A ScanGov government digital experience review of georgia.gov.",
+        "url": "https://georgia.gov",
+        "img": "georgia-gov.png",
+        "video": "X0uFodvibPw",
+        "scorecard": "https://my.scangov.com/public/key4343-1754059868813/georgia-gov/report",
+        "ogImage": "pages/georgia-gov.png"
+    },
+    {
         "title": "ms.gov",
         "page_title": "Now scanning ... ms.gov",
         "description": "A ScanGov government digital experience review of ms.gov.",
@@ -7,7 +27,7 @@
         "img": "ms-gov.png",
         "video": "xUgSk4JGPX8",
         "scorecard": "https://my.scangov.com/public/key4343-1754059868813/ms-gov/report",
-        "ogImage": "https://scangov.com/assets/img/pages/ms-gov.png"
+        "ogImage": "pages/ms-gov.png"
     },
     {
         "title": "texas.gov",
@@ -17,6 +37,6 @@
         "img": "texas-gov.png",
         "video": "8q3cMnGfPgY",
         "scorecard": "https://my.scangov.com/public/key4343-1754059868813/texas-gov/report",
-        "ogImage": "https://scangov.com/assets/img/pages/texas-gov.png"
+        "ogImage": "pages/texas-gov.png"
     }
 ]

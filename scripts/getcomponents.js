@@ -7,7 +7,7 @@ try {
     throw new Error(`Response status: ${response.status}`);
   }
   const cssText = await response.text();
-  fs.writeFileSync('./public/css/scangov.css',cssText,'utf8');
+  fs.writeFileSync('./public/css/scangov.css', cssText, 'utf8');
 } catch (error) {
   throw new Error(`Fetch error: ${error.message}`);
 }

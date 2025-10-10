@@ -1,5 +1,8 @@
 ---
 layout: "layouts/default-plain"
+date: 2025-08-30
+modified: 
+author: ScanGov
 title: Government digital experience primer
 description: "An introduction to government digital experience."
 ---

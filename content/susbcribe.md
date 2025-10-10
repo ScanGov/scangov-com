@@ -1,9 +1,9 @@
 ---
 layout: layouts/cards
-title: "Subscribe"
 date: 2025-08-08
 modified: 
 author: ScanGov
+title: "Subscribe"
 description: "Sign up for ScanGov newsletters."
 permalink: /subscribe/
 ---

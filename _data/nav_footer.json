@@ -2,27 +2,23 @@
   [
     {
       "title": "About",
-      "url": "https://docs.scangov.org/about"
-    },
-    {
-      "title": "Meet",
-      "url": "/meet"
+      "url": "/about"
     },
     {
       "title": "People",
-      "url": "https://docs.scangov.org/people"
+      "url": "/people"
     },
     {
       "title": "News",
-      "url": "https://scangov.com/news"
+      "url": "/news"
     },
     {
       "title": "Press",
-      "url": "https://scangov.com/press"
+      "url": "/press"
     },
     {
       "title": "Primer",
-      "url": "https://scangov.com/government-digital-experience"
+      "url": "/government-digital-experience"
     },
     {
       "title": "Contact",
@@ -35,20 +31,36 @@
   ],
   [
     {
-      "title": "Project ScanGov",
-      "url": "https://scangov.org"
+      "title": "Features",
+      "url": "/features"
     },
     {
-      "title": "Standards",
-      "url": "https://standards.scangov.org"
+      "title": "Plans",
+      "url": "/plans"
     },
     {
-      "title": "Docs",
-      "url": "https://docs.scangov.org/"
+      "title": "Demo",
+      "url": "/demo"
     },
     {
-      "title": "Data",
-      "url": "https://data.scangov.org"
+      "title": "Services",
+      "url": "/services"
+    },
+    {
+      "title": "What they say",
+      "url": "/what-they-say/"
+    },
+    {
+      "title": "Showcase",
+      "url": "/showcase"
+    },
+    {
+      "title": "Now scanning ...",
+      "url": "/now-scanning"
+    },
+    {
+      "title": "Tools",
+      "url": "/tools"
     }
   ],
   [
@@ -79,12 +91,28 @@
   ],
   [
     {
+      "title": "Project ScanGov",
+      "url": "https://scangov.org"
+    },
+    {
+      "title": "Standards",
+      "url": "https://standards.scangov.org"
+    },
+    {
+      "title": "Docs",
+      "url": "https://docs.scangov.org/"
+    },
+    {
+      "title": "Data",
+      "url": "https://data.scangov.org"
+    },
+    {
       "title": "Accessibility statement",
-      "url": "https://docs.scangov.org/scangov-accessibility-statement"
+      "url": "https://docs.scangov.org/accessibility-statement"
     },
     {
       "title": "Privacy statement",
-      "url": "https://docs.scangov.org/scangov-privacy-statement"
+      "url": "https://docs.scangov.org/privacy-statement"
     },
     {
       "title": "Code of conduct",

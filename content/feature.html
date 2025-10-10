@@ -1,5 +1,6 @@
 ---
 layout: "layouts/default"
+author: ScanGov
 tags: feature
 
 pagination:
@@ -12,6 +13,8 @@ eleventyComputed:
     title: "{{ feature.title }}"
     permalink: "/features/{{ feature.title | slugify }}/"
     description: "{{ feature.description }}"
+    ogImage: "{{ indicator.ogImage }}"
+    ogImageAlt: "{{ scan.ogImageAlt }}"
 ---
 
 {% if feature.video %}

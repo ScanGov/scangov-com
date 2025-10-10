@@ -1,9 +1,9 @@
 ---
 layout: layouts/default
-title: "Government. Digital. Experience."
 date: 2025-02-23
 modified: 2025-04-07
 author: ScanGov
+title: "Government. Digital. Experience."
 description: "Monitoring, reporting, remediation and certification."
 permalink: /
 home: true
@@ -25,10 +25,11 @@ home: true
       <div class="card-group">
         {% for item in why %}
           <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-stretch">
-            <div class="card px-4 py-3 m-1 text-center">
-              <i class="fa-solid fa-check fa-2x mt-1 mb-3" aria-label="hidden"></i>
+            <div class="card px-4 py-3 m-1">
               <p class="m-0 p-0">
-                {{ item.title }}</p>
+                <i class="fa-solid fa-check fa-2x mt-1 mb-3" aria-label="hidden"></i>
+                <span class="mx-2">{{ item.title }}</span>
+              </p>
             </div>
           </div>
         {% endfor %}
@@ -44,13 +45,16 @@ home: true
       <p class="lead">Everyone responsible for serving the public.</p>
       <div class="card-group">
         {% for item in who %}
-          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex align-items-stretch">
-            <div class="card p-4 text-center m-2">
-              <i class="{{ item.icon }} fa-xl mt-2" aria-label="hidden"></i>
-              <h3 class="h5 mt-3 mb-1">{{ item.title }}</h3>
-              {% if item.description %}
-                <p class="card-text mt-1 mb-4">{{ item.description }}</p>
-              {% endif %}
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
+            <div class="card p-4 text-center m-1">
+              <div class="stretched-link">
+                <!-- required to center the icon -->
+                <i
+                  class="fa-solid {{ item.icon }} fa-3x mt-2 mb-2"
+                  aria-label="hidden"
+                  style="color: {{ item.color }}"></i>
+                <h3 class="h5 mt-3">{{ item.title }}</h3>
+              </div>
             </div>
           </div>
         {% endfor %}
@@ -69,32 +73,6 @@ home: true
     </div>
   </div>
 </div>
-<div class="container border-bottom mb-5 pb-5">
-  <div class="row">
-    <div class="col-12">
-      <h2 class="mb-3">Plans</h2>
-    </div>
-  </div>
-  {% include "plans.html" %}
-</div>
-<!--
-  <div class="container border-bottom mb-5 pb-5">  <div class="row">    <div class="col-12">      <h2 class="mb-3">Services</h2>      <p class="lead">We're here to support you on your government digital experience journey.</p>      <div class="card-group">        {% for item in services %}          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-stretch">            <div class="card m-1">              <div class="card-header">                <h3 class="my-2 h4">{{ item.title }}</h3></div><div class="card-body pt-4 text-center"><iclass="{{ item.icon }} fa-3x mt-2"aria-label="hidden"style="color: {{ item.color }}"></i><ul class="list-unstyled mt-3 mb-3">{% for check in item.checks %}<li class="fs-5 mb-2"><i class="fa-solid fa-check" aria-label="hidden"></i>{{ check }}</li>{% endfor %}</ul></div>{% if item.cta-url %}<div class="card-footer"><a href="{{ item.cta-url }}" class="w-100 btn btn-lg btn-primary">{{ item.cta-text }}</a></div>{% endif %}</div></div>{% endfor %}</div></div></div></div>
--->
-<div class="container border-bottom mb-5 pb-5">
-  <div class="row">
-    <div class="col-12">
-      <h2 class="mb-3">Guidance</h2>
-      <p class="lead">Public policy, web protocol, guidelines and best practices used to develop the ScanGov Standards.</p>
-      {% set standards_list = guidance %}
-      {% set standards_list_type = "guidance" %}
-      {% include "standards_list.html" %}
-      <p class="small mt-3">
-        <a href="https://standards.scangov.org/guidance/">Guidance</a>
-      </p>
-    </div>
-  </div>
-</div>
-
 <div class="container border-bottom mb-5 pb-5 pt-3">
   <div class="row">
     <div class="col-12">
@@ -127,107 +105,54 @@ home: true
     </div>
   </div>
 </div>
-{% if quotes %}
-  <div class="container border-bottom mb-5 pb-5">
-    <div class="row">
-      <div class="col-12">
-        <h2 class="mb-3">What they say</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-2 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
-      <div class="col-8 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-        {% for item in quotes %}
-          {% if item.feature == true %}
-            <div class="my-4">
-              <blockquote>
-                <p>&ldquo;{{ item.quote | safe }}&rdquo;</p>
-              </blockquote>
-              {% if item.name %}
-                <p class="text-end">
-                  {% if item.name %}
-                    {{ item.name }}{% endif %}
-                  {% if item.title %}<br>{{ item.title }}
-                  {% endif %}
-                  {% if item.org %}<br>
-                    {{ item.org }}{% endif %}
-                </p>
-              {% endif %}
-            </div>
-          {% endif %}
-        {% endfor %}
-        <p class="small mt-3">
-          <a href="{{ site.baseurl }}what-they-say">What they say</a>
-        </p>
-      </div>
-      <div class="col-2 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
-    </div>
-  </div>
-{% endif %}
-<div class="container border-bottom mb-5 pb-5">
+<div class="container border-bottom mb-5 pb-5 pt-3">
   <div class="row">
-    <div class="col-12">
-      <h2 class="mb-3">News</h2>
-      <p class="lead">ScanGov updates.</p>
-      <div class="card-group">
-        {% for post in collections.posts | reverse %}
-          {% if loop.index0 < 2 %}
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-stretch">
-              <div class="card mx-2 my-2 pt-2">
-                <div class="card-body">
-                  <h2 class="h3 mb-3">
-                    <a href="{{ post.url }}" class="stretched-link">{{ post.data.title }}</a>
-                  </h2>
-                  <p class="card-text small">{{ post.data.description }}</p>
-                </div>
-                <div class="card-footer small">{{ post.data.date | dateFormat }}</div>
+    <h2 class="mb-3">Showcase</h2>
+    <p class="lead">Featured digital experience scorecards.</p>
+    <div class="card-group">
+      {% for item in showcase %}
+        <div class="col-12 col sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-stretch">
+          {% if item.feature %}
+            <div class="card mb-2 p-1">
+              <div class="card-body">
+                <h2 class="h5 p-0 m-0">
+                  <i class="fa-solid fa-star"></i>
+                  <a
+                    href="{{ item.url }}"
+                    class="stretched-link"
+                    target="_blank">{{ item.title }}</a>
+                </h2>
               </div>
             </div>
           {% endif %}
-        {% endfor %}
-      </div>
-      <p class="small mt-3">
-        <a href="https://scangov.com/news">News</a>
-      </p>
+        </div>
+      {% endfor %}
     </div>
+    <p class="small mt-3">
+      <a href="{{ site.baseurl }}showcase">Showcase</a>
+    </p>
   </div>
 </div>
 <div class="container border-bottom mb-5 pb-5">
   <div class="row">
     <div class="col-12">
-      <h2 class="mb-3">Press</h2>
-      <p class="lead">ScanGov in the news.</p>
-      <div class="card-group">
-        {% for item in press %}
-          {% if loop.index0 < 3 %}
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
-              <div class="card mx-2 my-2 pt-2">
-                <div class="card-body">
-                  <h2 class="h5 mb-3">
-                    <a href="{{ site.baseurl }}{{ item.url }}">
-                      {{ item.title }}
-                    </a>
-                  </h2>
-                </div>
-                <div class="card-footer small">
-                  {{ item.source }}
-                </div>
-              </div>
-            </div>
-          {% endif %}
-        {% endfor %}
-      </div>
-      <p class="small mt-3">
-        <a href="https://scangov.com/press">Press</a>
-      </p>
+      <h2 class="mb-3">Plans</h2>
     </div>
   </div>
+  {% include "plans.html" %}
+  <p class="small mt-3">
+    <a href="{{ site.baseurl }}plans">Plans</a>
+  </p>
 </div>
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <h2 class="mb-4">Questions?</h2>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKiSG0f07leAwW1QqIMSoDIgTA92m0jVy6NADtiaoPhg4rww/viewform" class="btn btn-primary btn-lg">Contact us</a>
+      <h2 class="mb-3">Now scanning ...</h2>
+      <p class="lead">ScanGov government digital experience reviews.</p>
+      {% include "now_scanning_list.html" %}
+      <p class="small mt-3">
+        <a href="{{ site.baseurl }}now-scanning">Now scanning ...</a>
+      </p>
     </div>
   </div>
 </div>

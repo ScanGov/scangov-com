@@ -1,11 +1,17 @@
 ---
+date: 2025-02-13
+#modified: 
+author: ScanGov
 title: "Connect with ScanGov"
 description: "Ways to stay in touch with us."
-date: 2025-02-13
-#img_og: -og.png
+#ogImage: posts/.png
+#ogImageAlt: ""
+#img_caption: ""
+#img_link: 
 keywords:
-topics:
-  - ScanGov
+ - digital experience
+ - government websites
+ - government digital experience
 ---
 
 We've set up a few ways to connect with us:

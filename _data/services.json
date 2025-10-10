@@ -3,11 +3,10 @@
     {
       "@type": "Service",
       "name": "Baseline",
-      "category": "Digital Experience Assessment & Strategy",
+      "category": "Digital experience assessment and strategy",
       "description": "Comprehensive multi-site digital experience baseline assessment",
       "serviceOutput": [
         "Gap analysis against ScanGov standards and industry best practices",
-        "Comparison of public facing web applications compliance with peer organizations",
         "Strategic roadmap development with prioritized recommendations",
         "Executive summary with ROI projections for digital improvements"
       ],
@@ -36,11 +35,10 @@
     {
       "@type": "Service",
       "name": "Strategy",
-      "category": "Digital Experience Assessment & Strategy",
+      "category": "Digital experience assessment and strategy",
       "description": "Long-term digital experience strategy aligned with citizen service goals",
       "serviceOutput": [
         "Feedback processing and categorization analysis",
-        "Web application fragmentation comparison with peer organizations",
         "Change management strategy for digital transformation initiatives",
         "Success metrics and KPI framework development"
       ],
@@ -68,8 +66,8 @@
     },
     {
       "@type": "Service",
-      "name": "Accessibility Compliance",
-      "category": "Implementation & Optimization Services",
+      "name": "Accessibility compliance",
+      "category": "Accessibility and optimization services",
       "description": "Complete WCAG compliance beyond automated audits",
       "serviceOutput": [
         "WCAG 2.1 AA manual review for complete compliance",
@@ -105,11 +103,11 @@
     },
     {
       "@type": "Service",
-      "name": "Performance Optimization",
-      "category": "Implementation & Optimization Services",
+      "name": "Performance optimization",
+      "category": "Accessibility and optimization services",
       "description": "Core Web Vitals improvement and performance optimization",
       "serviceOutput": [
-        "Core Web Vitals improvement (LCP, FID, CLS)",
+        "Core Web Vitals improvement (LCP, FCP, CLS, TTFB)",
         "Performance comparison with peer organizations",
         "Site speed optimization and caching implementation",
         "Mobile responsiveness and cross-browser testing",
@@ -141,13 +139,13 @@
     },
     {
       "@type": "Service",
-      "name": "Procurement Support",
-      "category": "Maintain High Standards",
+      "name": "Procurement",
+      "category": "Procurement and ongoing support",
       "description": "RFP development and vendor management",
       "serviceOutput": [
         "RFP development with ScanGov standards integration",
         "Vendor evaluation and selection criteria",
-        "Contract negotiation support for digital services",
+        "Digital services contract negotiation support",
         "Ongoing vendor performance monitoring setup"
       ],
       "offers": {
@@ -174,11 +172,11 @@
     },
     {
       "@type": "Service",
-      "name": "Digital Experience Monitoring &  Support",
-      "category": "Maintain High Standards",
+      "name": "Monitoring and support",
+      "category": "Procurement and ongoing support",
       "description": "Continuous monitoring and optimization",
       "serviceOutput": [
-        "Monthly ScanGov analysis and reporting",
+        "Monthly ScanGov reporting and analysis",
         "Quarterly optimization recommendations",
         "Priority issue resolution support",
         "Continuous monitoring and alerts management"

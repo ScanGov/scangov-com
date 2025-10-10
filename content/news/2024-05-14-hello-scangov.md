@@ -1,19 +1,20 @@
 ---
 date: 2024-05-14
+#modified: 
+author: ScanGov
 title: "Hello ScanGov"
-description: "A government digital experience monitor from Civic Hacking Agency."
+description: "A government digital experience monitor."
+#ogImage: posts/.png
+#ogImageAlt: ""
+#img_caption: ""
+#img_link: 
 keywords:
+ - digital experience
  - government websites
  - government digital experience
-topics:
-  - Accessibility
-  - Content
-  - SEO
-  - Security
-  - Social media
 ---
 
-[Civic Hacking Agency](https://civichackingagency.org) announces the launch of [ScanGov](https://scangov.org), a government digital experience monitor.
+Civic Hacking Agency announces the launch of [ScanGov](https://scangov.org), a government digital experience monitor.
 
 ## About ScanGov &#128165;
 
@@ -79,4 +80,4 @@ Key indicators:
 
 ## Questions? &#9993;
 
-- [Contact us](https://docs.scangov.org/about)
+- [Contact us](https://scangov.com/contact)

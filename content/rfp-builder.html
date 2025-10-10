@@ -1,0 +1,101 @@
+---
+layout: "layouts/default"
+title: "Website RFP builder"
+description: "Create a website request for proposal based on ScanGov Standards."
+ogImage: pages/website-rfp-og.png
+ogImageAlt: "File with signature icon"
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
+    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+      <form>
+        <div class="mb-4">
+          <label for="organization" class="form-label">Organization *</label>
+          <input
+            class="form-control"
+            type="text"
+            id="organization"
+            name="organization"
+            required
+            aria-required="true">
+        </div>
+
+        <div class="mb-4">
+          <label for="website" class="form-label">Website URL</label>
+          <input
+            class="form-control"
+            type="url"
+            id="website"
+            name="website"
+            placeholder="https://example.com">
+        </div>
+
+        <div class="mb-4">
+          <label for="contact" class="form-label">Point of contact *</label>
+          <input
+            class="form-control"
+            type="text"
+            id="contact"
+            name="contact"
+            required
+            aria-required="true">
+        </div>
+
+        <div class="mb-4">
+          <label for="email" class="form-label">Email address *</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            aria-describedby="emailHelp"
+            required
+            aria-required="true">
+        </div>
+
+        <div class="mb-4">
+          <label for="phone" class="form-label">Phone number</label>
+          <input
+            class="form-control"
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="(555) 123-4567">
+        </div>
+
+        <div class="mb-4">
+          <label for="submission-deadline" class="form-label">Submission deadline</label>
+          <input
+            class="form-control"
+            type="date"
+            id="submission-deadline"
+            name="submission-deadline">
+        </div>
+
+        <div class="mb-4">
+          <label for="questions-deadline" class="form-label">Questions deadline</label>
+          <input
+            class="form-control"
+            type="date"
+            id="questions-deadline"
+            name="questions-deadline">
+        </div>
+
+        <div class="mb-4">
+          <label for="instructions" class="form-label">General instructions</label>
+          <textarea
+            class="form-control"
+            id="instructions"
+            name="instructions"
+            rows="3"
+            aria-describedby="instructionsHelp"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
+</div></div>

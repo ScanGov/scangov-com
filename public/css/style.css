@@ -612,17 +612,6 @@ h1::after {
     --bs-link-color: var(--bs-body-bg);
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* Cards */
 
 .card-hover {
@@ -642,19 +631,11 @@ h1::after {
     vertical-align: -.125em;
 }
 
-.fa-solid {
-    height: 1em;
-}
-
 /* above doesn't assign width because it messes up the who it's for section on homepage */
-.nav-link .fa-solid, .fa-circle-check, .fa-5x.fa-solid {
+.fa-solid, .fa-circle-check, .fa-5x.fa-solid, .fa-brands {
     height: 1em;
     width: 1em;
 }
-
-/* this covers indicators section on homepage, circle checks on plans and h1 on topic pages */
-/* end experiment */
-
 
 /* Forms */
 
