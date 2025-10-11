@@ -1,6 +1,6 @@
 ---
 name: Feature
-about: New ScanGov feature.
+about: New ScanGov feature
 title: 'Feature: '
 labels: ''
 assignees: ''
