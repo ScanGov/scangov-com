@@ -1,5 +1,15 @@
 [
     {
+        "title": "colorado.gov",
+        "page_title": "Now scanning ... colorado.gov",
+        "description": "A ScanGov government digital experience review of colorado.gov.",
+        "url": "https://colorado.gov",
+        "img": "colorado-gov.png",
+        "video": "OZpvU2CHWME",
+        "scorecard": "https://my.scangov.com/public/key4343-1754059868813/colorado-gov/report",
+        "ogImage": "pages/colorado-gov.png"
+    },
+    {
         "title": "nyc.gov",
         "page_title": "Now scanning ... nyc.gov",
         "description": "A ScanGov government digital experience review of nyc.gov.",
