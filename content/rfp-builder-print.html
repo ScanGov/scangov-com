@@ -1,0 +1,17 @@
+---
+sitemap: false
+---
+
+<style>
+    @media print {
+        #back-link {
+            display: none;
+        }
+    }
+</style>
+<a id="back-link" href="javascript:void(0);" onclick="window.history.back()">Back</a>
+
+{% include "rfp_content.html" %}
+<script>
+    window.print();
+</script>
