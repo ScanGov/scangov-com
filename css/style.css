@@ -647,6 +647,6 @@ h1::after {
     color: #fff;
 }
 
-.text-bg-danger a {
+.text-bg-warning a {
     color: #000;
 }
