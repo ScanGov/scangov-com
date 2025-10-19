@@ -1,0 +1,62 @@
+---
+layout: layouts/default-plain.html
+date: 2025-10-19
+modified: 2025-10-19
+author: ScanGov
+title: "Readability scanner"
+ogImage: pages/readability-scanner.png
+description: "Test web page readability."
+permalink: /tools/readability/
+home: false
+---
+
+
+
+
+
+<form class="input-validation-required centered-sm" method="post" action="/audit">
+  <style>
+  textarea {
+    width: 90%;
+    height: 200px;
+    margin: 1rem;
+    padding: .5rem 1rem;
+  }
+  </style>
+  <div class="mb-3">
+    <label for="site" class="form-label">Page URL</label>
+    <input type="text" class="form-control" name="site" id="site" placeholder="https://www.yoursite.gov/page-to-review/" required>
+  </div>
+  <button type="submit" class="btn btn-primary" id="submitbutton">Scan</button>
+  <br><br>
+  <div id="scan_results"></div>
+</form>
+
+<div class="alert alert-secondary">
+  <h2>About</h2>
+  <p>Readability measures how easy text is to understand by looking at words and layout. Experts like Flesch-Kincaid and Automated Readability Index help test reading level. For example, ARI uses the average number of characters per word and words per sentence to give a U.S. school grade level—e.g., 8 = eighth grade. Simple words, short sentences, clear design, and legible fonts make text easier to read. These tests help match writing to different audiences' skill levels.</p>
+  <h2>Why it's important</h2>
+  <p>Improves communication by helping readers quickly understand messages without confusion or frustration.</p>
+  <h2>Guidance</h2>
+  <ul><li><a href="https://standards.scangov.org/21stcenturyidea">21st Century Integrated Digital Experience Act</a></li><li><a href="https://standards.scangov.org/automated-readability-index">Automated Readability Index</a></li><li><a href="https://standards.scangov.org/federal-website-standards">Federal website standards</a></li><li><a href="https://standards.scangov.org/memorandum-m-23-22">Memorandum (M-23-22)</a></li><li><a href="https://standards.scangov.org/plain-writing-act">Plain Writing Act of 2010</a></li></ul>
+</div>
+
+<script type="module" src="/js/readit.js"></script>
+
+<!-- all the code for this feature is in the js file, 
+ this html is here to let the css trimmer keep the classes associated with the cards we will display -->
+<div class="card mb-3 text-bg-danger col-12 col-sm-12 col-md-6 col-lg-5 d-flex align-items-stretch d-none">
+  <div class="card-header">
+    <a href="https://standards.scangov.org/readability" target="_blank" class="cardlink">Readability (ARI) <i class="fa-solid fa-circle-question"></i></a>
+  </div>
+  <span class="card-body text-center pt-5 text-decoration-none">
+    <p class="display-1">
+      10
+    </p>
+  </span>
+  <span class="card-footer text-center cardlink">ARI goal: 8 (or below)</span>
+</div>
+<div class="alert alert-danger d-none">
+  <i class="fa-solid fa-face-frown"></i>
+  <i class="fa-solid fa-circle-question"></i>
+</div>
