@@ -1,5 +1,15 @@
 [
     {
+        "title": "maryland.gov",
+        "page_title": "Now scanning ... maryland.gov",
+        "description": "A ScanGov government digital experience review of maryland.gov.",
+        "url": "https://maryland.gov",
+        "img": "maryland-gov.png",
+        "video": "DIM7x6YIGOA",
+        "scorecard": "https://my.scangov.com/public/key4343-1754059868813/maryland-gov/report",
+        "ogImage": "pages/maryland-gov.png"
+    },
+    {
         "title": "colorado.gov",
         "page_title": "Now scanning ... colorado.gov",
         "description": "A ScanGov government digital experience review of colorado.gov.",
