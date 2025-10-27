@@ -26,4 +26,4 @@ The grades are based on scans of state government website homepages and how each
 - Security
 - Social media
 
-[View the government digital experience map.](https://scangov.org/map/states/overall/)
+[Visit the government digital experience map.](https://scangov.org/map/states/overall/)
