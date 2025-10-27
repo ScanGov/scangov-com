@@ -642,3 +642,11 @@ h1::after {
 .form-control:focus {
     border-color: var(--bs-link-color);
 }
+
+.text-bg-danger a {
+    color: #fff;
+}
+
+.text-bg-warning a {
+    color: #000;
+}

@@ -15,6 +15,6 @@
         "title": "Readability scanner",
         "description": "Test web page readability.",
         "icon": "book-open-reader",
-        "url": "https://my.scangov.com/tools/readability"
+        "url": "/tools/readability"
     }
 ]
