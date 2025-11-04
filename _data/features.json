@@ -1,5 +1,22 @@
 [
   {
+    "title": "Readability",
+    "description": "Testing how easy it is to read website content.",
+    "img": "readability.png",
+    "video": "0OZ8ZJN8br4",
+    "items": [
+      {
+        "title": "Automated Readability Index (ARI)"
+      },
+      {
+        "title": "Flesch-Kincaid"
+      },
+      {
+        "title": "Report cards for targeted readability."
+      }
+    ]
+  },
+  {
     "title": "Sites dashboard",
     "description": "Multi-site management",
     "img": "sites.png",
