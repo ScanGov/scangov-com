@@ -14,9 +14,21 @@ sitemap: false
             <div class="mb-4 pb-4 border-bottom">
                 <ul class="nav nav-pills mt-2 mb-2 small">
                     <li class="nav-item">
-                        <a href="javascript:void(0);" onclick="navigator.clipboard.writeText(document.getElementById('rfp-content').innerText);" title="Copy to clipboard" class="nav-link btn btn-primary-outline mx-1">
+                        <a href="javascript:void(0);" onclick="navigator.clipboard.writeText(location.href);" title="Copy link" class="nav-link btn btn-primary-outline mx-1">
+                            <i class="fa-solid fa-link" style="color: white"></i>
+                            <small>Copy link</small>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0);" onclick="
+                            navigator.clipboard.write([
+                                new ClipboardItem({
+                                    'text/html': new Blob([document.getElementById('rfp-content').innerHTML], { type: 'text/html' }),
+                                    'text/plain': new Blob([document.getElementById('rfp-content').innerText], { type: 'text/plain' })
+                                })
+                            ]);" title="Copy text" class="nav-link btn btn-primary-outline mx-1">
                             <i class="fa-solid fa-copy"></i>
-                            <small>Copy to clipboard</small>
+                            <small>Copy text</small>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -35,5 +47,5 @@ sitemap: false
     </div>
 </div>
 <script>
-    document.getElementsByClassName('lead')[0].innerHTML = '<span class="organization"></span> website';
+    document.getElementsByClassName('lead')[0].innerHTML = '<span class="organization">' + params.get('organization') + '</span> website';
 </script>
