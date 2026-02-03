@@ -1,28 +1,13 @@
 [
   {
-    "title": "Starter",
-    "icon": null,
-    "price": "Free",
-    "ctaText": "Start",
-    "ctaUrl": "https://my.scangov.com/scan",
-    "checks": [
-      "1 domain",
-      "Homepage scan",
-      "Continuous monitoring",
-      "Unlimited users",
-      "Support documentation",
-      "Prioritization tasklist"
-    ]
-  },
-  {
     "title": "Basic",
     "icon": null,
-    "price": "$49/mo",
+    "price": "$100/mo",
     "ctaText": "Start",
-    "ctaUrl": "https://buy.stripe.com/aFafZh9gFbmx5s6bT73Nm00",
+    "ctaUrl": "https://buy.stripe.com/cNidR964t4Y97AeaP33Nm08",
     "checks": [
-      "1 domain",
-      "5,000 page scans / month (total)",
+      "Unlimited domains",
+      "5,000 page scans / month",
       "Continuous monitoring",
       "Unlimited users",
       "Support documentation",
@@ -32,16 +17,17 @@
     ]
   },
   {
-    "title": "Team",
+    "title": "Enterprise",
     "icon": null,
-    "price": "$199/mo",
+    "price": "$500/mo",
     "ctaText": "Start",
-    "ctaUrl": "https://buy.stripe.com/3cI3cv50p1LXdYCaP33Nm01",
+    "ctaUrl": "https://buy.stripe.com/bJeeVd1OdfCNbQu5uJ3Nm09",
     "checks": [
-      "5 domains",
-      "20,000 page scans / month (total)",
+      "Unlimited domains",
+      "50,000 page scans / month",
       "Continuous monitoring",
       "Unlimited users",
+      "Single sign-on",
       "Ticketing support",
       "Prioritization tasklist",
       "GitHub integration",
@@ -49,14 +35,14 @@
     ]
   },
   {
-    "title": "Enterprise",
+    "title": "Enterprise Max",
     "icon": null,
-    "price": "$499/mo",
+    "price": "$1,000/mo",
     "ctaText": "Start",
-    "ctaUrl": "https://buy.stripe.com/8x2fZh0K9bmx6wa1et3Nm02",
+    "ctaUrl": "https://buy.stripe.com/6oUdR9dwV9epdYC0ap3Nm07",
     "checks": [
       "Unlimited domains",
-      "50,000 page scans / month (total)",
+      "100,000 page scans / month *",
       "Continuous monitoring",
       "Unlimited users",
       "Single sign-on",
