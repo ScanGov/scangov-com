@@ -60,9 +60,16 @@
         {% include "favicon.html" %}
         <!-- CSS -->
         {% include "style.html" %}
+  <script>
+    (function() {
+      const theme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-bs-theme', theme);
+      document.body.setAttribute('data-bs-theme', theme);
+    })();
+  </script>
     </head>
 
-    <body class="{{ layout }}" data-bs-theme="dark">
-        <a class="sr-only sr-only-focusable skip-link" href="#main-content">
-            Skip to main content
-        </a>
+<body class="" data-bs-theme="dark">
+    <a class="sr-only sr-only-focusable skip-link" href="#main-content">
+        Skip to main content
+    </a>
