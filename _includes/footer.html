@@ -14,15 +14,12 @@
       {% endfor %}
     </div>
   </div>
-  <div class="container border-top mt-4 py-4">
+  <div class="container-fluid py-4 mt-4 border-top">
     <div class="row">
-      <div class="col-12">
-        <p class="small m-0 p-0">
+      <div class="col-12 text-center">
+        <p class="small">
           Built with
-          <i
-            class="fa-solid fa-heart"
-            aria-label="Heart"
-            aria-hidden="true"></i>
+          <i class="fa-solid fa-heart" aria-label="Heart"></i>
           by
           <a href="https://scangov.com">ScanGov</a>
         </p>
@@ -30,12 +27,21 @@
     </div>
   </div>
 </footer>
+{% include "analytics.html" %}
+{% include "js.html" %}
+{% include "feedback.html" %}
 <script>
   document.querySelector('button.navbar-toggler').addEventListener('click',function(e) {
     let el = document.querySelector(this.dataset.target);
     console.log(el)
     el.classList.toggle('show');
   })
-</script>{% include "analytics.html" %}
+  if(document.getElementById('dropdownMenuButton')) {
+    document.getElementById('dropdownMenuButton').addEventListener('click',function(e) {
+      let el = document.querySelector('[aria-labelledby="'+this.id+'"]')
+      el.classList.toggle('show');
+    })
+  }
+</script>
 <!-- outputs all the icons used on the page -->
 {% getBundle "fontawesome" %}
