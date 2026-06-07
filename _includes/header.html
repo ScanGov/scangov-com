@@ -1,75 +1,73 @@
 <!doctype html>
 <html lang="en">
 
-    <head>
-        <!-- Meta tags -->
-        <meta charset="utf-8">
-        <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-        {% if description %}
-        <meta name="description" content="{{ description }}">
-        {% endif %}
-        {% if keywords %}
-        {% set comma = joiner() %}
-        <meta name="keywords" content="{% for keyword in keywords %}{{ comma() }} {{ keyword }}{% endfor %}">
-        {% endif %}
-        {% if author %}
-        <meta name="author" content="{{ author }}">
-        {% endif %}
-        <meta name="robots" content="index, follow">
-        <meta name="googlebot" content="index, follow">
-        <meta property="og:locale" content="en_US">
-        <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-        <!-- Title -->
-        <title>{{ title }} - {{ site.title }}</title>
-        <!-- Open Graph -->
-        <meta property="og:site_name" content="{{ site.title }}">
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="{{ title }}">
-        <meta property="og:description" content="{{ description }}">
-        <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-        {% if ogImage %}
-        <meta property="og:image" content="{{ site.url }}/assets/img/{{ ogImage }}">
-        {% else %}
-        <meta property="og:image" content="{{ site.url }}/assets/img/avatar-og.png">
-        {% endif %}
-        <meta property="og:image:width" content="1200">
-        <meta property="og:image:height" content="630">
-        {% if ogImageAlt %}
-        <meta property="og:image:alt" content="{{ ogImageAlt }}">
-        {% else %}
-        <meta property="og:image:alt" content="ScanGov logo">
-        {% endif %}
-        {% if date %}
-        <!-- Created date -->
-        <meta property="article:published_time" content="{{ date }}" />
-        <meta name="dc.date" content="{{ date }}">
-        <meta name="dc.date.created" content="{{ date }}">
-        <meta name="dcterms.created" content="{{ date }}">
-        {% endif %}
-        {% if author %}
-        <!-- Author -->
-        <meta property="article:author" content="{{ author }}">
-        {% endif %}
-        {% if modified %}
-        <!-- Modified date -->
-        <meta property="article:modified_time" content="{{ modified }}">
-        <meta name="dc.date.modified" content="{{ modified }}">
-        <meta name="dcterms.modified" content="{{ modified }}">
-        {% endif %}
-        <!-- Favicon -->
-        {% include "favicon.html" %}
-        <!-- CSS -->
-        {% include "style.html" %}
-  <script>
-    (function() {
-      const theme = localStorage.getItem('theme') || 'dark';
-      document.documentElement.setAttribute('data-bs-theme', theme);
-      document.body.setAttribute('data-bs-theme', theme);
-    })();
-  </script>
-    </head>
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if description %}
+    <meta name="description" content="{{ description }}">
+    {% endif %}
+    {% if author %}
+    <meta name="author" content="{{ author }}">
+    {% endif %}
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta property="og:locale" content="en_US">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <link rel="alternate" hreflang="en" href="{{ site.url }}{{ page.url }}">
+    <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ page.url }}">
+    <!-- Title -->
+    <title>{{ title }} - {{ site.title }}</title>
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    {% if ogImage %}
+    <meta property="og:image" content="{{ site.url }}/assets/img/{{ ogImage }}">
+    {% else %}
+    <meta property="og:image" content="{{ site.url }}/assets/img/avatar-og.png">
+    {% endif %}
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    {% if ogImageAlt %}
+    <meta property="og:image:alt" content="{{ ogImageAlt }}">
+    {% else %}
+    <meta property="og:image:alt" content="{{ site.title }} logo">
+    {% endif %}
+    {% if date %}
+    <!-- Created date -->
+    <meta property="article:published_time" content="{{ date }}" />
+    {% endif %}
+    {% if author %}
+    <!-- Author -->
+    <meta property="article:author" content="{{ author }}">
+    {% endif %}
+    {% if modified %}
+    <!-- Modified date -->
+    <meta property="article:modified_time" content="{{ modified }}">
+    {% endif %}
+    {% if schema %}
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {{ schema | safe }}
+    </script>
+    {% endif %}
+    <!-- Favicon -->
+    {% include "favicon.html" %}
+    <!-- CSS -->
+    {% include "style.html" %}
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-bs-theme', theme);
+            document.body?.setAttribute('data-bs-theme', theme);
+        })();
+    </script>
+</head>
 
-<body class="" data-bs-theme="dark">
-    <a class="sr-only sr-only-focusable skip-link" href="#main-content">
+<body class="{{ layout }}" data-bs-theme="dark">
+    <a class="visually-hidden visually-hidden-focusable skip-link" href="#main-content">
         Skip to main content
     </a>
