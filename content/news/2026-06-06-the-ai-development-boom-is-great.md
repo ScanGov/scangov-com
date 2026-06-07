@@ -1,9 +1,11 @@
 ---
 date: 2026-06-06
 author: Aaron Hans
-title: "AI tools are generating code with standards problems"
-description: "More people can ship software now than ever before. But AI-generated code has consistent quality gaps. Automated guardrails can fix that."
+title: "The AI development boom is great. Automated quality checks make it sustainable."
+description: "AI-generated code has consistent quality gaps across accessibility, security, and bot-friendliness. Automated guardrails can catch them before they ship."
 eleventyExcludeFromCollections: true
+eleventyComputed:
+  permalink: /news/ai-development-boom-automated-quality-checks/
 keywords:
  - AI code quality
  - web standards
@@ -37,21 +39,21 @@ That made sense when a few developers controlled what went live. It doesn't work
 
 ## Guardrails in the development workflow
 
-ScanGov checks code against web standards before it ships, not after.
+ScanGov can check code against web standards before it ships as well as monitor your production environment.
 
-**CI pipeline.** Every pull request gets checked automatically. Accessibility, rendering, performance, and security issues are flagged before code reaches production. We render pages in a real browser, so we catch problems that static HTML scanners miss.
+- **CI pipeline.** Every pull request gets checked automatically. Accessibility, rendering, performance, and security issues are flagged before code reaches production. We render pages in a real browser, so we catch problems that static HTML scanners miss.
 
-**MCP server for AI tools.** Connect ScanGov to Claude or other AI assistants. When someone builds a page with AI, ScanGov checks their work in the same tool. The AI gets feedback on what to fix before a commit happens.
+- **MCP server for AI tools.** Connect ScanGov to Claude or other AI assistants. When someone builds a page with AI, ScanGov checks their work in the same tool. The AI gets feedback on what to fix before a commit happens.
 
-**Editor integration.** Run checks locally as you build. Get results without waiting for CI.
+- **Editor integration.** Run checks locally as you build. Get results without waiting for CI.
 
-**API.** Add standards checking to any workflow — CMS, design tools, custom builds.
+- **API.** Add standards checking to any workflow — CMS, design tools, custom builds.
 
-**Live site monitoring.** Continuous scanning catches what slips through and tracks trends over time across all your sites.
+- **Live site monitoring.** Continuous scanning catches what slips through and tracks trends over time across all your sites.
 
 ## What we check that others don't
 
-Most audit tools focus on performance and accessibility. That's important, but it's not the full picture.
+Popular audit tools focus on performance and accessibility. That's important, but it's not the full picture.
 
 ScanGov also checks whether bots can read your content, whether your writing meets plain language guidelines, and whether your security headers follow federal standards. We started from government web requirements and expanded into usability and bot-friendliness checks that general-purpose tools don't cover.
 
