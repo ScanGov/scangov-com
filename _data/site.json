@@ -2,5 +2,7 @@
     "title": "ScanGov",
     "url": "https://scangov.com",
     "org": "ScanGov",
-    "org-url": "https://scangov.com"
+    "org-url": "https://scangov.com",
+    "gaId": "G-4NWQV1GS7S",
+    "securityExpires": "2027-01-01T00:00:00.000Z"
 }
