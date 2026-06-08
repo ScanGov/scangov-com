@@ -1,6 +1,6 @@
 <script>
   const setTheme = (dark) => {
-  document.body.setAttribute('data-bs-theme', dark ? 'dark' : 'light');
+    document.body.setAttribute('data-bs-theme', dark ? 'dark' : 'light');
   };
   const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
   const lightQuery = window.matchMedia("(prefers-color-scheme: light)");
@@ -8,4 +8,14 @@
   setTheme(!lightQuery.matches);
   // Update instantly when OS preference changes
   darkQuery.addEventListener('change', e => setTheme(e.matches));
+</script>
+<script>
+  document.querySelector('button.navbar-toggler').addEventListener('click', function(e) {
+    document.querySelector(this.dataset.target).classList.toggle('show');
+  });
+  if (document.getElementById('dropdownMenuButton')) {
+    document.getElementById('dropdownMenuButton').addEventListener('click', function(e) {
+      document.querySelector('[aria-labelledby="' + this.id + '"]').classList.toggle('show');
+    });
+  }
 </script>
