@@ -1,30 +1,26 @@
+{% set topnav = [
+  { title: "ScanGov", icon: "fa-solid fa-landmark", url: "https://scangov.com" },
+  { title: "Standards", icon: "fa-solid fa-certificate", url: "https://standards.scangov.org" },
+  { title: "Project", icon: "fa-solid fa-diagram-project", url: "https://scangov.org" },
+  { title: "Docs", icon: "fa-solid fa-file-lines", url: "https://docs.scangov.org" }
+] %}
+{% set topnavUrls = ["https://scangov.com", "https://standards.scangov.org", "https://scangov.org", "https://docs.scangov.org"] %}
+{% if site.url in topnavUrls %}
 <div class="d-none d-md-block">
   <div class="d-flex justify-content-end border-bottom py-1">
     <ul class="nav nav-pills small">
-      <li class="nav-item">
-        <a
-          class="nav-link btn btn-primary-outline mx-1 active"
-          aria-current="page"
-          href="https://scangov.com">
-          <i class="fa-solid fa-landmark svg-inline--fa active me-1"></i>ScanGov</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link btn btn-primary-outline mx-1" href="https://standards.scangov.org">
-          <i class="fa-solid fa-certificate svg-inline--fa me-1"></i>Standards</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link btn btn-primary-outline mx-1" href="https://scangov.org">
-          <i class="fa-solid fa-diagram-project svg-inline--fa me-1"></i>
-          Project</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link btn btn-primary-outline mx-1" href="https://docs.scangov.org">
-          <i class="fa-solid fa-file-lines svg-inline--fa me-1"></i>
-          Docs</a>
-      </li>
+      {% for item in topnav %}
+        <li class="nav-item">
+          <a class="nav-link btn btn-primary-outline mx-1{% if item.url == site.url %} active{% endif %}"
+             {% if item.url == site.url %}aria-current="page"{% endif %}
+             href="{{ item.url }}">
+            <i class="{{ item.icon }} me-1"></i>{{ item.title }}</a>
+        </li>
+      {% endfor %}
     </ul>
   </div>
 </div>
+{% endif %}
 <nav class="navbar navbar-expand-md border-bottom">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">
@@ -71,16 +67,13 @@
         {% for item in nav %}
           {% if item.url %}
             <li class="nav-item me-3 me-lg-0 small">
-              <a class="nav-item nav-link mx-1 {% if item.url in page.url %}active{% endif %}" href="{{ site.baseurl }}{{ item.url }}">
-                <i class="{{ item.icon }}"></i>
+              <a class="nav-link mx-1{% if item.url in page.url %} active{% endif %}" href="{{ item.url }}">
+                <i class="{{ item.icon }} me-2"></i>
                 {{ item.title }}
               </a>
             </li>
           {% endif %}
         {% endfor %}
-      <!--
-        <li class="nav-item me-3 me-lg-0 small" id="toggle-theme">  <a    class="nav-item nav-link mx-1"    href="javascript:void(0)"    onclick="    localStorage.setItem('theme', document.body.getAttribute('data-bs-theme') == 'light' ? 'dark' : 'light');    document.body.setAttribute('data-bs-theme', document.body.getAttribute('data-bs-theme') == 'light' ? 'dark' : 'light');    document.querySelector('#toggle-theme img').src = '/assets/img/' + (document.body.getAttribute('data-bs-theme') == 'light' ? 'moon' : 'sun') + '.svg';    ">    <img      id="theme-icon"      src="/assets/img/sun.svg"      alt="Toggle theme"      style="width: 1rem;">    <script>      let colorTheme = localStorage.getItem('theme');      if (colorTheme) {        document.body.setAttribute('data-bs-theme', colorTheme);        document.querySelector('#toggle-theme img').src = '/assets/img/' + (colorTheme == 'light' ? 'moon' : 'sun') + '.svg';      }    </script>    Mode  </a></li>
-      -->
       </ul>
     </div>
   </div>
