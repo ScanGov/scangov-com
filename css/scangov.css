@@ -1407,6 +1407,10 @@ a[href$=".mp4"]::after {
     color: #b7f5bd !important;
 }
 
+.fa-binoculars {
+    color: #7de8d0 !important;
+}
+
 .fa-bullhorn {
     color: #96abee !important;
 }
@@ -1473,6 +1477,10 @@ a[href$=".mp4"]::after {
 
 .fa-eye {
     color: #f8b9c5;
+}
+
+.fa-face-sad-tear {
+    color: #face00;
 }
 
 .fa-face-smile {
@@ -1727,6 +1735,7 @@ a[href$=".mp4"]::after {
 [data-bs-theme=light] .fa-check,
 [data-bs-theme=light] .fa-crown,
 [data-bs-theme=light] .fa-dolly,
+[data-bs-theme=light] .fa-face-sad-tear,
 [data-bs-theme=light] .fa-face-smile,
 [data-bs-theme=light] .fa-file-contract,
 [data-bs-theme=light] .fa-hand, [data-bs-theme=light] .fa-hands,
@@ -1780,6 +1789,11 @@ a[href$=".mp4"]::after {
 [data-bs-theme=light] .fa-universal-access {
     /* → #1a6fa0 = 5.49:1 ✓ */
     color: #1a6fa0 !important;
+}
+
+[data-bs-theme=light] .fa-binoculars {
+    /* → #1a7a6a = 5.21:1 ✓ */
+    color: #1a7a6a !important;
 }
 
 [data-bs-theme=light] .fa-bluesky,
