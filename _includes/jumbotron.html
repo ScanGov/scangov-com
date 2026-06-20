@@ -1,6 +1,6 @@
 {% if home %}
   <div>
-    <div class="container py-5 mb-4 border-bottom">
+    <div class="container py-4 mb-4 border-bottom">
       <div class="row">
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
           {% if title %}
@@ -43,22 +43,28 @@
       </div>
     </div>
   </div>
-  {% elif tags == "posts" %}
-  <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
-  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-    <h1 class="display-5 pb-2 mb-0">{{ title }}</h1>
-    <p class="lead fs-4">{{ description }}</p>
-    <p class="small text-secondary">
-      By
-      <a href="https://scangov.com/">ScanGov</a>
-      /
-      {{ date | dateFormat }}
-    </p>
+{% elif tags == "posts" %}
+  <div class="py-4 mb-4 border-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-2"></div>
+        <div class="col-12 col-md-8">
+          <h1 class="display-5 pb-2 mb-0">{{ title }}</h1>
+          <p class="lead fs-4">{{ description }}</p>
+          <p class="small text-secondary">
+            By
+            <a href="https://scangov.com/">ScanGov</a>
+            /
+            {{ date | dateFormat }}
+          </p>
+        </div>
+        <div class="col-12 col-md-2"></div>
+      </div>
+    </div>
   </div>
-  <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
-  {% elif feature %}
+{% elif feature %}
   <div>
-    <div class="container py-5 mb-4 border-bottom">
+    <div class="container py-4 mb-4 border-bottom">
       <div class="row">
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
           <h1 class="display-4 pb-0 mb-4">{{ title }}</h1>
@@ -79,19 +85,12 @@
     </div>
   </div>
 {% else %}
-  <div>
-    <div class="container pt-4 pb-3 mb-4 border-bottom">
+  <div class="py-4{% if not noBorder %} mb-4 border-bottom{% endif %}">
+    <div class="container">
       <div class="row">
-        {% if indicator.icon %}
-          <div class="col-3 col-md-1">
-            <i class="fa-5x fa-solid fa-{{ indicator.icon }}" style="color: {{ indicator.color }}"></i>
-          </div>
-        {% endif %}
-        <div class="col-9 col-md-11">
-          <h1 class="display-5 pb-0 mb-2">{{ title }}</h1>
-          {% if description %}
-            <p class="lead">{{ description }}</p>
-          {% endif %}
+        <div class="col-12">
+          {% if title %}<h1 class="display-5 mb-0">{{ title }}</h1>{% endif %}
+          {% if showDescription %}<p class="lead fs-5 mt-2 mb-0">{{ description }}</p>{% endif %}
         </div>
       </div>
     </div>
