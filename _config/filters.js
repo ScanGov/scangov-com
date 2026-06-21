@@ -37,4 +37,16 @@ export default function(eleventyConfig) {
 		return (tags || []).filter(tag => ["all", "posts"].indexOf(tag) === -1);
 	});
 
+	eleventyConfig.addFilter("rejectUrl", (array, url) => {
+		return (array || []).filter(item => item.url !== url);
+	});
+
+	eleventyConfig.addFilter("findPerson", (people, slug) => {
+		return (people || []).find(p => p.slug === slug) || null;
+	});
+
+	eleventyConfig.addFilter("filterByAuthor", (posts, slug) => {
+		return (posts || []).filter(post => post.data && post.data.author === slug);
+	});
+
 };

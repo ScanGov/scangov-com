@@ -1,7 +1,7 @@
 ---
 date: 2024-10-17
 #modified: 
-author: ScanGov
+author: scangov
 title: "New ScanGov government website security report cards"
 description: "Scans include content security policy, HSTS, X-Content-Type-Options, security.txt."
 #ogImage: posts/.png

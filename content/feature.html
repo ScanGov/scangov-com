@@ -13,8 +13,8 @@ eleventyComputed:
     title: "{{ feature.title }}"
     permalink: "/features/{{ feature.title | slugify }}/"
     description: "{{ feature.description }}"
-    ogImage: "{{ indicator.ogImage }}"
-    ogImageAlt: "{{ scan.ogImageAlt }}"
+    ogImage: "{{ feature.ogImage }}"
+    ogImageAlt: "{{ feature.ogImageAlt }}"
 ---
 
 {% if feature.video %}

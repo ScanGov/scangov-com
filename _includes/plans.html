@@ -1,7 +1,7 @@
 <div class="row">
   {% for item in plans %}
     <div class="col-lg-3 d-flex">
-      <div class="card card-plans mb-4 shadow-sm">
+      <div class="card card-plans mb-4 shadow-sm position-relative">
         <div class="card-header">
           <h2 class="my-0 fw-normal h5">{{ item.title }}</h2>
         </div>
@@ -10,7 +10,7 @@
           <ul class="list-unstyled mt-3 mb-4">
             {% for check in item.checks %}
               <li class="mb-2">
-                <i class="fa-solid fa-circle-check" aria-label="hidden"></i>
+                <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
                 {{ check }}</li>
             {% endfor %}
           </ul>

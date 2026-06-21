@@ -1,12 +1,29 @@
 ---
 layout: "layouts/default"
 date: 2025-08-30
-modified: 
+modified:
 author: ScanGov
 title: Now scanning ...
 description: "ScanGov government digital experience reviews."
 ---
 
 <div class="container">
-  {% include "now_scanning_list.html" %}
+  <div class="row">
+    <div class="col-12">
+      <div class="card-group">
+        {% for post in collections["now-scanning"] | reverse %}
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-stretch">
+            <div class="card mx-2 my-2 pt-2">
+              <div class="card-body">
+                <h2 class="h3 mb-3">
+                  <a href="{{ post.url }}" class="stretched-link">{{ post.data.title }}</a>
+                </h2>
+                <p class="card-text small">{{ post.data.description }}</p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </div>

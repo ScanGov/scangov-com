@@ -1,7 +1,7 @@
 ---
 date: 2025-02-13
 #modified: 
-author: ScanGov
+author: scangov
 title: "Connect with ScanGov"
 description: "Ways to stay in touch with us."
 #ogImage: posts/.png
@@ -20,4 +20,4 @@ We've set up a few ways to connect with us:
 * [Substack](https://scangov.substack.com/subscribe)
 * [LinkedIn](https://linkedin.com/company/scangov)
 * [GitHub](https://github.com/scangov)
-* [RSS](https://docs.scangov.org/feed.xml)
+* [RSS](https://scangov.com/news/feed.xml)

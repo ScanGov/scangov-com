@@ -1,0 +1,25 @@
+---
+permalink: /news/feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ site.url }}">
+  <title>ScanGov News</title>
+  <link href="{{ site.url }}/news/feed.xml" rel="self"/>
+  <link href="{{ site.url }}/news/"/>
+  <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>{{ site.url }}/news/</id>
+  <author>
+    <name>ScanGov</name>
+    <uri>{{ site.url }}</uri>
+  </author>
+  {% for post in collections.postsByDate | head(20) %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ post.url | absoluteUrl(site.url) }}"/>
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <id>{{ post.url | absoluteUrl(site.url) }}</id>
+    {% if post.data.description %}<summary>{{ post.data.description }}</summary>{% endif %}
+  </entry>
+  {% endfor %}
+</feed>

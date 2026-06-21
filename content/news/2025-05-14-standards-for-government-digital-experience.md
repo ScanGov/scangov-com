@@ -1,7 +1,7 @@
 ---
 date: 2025-05-14
 #modified: 
-author: ScanGov
+author: scangov
 title: "Standards for government digital experience"
 description: "Building a community approach that holistically delivers for the people."
 ogImage: posts/certificate-og.png

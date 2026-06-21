@@ -1,7 +1,7 @@
 ---
 date: 2025-04-06
 #modified: 
-author: ScanGov
+author: scangov
 title: "ScanGov to support judging for 2025 Government Experience Awards"
 description: "Will provide holistic, quantitative website scan data to e.Republic’s Center for Digital Government annual GovX awards program."
 ogImage: posts/government-experience-awards-2025.png

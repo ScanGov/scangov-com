@@ -10,7 +10,7 @@
                 {% endif %}
                 <a class="nav-link" target="_blank"
                     href="https://standards.scangov.org{% if standards_list_type == "guidance" %}{{ item.url }}{% else %}/{{ item.key }}{% endif %}/">
-                    <i class="fa-solid fa-{% if standards_list_type == "guidance" %}scroll{% else %}certificate{% endif %}" aria-label="hidden"></i>
+                    <i class="fa-solid fa-{% if standards_list_type == "guidance" %}scroll{% else %}certificate{% endif %}" aria-hidden="true"></i>
                     {{ name }}
                 </a>
             </p>

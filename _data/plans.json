@@ -1,5 +1,18 @@
 [
   {
+    "title": "Trial",
+    "icon": null,
+    "price": "Free",
+    "ctaText": "Schedule demo",
+    "ctaUrl": "/demo",
+    "checks": [
+      "1 domain",
+      "4 page scans",
+      "One-time scan",
+      "Support documentation"
+    ]
+  },
+  {
     "title": "Basic",
     "icon": null,
     "price": "$100/mo",
