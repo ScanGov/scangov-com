@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://scangov.com">
+  <title>ScanGov News</title>
+  <link href="https://scangov.com/news/feed.xml" rel="self"/>
+  <link href="https://scangov.com/news/"/>
+  <updated>2026-06-21T23:29:59Z</updated>
+  <id>https://scangov.com/news/</id>
+  <author>
+    <name>ScanGov</name>
+    <uri>https://scangov.com</uri>
+  </author>
+  
+  <entry>
+    <title>New ScanGov website RFP builder</title>
+    <link href="https://scangov.com/news/new-scangov-website-rfp-builder/"/>
+    <updated>2025-11-23T00:00:00Z</updated>
+    <id>https://scangov.com/news/new-scangov-website-rfp-builder/</id>
+    <summary>Create website request for proposals based on ScanGov Standards.</summary>
+  </entry>
+  
+  <entry>
+    <title>New ScanGov readability scanner</title>
+    <link href="https://scangov.com/news/new-scangov-readability-scanner/"/>
+    <updated>2025-10-27T00:00:00Z</updated>
+    <id>https://scangov.com/news/new-scangov-readability-scanner/</id>
+    <summary>Helping web managers evaluate content readability.</summary>
+  </entry>
+  
+  <entry>
+    <title>Now scanning ... maryland.gov</title>
+    <link href="https://scangov.com/now-scanning/maryland-gov/"/>
+    <updated>2026-06-21T23:29:59Z</updated>
+    <id>https://scangov.com/now-scanning/maryland-gov/</id>
+    <summary>A ScanGov government digital experience review of maryland.gov.</summary>
+  </entry>
+  
+  <entry>
+    <title>Now scanning ... colorado.gov</title>
+    <link href="https://scangov.com/now-scanning/colorado-gov/"/>
+    <updated>2026-06-21T23:29:59Z</updated>
+    <id>https://scangov.com/now-scanning/colorado-gov/</id>
+    <summary>A ScanGov government digital experience review of colorado.gov.</summary>
+  </entry>
+  
+  <entry>
+    <title>ScanGov data supports judging for 2025 Government Experience Awards</title>
+    <link href="https://scangov.com/news/scangov-data-supports-judging-for-2025-government-experience-awards/"/>
+    <updated>2025-10-08T00:00:00Z</updated>
+    <id>https://scangov.com/news/scangov-data-supports-judging-for-2025-government-experience-awards/</id>
+    <summary>Provided quantitative website scan data to e.Republic’s Center for Digital Government annual awards program.</summary>
+  </entry>
+  
+  <entry>
+    <title>Now scanning ... nyc.gov</title>
+    <link href="https://scangov.com/now-scanning/nyc-gov/"/>
+    <updated>2026-06-21T23:29:59Z</updated>
+    <id>https://scangov.com/now-scanning/nyc-gov/</id>
+    <summary>A ScanGov government digital experience review of nyc.gov.</summary>
+  </entry>
+  
+  <entry>
+    <title>Now scanning ... georgia.gov</title>
+    <link href="https://scangov.com/now-scanning/georgia-gov/"/>
+    <updated>2026-06-21T23:29:59Z</updated>
+    <id>https://scangov.com/now-scanning/georgia-gov/</id>
+    <summary>A ScanGov government digital experience review of georgia.gov.</summary>
+  </entry>
+  
+  <entry>
+    <title>Now scanning ... ms.gov</title>
+    <link href="https://scangov.com/now-scanning/ms-gov/"/>
+    <updated>2026-06-21T23:29:59Z</updated>
+    <id>https://scangov.com/now-scanning/ms-gov/</id>
+    <summary>A ScanGov government digital experience review of ms.gov.</summary>
+  </entry>
+  
+  <entry>
+    <title>Now scanning ... texas.gov</title>
+    <link href="https://scangov.com/now-scanning/texas-gov/"/>
+    <updated>2026-06-21T23:29:59Z</updated>
+    <id>https://scangov.com/now-scanning/texas-gov/</id>
+    <summary>A ScanGov government digital experience review of texas.gov.</summary>
+  </entry>
+  
+  <entry>
+    <title>Standards for government digital experience</title>
+    <link href="https://scangov.com/news/standards-for-government-digital-experience/"/>
+    <updated>2025-05-14T00:00:00Z</updated>
+    <id>https://scangov.com/news/standards-for-government-digital-experience/</id>
+    <summary>Building a community approach that holistically delivers for the people.</summary>
+  </entry>
+  
+  <entry>
+    <title>Government digital experience map</title>
+    <link href="https://scangov.com/news/government-digital-experience-map/"/>
+    <updated>2025-04-21T00:00:00Z</updated>
+    <id>https://scangov.com/news/government-digital-experience-map/</id>
+    <summary>ScanGov map shows how U.S. states fare on government digital experience standards.</summary>
+  </entry>
+  
+  <entry>
+    <title>ScanGov notes (2025.04.09)</title>
+    <link href="https://scangov.com/news/scangov-notes-2025-04-09/"/>
+    <updated>2025-04-09T00:00:00Z</updated>
+    <id>https://scangov.com/news/scangov-notes-2025-04-09/</id>
+    <summary>Updates from ScanGov.</summary>
+  </entry>
+  
+  <entry>
+    <title>ScanGov to support judging for 2025 Government Experience Awards</title>
+    <link href="https://scangov.com/news/scangov-to-support-judging-for-2025-government-experience-awards/"/>
+    <updated>2025-04-06T00:00:00Z</updated>
+    <id>https://scangov.com/news/scangov-to-support-judging-for-2025-government-experience-awards/</id>
+    <summary>Will provide holistic, quantitative website scan data to e.Republic’s Center for Digital Government annual GovX awards program.</summary>
+  </entry>
+  
+  <entry>
+    <title>Connect with ScanGov</title>
+    <link href="https://scangov.com/news/connect-with-scangov/"/>
+    <updated>2025-02-13T00:00:00Z</updated>
+    <id>https://scangov.com/news/connect-with-scangov/</id>
+    <summary>Ways to stay in touch with us.</summary>
+  </entry>
+  
+  <entry>
+    <title>Welcome Aaron Hans</title>
+    <link href="https://scangov.com/news/welcome-aaron-hans/"/>
+    <updated>2025-02-12T00:00:00Z</updated>
+    <id>https://scangov.com/news/welcome-aaron-hans/</id>
+    <summary>New ScanGov maintainer.</summary>
+  </entry>
+  
+  <entry>
+    <title>New ScanGov government website security report cards</title>
+    <link href="https://scangov.com/news/new-scangov-government-website-security-report-cards/"/>
+    <updated>2024-10-17T00:00:00Z</updated>
+    <id>https://scangov.com/news/new-scangov-government-website-security-report-cards/</id>
+    <summary>Scans include content security policy, HSTS, X-Content-Type-Options, security.txt.</summary>
+  </entry>
+  
+  <entry>
+    <title>ScanGov supports judging for 2024 Government Experience Awards</title>
+    <link href="https://scangov.com/news/scangov-supports-judging-for-2024-government-experience-awards/"/>
+    <updated>2024-09-18T00:00:00Z</updated>
+    <id>https://scangov.com/news/scangov-supports-judging-for-2024-government-experience-awards/</id>
+    <summary>Provided quantitative website scan data to e.Republic’s Center for Digital Government annual awards program.</summary>
+  </entry>
+  
+  <entry>
+    <title>Release notes (June 2024)</title>
+    <link href="https://scangov.com/news/release-notes-june-2024/"/>
+    <updated>2024-06-25T00:00:00Z</updated>
+    <id>https://scangov.com/news/release-notes-june-2024/</id>
+    <summary>ScanGov updates.</summary>
+  </entry>
+  
+  <entry>
+    <title>Hello ScanGov</title>
+    <link href="https://scangov.com/news/hello-scangov/"/>
+    <updated>2024-05-14T00:00:00Z</updated>
+    <id>https://scangov.com/news/hello-scangov/</id>
+    <summary>A government digital experience monitor.</summary>
+  </entry>
+  
+</feed>
