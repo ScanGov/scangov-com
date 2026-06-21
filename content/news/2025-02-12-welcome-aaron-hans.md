@@ -1,7 +1,7 @@
 ---
 date: 2025-02-12
 #modified: 
-author: ScanGov
+author: scangov
 title: "Welcome Aaron Hans"
 description: "New ScanGov maintainer."
 #ogImage: posts/.png

@@ -8,6 +8,7 @@ import pluginNavigation from '@11ty/eleventy-navigation'
 import { EleventyRenderPlugin } from '@11ty/eleventy'
 import pluginFilters from './_config/filters.js'
 import fontAwesomePlugin from "@11ty/font-awesome";
+import rssPlugin from "@11ty/eleventy-plugin-rss";
 import { PurgeCSS } from 'purgecss'
 import * as fs from 'fs';
 import CleanCSS from "clean-css";
@@ -18,6 +19,7 @@ import htmlmin from "html-minifier-terser";
 export default async function (eleventyConfig) {
     
     eleventyConfig.addPlugin(fontAwesomePlugin);
+    eleventyConfig.addPlugin(rssPlugin);
     // let audits = JSON.parse(fs.readFileSync('./_data/audits.json'))
     eleventyConfig.addPlugin(eleventyImageTransformPlugin);
 
@@ -104,6 +106,14 @@ export default async function (eleventyConfig) {
         return []
     })
 
+    eleventyConfig.addCollection("postsByDate", function(collectionApi) {
+        return collectionApi.getFilteredByTag("posts").sort((a, b) => {
+            const dateA = a.data.date ? new Date(a.data.date) : a.date;
+            const dateB = b.data.date ? new Date(b.data.date) : b.date;
+            return dateB - dateA; // newest first
+        });
+    });
+
     eleventyConfig.addPlugin(EleventyRenderPlugin)
 
     eleventyConfig.addFilter('encodeParameter', (param) => {
@@ -112,6 +122,11 @@ export default async function (eleventyConfig) {
 
     eleventyConfig.addFilter('breakAllWords', (param) => {
         return param.replace(/\. +/g, ".<br>");
+    })
+
+    eleventyConfig.addFilter('exclude', (arr, key, value) => {
+        if (!arr) return [];
+        return arr.filter(item => item[key] !== value);
     })
     
 

@@ -1,7 +1,7 @@
 ---
 date: 2025-04-21
 #modified: 
-author: ScanGov
+author: scangov
 title: "Government digital experience map"
 description: "ScanGov map shows how U.S. states fare on government digital experience standards."
 ogImage: posts/scangov-map.png

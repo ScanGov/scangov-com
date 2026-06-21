@@ -1,64 +1,61 @@
 {% if home %}
-  <div>
-    <div class="container py-4 mb-4 border-bottom">
+  <div class="py-5 mb-4 border-bottom text-center">
+    <div class="container">
+      <h1 class="display-4 mb-4">Monitor, fix, and certify<br class="d-none d-lg-block"> government digital experience.</h1>
+      {% if description %}
+        <p class="lead mb-5 col-lg-8 mx-auto">{{ description }}</p>
+        <a href="/demo" class="btn btn-primary btn-lg shadow-md"><i class="fa-solid fa-wand-magic-sparkles me-2" aria-hidden="true"></i>Schedule demo</a>
+        &nbsp;
+        <a href="/plans" class="btn btn-outline-primary btn-lg"><i class="fa-solid fa-rocket me-2" aria-hidden="true"></i>Get started</a>
+      {% endif %}
+    </div>
+  </div>
+{% elif isPost %}
+  <div class="pt-5 pb-4 mb-4 border-bottom">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-          {% if title %}
-            <h1 class="display-4 pb-0 mb-4">{{ title | breakAllWords | safe }}</h1>
-          {% endif %}
-          <div class="d-block d-md-none">
-            <a href="/plans"><img
-                fetchpriority="high"
-                eleventy:widths="404"
-                width="404"
-                height="222"
-                src="/../public/assets/img/pages/screenshot.png"
-                class="img-fluid border rounded shadow"
-                alt="Screenshot of ScanGov"></a>
-          </div>
-          {% if description %}
-            <p class="lead mb-4">{{ description }}</p>
-            <a
-              href="/demo"
-              id=""
-              aria-label="Schedule demo"
-              class="btn btn-primary btn-lg shadow-md">
-              Schedule demo
-            </a>
-            &nbsp;
-            <a href="/plans" class="btn btn-primary btn-lg shadow-md">Get started</a>
-          {% endif %}
-        </div>
-        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-none d-md-block">
-          <a href="/plans/">
-            <img
-              eleventy:widths="630"
-              width="630"
-              height="346"
-              src="/../public/assets/img/pages/screenshot.png"
-              class="img-fluid border rounded shadow mb-4"
-              alt="Screenshot of ScanGov">
-          </a>
+        <div class="col-12">
+          {% if title %}<h1 class="display-5">{{ title }}</h1>{% endif %}
+          {% if description %}<p class="lead fs-5">{{ description }}</p>{% endif %}
+          <p class="small text-secondary">
+            {% if author %}
+              {% set authorPerson = people | findPerson(author) %}
+              By
+              {% if authorPerson %}
+                <a href="/people/{{ authorPerson.slug }}/">{{ authorPerson.name }}</a>
+              {% else %}
+                {{ author }}
+              {% endif %}
+              {% if date %} / {{ date | dateFormat }}{% endif %}
+            {% elif date %}
+              {{ date | dateFormat }}
+            {% endif %}
+          </p>
         </div>
       </div>
     </div>
   </div>
-{% elif tags == "posts" %}
-  <div class="py-4 mb-4 border-bottom">
-    <div class="container">
+{% elif isPerson %}
+  <div class="pt-5 pb-4 mb-4 border-bottom">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-12 col-md-2"></div>
-        <div class="col-12 col-md-8">
-          <h1 class="display-5 pb-2 mb-0">{{ title }}</h1>
-          <p class="lead fs-4">{{ description }}</p>
-          <p class="small text-secondary">
-            By
-            <a href="https://scangov.com/">ScanGov</a>
-            /
-            {{ date | dateFormat }}
-          </p>
+        <div class="col-12">
+          {% if title %}<h1 class="display-5">{{ title }}</h1>{% endif %}
+          {% if description %}<p class="lead fs-5">{{ description }}</p>{% endif %}
+          {% if person %}
+            <div class="social fs-4 mt-3">
+              {% if person.url %}<a href="{{ person.url }}" aria-label="Website" target="_blank" rel="noopener"><i class="fa-solid fa-link"></i></a> {% endif %}
+              {% if person.substack %}<a href="{{ person.substack }}" aria-label="Substack" target="_blank" rel="noopener"><i class="fa-solid fa-envelope-open-text"></i></a> {% endif %}
+              {% if person.linkedin %}<a href="{{ person.linkedin }}" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a> {% endif %}
+              {% if person.youtube %}<a href="{{ person.youtube }}" aria-label="YouTube" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a> {% endif %}
+              {% if person.discord %}<a href="{{ person.discord }}" aria-label="Discord" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i></a> {% endif %}
+              {% if person.github %}<a href="{{ person.github }}" aria-label="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a> {% endif %}
+              {% if person.mastodon %}<a href="{{ person.mastodon }}" aria-label="Mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon"></i></a> {% endif %}
+              {% if person.bluesky %}<a href="{{ person.bluesky }}" aria-label="Bluesky" target="_blank" rel="noopener"><i class="fa-brands fa-bluesky"></i></a> {% endif %}
+              {% if person.rss %}<a href="{{ person.rss }}" aria-label="RSS" target="_blank" rel="noopener"><i class="fa-solid fa-rss"></i></a> {% endif %}
+            </div>
+          {% endif %}
         </div>
-        <div class="col-12 col-md-2"></div>
       </div>
     </div>
   </div>
@@ -85,12 +82,19 @@
     </div>
   </div>
 {% else %}
-  <div class="py-4{% if not noBorder %} mb-4 border-bottom{% endif %}">
-    <div class="container">
+  <div class="pt-5 pb-4 mb-4 border-bottom">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          {% if title %}<h1 class="display-5 mb-0">{{ title }}</h1>{% endif %}
-          {% if showDescription %}<p class="lead fs-5 mt-2 mb-0">{{ description }}</p>{% endif %}
+          {% if title %}<h1 class="display-5">{{ title }}</h1>{% endif %}
+          {% if description %}<p class="lead fs-5">{{ description }}</p>{% endif %}
+          {% if search %}
+          <div class="row mt-3">
+            <div class="col-12 col-md-6">
+              {% include "search.html" %}
+            </div>
+          </div>
+          {% endif %}
         </div>
       </div>
     </div>

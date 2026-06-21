@@ -18,7 +18,7 @@ sitemap: false
             - [Substack](https://docs.scangov.org/subscribe)
             - [LinkedIn](https://linkedin.com/company/scangov)
             - [GitHub](https://github.com/scangov)
-            - [RSS](https://docs.scangov.org/feed.xml)
+            - [RSS](https://scangov.com/news/feed.xml)
             <ul>
         </div>
     </div>

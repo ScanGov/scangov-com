@@ -1,7 +1,7 @@
 ---
 date: 2024-05-14
 #modified: 
-author: ScanGov
+author: scangov
 title: "Hello ScanGov"
 description: "A government digital experience monitor."
 #ogImage: posts/.png

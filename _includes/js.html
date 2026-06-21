@@ -1,19 +1,14 @@
+<script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script>
-  const setTheme = (dark) => {
-    document.body.setAttribute('data-bs-theme', dark ? 'dark' : 'light');
-  };
-  const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
-  const lightQuery = window.matchMedia("(prefers-color-scheme: light)");
-  // Only use light if explicitly set to light, otherwise dark
-  setTheme(!lightQuery.matches);
-  // Update instantly when OS preference changes
-  darkQuery.addEventListener('change', e => setTheme(e.matches));
-</script>
-<script>
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    if (!localStorage.getItem('theme')) {
+      document.documentElement.setAttribute('data-bs-theme', e.matches ? 'dark' : 'light');
+    }
+  });
   const toggler = document.querySelector('button.navbar-toggler');
   if (toggler) {
-    toggler.addEventListener('click', function(e) {
-      document.querySelector(this.dataset.target).classList.toggle('show');
+    toggler.addEventListener('click', function() {
+      document.querySelector(this.dataset.bsTarget).classList.toggle('show');
     });
   }
 </script>

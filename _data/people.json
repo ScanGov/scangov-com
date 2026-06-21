@@ -1,11 +1,25 @@
 [
     {
+      "name": "ScanGov",
+      "slug": "scangov",
+      "url": "https://scangov.com",
+      "linkedin": "https://linkedin.com/company/scangov",
+      "youtube": "https://youtube.com/@scangov",
+      "github": "https://github.com/scangov",
+      "discord": "https://discord.gg/EPCXEMAX5y",
+      "substack": "https://scangov.substack.com",
+      "rss": "https://scangov.com/news/feed.xml",
+      "hidden": true
+    },
+    {
       "name": "Elias Fretwell",
+      "slug": "elias-fretwell",
       "img": "elias-fretwell.jpg",
       "github": "https://github.com/narlotl"
     },
     {
       "name": "Luke Fretwell",
+      "slug": "luke-fretwell",
       "img": "luke-fretwell.jpg",
       "url": "https://lukefretwell.com",
       "linkedin": "https://www.linkedin.com/in/lukefretwell",
@@ -15,6 +29,7 @@
     },
     {
       "name": "Aaron Hans",
+      "slug": "aaron-hans",
       "img": "aaron-hans.jpg",
       "linkedin": "https://www.linkedin.com/in/aaronhans/",
       "github": "https://github.com/aaronhans",

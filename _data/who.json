@@ -1,26 +1,32 @@
 [
   {
     "title": "Government leaders",
-    "icon": "fa-solid fa-check-to-slot"
+    "icon": "fa-landmark",
+    "description": "Get executive visibility into agency digital performance and compliance."
   },
   {
     "title": "Digital service teams",
-    "icon": "fa-solid fa-laptop"
-  },
-  {
-    "title": "Website managers",
-    "icon": "fa-solid fa-window-maximize"
-  },
-  {
-    "title": "IT staff",
-    "icon": "fa-solid fa-code"
+    "icon": "fa-laptop",
+    "description": "Monitor, track, and improve government website health at scale."
   },
   {
     "title": "Third-party vendors",
-    "icon": "fa-solid fa-arrows-rotate"
+    "icon": "fa-handshake",
+    "description": "Demonstrate compliance and performance to government clients."
+  },
+  {
+    "title": "Website managers",
+    "icon": "fa-window-maximize",
+    "description": "Identify and fix issues before they impact visitors."
+  },
+  {
+    "title": "IT staff",
+    "icon": "fa-code",
+    "description": "Automate scanning and integrate performance data into your workflows."
   },
   {
     "title": "Hosting providers",
-    "icon": "fa-solid fa-server"
+    "icon": "fa-server",
+    "description": "Prove the value of your hosting environment with verified data."
   }
 ]

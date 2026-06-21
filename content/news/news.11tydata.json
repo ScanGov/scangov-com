@@ -1,5 +1,7 @@
 {
     "layout": "layouts/post.html",
+    "isPost": true,
+    "author": "scangov",
     "eleventyComputed": {
         "permalink": "/news/{{ title | lower | replace(' ', '-') | replace('.', '-') | replace('(', '') | replace(')', '') }}/index.html"
     },

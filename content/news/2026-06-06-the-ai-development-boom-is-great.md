@@ -1,6 +1,6 @@
 ---
 date: 2026-06-06
-author: Aaron Hans
+author: aaron-hans
 title: "The AI development boom is great. Automated quality checks make it sustainable."
 description: "AI-generated code has consistent quality gaps across accessibility, security, and bot-friendliness. Automated guardrails can catch them before they ship."
 eleventyExcludeFromCollections: true

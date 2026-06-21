@@ -3,57 +3,101 @@ layout: layouts/default
 date: 2025-02-23
 modified: 2025-04-07
 author: ScanGov
-title: "Government. Digital. Experience."
-description: "Monitoring, reporting, remediation and certification."
+title: "Monitor, fix, and certify government digital experience."
+description: "Government websites that pass every test — accessibility, security, AI-readiness, and more."
 permalink: /
 home: true
 ---
 
 <div class="container border-bottom mb-5 pb-5">
-  <h2 class="mb-3">Indicators</h2>
-  <p class="lead">Holistically addressing digital experience.</p>
+  <h2 class="mb-3">What we scan</h2>
   {% include "indicator_list.html" %}
-  <p class="small mt-3">
-    <a href="{{ site.baseurl }}indicators">Indicators</a>
-  </p>
 </div>
 <div class="container border-bottom mb-5 pb-5">
-  <div class="row">
-    <div class="col-12">
-      <h2 class="mb-3">Why it matters</h2>
-      <p class="lead">Deliver digital experience with confidence.</p>
-      <div class="card-group">
-        {% for item in why %}
-          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-stretch">
-            <div class="card px-4 py-3 m-1">
-              <p class="m-0 p-0">
-                <i class="fa-solid fa-check fa-2x mt-1 mb-3" aria-label="hidden"></i>
-                <span class="mx-2">{{ item.title }}</span>
-              </p>
-            </div>
+  <h2 class="mb-4">How it works</h2>
+  <div class="row justify-content-center">
+  <div class="col-12 col-md-8">
+  <ul class="timeline mb-0">
+    <li class="timeline-item pb-3">
+      <div class="card">
+        <div class="row g-0 align-items-center">
+          <div class="col-auto p-3 text-center" style="min-width: 4rem;">
+            <i class="fa-solid fa-bars-progress fa-2x" aria-hidden="true"></i>
           </div>
-        {% endfor %}
+          <div class="col border-start p-3">
+            <h3 class="h5 mb-1">Scan</h3>
+            <p class="small text-body-secondary mb-0">We fully scan your website.</p>
+          </div>
+        </div>
       </div>
-    </div>
+    </li>
+    <li class="timeline-item pb-3">
+      <div class="card">
+        <div class="row g-0 align-items-center">
+          <div class="col-auto p-3 text-center" style="min-width: 4rem;">
+            <i class="fa-solid fa-square-check fa-2x" aria-hidden="true"></i>
+          </div>
+          <div class="col border-start p-3">
+            <h3 class="h5 mb-1">Tasks</h3>
+            <p class="small text-body-secondary mb-0">We create a tasklist of items to fix.</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="timeline-item pb-3">
+      <div class="card">
+        <div class="row g-0 align-items-center">
+          <div class="col-auto p-3 text-center" style="min-width: 4rem;">
+            <i class="fa-solid fa-screwdriver-wrench fa-2x" aria-hidden="true"></i>
+          </div>
+          <div class="col border-start p-3">
+            <h3 class="h5 mb-1">Fix</h3>
+            <p class="small text-body-secondary mb-0">Fix issues with your team, agency, or vendor.</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="timeline-item pb-3">
+      <div class="card">
+        <div class="row g-0 align-items-center">
+          <div class="col-auto p-3 text-center" style="min-width: 4rem;">
+            <i class="fa-solid fa-eye fa-2x" aria-hidden="true"></i>
+          </div>
+          <div class="col border-start p-3">
+            <h3 class="h5 mb-1">Monitor</h3>
+            <p class="small text-body-secondary mb-0">We continuously monitor your website for new issues.</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="timeline-item">
+      <div class="card">
+        <div class="row g-0 align-items-center">
+          <div class="col-auto p-3 text-center" style="min-width: 4rem;">
+            <i class="fa-solid fa-star fa-2x" aria-hidden="true"></i>
+          </div>
+          <div class="col border-start p-3">
+            <h3 class="h5 mb-1">Scorecard</h3>
+            <p class="small text-body-secondary mb-0">You share your digital experience success with your community.</p>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  </div>
   </div>
 </div>
-
 <div class="container border-bottom mb-5 pb-5">
   <div class="row">
     <div class="col-12">
-      <h2 class="mb-3">Who it's for</h2>
+      <h2 class="mb-3">Who we serve</h2>
       <div class="card-group">
-        {% for item in who %}
+        {% for item in who | head(3) %}
           <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
-            <div class="card p-4 text-center m-1">
-              <div class="stretched-link">
-                <!-- required to center the icon -->
-                <i
-                  class="fa-solid {{ item.icon }} fa-3x mt-2 mb-2"
-                  aria-label="hidden"
-                  style="color: {{ item.color }}"></i>
-                <h3 class="h5 mt-3">{{ item.title }}</h3>
-              </div>
+            <div class="card p-4 text-center m-1 d-flex flex-column align-items-center">
+              <i class="fa-solid {{ item.icon }} fa-3x mt-2 mb-2" aria-hidden="true"></i>
+              <h3 class="h5 mt-3">{{ item.title }}</h3>
+              <p class="small text-body-secondary mb-0">{{ item.description }}</p>
             </div>
           </div>
         {% endfor %}
@@ -62,45 +106,64 @@ home: true
   </div>
 </div>
 <div class="container border-bottom mb-5 pb-5">
-  <div class="row">
-    <div class="col-12">
-      <h2 class="mb-3">Features</h2>
-      {% include "feature_list.html" %}
-      <p class="small mt-3">
-        <a href="{{ site.baseurl }}features">Features</a>
-      </p>
-    </div>
-  </div>
+  <h2 class="mb-4">What they say</h2>
+  <div class="row g-3" id="testimonials-row"></div>
+  <script>
+    (function () {
+      const quotes = {{ quotes | dump | safe }};
+      const shuffled = quotes.slice().sort(() => Math.random() - 0.5).slice(0, 2);
+      document.getElementById('testimonials-row').innerHTML = shuffled.map(function (item) {
+        return '<div class="col-12 col-md-6">' +
+          '<div class="card p-4 h-100">' +
+          '<blockquote class="mb-3"><p class="fs-5">“' + item.quote + '”</p></blockquote>' +
+          '<div class="mt-auto small text-body-secondary">' +
+          item.name + '<br>' + item.title + '<br>' + item.org +
+          '</div></div></div>';
+      }).join('');
+    })();
+  </script>
+  <a href="/what-they-say" class="btn btn-outline-primary mt-4">What they say</a>
 </div>
 <div class="container border-bottom mb-5 pb-5 pt-3">
   <div class="row">
     <div class="col-12">
       <h2 class="mb-3">GovX Awards</h2>
-      <p class="lead">Supporting the Center for Digital Government's Government Experience Awards.</p>
     </div>
   </div>
-  <div class="row">
-    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-      <img
-        src="/../public/assets/img/pages/government-experience-awards.png"
-        class="my-4 img-fluid border rounded shadow d-block d-md-none"
-        alt="Government Experience Awards">
-      <blockquote>
-        <p class="my-4">
-          “The Government Experience Awards celebrate innovation that directly impacts how the public engages with government.
-          <strong>ScanGov has been instrumental in helping us identify the best digital government experiences.</strong>
-          By incorporating ScanGov’s expanded data capabilities into our evaluation process, we’re deepening our understanding of what defines a leading digital government experience—from accessibility to laying the foundation for AI, this layer of insight is invaluable in identifying the jurisdictions setting the gold standard for service delivery.”
+  <div class="row align-items-start">
+    <div class="col-12 col-md-4 d-none d-md-block">
+      <a href="{{ site.baseurl }}government-experience-awards">
+        <img
+          src="/../public/assets/img/pages/government-experience-awards.png"
+          class="mb-4 img-fluid border rounded shadow"
+          alt="Government Experience Awards">
+      </a>
+    </div>
+    <div class="col-12 col-md-8">
+      <a href="{{ site.baseurl }}government-experience-awards">
+        <img
+          src="/../public/assets/img/pages/government-experience-awards.png"
+          class="my-4 img-fluid border rounded shadow d-block d-md-none"
+          alt="Government Experience Awards">
+      </a>
+      <blockquote class="mb-3">
+        <p class="fs-5">
+          "The Government Experience Awards celebrate innovation that directly impacts how the public engages with government.
+          <strong>ScanGov has been instrumental in helping us identify the best digital government experiences.</strong>"
         </p>
       </blockquote>
-      <p class="small mt-3">
-        <a href="{{ site.baseurl }}government-experience-awards">GovX Awards</a>
-      </p>
+      <div class="small text-body-secondary mb-3">Center for Digital Government</div>
+      <a href="{{ site.baseurl }}government-experience-awards" class="btn btn-outline-primary mt-3">GovX Awards</a>
     </div>
-    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-none d-md-block">
-      <img
-        src="/../public/assets/img/pages/government-experience-awards.png"
-        class="my-4 img-fluid border rounded shadow"
-        alt="Government Experience Awards">
+  </div>
+</div>
+<div class="container border-bottom mb-5 pb-5">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="mb-3">ScanGov in action</h2>
+      <p class="lead">See how ScanGov works using live websites.</p>
+      {% include "now_scanning_list.html" %}
+      <a href="{{ site.baseurl }}now-scanning" class="btn btn-outline-primary mt-3">Now scanning ...</a>
     </div>
   </div>
 </div>
@@ -111,19 +174,12 @@ home: true
     </div>
   </div>
   {% include "plans.html" %}
-  <p class="small mt-3">
-    <a href="{{ site.baseurl }}plans">Plans</a>
-  </p>
 </div>
-<div class="container">
-  <div class="row">
-    <div class="col-12">
-      <h2 class="mb-3">Now scanning ...</h2>
-      <p class="lead">ScanGov digital experience reviews.</p>
-      {% include "now_scanning_list.html" %}
-      <p class="small mt-3">
-        <a href="{{ site.baseurl }}now-scanning">Now scanning ...</a>
-      </p>
-    </div>
-  </div>
+<div id="cta-section" class="container pt-4 pb-4 mb-5 text-center">
+  <i class="fa-solid fa-rocket fa-3x mb-3" aria-hidden="true"></i>
+  <h2 class="mt-2 mb-4 display-6">Ready to get started?</h2>
+  <p class="lead mb-5">Schedule a ScanGov demo or sign up today.</p>
+  <a href="/demo" aria-label="Schedule demo" class="btn btn-primary btn-lg shadow-md"><i class="fa-solid fa-wand-magic-sparkles me-2" aria-hidden="true"></i>Schedule demo</a>
+  &nbsp;
+  <a href="/plans" class="btn btn-outline-primary btn-lg"><i class="fa-solid fa-rocket me-2" aria-hidden="true"></i>Get started</a>
 </div>

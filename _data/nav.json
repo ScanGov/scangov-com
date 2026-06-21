@@ -15,6 +15,11 @@
     "url": "/demo"
   },
   {
+    "title": "News",
+    "icon": "fa-solid fa-newspaper",
+    "url": "/news"
+  },
+  {
     "title": "Login",
     "icon": "fa-solid fa-right-from-bracket",
     "url": "https://my.scangov.com/"
