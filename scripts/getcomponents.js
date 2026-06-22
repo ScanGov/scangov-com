@@ -1,6 +1,6 @@
 import * as fs from 'fs'
 
-let scangovCSS = 'https://raw.githubusercontent.com/ScanGov/components/refs/heads/main/scangov.css';
+let scangovCSS = 'https://raw.githubusercontent.com/ScanGov/components/refs/heads/main/public/css/scangov.css';
 try {
   const response = await fetch(scangovCSS);
   if (!response.ok) {
@@ -9,5 +9,5 @@ try {
   const cssText = await response.text();
   fs.writeFileSync('./public/css/scangov.css', cssText, 'utf8');
 } catch (error) {
-  throw new Error(`Fetch error: ${error.message}`);
+  console.warn(`[getcomponents] Skipping CSS fetch: ${error.message}`);
 }
