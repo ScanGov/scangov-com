@@ -14,22 +14,19 @@ permalink: /subscribe/
       <div class="card-group">
         {% for item in subscribe %}
           <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 d-flex align-items-stretch">
-            <div class="card p-4 text-center m-2">
-              {% if item.image %}
-                <img
-                  src="/../public/assets/img/pages/{{ item.image }}"
-                  class="mt-2 mb-3 img-fluid border rounded shadow stretched-link"
-                  alt="{{ item.title }}">
-              {% endif %}
-              <h2 class="h3 mt-3 mb-1">{{ item.title }}</h2>
-              {% if item.description %}
-                <p class="card-text mt-1 mb-4">{{ item.description }}</p>
-              {% endif %}
-              {% if item.link %}
-                <p>
-                  <a href="{{ site.baseurl }}{{ item.link }}" class="btn btn-primary stretched-link">Subscribe</a>
-                </p>
-              {% endif %}
+            <div class="card mx-2 my-2 pt-2">
+              <div class="card-body">
+                {% if item.icon %}
+                  <i class="{{ item.icon }} fa-lg d-block mb-2" aria-hidden="true"></i>
+                {% endif %}
+                <h2 class="h4 mb-2 mt-3">{{ item.title }}</h2>
+                {% if item.description %}
+                  <p class="card-text small">{{ item.description }}</p>
+                {% endif %}
+                {% if item.link %}
+                  <a href="{{ item.link }}" class="stretched-link" target="_blank" rel="noopener" aria-label="Subscribe to {{ item.title }}"></a>
+                {% endif %}
+              </div>
             </div>
           </div>
         {% endfor %}

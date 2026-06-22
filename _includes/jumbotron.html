@@ -4,7 +4,7 @@
       <h1 class="display-4 mb-4">Monitor, fix, and certify<br class="d-none d-lg-block"> government digital experience.</h1>
       {% if description %}
         <p class="lead mb-5 col-lg-8 mx-auto">{{ description }}</p>
-        <a href="/demo" class="btn btn-primary btn-lg shadow-md"><i class="fa-solid fa-wand-magic-sparkles me-2" aria-hidden="true"></i>Schedule demo</a>
+        <a href="/demo" class="btn btn-primary btn-lg shadow-md"><i class="fa-solid fa-calendar-check me-2" aria-hidden="true"></i>Schedule demo</a>
         &nbsp;
         <a href="/plans" class="btn btn-outline-primary btn-lg"><i class="fa-solid fa-rocket me-2" aria-hidden="true"></i>Get started</a>
       {% endif %}
@@ -37,7 +37,7 @@
   </div>
 {% elif isPerson %}
   <div class="pt-5 pb-4 mb-4 border-bottom">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col-12">
           {% if title %}<h1 class="display-5">{{ title }}</h1>{% endif %}
@@ -55,28 +55,6 @@
               {% if person.rss %}<a href="{{ person.rss }}" aria-label="RSS" target="_blank" rel="noopener"><i class="fa-solid fa-rss"></i></a> {% endif %}
             </div>
           {% endif %}
-        </div>
-      </div>
-    </div>
-  </div>
-{% elif feature %}
-  <div>
-    <div class="container py-4 mb-4 border-bottom">
-      <div class="row">
-        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-          <h1 class="display-4 pb-0 mb-4">{{ title }}</h1>
-          <ul>
-            {% for item in feature.items %}
-              <li class="lead">
-                {{ item.title }}</li>
-            {% endfor %}
-          </ul>
-        </div>
-        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-          <img
-            src="/../public/assets/img/pages/{{ feature.img }}"
-            class="img-fluid border rounded shadow"
-            alt="{{ feature.title }}">
         </div>
       </div>
     </div>

@@ -17,25 +17,55 @@ eleventyComputed:
     ogImageAlt: "{{ feature.ogImageAlt }}"
 ---
 
-{% if feature.video %}
-  <div class="container border-bottom mb-5 pb-5">
-    <div class="row">
-      <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
-      <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-        <h2 class="mb-3">Watch</h2>
-        <p class="">Learn more about ScanGov {{ feature.title }}:</p>
-        <div class="ratio ratio-16x9 mb-4 border">
-          <iframe
-            src="https://www.youtube.com/embed/{{ feature.video }}?modestbranding=1&rel=0"
-            title="{{ feature.title }}"
-            allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
+<div class="container mb-4 pb-4 border-bottom">
+  <div class="row">
+    {% if feature.items %}
+    <div class="col-12 col-md-5">
+      <h2 class="mb-3">What</h2>
+      <ul class="list-unstyled">
+        {% for item in feature.items %}
+          <li class="mb-2"><i class="fa-solid fa-circle-check me-2" aria-hidden="true"></i>{{ item.title }}</li>
+        {% endfor %}
+      </ul>
     </div>
+    {% endif %}
+    {% if feature.video %}
+    <div class="col-12 col-md-7">
+      <h2 class="mb-3">Watch</h2>
+      <div class="ratio ratio-16x9 border">
+        <iframe
+          src="https://www.youtube.com/embed/{{ feature.video }}?modestbranding=1&rel=0"
+          title="{{ feature.title }}"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+    {% endif %}
   </div>
-{% endif %}
+</div>
+
 <div class="container">
   <h2 class="mb-3">Features</h2>
-  {% include "feature_list.html" %}
+  <div id="features-pool" style="display:none" aria-hidden="true">
+    {% for item in features %}
+      {% if item.title != feature.title %}
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
+        <div class="card mx-2 my-2 pt-2"><div class="card-body">
+          <i class="fa-solid {{ item.icon }} fa-lg d-block mb-2" aria-hidden="true"></i>
+          <h3 class="h4 mb-2 mt-3"><a href="/features/{{ item.title | slugify }}/" class="stretched-link">{{ item.title }}</a></h3>
+          <p class="card-text small">{{ item.description }}</p>
+        </div></div>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div class="card-group" id="features-cards"></div>
+  <a href="/features/" class="btn btn-outline-primary mt-4">Features</a>
 </div>
+<script>
+(function() {
+  var pool = Array.from(document.getElementById('features-pool').children);
+  var shuffled = pool.slice().sort(function() { return Math.random() - 0.5; }).slice(0, 6);
+  var target = document.getElementById('features-cards');
+  shuffled.forEach(function(el) { target.appendChild(el); });
+})();
+</script>

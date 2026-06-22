@@ -1,12 +1,30 @@
 ---
 layout: "layouts/default"
 date: 2025-08-30
-modified: 
+modified:
 author: ScanGov
 title: Features
 description: "ScanGov features."
 ---
 
 <div class="container">
-  {% include "feature_list.html" %}
+  <div id="features-pool" style="display:none" aria-hidden="true">
+    {% for item in features %}
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
+        <div class="card mx-2 my-2 pt-2"><div class="card-body">
+          <i class="fa-solid {{ item.icon }} fa-lg d-block mb-2" aria-hidden="true"></i>
+          <h3 class="h4 mb-2 mt-3"><a href="/features/{{ item.title | slugify }}/" class="stretched-link">{{ item.title }}</a></h3>
+          <p class="card-text small">{{ item.description }}</p>
+        </div></div>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="card-group" id="features-cards"></div>
 </div>
+<script>
+(function() {
+  var pool = Array.from(document.getElementById('features-pool').children);
+  var target = document.getElementById('features-cards');
+  pool.forEach(function(el) { target.appendChild(el); });
+})();
+</script>
