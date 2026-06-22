@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-12">
         {% if title %}<h1 class="display-5">{{ title | safe }}</h1>{% endif %}
-        {% if description %}<p class="lead fs-5">{{ description | safe }}</p>{% endif %}
+        {% if description and not search %}<p class="lead fs-5">{{ description | safe }}</p>{% endif %}
         {% if search %}
         <div class="row mt-3">
           <div class="col-12 col-md-6">
