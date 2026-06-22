@@ -6,22 +6,35 @@ layout: layouts/default
   <div class="row">
     <div class="col-12">
       <h2 class="mb-3">Schedule</h2>
-      <div class="card-group">
-        {% for item in demo %}
-          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex align-items-stretch">
-            <div class="card p-4 text-center m-2">
-              {% if item.icon %}
-                <i class="{{ item.icon }} fa-xl mt-2" aria-hidden="true"></i>
-              {% endif %}
-              <h2 class="h3 mt-3 mb-1">{{ item.title }}</h2>
-              {% if item.description %}
-                <p class="card-text mt-1 mb-4">{{ item.description }}</p>
-              {% endif %}
-              {% if item.link %}
-                <p>
-                  <a href="{{ site.baseurl }}{{ item.link }}" class="btn btn-primary stretched-link">Schedule</a>
-                </p>
-              {% endif %}
+      <div class="mb-4 pb-4 border-bottom">
+        <div class="card-group">
+          {% for item in demo %}
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex align-items-stretch">
+              <div class="card mx-2 my-2 pt-2 text-center">
+                <div class="card-body">
+                  <h3 class="mb-2">{{ item.title }}</h3>
+                  {% if item.description %}
+                    <p class="card-text small">{{ item.description }}</p>
+                  {% endif %}
+                  {% if item.link %}
+                    <a href="{{ item.link }}" class="btn btn-primary stretched-link"><i class="fa-solid fa-calendar-check me-2" aria-hidden="true"></i>Schedule</a>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <h2 class="mb-3">Watch</h2>
+      <div class="card-group mb-3">
+        {% for item in features.slice(0, 6) %}
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
+            <div class="card mx-2 my-2 pt-2">
+              <div class="card-body">
+                <i class="fa-solid fa-circle-play fa-lg d-block mb-2" aria-hidden="true"></i>
+                <h3 class="h4 mb-2 mt-3"><a href="/features/{{ item.title | slugify }}/" class="stretched-link">{{ item.title }}</a></h3>
+                {% if item.description %}<p class="card-text small">{{ item.description }}</p>{% endif %}
+              </div>
             </div>
           </div>
         {% endfor %}

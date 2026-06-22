@@ -1,8 +1,8 @@
 [
     {
         "title": "Demo",
-        "description": "45-minute ScanGov demo + Q&A",
-        "link": "https://calendly.com/scangov/30min",
-        "icon": "fa-solid fa-wand-magic-sparkles"
+        "description": "1 hour ScanGov demo + discussion",
+        "link": "https://calendly.com/scangov/demo",
+        "icon": "fa-solid fa-calendar-check"
     }
 ]
