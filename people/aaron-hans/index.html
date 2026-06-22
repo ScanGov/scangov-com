@@ -40,7 +40,8 @@
     feedbackButton.setAttribute('tabindex', visible ? '0' : '-1');
   }
 
-  if (window.location.hostname !== 'my.scangov.com') {
+  const hiddenPaths = ['/plans/', '/demo/', '/demo-confirm/'];
+  if (window.location.hostname !== 'my.scangov.com' && !hiddenPaths.includes(window.location.pathname)) {
     window.addEventListener('scroll', updateButton);
     updateButton();
   }</script><svg class="fa-solid fa-link" style="display:none" aria-hidden="true"><use href="#fas-fa-link" xlink:href="#fas-fa-link"></use></svg><script>(function() {
