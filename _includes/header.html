@@ -82,8 +82,11 @@
       "@type": "Organization",
       "name": "{{ site.title }}",
       "url": "{{ site.url }}",
-      "logo": "{{ site.url }}/assets/img/avatar-og.png",
-      "description": "{{ site.description }}"
+      "logo": "{{ site.url }}/assets/img/avatar-og.png"
+      {% if site.description %},"description": "{{ site.description }}"{% endif %}
+      {% if site.substack or site.linkedin or site.youtube or site.discord or site.github %}
+      ,"sameAs": [{% set comma = joiner() %}{% if site.substack %}{{ comma() }}"{{ site.substack }}"{% endif %}{% if site.linkedin %}{{ comma() }}"{{ site.linkedin }}"{% endif %}{% if site.youtube %}{{ comma() }}"{{ site.youtube }}"{% endif %}{% if site.discord %}{{ comma() }}"{{ site.discord }}"{% endif %}{% if site.github %}{{ comma() }}"{{ site.github }}"{% endif %}]
+      {% endif %}
     }
     </script>
     {% else %}
