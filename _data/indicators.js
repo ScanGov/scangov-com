@@ -3,6 +3,10 @@ import { getData } from '../scripts/getdata.js';
 export default async () => {
     const data = await getData('https://github.com/ScanGov/data/raw/refs/heads/main/standards/audits.json', true);
 
+    const descriptionOverrides = {
+        usability: 'Optimize content and design so visitors quickly find what they need.'
+    };
+
     const indicators = [];
     for (const key in data) {
         const value = data[key];
@@ -24,7 +28,7 @@ export default async () => {
             icon: value.icon,
             link: key,
             color: value.color,
-            description: value.description,
+            description: descriptionOverrides[key] ?? value.description,
             standards: value.attributes,
             guidance,
             videos: value.videos,

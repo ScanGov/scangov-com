@@ -16,5 +16,17 @@
         "description": "Test web page readability.",
         "icon": "book-open-reader",
         "url": "/tools/readability"
+    },
+    {
+        "title": "PDF site review",
+        "description": "Review a website for PDF files.",
+        "icon": "folder-tree",
+        "url": "https://scangov.com/tools/pdf-site-review/"
+    },
+    {
+        "title": "PDF scanner",
+        "description": "Scan a PDF for accessibility and compliance.",
+        "icon": "file-pdf",
+        "url": "https://scangov.com/tools/pdf-scanner/"
     }
 ]

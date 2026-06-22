@@ -2,7 +2,7 @@
   {
     "title": "Readability",
     "description": "Testing how easy it is to read website content.",
-    "img": "readability.png",
+    "icon": "fa-book-open-reader",
     "video": "0OZ8ZJN8br4",
     "items": [
       {
@@ -19,7 +19,7 @@
   {
     "title": "Sites dashboard",
     "description": "Multi-site management",
-    "img": "sites.png",
+    "icon": "fa-table-columns",
     "video": "zAGistF44Ag",
     "items": [
       {
@@ -36,7 +36,7 @@
   {
     "title": "Domain dashboards",
     "description": "Top-level overview",
-    "img": "dashboards.png",
+    "icon": "fa-gauge-high",
     "video": "xMA7KLnLvng",
     "items": [
       {
@@ -50,7 +50,7 @@
   {
     "title": "Indicator monitoring",
     "description": "Status by indicator",
-    "img": "monitoring.png",
+    "icon": "fa-chart-line",
     "video": "4RxwszK3K34",
     "items": [
       {
@@ -70,7 +70,7 @@
   {
     "title": "Pages",
     "description": "Page-level analysis",
-    "img": "page.png",
+    "icon": "fa-file-lines",
     "video": "6CCHn7DqBjU",
     "items": [
       {
@@ -87,7 +87,7 @@
   {
     "title": "Tasklist",
     "description": "Prioritized by ROI",
-    "img": "tasks.png",
+    "icon": "fa-list-check",
     "video": "gH2d_a7n8oo",
     "items": [
       {
@@ -104,7 +104,7 @@
   {
     "title": "Issue reports",
     "description": "Pre-populated issue reports",
-    "img": "bug-report.png",
+    "icon": "fa-bug",
     "video": "ncIBUxnX7vc",
     "items": [
       {
@@ -121,7 +121,7 @@
   {
     "title": "Scorecards",
     "description": "Public view of domain digital experience grades/scores",
-    "img": "scorecards.png",
+    "icon": "fa-star",
     "video": "8LErMmgYUDg",
     "items": [
       {
@@ -138,7 +138,7 @@
   {
     "title": "Feedback",
     "description": "Simple, open, accountable customer feedback loop.",
-    "img": "feedback.png",
+    "icon": "fa-comments",
     "video": "1ci_wAt4a0k",
     "items": [
       {
