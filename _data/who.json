@@ -2,31 +2,49 @@
   {
     "title": "Government leaders",
     "icon": "fa-landmark",
-    "description": "Get executive visibility into agency digital performance and compliance."
+    "description": "Get executive visibility into agency digital performance and compliance.",
+    "detail": "Real-time compliance and performance data across all your websites — so you can report progress, spot risk, and decide without waiting on manual audits."
   },
   {
     "title": "Digital service teams",
     "icon": "fa-laptop",
-    "description": "Monitor, track, and improve government website health at scale."
+    "description": "Monitor, track, and improve government website health at scale.",
+    "detail": "Continuous scanning across your entire web portfolio. Accessibility, security, and performance issues surface in a prioritized task list so your team fixes what matters most."
   },
   {
     "title": "Third-party vendors",
     "icon": "fa-handshake",
-    "description": "Demonstrate compliance and performance to government clients."
+    "description": "Demonstrate compliance and performance to government clients.",
+    "detail": "A verified, shareable compliance record that proves digital standards are being met — building client trust and simplifying renewals."
   },
   {
     "title": "Website managers",
     "icon": "fa-window-maximize",
-    "description": "Identify and fix issues before they impact visitors."
+    "description": "Identify and fix issues before they impact visitors.",
+    "detail": "Around-the-clock monitoring with alerts for new issues before they affect users — so you can prioritize fixes and show measurable progress."
   },
   {
     "title": "IT staff",
     "icon": "fa-code",
-    "description": "Automate scanning and integrate performance data into your workflows."
+    "description": "Automate scanning and integrate performance data into your workflows.",
+    "detail": "API access and automated scanning that fits your existing workflows — compliance and performance data flows into the tools your team already uses."
   },
   {
     "title": "Hosting providers",
     "icon": "fa-server",
-    "description": "Prove the value of your hosting environment with verified data."
+    "description": "Prove the value of your hosting environment with verified data.",
+    "detail": "Independent verification of the performance, security, and compliance of your hosted sites — credible third-party data that proves the value of your infrastructure."
+  },
+  {
+    "title": "Procurement officers",
+    "icon": "fa-file-contract",
+    "description": "Evaluate and enforce digital delivery standards across vendor contracts.",
+    "detail": "Objective, verified data on whether vendors are meeting digital requirements — so you can write standards into RFPs and hold vendors accountable at renewal."
+  },
+  {
+    "title": "Oversight offices",
+    "icon": "fa-magnifying-glass-chart",
+    "description": "Track digital compliance across agencies and identify systemic issues at the portfolio level.",
+    "detail": "Compliance and performance data across multiple agency websites — so you can identify patterns, prioritize reviews, and report on government-wide digital health."
   }
 ]
