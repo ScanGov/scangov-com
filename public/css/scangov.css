@@ -1667,7 +1667,8 @@ a[href$=".mp4"]::after {
     color: #ff8d7b;
 }
 
-.fa-magnifying-glass {
+.fa-magnifying-glass,
+.fa-magnifying-glass-chart {
     color: #ffe396;
 }
 
@@ -1902,6 +1903,7 @@ a[href$=".mp4"]::after {
 [data-bs-theme=light] .fa-highlighter,
 [data-bs-theme=light] .fa-lightbulb,
 [data-bs-theme=light] .fa-magnifying-glass,
+[data-bs-theme=light] .fa-magnifying-glass-chart,
 [data-bs-theme=light] .fa-plug-circle-bolt,
 [data-bs-theme=light] .fa-robot,
 [data-bs-theme=light] .fa-scale-balanced,
@@ -2277,26 +2279,4 @@ th a:focus i, th a:focus svg {
     --bs-body-bg-rgb: 26, 27, 46;
     --bs-body-secondary-bg: #13141f;
     --bs-border-color: rgba(255, 255, 255, 0.07);
-}
-
-/* Plans */
-.card-plans { cursor: pointer; }
-
-/* Card links: underline on hover only */
-.card a:not(.btn):not(.stretched-link) {
-    text-decoration: none;
-}
-.card a:not(.btn):not(.stretched-link):hover {
-    text-decoration: underline;
-}
-.card .stretched-link {
-    text-decoration: none;
-}
-.card .stretched-link:hover {
-    text-decoration: underline;
-}
-
-/* Dark mode — scangov-com overrides */
-[data-bs-theme=dark] {
-    --bs-info-bg-subtle: #1f2144;
 }
