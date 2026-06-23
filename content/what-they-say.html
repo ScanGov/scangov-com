@@ -1,0 +1,29 @@
+---
+layout: layouts/default
+date: 2025-04-26
+modified: 
+author: ScanGov
+title: "What they say"
+description: "What people say about ScanGov."
+---
+
+<div class="container mt-4">
+  <div class="row g-3">
+    {% for item in quotes %}
+      <div class="col-12 col-md-6">
+        <div class="card p-4 h-100">
+          <blockquote class="mb-3"><p class="fs-5">&ldquo;{{ item.quote | safe }}&rdquo;</p></blockquote>
+          <div class="mt-auto small text-body-secondary">
+            {{ item.name }}<br>
+            {{ item.title }}<br>
+            {%- if item["org-link"] %}
+              <a href="{{ item["org-link"] }}" target="_blank">{{ item.org }}</a>
+            {%- else %}
+              {{ item.org }}
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

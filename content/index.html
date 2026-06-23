@@ -107,20 +107,30 @@ home: true
 </div>
 <div class="container border-bottom mb-5 pb-5">
   <h2 class="mb-4">What they say</h2>
-  <div class="row g-3" id="testimonials-row"></div>
+  <div id="quotes-pool" style="display:none" aria-hidden="true">
+    <div class="row g-3">
+      {% for item in quotes %}
+        <div class="col-12 col-md-6">
+          <div class="card p-4 h-100">
+            <blockquote class="mb-3"><p class="fs-5">&ldquo;{{ item.quote | safe }}&rdquo;</p></blockquote>
+            <div class="mt-auto small text-body-secondary">
+              {{ item.name }}<br>
+              {{ item.title }}<br>
+              {{ item.org }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="row g-3" id="quotes-row"></div>
   <script>
-    (function () {
-      const quotes = {{ quotes | dump | safe }};
-      const shuffled = quotes.slice().sort(() => Math.random() - 0.5).slice(0, 2);
-      document.getElementById('testimonials-row').innerHTML = shuffled.map(function (item) {
-        return '<div class="col-12 col-md-6">' +
-          '<div class="card p-4 h-100">' +
-          '<blockquote class="mb-3"><p class="fs-5">“' + item.quote + '”</p></blockquote>' +
-          '<div class="mt-auto small text-body-secondary">' +
-          item.name + '<br>' + item.title + '<br>' + item.org +
-          '</div></div></div>';
-      }).join('');
-    })();
+  (function() {
+    var pool = Array.from(document.querySelector('#quotes-pool .row').children);
+    var shuffled = pool.slice().sort(function() { return Math.random() - 0.5; }).slice(0, 2);
+    var target = document.getElementById('quotes-row');
+    shuffled.forEach(function(el) { target.appendChild(el); });
+  })();
   </script>
   <a href="/what-they-say" class="btn btn-outline-primary mt-4">What they say</a>
 </div>
