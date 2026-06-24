@@ -8,7 +8,7 @@ eleventyExcludeFromCollections: true
         {% if page.data.sitemap != "false" %}
             <url>
                 <loc>{{ site.url }}{{ page.url | url }}</loc>
-                <lastmod>{{ page.date.toISOString() }}</lastmod>
+                <lastmod>{% if page.data.modified %}{{ page.data.modified }}{% else %}{{ page.date.toISOString() }}{% endif %}</lastmod>
             </url>
         {% endif %}
     {% endfor %}
