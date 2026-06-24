@@ -1,32 +1,32 @@
 [
     {
         "title": "Site scanner",
-        "description": "Scan website for standards compliance.",
+        "description": "Scan a website for digital standards compliance issues.",
         "icon": "window-maximize",
         "url": "https://my.scangov.com/scan"
     },
     {
         "title": "RFP builder",
-        "description": "Create a website request for proposal.",
+        "description": "Build a website request for proposal using digital standards.",
         "icon": "file-contract",
-        "url": "https://scangov.com/rfp-builder"
+        "url": "/rfp-builder/"
     },
     {
         "title": "Readability scanner",
-        "description": "Test web page readability.",
+        "description": "Check how easy a web page is to read.",
         "icon": "book-open-reader",
-        "url": "/tools/readability"
+        "url": "/tools/readability/"
     },
     {
         "title": "PDF site review",
-        "description": "Review a website for PDF files.",
+        "description": "Find and review all PDF files on a website.",
         "icon": "folder-tree",
-        "url": "https://scangov.com/tools/pdf-site-review/"
+        "url": "/tools/pdf-site-review/"
     },
     {
         "title": "PDF scanner",
-        "description": "Scan a PDF for accessibility and compliance.",
+        "description": "Check a PDF for accessibility and compliance issues.",
         "icon": "file-pdf",
-        "url": "https://scangov.com/tools/pdf-scanner/"
+        "url": "/tools/pdf-scanner/"
     }
 ]
