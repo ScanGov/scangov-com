@@ -10,15 +10,16 @@ description: "The humans of ScanGov."
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <div class="card-group">
+      <div class="row g-3">
         {% for item in people %}{% if not item.hidden %}
           <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
-            <div class="card mx-2 my-2 pt-2 social">
+            <div class="card social">
               <div class="card-body">
                 {% if item.img %}
                   <img
                     src="/../public/assets/img/people/{{ item.img }}"
                     class="img-fluid rounded-circle mb-3 w-50 border"
+                    loading="lazy"
                     alt="{{ item.name }}">
                 {% endif %}
                 <h2 class="h4 mb-3">

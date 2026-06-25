@@ -32,13 +32,8 @@
      the file.
 #}
 {% if profile %}
-<ul class="small list-unstyled text-body-secondary">
+<ul class="small list-unstyled text-body-secondary font-monospace">
     {% if not mapPage and not orgPage %}
-    <li>
-        <a class="js-title-link" target="_blank" href="{{ domain.redirect }}">
-            / <i class="fa-solid fa-up-right-from-square"></i>
-        </a>
-    </li>
     {% if site.url == 'https://scangov.org' and domain.name %}
     <li>
         Managed by:

@@ -17,7 +17,7 @@ eleventyComputed:
     ogImageAlt: "{{ feature.ogImageAlt }}"
 ---
 
-<div class="container mb-4 pb-4 border-bottom">
+<div class="container page-section">
   <div class="row">
     {% if feature.items %}
     <div class="col-12 col-md-5">
@@ -49,7 +49,7 @@ eleventyComputed:
     {% for item in features %}
       {% if item.title != feature.title %}
       <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
-        <div class="card mx-2 my-2 pt-2"><div class="card-body">
+        <div class="card"><div class="card-body">
           <i class="fa-solid {{ item.icon }} fa-lg d-block mb-2" aria-hidden="true"></i>
           <h3 class="h4 mb-2 mt-3"><a href="/features/{{ item.title | slugify }}/" class="stretched-link">{{ item.title }}</a></h3>
           <p class="card-text small">{{ item.description }}</p>
@@ -58,8 +58,8 @@ eleventyComputed:
       {% endif %}
     {% endfor %}
   </div>
-  <div class="card-group" id="features-cards"></div>
-  <a href="/features/" class="btn btn-outline-primary mt-4">Features</a>
+  <div class="row g-3" id="features-cards"></div>
+  <a href="/features/" class="btn btn-outline-primary">Features</a>
 </div>
 <script>
 (function() {

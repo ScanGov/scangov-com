@@ -4,11 +4,11 @@ layout: layouts/default
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <div class="card-group">
+      <div class="row g-3">
         {% if page.data %}
           {% for item in indicators %}
             <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 d-flex align-items-stretch">
-              <div class="card p-4 text-center m-2">
+              <div class="card p-4 text-center">
                 {% if item.icon %}
                   <a href="{{ page.ctaUrl }}" class="stretched-link">
                     <i

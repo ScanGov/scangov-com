@@ -1,6 +1,7 @@
 [
     {
-        "title": "Demo + discussion (1 hour)",
+        "title": "Demo + discussion",
+        "duration": "1 hour",
         "link": "https://calendly.com/scangov/demo",
         "icon": "fa-solid fa-calendar-check"
     }
