@@ -9,11 +9,11 @@ permalink: /
 home: true
 ---
 
-<div class="container border-bottom mb-5 pb-5">
+<div class="container page-section">
   <h2 class="mb-3">What we scan</h2>
   {% include "indicator_list.html" %}
 </div>
-<div class="container border-bottom mb-5 pb-5">
+<div class="container page-section">
   <h2 class="mb-4">How it works</h2>
   <div class="row justify-content-center">
   <div class="col-12 col-md-8">
@@ -87,14 +87,14 @@ home: true
   </div>
   </div>
 </div>
-<div class="container border-bottom mb-5 pb-5">
+<div class="container page-section">
   <div class="row">
     <div class="col-12">
       <h2 class="mb-3">Who we serve</h2>
-      <div class="card-group">
+      <div class="row g-3">
         {% for item in who | head(3) %}
           <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
-            <div class="card p-4 text-center m-1 d-flex flex-column align-items-center">
+            <div class="card p-4 text-center d-flex flex-column align-items-center">
               <i class="fa-solid {{ item.icon }} fa-3x mt-2 mb-2" aria-hidden="true"></i>
               <h3 class="h5 mt-3">{{ item.title }}</h3>
               <p class="small text-body-secondary mb-0">{{ item.description }}</p>
@@ -102,11 +102,11 @@ home: true
           </div>
         {% endfor %}
       </div>
-      <a href="/who-we-serve" class="btn btn-outline-primary mt-4">Who we serve</a>
+      <a href="/who-we-serve" class="btn btn-outline-primary">Who we serve</a>
     </div>
   </div>
 </div>
-<div class="container border-bottom mb-5 pb-5">
+<div class="container page-section">
   <h2 class="mb-4">What they say</h2>
   <div id="quotes-pool" style="display:none" aria-hidden="true">
     <div class="row g-3">
@@ -133,9 +133,9 @@ home: true
     shuffled.forEach(function(el) { target.appendChild(el); });
   })();
   </script>
-  <a href="/what-they-say" class="btn btn-outline-primary mt-4">What they say</a>
+  <a href="/what-they-say" class="btn btn-outline-primary">What they say</a>
 </div>
-<div class="container border-bottom mb-5 pb-5 pt-3">
+<div class="container page-section">
   <div class="row">
     <div class="col-12">
       <h2 class="mb-3">GovX Awards</h2>
@@ -147,6 +147,7 @@ home: true
         <img
           src="/../public/assets/img/pages/government-experience-awards.png"
           class="mb-4 img-fluid border rounded shadow"
+          loading="lazy"
           alt="">
       </a>
     </div>
@@ -155,6 +156,7 @@ home: true
         <img
           src="/../public/assets/img/pages/government-experience-awards.png"
           class="my-4 img-fluid border rounded shadow d-block d-md-none"
+          loading="lazy"
           alt="">
       </a>
       <blockquote class="mb-3">
@@ -164,18 +166,18 @@ home: true
         </p>
       </blockquote>
       <div class="small text-body-secondary mb-3">Center for Digital Government</div>
-      <a href="{{ site.baseurl }}government-experience-awards" class="btn btn-outline-primary mt-3">GovX Awards</a>
+      <a href="{{ site.baseurl }}government-experience-awards" class="btn btn-outline-primary">GovX Awards</a>
     </div>
   </div>
 </div>
-<div class="container border-bottom mb-5 pb-5">
+<div class="container page-section">
   <div class="row">
     <div class="col-12">
       <h2 class="mb-3">Features</h2>
       <div id="features-pool" style="display:none" aria-hidden="true">
         {% for item in features %}
           <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
-            <div class="card mx-2 my-2 pt-2"><div class="card-body">
+            <div class="card"><div class="card-body">
               <i class="fa-solid {{ item.icon }} fa-lg d-block mb-2" aria-hidden="true"></i>
               <h3 class="h4 mb-2 mt-3"><a href="/features/{{ item.title | slugify }}/" class="stretched-link">{{ item.title }}</a></h3>
               <p class="card-text small">{{ item.description }}</p>
@@ -183,8 +185,8 @@ home: true
           </div>
         {% endfor %}
       </div>
-      <div class="card-group" id="features-cards"></div>
-      <a href="/features/" class="btn btn-outline-primary mt-4">Features</a>
+      <div class="row g-3" id="features-cards"></div>
+      <a href="/features/" class="btn btn-outline-primary">Features</a>
     </div>
   </div>
 </div>
@@ -196,17 +198,17 @@ home: true
   shuffled.forEach(function(el) { target.appendChild(el); });
 })();
 </script>
-<div class="container border-bottom mb-5 pb-5">
+<div class="container page-section">
   <div class="row">
     <div class="col-12">
       <h2 class="mb-3">ScanGov in action</h2>
       <p class="lead">See how ScanGov works using live websites.</p>
       {% include "now_scanning_list.html" %}
-      <a href="{{ site.baseurl }}now-scanning" class="btn btn-outline-primary mt-3">Now scanning ...</a>
+      <a href="{{ site.baseurl }}now-scanning" class="btn btn-outline-primary">Now scanning ...</a>
     </div>
   </div>
 </div>
-<div class="container border-bottom mb-5 pb-5">
+<div class="container page-section">
   <div class="row">
     <div class="col-12">
       <h2 class="mb-3">Plans</h2>

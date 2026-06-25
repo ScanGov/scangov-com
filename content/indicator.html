@@ -29,7 +29,7 @@ eleventyComputed:
   </div>
 </div> #}
 {# {% for item in indicator.videos %}
-  <div class="container border-bottom mb-5 pb-5">
+  <div class="container page-section">
     <div class="row">
       <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
       <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
@@ -46,7 +46,7 @@ eleventyComputed:
     </div>
   </div>
 {% endfor %} #}
-<div class="container border-bottom mt-5 mb-5 pb-5">
+<div class="container page-section">
   <div class="row">
     <div class="col-12">
       <h2>Standards</h2>
@@ -56,7 +56,7 @@ eleventyComputed:
     </div>
   </div>
 </div>
-<div class="container border-bottom mb-5 pb-5">
+<div class="container page-section">
   <div class="row">
     <div class="col-12">
       <h2>Guidance</h2>
@@ -74,20 +74,21 @@ eleventyComputed:
   {% endif %}
 {% endfor %}
 {% if videos %}
-  <div class="container border-bottom mb-5 pb-5">
+  <div class="container page-section">
     <div class="row">
       <div class="col-12">
         <h2>Videos</h2>
-        <div class="card-group">
+        <div class="row g-3">
           {% for item in indicator.standards %}
             {% for vid in item.videos %}
               <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
-                <div class="card p-3 m-2">
+                <div class="card p-3">
                   <a href="/indicators/{{ indicator.url }}/{{ item.key }}/">
                     <img
                       width="360"
                       src="/../public/{{ vid.thumb }}"
                       alt="Image containing the words {{ vid.title }}"
+                      loading="lazy"
                       class="border img-fluid">
                   </a>
                   <h3 class="h5 mt-3">{{ vid.title }}</h3>

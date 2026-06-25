@@ -9,10 +9,10 @@ description: "ScanGov in the news."
 
 <div class="container">
   <div class="row">
-    <div class="card-group">
+    <div class="row g-3">
       {% for item in press %}
         <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
-          <div class="card mx-2 my-2 pt-2">
+          <div class="card">
             <div class="card-body">
               <h3 class="h4 mb-3">
                 <a href="{{ item.url }}">{{ item.title }}</a>

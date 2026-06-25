@@ -28,10 +28,10 @@
   {% if morePosts | length %}
     <div class="container mt-5 pt-4 border-top">
       <h2 class="h4 mb-4">News</h2>
-      <div class="card-group">
+      <div class="row g-3">
         {% for post in morePosts %}
           <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
-            <div class="card mx-2 my-2 pt-2">
+            <div class="card">
               <div class="card-body">
                 <i class="fa-solid fa-newspaper fa-lg d-block mb-2"></i>
                 <h3 class="h4 mb-2 mt-3">
@@ -43,7 +43,7 @@
           </div>
         {% endfor %}
       </div>
-      <a href="/news/" class="btn btn-outline-primary mt-4">News</a>
+      <a href="/news/" class="btn btn-outline-primary">News</a>
     </div>
   {% endif %}
 </main>
