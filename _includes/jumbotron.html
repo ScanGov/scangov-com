@@ -17,7 +17,7 @@
         <div class="col-12">
           {% if title %}<h1 class="display-5">{{ title }}</h1>{% endif %}
           {% if description %}<p class="lead fs-5">{{ description }}</p>{% endif %}
-          <ul class="small list-unstyled text-body-secondary mb-0">
+          <ul class="small list-unstyled text-body-secondary font-monospace mb-0">
             {% if author %}
               {% set authorPerson = people | findPerson(author) %}
               <li>By
@@ -28,7 +28,7 @@
                 {% endif %}
               </li>
             {% endif %}
-            {% if date %}<li class="font-monospace">{{ date | dateFormat }}</li>{% endif %}
+            {% if date %}<li>{{ date | dateFormat }}</li>{% endif %}
           </ul>
         </div>
       </div>
