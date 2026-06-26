@@ -54,7 +54,7 @@
 
 :root, [data-bs-theme=dark] {
     color-scheme: dark;
-    --bs-primary: #70e17b;
+    --bs-primary: #70b3e1;
     --bs-primary-rgb: 112, 225, 123;
     --bs-primary-text: #13171f;
     --bs-body-color: #fff;
@@ -62,7 +62,7 @@
     --bs-body-bg: #13171f;
     --bs-body-bg-rgb: 19, 23, 31;
     --bs-body-secondary-bg: #0f1218;
-    --bs-link-color: #70e17b;
+    --bs-link-color: #70b3e1;
     --bs-link-color-rgb: 112, 225, 123;
     --bs-link-hover-color: var(--bs-link-color);
     --bs-link-hover-color-rgb: 112, 225, 123;
@@ -234,9 +234,17 @@
 
 /* Footer */
 
-footer a:hover { text-decoration: underline; }
-footer p.small a { text-decoration: underline; }
-footer p.small a:hover { text-decoration: none; }
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p.small a {
+    text-decoration: underline;
+}
+
+footer p.small a:hover {
+    text-decoration: none;
+}
 
 /* Theme-dependent: logo/image invert */
 
@@ -300,7 +308,7 @@ strong {
     text-wrap: balance;
 }
 
-#main-content > .container {
+#main-content>.container {
     margin-top: 1.5rem;
 }
 
@@ -352,7 +360,7 @@ body.default h6 {
 .alert h4,
 .alert h5,
 .alert h6 {
-    margin-top: 2rem;
+    margin-top: 0.75rem;
     margin-bottom: 0.75rem;
 }
 
@@ -534,32 +542,54 @@ a.list-group-item:hover {
     font-family: var(--bs-font-bold);
     text-decoration: none;
 }
+
 .breadcrumb-item a:hover {
     text-decoration: underline;
     color: var(--bs-link-color);
 }
 
-.bc-sep { color: white; }
+.bc-sep {
+    color: white;
+}
+
 .breadcrumb-item a.bc-org,
-.breadcrumb-item a.bc-org:visited { color: #70e17b; }
+.breadcrumb-item a.bc-org:visited {
+    color: #70e17b;
+}
+
 .breadcrumb-item a.bc-domain,
 .breadcrumb-item a.bc-domain:visited,
 .breadcrumb-item a.bc-org-current,
-.breadcrumb-item a.bc-org-current:visited { color: white; }
+.breadcrumb-item a.bc-org-current:visited {
+    color: white;
+}
 
-[data-bs-theme=light] .bc-sep { color: var(--bs-body-color); }
+[data-bs-theme=light] .bc-sep {
+    color: var(--bs-body-color);
+}
+
 [data-bs-theme=light] .breadcrumb-item a.bc-org,
-[data-bs-theme=light] .breadcrumb-item a.bc-org:visited { color: var(--bs-link-color); }
+[data-bs-theme=light] .breadcrumb-item a.bc-org:visited {
+    color: var(--bs-link-color);
+}
+
 [data-bs-theme=light] .breadcrumb-item a.bc-domain,
 [data-bs-theme=light] .breadcrumb-item a.bc-domain:visited,
 [data-bs-theme=light] .breadcrumb-item a.bc-org-current,
-[data-bs-theme=light] .breadcrumb-item a.bc-org-current:visited { color: var(--bs-body-color); }
+[data-bs-theme=light] .breadcrumb-item a.bc-org-current:visited {
+    color: var(--bs-body-color);
+}
 
 /* Default (Bootstrap-style) breadcrumb — no bold, standard colors */
 .breadcrumb-default .breadcrumb-item,
 .breadcrumb-default .breadcrumb-item a,
-.breadcrumb-default .breadcrumb-item a:visited { font-family: inherit; }
-.breadcrumb-default .breadcrumb-item.active { color: var(--bs-secondary-color); }
+.breadcrumb-default .breadcrumb-item a:visited {
+    font-family: inherit;
+}
+
+.breadcrumb-default .breadcrumb-item.active {
+    color: var(--bs-secondary-color);
+}
 
 /* Links / Buttons */
 
@@ -747,6 +777,7 @@ a.btn-primary-outline:not(.active):focus {
 .nav-pills .nav-link:not(.active):hover svg {
     color: #13171f !important;
 }
+
 .nav-pills .nav-link:not(.active):hover svg path {
     fill: #13171f !important;
 }
@@ -867,7 +898,7 @@ a.btn-primary-outline:not(.active):focus {
     border-color: #70e17b;
 }
 
-.active > .page-link,
+.active>.page-link,
 .page-link.active {
     background-color: #70e17b;
     border-color: #70e17b;
@@ -885,13 +916,17 @@ a.btn-primary-outline:not(.active):focus {
 }
 
 [data-bs-theme=light] .page-link:hover,
-[data-bs-theme=light] .active > .page-link,
+[data-bs-theme=light] .active>.page-link,
 [data-bs-theme=light] .page-link.active {
     color: #13171f;
 }
 
 /* Sortable tables */
-th.sortable { cursor: pointer; user-select: none; white-space: nowrap; }
+th.sortable {
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+}
 
 /* Rankings table */
 
@@ -952,7 +987,7 @@ code.language-plaintext {
     padding: 0;
 }
 
-.actions > li > a {
+.actions>li>a {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -961,7 +996,7 @@ code.language-plaintext {
     text-decoration: none;
 }
 
-.actions > li > a small {
+.actions>li>a small {
     border-left: 1px solid var(--bs-border-color);
     padding-left: 0.5rem;
     align-self: stretch;
@@ -969,8 +1004,8 @@ code.language-plaintext {
     align-items: center;
 }
 
-.actions > li > a:hover,
-.actions > li > a:focus {
+.actions>li>a:hover,
+.actions>li>a:focus {
     color: var(--bs-link-color);
 }
 
@@ -1052,7 +1087,7 @@ a.card {
     box-shadow: var(--bs-box-shadow-md);
 }
 
-.card-body i + h3 {
+.card-body i+h3 {
     margin-top: 0.75rem;
     margin-bottom: 0.5rem;
 }
@@ -2392,17 +2427,21 @@ th a:focus i, th a:focus svg {
     color: var(--bs-body-color) !important;
     fill: var(--bs-body-color) !important;
 }
+
 /* Docs */
 #post h2 {
     margin-top: 2.5rem;
 }
+
 #post h3 {
     margin-top: 2rem;
     font-size: 1.1rem;
 }
+
 #post .alert h2 {
     margin-top: 2rem;
 }
+
 #post .alert h3 {
     margin-top: 2rem;
     font-size: inherit;
@@ -2425,10 +2464,12 @@ th a:focus i, th a:focus svg {
     align-items: center;
     gap: 0.5rem;
 }
+
 .scan-notice .btn-close {
     flex-shrink: 0;
     margin-left: auto;
 }
+
 @media (min-width: 768px) {
     .scan-notice {
         width: 75%;
@@ -2439,7 +2480,10 @@ th a:focus i, th a:focus svg {
 }
 
 /* Actions list: restore left border and radius — Bootstrap targets :first-child but rescan is a hidden first node */
-.actions .list-group-item + .list-group-item { border-left-width: 1px; }
+.actions .list-group-item+.list-group-item {
+    border-left-width: 1px;
+}
+
 @media (min-width: 576px) {
     .actions .list-group-item:nth-child(2) {
         border-top-left-radius: var(--bs-list-group-border-radius);
@@ -2451,12 +2495,15 @@ th a:focus i, th a:focus svg {
 .card a:not(.btn):not(.stretched-link) {
     text-decoration: none;
 }
+
 .card a:not(.btn):not(.stretched-link):hover {
     text-decoration: underline;
 }
+
 .card .stretched-link {
     text-decoration: none;
 }
+
 .card .stretched-link:hover {
     text-decoration: underline;
 }

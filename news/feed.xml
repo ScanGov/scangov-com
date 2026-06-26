@@ -3,7 +3,7 @@
   <title>ScanGov News</title>
   <link href="https://scangov.com/news/feed.xml" rel="self"/>
   <link href="https://scangov.com/news/"/>
-  <updated>2026-06-26T05:47:28Z</updated>
+  <updated>2026-06-26T21:50:49Z</updated>
   <id>https://scangov.com/news/</id>
   <author>
     <name>ScanGov</name>
@@ -11,25 +11,9 @@
   </author>
   
   <entry>
-    <title>New ScanGov website RFP builder</title>
-    <link href="https://scangov.com/news/new-scangov-website-rfp-builder/"/>
-    <updated>2025-11-23T00:00:00Z</updated>
-    <id>https://scangov.com/news/new-scangov-website-rfp-builder/</id>
-    <summary>Create website request for proposals based on ScanGov Standards.</summary>
-  </entry>
-  
-  <entry>
-    <title>New ScanGov readability scanner</title>
-    <link href="https://scangov.com/news/new-scangov-readability-scanner/"/>
-    <updated>2025-10-27T00:00:00Z</updated>
-    <id>https://scangov.com/news/new-scangov-readability-scanner/</id>
-    <summary>Helping web managers evaluate content readability.</summary>
-  </entry>
-  
-  <entry>
     <title>Now scanning ... maryland.gov</title>
     <link href="https://scangov.com/now-scanning/maryland-gov/"/>
-    <updated>2026-06-26T05:47:28Z</updated>
+    <updated>2026-06-26T21:50:49Z</updated>
     <id>https://scangov.com/now-scanning/maryland-gov/</id>
     <summary>A ScanGov government digital experience review of maryland.gov.</summary>
   </entry>
@@ -37,7 +21,7 @@
   <entry>
     <title>Now scanning ... colorado.gov</title>
     <link href="https://scangov.com/now-scanning/colorado-gov/"/>
-    <updated>2026-06-26T05:47:28Z</updated>
+    <updated>2026-06-26T21:50:49Z</updated>
     <id>https://scangov.com/now-scanning/colorado-gov/</id>
     <summary>A ScanGov government digital experience review of colorado.gov.</summary>
   </entry>
@@ -53,7 +37,7 @@
   <entry>
     <title>Now scanning ... nyc.gov</title>
     <link href="https://scangov.com/now-scanning/nyc-gov/"/>
-    <updated>2026-06-26T05:47:28Z</updated>
+    <updated>2026-06-26T21:50:49Z</updated>
     <id>https://scangov.com/now-scanning/nyc-gov/</id>
     <summary>A ScanGov government digital experience review of nyc.gov.</summary>
   </entry>
@@ -61,7 +45,7 @@
   <entry>
     <title>Now scanning ... georgia.gov</title>
     <link href="https://scangov.com/now-scanning/georgia-gov/"/>
-    <updated>2026-06-26T05:47:28Z</updated>
+    <updated>2026-06-26T21:50:49Z</updated>
     <id>https://scangov.com/now-scanning/georgia-gov/</id>
     <summary>A ScanGov government digital experience review of georgia.gov.</summary>
   </entry>
@@ -69,7 +53,7 @@
   <entry>
     <title>Now scanning ... ms.gov</title>
     <link href="https://scangov.com/now-scanning/ms-gov/"/>
-    <updated>2026-06-26T05:47:28Z</updated>
+    <updated>2026-06-26T21:50:49Z</updated>
     <id>https://scangov.com/now-scanning/ms-gov/</id>
     <summary>A ScanGov government digital experience review of ms.gov.</summary>
   </entry>
@@ -77,9 +61,25 @@
   <entry>
     <title>Now scanning ... texas.gov</title>
     <link href="https://scangov.com/now-scanning/texas-gov/"/>
-    <updated>2026-06-26T05:47:28Z</updated>
+    <updated>2026-06-26T21:50:49Z</updated>
     <id>https://scangov.com/now-scanning/texas-gov/</id>
     <summary>A ScanGov government digital experience review of texas.gov.</summary>
+  </entry>
+  
+  <entry>
+    <title>First Contentful Paint (FCP) + Largest Contentful Paint (LCP) demo</title>
+    <link href="https://scangov.com/news/fcp-lcp-demo/"/>
+    <updated>2025-07-17T00:00:00Z</updated>
+    <id>https://scangov.com/news/fcp-lcp-demo/</id>
+    <summary>ScanGov demos how we conduct performance audits related to First Contentful Paint (FCP) and Largest Contentful Paint (LCP).</summary>
+  </entry>
+  
+  <entry>
+    <title>Time to First Byte (TTFB) demo</title>
+    <link href="https://scangov.com/news/ttfb-demo/"/>
+    <updated>2025-07-17T00:00:00Z</updated>
+    <id>https://scangov.com/news/ttfb-demo/</id>
+    <summary>ScanGov demos how we conduct performance audits related to Time to First Byte.</summary>
   </entry>
   
   <entry>

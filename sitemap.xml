@@ -57,6 +57,14 @@
     <lastmod>Tue Jul 01 2025 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
   </url>
   <url>
+    <loc>https://scangov.com/news/fcp-lcp-demo/</loc>
+    <lastmod>Thu Jul 17 2025 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
+  </url>
+  <url>
+    <loc>https://scangov.com/news/ttfb-demo/</loc>
+    <lastmod>Thu Jul 17 2025 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
+  </url>
+  <url>
     <loc>https://scangov.com/contact/</loc>
     <lastmod>Sat Jul 26 2025 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
   </url>
@@ -105,32 +113,8 @@
     <lastmod>Sat Aug 30 2025 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
   </url>
   <url>
-    <loc>https://scangov.com/tools/</loc>
-    <lastmod>Tue Jun 23 2026 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-  </url>
-  <url>
     <loc>https://scangov.com/news/scangov-data-supports-judging-for-2025-government-experience-awards/</loc>
     <lastmod>Wed Oct 08 2025 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-  </url>
-  <url>
-    <loc>https://scangov.com/tools/pdf-scanner/</loc>
-    <lastmod>Tue Jun 23 2026 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-  </url>
-  <url>
-    <loc>https://scangov.com/tools/pdf-site-review/</loc>
-    <lastmod>Tue Jun 23 2026 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-  </url>
-  <url>
-    <loc>https://scangov.com/tools/readability/</loc>
-    <lastmod>Tue Jun 23 2026 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-  </url>
-  <url>
-    <loc>https://scangov.com/news/new-scangov-readability-scanner/</loc>
-    <lastmod>Mon Oct 27 2025 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-  </url>
-  <url>
-    <loc>https://scangov.com/news/new-scangov-website-rfp-builder/</loc>
-    <lastmod>Sun Nov 23 2025 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
   </url>
   <url>
     <loc>https://scangov.com/who-we-serve/</loc>
@@ -218,14 +202,6 @@
   </url>
   <url>
     <loc>https://scangov.com/rfp-builder/</loc>
-    <lastmod></lastmod>
-  </url>
-  <url>
-    <loc>https://scangov.com/indicators/usability/fcp/</loc>
-    <lastmod></lastmod>
-  </url>
-  <url>
-    <loc>https://scangov.com/indicators/usability/ttfb/</loc>
     <lastmod></lastmod>
   </url>
   <url>
