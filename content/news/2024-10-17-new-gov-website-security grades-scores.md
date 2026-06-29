@@ -12,6 +12,8 @@ keywords:
  - digital experience
  - government websites
  - government digital experience
+indicators:
+  - security
 ---
 
 We added a new [ScanGov](https://scangov.org) indicator that grades/scores federal and state government websites based on basic web security practices.

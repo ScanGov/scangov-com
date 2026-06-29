@@ -33,6 +33,7 @@ export default async () => {
             guidance,
             videos: value.videos,
             why: value.why,
+            risk: value.risk,
             ogImage: value.ogImage
         });
     };
