@@ -8,12 +8,17 @@ pagination:
     alias: indicator
     addAllPagesToCollections: true
 
+breadcrumbParent:
+  - url: "/indicators/"
+    title: "Indicators"
+
 eleventyComputed:
     title: "{{ indicator.name }}"
     permalink: "/{{ indicator.url }}/"
     description: "{{ indicator.description }}"
     ogImage: "{{ indicator.ogImage }}"
     ogImageAlt: "{{ indicator.ogImageAlt }}"
+    breadcrumbCurrent: "{{ indicator.name }}"
 ---
 
 {# <div class="container">
@@ -46,6 +51,28 @@ eleventyComputed:
     </div>
   </div>
 {% endfor %} #}
+<div class="container pb-4 mb-4 border-bottom">
+  <div class="row g-3">
+    <div class="col-12 col-md-4 d-flex align-items-stretch">
+      <div class="card">
+        <div class="card-body">
+          <i class="fa-solid fa-circle-question fa-lg d-block mb-2"></i>
+          <h2>Why</h2>
+          <p>{{ indicator.why }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 d-flex align-items-stretch">
+      <div class="card">
+        <div class="card-body">
+          <i class="fa-solid fa-triangle-exclamation fa-lg d-block mb-2"></i>
+          <h2>Risks</h2>
+          <p>{{ indicator.risk }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="container page-section">
   <div class="row">
     <div class="col-12">
@@ -67,6 +94,39 @@ eleventyComputed:
     </div>
   </div>
 </div>
+{% set hasRelatedNews = false %}
+{% for post in collections.postsByDate %}
+  {% if post.data.indicators and indicator.url in post.data.indicators %}
+    {% set hasRelatedNews = true %}
+  {% endif %}
+{% endfor %}
+{% if hasRelatedNews %}
+<div class="container page-section">
+  <div class="row">
+    <div class="col-12">
+      <h2>News</h2>
+      <p>{{ indicator.name }} updates from ScanGov.</p>
+      <div class="row g-3">
+        {% for post in collections.postsByDate %}
+          {% if post.data.indicators and indicator.url in post.data.indicators %}
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
+              <div class="card">
+                <div class="card-body">
+                  <i class="fa-solid fa-newspaper fa-lg d-block mb-2"></i>
+                  <h3 class="h4 mb-2 mt-3">
+                    <a href="{{ post.url }}" class="stretched-link">{{ post.data.title }}</a>
+                  </h3>
+                  <p class="card-text small">{{ post.data.description }}</p>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
 {# {% set videos = false %}
 {% for item in indicator.standards %}
   {% if item.videos and item.videos.length > 0 %}
@@ -103,6 +163,6 @@ eleventyComputed:
 {% endif %} #}
 <div class="container">
   <h2 class="mb-3">Indicators</h2>
-  <p>Holistically addressing government digital experience.</p>
+  <p>The four key areas ScanGov monitors.</p>
   {% include "indicator_list.html" %}
 </div>

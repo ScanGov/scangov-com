@@ -9,12 +9,17 @@ pagination:
     alias: feature
     addAllPagesToCollections: true
 
+breadcrumbParent:
+  - url: "/features/"
+    title: "Features"
+
 eleventyComputed:
     title: "{{ feature.title }}"
     permalink: "/features/{{ feature.title | slugify }}/"
     description: "{{ feature.description }}"
     ogImage: "{{ feature.ogImage }}"
     ogImageAlt: "{{ feature.ogImageAlt }}"
+    breadcrumbCurrent: "{{ feature.title }}"
 ---
 
 <div class="container page-section">

@@ -1,6 +1,7 @@
 {
     "title": "ScanGov",
     "titleShort": "ScanGov",
+    "description": "Monitor, fix, and certify government digital experience.",
     "url": "https://scangov.com",
     "org": "ScanGov",
     "org-url": "https://scangov.com",
@@ -12,5 +13,6 @@
     "youtube": "https://youtube.com/@scangov",
     "discord": "https://discord.gg/EPCXEMAX5y",
     "github": "https://github.com/scangov",
-    "rss": "https://scangov.com/news/feed.xml"
+    "rss": "https://scangov.com/news/feed.xml",
+    "date": "%B %-d, %Y"
 }

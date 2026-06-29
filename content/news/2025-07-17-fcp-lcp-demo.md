@@ -11,7 +11,11 @@ keywords:
   - FCP
   - LCP
   - web vitals
+indicators:
+  - usability
 ---
+
+Transcript:
 
 I'm gonna go over the steps I took to remedy performance problems on the Scangov site, specifically, front-end choices that needed to be reviewed in order to get a decent first contentful paint and largest contentful paint.
 
