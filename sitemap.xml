@@ -121,15 +121,7 @@
     <lastmod>Mon Jun 22 2026 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
   </url>
   <url>
-    <loc>https://scangov.com/features/readability/</loc>
-    <lastmod></lastmod>
-  </url>
-  <url>
     <loc>https://scangov.com/features/sites-dashboard/</loc>
-    <lastmod></lastmod>
-  </url>
-  <url>
-    <loc>https://scangov.com/features/domain-dashboards/</loc>
     <lastmod></lastmod>
   </url>
   <url>
@@ -137,11 +129,15 @@
     <lastmod></lastmod>
   </url>
   <url>
-    <loc>https://scangov.com/features/pages/</loc>
+    <loc>https://scangov.com/features/domain-dashboards/</loc>
     <lastmod></lastmod>
   </url>
   <url>
     <loc>https://scangov.com/features/tasklist/</loc>
+    <lastmod></lastmod>
+  </url>
+  <url>
+    <loc>https://scangov.com/features/pages/</loc>
     <lastmod></lastmod>
   </url>
   <url>
@@ -150,6 +146,10 @@
   </url>
   <url>
     <loc>https://scangov.com/features/scorecards/</loc>
+    <lastmod></lastmod>
+  </url>
+  <url>
+    <loc>https://scangov.com/features/readability/</loc>
     <lastmod></lastmod>
   </url>
   <url>
