@@ -1,100 +1,66 @@
 [
   {
-    "title": "Readability",
-    "description": "Testing how easy it is to read website content.",
-    "icon": "fa-book-open-reader",
-    "video": "0OZ8ZJN8br4",
-    "items": [
-      {
-        "title": "Automated Readability Index (ARI)"
-      },
-      {
-        "title": "Flesch-Kincaid"
-      },
-      {
-        "title": "Report cards for targeted readability."
-      }
-    ]
-  },
-  {
     "title": "Sites dashboard",
-    "description": "Multi-site management",
+    "description": "Monitor every domain you manage from one dashboard, with grades and scores at a glance.",
     "icon": "fa-table-columns",
     "video": "zAGistF44Ag",
     "items": [
       {
-        "title": "Add multiple domains"
+        "title": "Track multiple domains in one place"
       },
       {
-        "title": "Quick view of overall grades/scores"
+        "title": "See grades and scores at a glance"
       },
       {
-        "title": "Drill down to individual domains"
-      }
-    ]
-  },
-  {
-    "title": "Domain dashboards",
-    "description": "Top-level overview",
-    "icon": "fa-gauge-high",
-    "video": "xMA7KLnLvng",
-    "items": [
-      {
-        "title": "Top-level view of domain indicator grades/scores"
-      },
-      {
-        "title": "Drill down to individual indicator grades/scores"
+        "title": "Drill into any domain for details"
       }
     ]
   },
   {
     "title": "Indicator monitoring",
-    "description": "Status by indicator",
+    "description": "Track grades and scores for every indicator, then drill into the standards driving each one.",
     "icon": "fa-chart-line",
     "video": "4RxwszK3K34",
     "items": [
       {
-        "title": "Domain indicator grade/score"
+        "title": "Grade and score for every indicator"
       },
       {
-        "title": "Number of indicator tasks"
+        "title": "Open task count per indicator"
       },
       {
-        "title": "List of indicator standards"
+        "title": "Standards behind every indicator"
       },
       {
-        "title": "Indicator standards impact scores"
+        "title": "Impact score for each standard"
       }
     ]
   },
   {
-    "title": "Pages",
-    "description": "Page-level analysis",
-    "icon": "fa-file-lines",
-    "video": "6CCHn7DqBjU",
+    "title": "Domain dashboards",
+    "description": "View domain performance from the top down, then drill into individual indicators.",
+    "icon": "fa-gauge-high",
+    "video": "xMA7KLnLvng",
     "items": [
       {
-        "title": "List of site pages"
+        "title": "Top-level grades and scores by domain"
       },
       {
-        "title": "Number of issues per page"
-      },
-      {
-        "title": "Filter pages issues by indicator"
+        "title": "Drill into individual indicator scores"
       }
     ]
   },
   {
     "title": "Tasklist",
-    "description": "Prioritized by ROI",
+    "description": "Prioritize fixes by their impact, so your team works on what matters most.",
     "icon": "fa-list-check",
     "video": "gH2d_a7n8oo",
     "items": [
       {
-        "title": "Tasks prioritized by impact"
+        "title": "Tasks ranked by impact, not guesswork"
       },
       {
-        "title": "Number of issues per standard"
+        "title": "Issue counts by standard"
       },
       {
         "title": "Filter tasks by indicator"
@@ -102,53 +68,87 @@
     ]
   },
   {
+    "title": "Pages",
+    "description": "Pinpoint exactly which pages have issues and how many, broken down by indicator.",
+    "icon": "fa-file-lines",
+    "video": "6CCHn7DqBjU",
+    "items": [
+      {
+        "title": "Every page on your site, in one list"
+      },
+      {
+        "title": "Issue counts by page"
+      },
+      {
+        "title": "Filter page issues by indicator"
+      }
+    ]
+  },
+  {
     "title": "Issue reports",
-    "description": "Pre-populated issue reports",
+    "description": "Generate pre-populated issue reports your developers can act on immediately.",
     "icon": "fa-bug",
     "video": "ncIBUxnX7vc",
     "items": [
       {
-        "title": "Comprehensive, pre-populated issue reports"
+        "title": "Pre-populated, ready-to-file reports"
       },
       {
-        "title": "Copy issue details to clipboard"
+        "title": "Copy issue details with one click"
       },
       {
-        "title": "Submit issues to GitHub"
+        "title": "Submit issues directly to GitHub"
       }
     ]
   },
   {
     "title": "Scorecards",
-    "description": "Public view of domain digital experience grades/scores",
+    "description": "Publish a public scorecard that shows your digital experience grades and builds trust.",
     "icon": "fa-star",
     "video": "8LErMmgYUDg",
     "items": [
       {
-        "title": "Public view of domain digital experience grades"
+        "title": "Public-facing view of your grades"
       },
       {
-        "title": "Share status with the public"
+        "title": "Share status with constituents"
       },
       {
-        "title": "Creates a culture of transparency/accountability"
+        "title": "Builds a culture of transparency"
+      }
+    ]
+  },
+  {
+    "title": "Readability",
+    "description": "Measure how easy your content is to read, using established readability standards.",
+    "icon": "fa-book-open-reader",
+    "video": "0OZ8ZJN8br4",
+    "items": [
+      {
+        "title": "Automated Readability Index (ARI)"
+      },
+      {
+        "title": "Flesch-Kincaid grade level"
+      },
+      {
+        "title": "Readability report cards by page"
       }
     ]
   },
   {
     "title": "Feedback",
-    "description": "Simple, open, accountable customer feedback loop.",
+    "description": "Collect public feedback and respond in the open, building accountability into your process.",
     "icon": "fa-comments",
     "video": "1ci_wAt4a0k",
     "items": [
       {
-        "title": "Building with government"
+        "title": "Built in partnership with government"
       },
       {
-        "title": "Easy, accessible customer feedback form"
+        "title": "Simple, accessible feedback form"
       },
       {
-        "title": "Transparent visibility into what we're working on"
+        "title": "Open visibility into what's next"
       }
     ]
   }
