@@ -56,6 +56,15 @@ eleventyComputed:
     <div class="col-12 col-md-4 d-flex align-items-stretch">
       <div class="card">
         <div class="card-body">
+          <i class="fa-solid fa-bolt fa-lg d-block mb-2"></i>
+          <h2>What</h2>
+          <p>ScanGov uses {{ indicator.standards.length }} {{ indicator.name | lower }} standards to help monitor and fix {{ indicator.what }}.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 d-flex align-items-stretch">
+      <div class="card">
+        <div class="card-body">
           <i class="fa-solid fa-circle-question fa-lg d-block mb-2"></i>
           <h2>Why</h2>
           <p>{{ indicator.why }}</p>

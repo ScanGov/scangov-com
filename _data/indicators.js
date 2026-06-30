@@ -7,6 +7,13 @@ export default async () => {
         usability: 'Optimize content and design so visitors quickly find what they need.'
     };
 
+    const whatCopy = {
+        botability: 'the technical issues that keep AI tools and search engines from finding, crawling, and understanding your website',
+        accessibility: 'the barriers that keep people with disabilities from using your website',
+        usability: 'the navigation and content issues that make it hard for people to find what they need',
+        security: 'the vulnerabilities that put your website and its visitors at risk'
+    };
+
     const indicators = [];
     for (const key in data) {
         const value = data[key];
@@ -32,6 +39,7 @@ export default async () => {
             standards: value.attributes,
             guidance,
             videos: value.videos,
+            what: whatCopy[key] ?? '',
             why: value.why,
             risk: value.risk,
             ogImage: value.ogImage

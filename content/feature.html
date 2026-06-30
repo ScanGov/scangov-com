@@ -68,9 +68,8 @@ eleventyComputed:
 </div>
 <script>
 (function() {
-  var pool = Array.from(document.getElementById('features-pool').children);
-  var shuffled = pool.slice().sort(function() { return Math.random() - 0.5; }).slice(0, 6);
+  var pool = Array.from(document.getElementById('features-pool').children).slice(0, 6);
   var target = document.getElementById('features-cards');
-  shuffled.forEach(function(el) { target.appendChild(el); });
+  pool.forEach(function(el) { target.appendChild(el); });
 })();
 </script>
