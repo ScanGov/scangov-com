@@ -1,12 +1,16 @@
 {
     "title": "ScanGov",
     "titleShort": "ScanGov",
-    "description": "Monitor, fix, and certify government digital experience.",
+    "description": "Monitor, fix, and certify your digital service experience.",
     "url": "https://scangov.com",
     "org": "ScanGov",
     "org-url": "https://scangov.com",
     "gaId": "G-4NWQV1GS7S",
-    "googleVerify": ["10895162be5e592f", "c4cd54504f53031f", "ZbskZD78DTvx3m3pTWx_du_xHFh9tQNE02oIS5y2kYo"],
+    "googleVerify": [
+        "10895162be5e592f",
+        "c4cd54504f53031f",
+        "ZbskZD78DTvx3m3pTWx_du_xHFh9tQNE02oIS5y2kYo"
+    ],
     "securityExpires": "2027-01-01T00:00:00.000Z",
     "substack": "https://scangov.substack.com",
     "linkedin": "https://linkedin.com/company/scangov",

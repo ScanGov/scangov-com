@@ -1,22 +1,28 @@
 {% if home %}
   <div class="pt-5 pb-4 mb-4 border-bottom text-center">
     <div class="container">
-      <h1 class="display-4 mb-4">Monitor, fix, and certify government digital experience.</h1>
+      <h1 class="display-4 mb-4">Monitor, fix, and certify your digital service experience.</h1>
       {% if description %}
         <p class="lead fs-5 mb-5 col-lg-8 mx-auto">{{ description }}</p>
-        <a href="/demo" class="btn btn-primary btn-lg"><i class="fa-solid fa-calendar-check me-2" aria-hidden="true"></i>Schedule demo</a>
+        <a href="/demo" class="btn btn-primary btn-lg">
+          <i class="fa-solid fa-calendar-check me-2" aria-hidden="true"></i>Schedule demo</a>
         &nbsp;
-        <a href="/plans" class="btn btn-outline-primary btn-lg"><i class="fa-solid fa-rocket me-2" aria-hidden="true"></i>Get started</a>
+        <a href="/plans" class="btn btn-outline-primary btn-lg">
+          <i class="fa-solid fa-rocket me-2" aria-hidden="true"></i>Get started</a>
       {% endif %}
     </div>
   </div>
-{% elif isPost %}
+  {% elif isPost %}
   <div class="pt-5 pb-4 mb-4 border-bottom">
     <div class="container">
       <div class="row">
         <div class="col-12">
-          {% if title %}<h1 class="display-5">{{ title }}</h1>{% endif %}
-          {% if description %}<p class="lead fs-5">{{ description }}</p>{% endif %}
+          {% if title %}
+            <h1 class="display-5">{{ title }}</h1>
+          {% endif %}
+          {% if description %}
+            <p class="lead fs-5">{{ description }}</p>
+          {% endif %}
           <ul class="small list-unstyled text-body-secondary font-monospace mb-0">
             {% if author %}
               {% set authorPerson = people | findPerson(author) %}
@@ -28,30 +34,108 @@
                 {% endif %}
               </li>
             {% endif %}
-            {% if date %}<li>{{ date | dateFormat }}</li>{% endif %}
+            {% if date %}
+              <li>{{ date | dateFormat }}</li>
+            {% endif %}
           </ul>
         </div>
       </div>
     </div>
   </div>
-{% elif isPerson %}
+  {% elif isPerson %}
   <div class="pt-5 pb-4 mb-4 border-bottom">
     <div class="container">
       <div class="row">
         <div class="col-12">
-          {% if title %}<h1 class="display-5">{{ title }}</h1>{% endif %}
-          {% if description %}<p class="lead fs-5">{{ description }}</p>{% endif %}
+          {% if title %}
+            <h1 class="display-5">{{ title }}</h1>
+          {% endif %}
+          {% if description %}
+            <p class="lead fs-5">{{ description }}</p>
+          {% endif %}
           {% if person %}
             <div class="social fs-4 mt-3">
-              {% if person.url %}<a href="{{ person.url }}" aria-label="Website" target="_blank" rel="noopener"><i class="fa-solid fa-link"></i></a> {% endif %}
-              {% if person.substack %}<a href="{{ person.substack }}" aria-label="Substack" target="_blank" rel="noopener"><i class="fa-solid fa-envelope-open-text"></i></a> {% endif %}
-              {% if person.linkedin %}<a href="{{ person.linkedin }}" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a> {% endif %}
-              {% if person.youtube %}<a href="{{ person.youtube }}" aria-label="YouTube" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a> {% endif %}
-              {% if person.discord %}<a href="{{ person.discord }}" aria-label="Discord" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i></a> {% endif %}
-              {% if person.github %}<a href="{{ person.github }}" aria-label="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a> {% endif %}
-              {% if person.mastodon %}<a href="{{ person.mastodon }}" aria-label="Mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon"></i></a> {% endif %}
-              {% if person.bluesky %}<a href="{{ person.bluesky }}" aria-label="Bluesky" target="_blank" rel="noopener"><i class="fa-brands fa-bluesky"></i></a> {% endif %}
-              {% if person.rss %}<a href="{{ person.rss }}" aria-label="RSS" target="_blank" rel="noopener"><i class="fa-solid fa-rss"></i></a> {% endif %}
+              {% if person.url %}
+                <a
+                  href="{{ person.url }}"
+                  aria-label="Website"
+                  target="_blank"
+                  rel="noopener">
+                  <i class="fa-solid fa-link"></i>
+                </a>
+              {% endif %}
+              {% if person.substack %}
+                <a
+                  href="{{ person.substack }}"
+                  aria-label="Substack"
+                  target="_blank"
+                  rel="noopener">
+                  <i class="fa-solid fa-envelope-open-text"></i>
+                </a>
+              {% endif %}
+              {% if person.linkedin %}
+                <a
+                  href="{{ person.linkedin }}"
+                  aria-label="LinkedIn"
+                  target="_blank"
+                  rel="noopener">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              {% endif %}
+              {% if person.youtube %}
+                <a
+                  href="{{ person.youtube }}"
+                  aria-label="YouTube"
+                  target="_blank"
+                  rel="noopener">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              {% endif %}
+              {% if person.discord %}
+                <a
+                  href="{{ person.discord }}"
+                  aria-label="Discord"
+                  target="_blank"
+                  rel="noopener">
+                  <i class="fa-brands fa-discord"></i>
+                </a>
+              {% endif %}
+              {% if person.github %}
+                <a
+                  href="{{ person.github }}"
+                  aria-label="GitHub"
+                  target="_blank"
+                  rel="noopener">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              {% endif %}
+              {% if person.mastodon %}
+                <a
+                  href="{{ person.mastodon }}"
+                  aria-label="Mastodon"
+                  target="_blank"
+                  rel="noopener">
+                  <i class="fa-brands fa-mastodon"></i>
+                </a>
+              {% endif %}
+              {% if person.bluesky %}
+                <a
+                  href="{{ person.bluesky }}"
+                  aria-label="Bluesky"
+                  target="_blank"
+                  rel="noopener">
+                  <i class="fa-brands fa-bluesky"></i>
+                </a>
+              {% endif %}
+              {% if person.rss %}
+                <a
+                  href="{{ person.rss }}"
+                  aria-label="RSS"
+                  target="_blank"
+                  rel="noopener">
+                  <i class="fa-solid fa-rss"></i>
+                </a>
+              {% endif %}
             </div>
           {% endif %}
         </div>
