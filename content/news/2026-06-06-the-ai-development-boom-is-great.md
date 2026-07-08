@@ -6,7 +6,7 @@ description: "AI-generated code has consistent quality gaps across accessibility
 eleventyExcludeFromCollections: true
 eleventyComputed:
   permalink: /news/ai-development-boom-automated-quality-checks/
-keywords:
+topics:
  - AI code quality
  - web standards
  - accessibility
