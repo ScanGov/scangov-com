@@ -7,7 +7,7 @@
             class="fa-solid fa-{{ item.icon }} fa-3x mb-3"
             aria-hidden="true"
             style="color: {{ item.color }}"></i>
-          <h3 class="h5 my-2">{{ item.name }}</h3>
+          {% if indicatorHeading == "h2" %}<h2 class="h5 my-2">{{ item.name }}</h2>{% else %}<h3 class="h5 my-2">{{ item.name }}</h3>{% endif %}
         </a>
         <p class="small text-body-secondary mb-0">{{ item.description }}</p>
       </div>
