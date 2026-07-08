@@ -6,7 +6,7 @@ author: aaron-hans
 video: 6ElhrWOutL0
 eleventyComputed:
   permalink: /news/fcp-lcp-demo/
-keywords:
+topics:
   - performance
   - FCP
   - LCP

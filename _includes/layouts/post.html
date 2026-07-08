@@ -23,7 +23,7 @@
       <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
     </div>
   </div>
-  {% set morePosts = collections.postsByDate | relatedPosts(page.url, keywords, topics) %}
+  {% set morePosts = collections.postsByDate | relatedPosts(page.url, topics) %}
   {% if morePosts | length %}
     <div class="container mt-5 pt-4 border-top">
       <h2 class="h4 mb-4">News</h2>

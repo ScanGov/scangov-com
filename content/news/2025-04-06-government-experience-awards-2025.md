@@ -11,10 +11,8 @@ ogImageAlt: "2025 Government Experience Awards"
 topics:
   - ScanGov
   - GovX
-keywords:
- - Government Experience Awards
- - GovX
- - Center for Digital Government
+  - Government Experience Awards
+  - Center for Digital Government
 ---
 
 [ScanGov](https://scangov.com) will again provide essential data support for e.Republic’s [Center for Digital Government](https://www.govtech.com/cdg)  **2025** [Government Experience Awards](https://www.govtech.com/cdg/government-experience), contributing critical quantitative metrics to the judging process.

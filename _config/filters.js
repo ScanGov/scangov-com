@@ -49,19 +49,16 @@ export default function(eleventyConfig) {
 		return (posts || []).filter(post => post.data && post.data.author === slug);
 	});
 
-	eleventyConfig.addFilter("relatedPosts", (allPosts, currentUrl, keywords, topics) => {
-		const currentTerms = new Set([
-			...(Array.isArray(keywords) ? keywords : []),
-			...(Array.isArray(topics) ? topics : []),
-		].map(t => String(t).toLowerCase()));
+	eleventyConfig.addFilter("relatedPosts", (allPosts, currentUrl, topics) => {
+		const currentTerms = new Set(
+			(Array.isArray(topics) ? topics : []).map(t => String(t).toLowerCase())
+		);
 
 		return (allPosts || [])
 			.filter(post => post.url !== currentUrl)
 			.map(post => {
-				const postTerms = [
-					...(Array.isArray(post.data.keywords) ? post.data.keywords : []),
-					...(Array.isArray(post.data.topics) ? post.data.topics : []),
-				].map(t => String(t).toLowerCase());
+				const postTerms = (Array.isArray(post.data.topics) ? post.data.topics : [])
+					.map(t => String(t).toLowerCase());
 				const score = postTerms.filter(t => currentTerms.has(t)).length;
 				return { post, score };
 			})

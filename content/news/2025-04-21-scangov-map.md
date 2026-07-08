@@ -8,7 +8,7 @@ ogImage: posts/scangov-map.png
 ogImageAlt: "Map of U.S. states color coded by government digital experience grade."
 img_caption: "Source: Project ScanGov"
 #img-link: 
-keywords:
+topics:
  - digital experience
  - government websites
  - government digital experience

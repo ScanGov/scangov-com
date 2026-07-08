@@ -8,7 +8,7 @@ ogImage: posts/certificate-og.png
 ogImageAlt: "Certificate icon"
 img_caption: "Icon by Font Awesome"
 img_link: https://fontawesome.com/
-keywords:
+topics:
  - digital experience
  - government websites
  - government digital experience
