@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://scangov.com/news/hello-scangov/</loc>
-    <lastmod>Tue May 14 2024 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-  </url>
-  <url>
-    <loc>https://scangov.com/news/release-notes-june-2024/</loc>
-    <lastmod>Tue Jun 25 2024 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-  </url>
-  <url>
     <loc>https://scangov.com/news/scangov-supports-judging-for-2024-government-experience-awards/</loc>
     <lastmod>Wed Sep 18 2024 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-  </url>
-  <url>
-    <loc>https://scangov.com/news/new-scangov-government-website-security-report-cards/</loc>
-    <lastmod>Thu Oct 17 2024 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
   </url>
   <url>
     <loc>https://scangov.com/search/</loc>
@@ -33,20 +21,8 @@
     <lastmod>Sun Apr 06 2025 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
   </url>
   <url>
-    <loc>https://scangov.com/news/scangov-notes-2025-04-09/</loc>
-    <lastmod>Wed Apr 09 2025 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-  </url>
-  <url>
-    <loc>https://scangov.com/news/government-digital-experience-map/</loc>
-    <lastmod>Mon Apr 21 2025 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-  </url>
-  <url>
     <loc>https://scangov.com/what-they-say/</loc>
     <lastmod>Sat Apr 26 2025 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
-  </url>
-  <url>
-    <loc>https://scangov.com/news/standards-for-government-digital-experience/</loc>
-    <lastmod>Wed May 14 2025 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
   </url>
   <url>
     <loc>https://scangov.com/plans/</loc>
@@ -119,6 +95,10 @@
   <url>
     <loc>https://scangov.com/who-we-serve/</loc>
     <lastmod>Mon Jun 22 2026 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
+  </url>
+  <url>
+    <loc>https://scangov.com/news/scangov-to-support-judging-for-2026-government-experience-awards/</loc>
+    <lastmod>Fri Jul 10 2026 00:00:00 GMT+0000 (Coordinated Universal Time)</lastmod>
   </url>
   <url>
     <loc>https://scangov.com/features/sites-dashboard/</loc>
@@ -198,6 +178,18 @@
   </url>
   <url>
     <loc>https://scangov.com/people/scangov/</loc>
+    <lastmod></lastmod>
+  </url>
+  <url>
+    <loc>https://scangov.com/people/elias-fretwell/</loc>
+    <lastmod></lastmod>
+  </url>
+  <url>
+    <loc>https://scangov.com/people/luke-fretwell/</loc>
+    <lastmod></lastmod>
+  </url>
+  <url>
+    <loc>https://scangov.com/people/aaron-hans/</loc>
     <lastmod></lastmod>
   </url>
   <url>
