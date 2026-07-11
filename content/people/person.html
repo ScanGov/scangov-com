@@ -5,6 +5,7 @@ pagination:
   data: people
   size: 1
   alias: person
+  addAllPagesToCollections: true
 eleventyComputed:
   title: "{{ person.name }}"
   permalink: "/people/{{ person.slug }}/"

@@ -17,7 +17,13 @@ import htmlmin from "html-minifier-terser";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function (eleventyConfig) {
-    
+
+    // Build gitignored content too (e.g. content/news/drafts/) - the
+    // `drafts` preprocessor below is what keeps drafts out of production,
+    // not .gitignore, which would otherwise stop the dev server from
+    // rebuilding them on change.
+    eleventyConfig.setUseGitIgnore(false);
+
     eleventyConfig.addPlugin(fontAwesomePlugin);
     eleventyConfig.addPlugin(rssPlugin);
     // let audits = JSON.parse(fs.readFileSync('./_data/audits.json'))
