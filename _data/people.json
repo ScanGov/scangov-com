@@ -1,38 +1,46 @@
 [
-    {
-      "name": "ScanGov",
-      "slug": "scangov",
-      "url": "https://scangov.com",
-      "linkedin": "https://linkedin.com/company/scangov",
-      "youtube": "https://youtube.com/@scangov",
-      "github": "https://github.com/scangov",
-      "discord": "https://discord.gg/EPCXEMAX5y",
-      "substack": "https://scangov.substack.com",
-      "rss": "https://scangov.com/news/feed.xml",
-      "hidden": true
-    },
-    {
-      "name": "Elias Fretwell",
-      "slug": "elias-fretwell",
-      "img": "elias-fretwell.jpg",
-      "github": "https://github.com/narlotl"
-    },
-    {
-      "name": "Luke Fretwell",
-      "slug": "luke-fretwell",
-      "img": "luke-fretwell.jpg",
-      "url": "https://lukefretwell.com",
-      "linkedin": "https://www.linkedin.com/in/lukefretwell",
-      "github": "https://github.com/lukefretwell",
-      "mastodon": "https://mastodon.social/@lukefretwell",
-      "bluesky": "https://lukefretwell.bsky.social/"
-    },
-    {
-      "name": "Aaron Hans",
-      "slug": "aaron-hans",
-      "img": "aaron-hans.jpg",
-      "linkedin": "https://www.linkedin.com/in/aaronhans/",
-      "github": "https://github.com/aaronhans",
-      "mastodon": "https://indieweb.social/@nopattern"
-    }
+  {
+    "name": "ScanGov",
+    "slug": "scangov",
+    "url": "https://scangov.com",
+    "description": "ScanGov is a digital experience monitor, fixer, and certifier.",
+    "linkedin": "https://linkedin.com/company/scangov",
+    "youtube": "https://youtube.com/@scangov",
+    "github": "https://github.com/scangov",
+    "discord": "https://discord.gg/EPCXEMAX5y",
+    "substack": "https://scangov.substack.com",
+    "rss": "https://scangov.com/news/feed.xml",
+    "hidden": true
+  },
+  {
+    "name": "Elias Fretwell",
+    "slug": "elias-fretwell",
+    "img": "elias-fretwell.jpg",
+    "title": "Co-founder",
+    "description": "Elias is a ScanGov co-founder.",
+    "url": "https://eliasfretwell.com",
+    "github": "https://github.com/narlotl"
+  },
+  {
+    "name": "Luke Fretwell",
+    "slug": "luke-fretwell",
+    "img": "luke-fretwell.jpg",
+    "title": "Co-founder",
+    "description": "Luke is a ScanGov co-founder.",
+    "url": "https://lukefretwell.com",
+    "linkedin": "https://www.linkedin.com/in/lukefretwell",
+    "github": "https://github.com/lukefretwell",
+    "mastodon": "https://mastodon.social/@lukefretwell",
+    "bluesky": "https://lukefretwell.bsky.social/"
+  },
+  {
+    "name": "Aaron Hans",
+    "slug": "aaron-hans",
+    "img": "aaron-hans.jpg",
+    "title": "Co-founder",
+    "description": "Aaron is a ScanGov co-founder.",
+    "linkedin": "https://www.linkedin.com/in/aaronhans/",
+    "github": "https://github.com/aaronhans",
+    "mastodon": "https://indieweb.social/@nopattern"
+  }
 ]

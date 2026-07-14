@@ -1,7 +1,7 @@
 ---
-date: 2026-07-10
+date: 2026-07-14
 # modified: YYYY-MM-DD
-author: ScanGov
+author: scangov
 title: "ScanGov to support judging for 2026 Government Experience Awards"
 description: "Will provide website digital experience data to the Center for Digital Government’s annual GovX Awards program."
 # ogImage: posts/.png

@@ -2,6 +2,9 @@
     "layout": "layouts/post.html",
     "isPost": true,
     "author": "scangov",
+    "breadcrumbParent": [
+        { "url": "/news/", "title": "News" }
+    ],
     "eleventyComputed": {
         "permalink": "/news/{{ title | lower | replace(' ', '-') | replace('.', '-') | replace('(', '') | replace(')', '') }}/index.html"
     },
