@@ -100,6 +100,7 @@
     <script type="application/ld+json">{{ schema | safe }}</script>
     {% endif %}
     {% include "favicon.html" %}
+    <link rel="preload" href="/assets/fonts/public-sans/ttf/PublicSans-Regular.ttf" as="font" type="font/ttf" crossorigin>
     {% include "style.html" %}
     <script>
         document.documentElement.setAttribute('data-bs-theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
