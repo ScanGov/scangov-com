@@ -3,7 +3,7 @@
     <div class="col-lg-3 d-flex">
       <div class="card card-plans mb-4 shadow-sm position-relative">
         <div class="card-header">
-          <h2 class="my-0 fw-normal h5">{{ item.title }}</h2>
+          <h2 class="my-0 fw-normal h5">{{ item.shortName }}</h2>
         </div>
         <div class="card-body pt-4">
           <h3 class="card-title h2 pb-3">{{ item.price }}</h3>
@@ -16,7 +16,7 @@
           </ul>
         </div>
         <div class="card-footer">
-          <a href="{{ item.ctaUrl }}" class="w-100 btn btn-lg btn-primary">{{ item.ctaText }}</a>
+          <a href="{{ item.ctaUrl }}" class="w-100 btn btn-lg btn-primary" aria-label="{{ item.ctaText }} {{ item.title }} plan" title="{{ item.ctaText }} {{ item.title }} plan">{{ item.ctaText }}</a>
         </div>
       </div>
     </div>

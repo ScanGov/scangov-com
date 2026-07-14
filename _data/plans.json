@@ -1,68 +1,71 @@
 [
   {
-    "title": "Trial",
+    "title": "ScanGov Starter",
+    "shortName": "Starter",
     "icon": null,
-    "price": "Free",
-    "ctaText": "Schedule demo",
-    "ctaUrl": "/demo",
-    "checks": [
-      "1 domain",
-      "4 page scans",
-      "One-time scan",
-      "Support documentation"
-    ]
-  },
-  {
-    "title": "Basic",
-    "icon": null,
-    "price": "$100/mo",
+    "price": "$50/mo",
     "ctaText": "Start",
-    "ctaUrl": "https://buy.stripe.com/cNidR964t4Y97AeaP33Nm08",
+    "ctaUrl": "https://buy.stripe.com/3cI00c90WePV9i34HMgA800",
     "checks": [
-      "Unlimited domains",
-      "5,000 page scans / month",
-      "Continuous monitoring",
+      "One domain",
+      "5,000 page scans / month (total)",
       "Unlimited users",
-      "Support documentation",
       "Prioritization tasklist",
       "GitHub integration",
       "Public dashboard"
     ]
   },
   {
-    "title": "Enterprise",
+    "title": "ScanGov Team",
+    "shortName": "Team",
     "icon": null,
-    "price": "$500/mo",
+    "price": "$100/mo",
     "ctaText": "Start",
-    "ctaUrl": "https://buy.stripe.com/bJeeVd1OdfCNbQu5uJ3Nm09",
+    "ctaUrl": "https://buy.stripe.com/3cI4gs1yuazFeCneimgA801",
     "checks": [
-      "Unlimited domains",
-      "50,000 page scans / month",
-      "Continuous monitoring",
+      "5 domains",
+      "20,000 page scans / month (total)",
       "Unlimited users",
-      "Single sign-on",
       "Ticketing support",
       "Prioritization tasklist",
       "GitHub integration",
-      "Public dashboards"
+      "Public dashboard"
     ]
   },
   {
-    "title": "Enterprise Max",
+    "title": "ScanGov Business",
+    "shortName": "Business",
     "icon": null,
-    "price": "$1,000/mo",
+    "price": "$500/mo",
     "ctaText": "Start",
-    "ctaUrl": "https://buy.stripe.com/6oUdR9dwV9epdYC0ap3Nm07",
+    "ctaUrl": "https://buy.stripe.com/4gM9AM90W4bh3XJ4HMgA802",
     "checks": [
       "Unlimited domains",
-      "100,000 page scans / month *",
-      "Continuous monitoring",
+      "50,000 page scans / month (total)",
       "Unlimited users",
       "Single sign-on",
       "Ticketing support",
       "Prioritization tasklist",
       "GitHub integration",
-      "Public dashboards"
+      "Public dashboard"
+    ]
+  },
+  {
+    "title": "ScanGov Enterprise",
+    "shortName": "Enterprise",
+    "icon": null,
+    "price": "$1,000/mo",
+    "ctaText": "Start",
+    "ctaUrl": "https://buy.stripe.com/6oUcMYa50bDJcuffmqgA803",
+    "checks": [
+      "Unlimited domains",
+      "100,000 page scans / month (total)",
+      "Unlimited users",
+      "Single sign-on",
+      "Ticketing support",
+      "Prioritization tasklist",
+      "GitHub integration",
+      "Public dashboard"
     ]
   }
 ]
