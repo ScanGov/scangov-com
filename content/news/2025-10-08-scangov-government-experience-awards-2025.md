@@ -2,7 +2,7 @@
 title: "ScanGov data supports judging for 2025 Government Experience Awards"
 description: "Provided quantitative website scan data to e.Republic’s Center for Digital Government annual awards program."
 date: 2025-10-08
-ogImage: posts/government-experience-awards-2025-winners.png
+ogImage: govx-og.png
 ogImageAlt: "Government Experience Awards 2025"
 topics:
   - ScanGov
