@@ -4,8 +4,8 @@ date: 2026-07-14
 author: scangov
 title: "ScanGov to support judging for 2026 Government Experience Awards"
 description: "Will provide website digital experience data to the Center for Digital Government’s annual GovX Awards program."
-# ogImage: posts/.png
-# ogImageAlt: ""
+ogImage: govx-og.png
+ogImageAlt: "Government Experience Awards 2026"
 # img_caption: ""
 # img_link:
 # video: youtube-id-here

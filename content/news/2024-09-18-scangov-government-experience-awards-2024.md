@@ -2,7 +2,7 @@
 title: "ScanGov supports judging for 2024 Government Experience Awards"
 description: "Provided quantitative website scan data to e.Republic’s Center for Digital Government annual awards program."
 date: 2024-09-18
-ogImage: posts/government-experience-awards-2024.png
+ogImage: govx-og.png
 ogImageAlt: "Government Experience Awards 2024"
 topics:
   - ScanGov
