@@ -32,6 +32,11 @@ eleventyComputed:
           <li class="mb-2"><i class="fa-solid fa-circle-check me-2" aria-hidden="true"></i>{{ item.title }}</li>
         {% endfor %}
       </ul>
+      {% if feature.workExample %}
+      <a href="{{ feature.workExample }}" class="btn btn-outline-primary mt-4" target="_blank" rel="noopener">
+        <i class="fa-solid fa-wand-sparkles me-2" aria-hidden="true"></i>{{ feature.title }} example
+      </a>
+      {% endif %}
     </div>
     {% endif %}
     {% if feature.video %}

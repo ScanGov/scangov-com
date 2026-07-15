@@ -13,6 +13,9 @@
       },
       {
         "title": "Drill into any domain for details"
+      },
+      {
+        "title": "Filter and sort every domain by any indicator"
       }
     ]
   },
@@ -106,6 +109,7 @@
     "description": "Publish a public scorecard that shows your digital experience grades and builds trust.",
     "icon": "fa-star",
     "video": "8LErMmgYUDg",
+    "workExample": "https://my.scangov.com/public/key5279-1751598352407/scangov-com/report",
     "items": [
       {
         "title": "Public-facing view of your grades"
@@ -115,6 +119,9 @@
       },
       {
         "title": "Builds a culture of transparency"
+      },
+      {
+        "title": "Share directly to LinkedIn, Bluesky, Mastodon, X, or email"
       }
     ]
   },
@@ -149,6 +156,70 @@
       },
       {
         "title": "Open visibility into what's next"
+      }
+    ]
+  },
+  {
+    "title": "Single sign-on",
+    "description": "Let your team sign in with your organization's existing identity provider, so access stays centrally managed.",
+    "icon": "fa-key",
+    "items": [
+      {
+        "title": "Sign in with your organization's identity provider"
+      },
+      {
+        "title": "No separate passwords to manage"
+      },
+      {
+        "title": "Centralized access control for your team"
+      }
+    ]
+  },
+  {
+    "title": "URL management",
+    "description": "Control exactly which pages are monitored, and keep your page list in sync as your site changes.",
+    "icon": "fa-link",
+    "items": [
+      {
+        "title": "Add or remove pages from monitoring"
+      },
+      {
+        "title": "Sync automatically from your sitemap"
+      },
+      {
+        "title": "Track redirected and retired pages separately"
+      }
+    ]
+  },
+  {
+    "title": "GitHub integration",
+    "description": "Connect your GitHub repo so issues flow straight into your team's existing developer workflow.",
+    "icon": "fa-code-branch",
+    "items": [
+      {
+        "title": "Connect your GitHub repo in a few clicks"
+      },
+      {
+        "title": "Issues sync automatically, no manual copy-paste"
+      },
+      {
+        "title": "Fixes stay in your team's existing workflow"
+      }
+    ]
+  },
+  {
+    "title": "Scan management",
+    "description": "Keep your monitoring data fresh with on-demand rescans and full visibility into scan status.",
+    "icon": "fa-rotate",
+    "items": [
+      {
+        "title": "Trigger an on-demand rescan anytime"
+      },
+      {
+        "title": "See real-time scan progress and status"
+      },
+      {
+        "title": "Review scan history for every domain"
       }
     ]
   }
