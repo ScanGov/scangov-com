@@ -4,5 +4,6 @@ _site
 node_modules/
 content/news/drafts/
 
+# Claude Code local/generated content
+.claude/
 docs/plans/
-.claude
