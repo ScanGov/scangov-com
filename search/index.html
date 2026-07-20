@@ -348,7 +348,15 @@ if (params.has('q')) {
 
   const hiddenPaths = ['/plans/', '/demo/', '/demo-confirm/', '/contact/'];
   if (window.location.hostname !== 'my.scangov.com' && !hiddenPaths.includes(window.location.pathname)) {
-    window.addEventListener('scroll', updateButton);
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function() {
+        updateButton();
+        ticking = false;
+      });
+    }, { passive: true });
     updateButton();
   }</script><svg class="fa-solid fa-link" style="display:none" aria-hidden="true"><use href="#fas-fa-link" xlink:href="#fas-fa-link"></use></svg><script>(function() {
     document.querySelectorAll('#post h2[id], #post h3[id]').forEach(function(h) {
