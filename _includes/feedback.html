@@ -24,7 +24,15 @@
 
   const hiddenPaths = ['/plans/', '/demo/', '/demo-confirm/', '/contact/'];
   if (window.location.hostname !== 'my.scangov.com' && !hiddenPaths.includes(window.location.pathname)) {
-    window.addEventListener('scroll', updateButton);
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function() {
+        updateButton();
+        ticking = false;
+      });
+    }, { passive: true });
     updateButton();
   }
 </script>
