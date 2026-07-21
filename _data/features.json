@@ -54,6 +54,22 @@
     ]
   },
   {
+    "title": "Status bar",
+    "description": "See how many pages still have issues out of your total, right on the dashboard and indicator pages.",
+    "icon": "fa-bars-progress",
+    "items": [
+      {
+        "title": "Pages with issues vs. total, at a glance"
+      },
+      {
+        "title": "Shown on the dashboard and every indicator page"
+      },
+      {
+        "title": "Updates automatically as pages get fixed"
+      }
+    ]
+  },
+  {
     "title": "Tasklist",
     "description": "Prioritize fixes by their impact, so your team works on what matters most.",
     "icon": "fa-list-check",
