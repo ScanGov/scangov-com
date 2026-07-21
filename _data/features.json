@@ -105,6 +105,22 @@
     ]
   },
   {
+    "title": "Download issues",
+    "description": "Export every issue as CSV, JSON, or Markdown for spreadsheets, project boards, or AI coding agents.",
+    "icon": "fa-download",
+    "items": [
+      {
+        "title": "CSV and JSON for spreadsheets and project boards"
+      },
+      {
+        "title": "Markdown checklist ready for AI coding agents"
+      },
+      {
+        "title": "Export a whole site or a single page"
+      }
+    ]
+  },
+  {
     "title": "Scorecards",
     "description": "Publish a public scorecard that shows your digital experience grades and builds trust.",
     "icon": "fa-star",
