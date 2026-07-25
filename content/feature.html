@@ -32,10 +32,19 @@ eleventyComputed:
           <li class="mb-2"><i class="fa-solid fa-circle-check me-2" aria-hidden="true"></i>{{ item.title }}</li>
         {% endfor %}
       </ul>
-      {% if feature.workExample %}
-      <a href="{{ feature.workExample }}" class="btn btn-outline-primary mt-4" target="_blank" rel="noopener">
-        <i class="fa-solid fa-wand-sparkles me-2" aria-hidden="true"></i>{{ feature.title }} example
-      </a>
+      {% if feature.workExample or feature.docsPath %}
+      <div class="d-flex flex-column align-items-start gap-2 mt-4">
+        {% if feature.workExample %}
+        <a href="{{ feature.workExample }}" class="btn btn-outline-primary mt-0" target="_blank" rel="noopener">
+          <i class="fa-solid fa-wand-sparkles me-2" aria-hidden="true"></i>Example
+        </a>
+        {% endif %}
+        {% if feature.docsPath %}
+        <a href="https://docs.scangov.org{{ feature.docsPath }}" class="btn btn-outline-primary mt-0" target="_blank" rel="noopener">
+          <i class="fa-solid fa-file-lines me-2" aria-hidden="true"></i>Docs
+        </a>
+        {% endif %}
+      </div>
       {% endif %}
     </div>
     {% endif %}

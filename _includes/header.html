@@ -65,6 +65,11 @@
       "url": {{ (site.url + page.url) | dump | safe }},
       "datePublished": {{ date | dump | safe }},
       {% if modified %}"dateModified": {{ modified | dump | safe }},{% endif %}
+      {% if video %}
+      "embedUrl": {{ ("https://www.youtube.com/embed/" + video) | dump | safe }},
+      "thumbnailUrl": {{ ("https://i.ytimg.com/vi/" + video + "/hqdefault.jpg") | dump | safe }},
+      "uploadDate": {{ date | dump | safe }},
+      {% endif %}
       "author": {
         "@type": "Organization",
         "name": "ScanGov",

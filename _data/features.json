@@ -24,6 +24,7 @@
     "description": "Track grades and scores for every indicator, then drill into the standards driving each one.",
     "icon": "fa-chart-line",
     "video": "4RxwszK3K34",
+    "docsPath": "/indicators/",
     "items": [
       {
         "title": "Grade and score for every indicator"
@@ -57,6 +58,7 @@
     "title": "Status bar",
     "description": "See how many pages still have issues out of your total, right on the dashboard and indicator pages.",
     "icon": "fa-bars-progress",
+    "docsPath": "/status-bar/",
     "items": [
       {
         "title": "Pages with issues vs. total, at a glance"
@@ -74,6 +76,7 @@
     "description": "Prioritize fixes by their impact, so your team works on what matters most.",
     "icon": "fa-list-check",
     "video": "gH2d_a7n8oo",
+    "docsPath": "/tasklist/",
     "items": [
       {
         "title": "Tasks ranked by impact, not guesswork"
@@ -124,6 +127,7 @@
     "title": "Download issues",
     "description": "Export every issue as CSV, JSON, or Markdown for spreadsheets, project boards, or AI coding agents.",
     "icon": "fa-download",
+    "docsPath": "/download-issues/",
     "items": [
       {
         "title": "CSV and JSON for spreadsheets and project boards"
@@ -142,6 +146,7 @@
     "icon": "fa-star",
     "video": "8LErMmgYUDg",
     "workExample": "https://my.scangov.com/public/key5279-1751598352407/scangov-com/report",
+    "docsPath": "/scorecard/",
     "items": [
       {
         "title": "Public-facing view of your grades"
@@ -162,6 +167,7 @@
     "description": "Measure how easy your content is to read, using established readability standards.",
     "icon": "fa-book-open-reader",
     "video": "0OZ8ZJN8br4",
+    "docsPath": "/readability/",
     "items": [
       {
         "title": "Automated Readability Index (ARI)"
@@ -179,6 +185,7 @@
     "description": "Collect public feedback and respond in the open, building accountability into your process.",
     "icon": "fa-comments",
     "video": "1ci_wAt4a0k",
+    "docsPath": "/feedback/",
     "items": [
       {
         "title": "Built in partnership with government"
@@ -195,6 +202,7 @@
     "title": "Single sign-on",
     "description": "Let your team sign in with your organization's existing identity provider, so access stays centrally managed.",
     "icon": "fa-key",
+    "docsPath": "/single-sign-on/",
     "items": [
       {
         "title": "Sign in with your organization's identity provider"
@@ -211,6 +219,7 @@
     "title": "URL management",
     "description": "Control exactly which pages are monitored, and keep your page list in sync as your site changes.",
     "icon": "fa-link",
+    "docsPath": "/urlset/",
     "items": [
       {
         "title": "Add or remove pages from monitoring"
@@ -243,6 +252,7 @@
     "title": "Scan management",
     "description": "Keep your monitoring data fresh with on-demand rescans and full visibility into scan status.",
     "icon": "fa-rotate",
+    "docsPath": "/scans/",
     "items": [
       {
         "title": "Trigger an on-demand rescan anytime"
