@@ -264,5 +264,42 @@
         "title": "Review scan history for every domain"
       }
     ]
+  },
+  {
+    "title": "Changelog",
+    "description": "See exactly what changed and when, with a dated history of every indicator score change.",
+    "icon": "fa-timeline",
+    "docsPath": "/changelog/",
+    "items": [
+      {
+        "title": "Dated history of every score change"
+      },
+      {
+        "title": "Old vs. new grade and score for each change"
+      },
+      {
+        "title": "Up or down indicator shows improvement or decline"
+      },
+      {
+        "title": "Links straight to the standard that changed"
+      }
+    ]
+  },
+  {
+    "title": "Pulse",
+    "description": "Watch your scores trend over time, for every indicator, in one chart.",
+    "icon": "fa-wave-square",
+    "docsPath": "/pulse/",
+    "items": [
+      {
+        "title": "Overall and per-indicator trend lines"
+      },
+      {
+        "title": "Click any line's latest point to jump to that indicator"
+      },
+      {
+        "title": "Shown on the dashboard, indicator pages, and its own page"
+      }
+    ]
   }
 ]
