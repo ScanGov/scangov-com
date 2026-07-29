@@ -19,9 +19,9 @@ topics:
 The scans evaluate key [government digital experience indicators](https://scangov.com/indicators) based on public policy, established web protocols, guidelines, and industry best practices:
 
 - [Accessibility](https://scangov.com/accessibility)
-- [Botability](https://scangov.com/botability)
+- [Botability](https://scangov.com/botability/)
 - [Security](https://scangov.com/security)
-- [Usability](https://scangov.com/usability)
+- [Usability](https://scangov.com/usability/)
 
 ## About GovX
 
