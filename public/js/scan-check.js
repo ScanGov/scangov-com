@@ -1,10 +1,26 @@
 const API_BASE = 'https://audits.my.scangov.com';
+const STATUS_DEFS_URL = 'https://raw.githubusercontent.com/ScanGov/data/refs/heads/main/status.json';
+
+let statusDefsPromise = null;
+function getStatusDefs() {
+  if (!statusDefsPromise) {
+    statusDefsPromise = fetch(STATUS_DEFS_URL).then((r) => r.json()).catch(() => []);
+  }
+  return statusDefsPromise;
+}
+
+function resolveStatusCode(data) {
+  if (data.fetch && data.fetch.statusCode) return data.fetch.statusCode;
+  if (data.playwright && data.playwright.statusCode) return data.playwright.statusCode;
+  return null;
+}
 
 const form = document.getElementById('scan-check-form');
 const formSection = document.getElementById('scan-form');
 const loadingSection = document.getElementById('scan-loading');
 const resultsSection = document.getElementById('scan-results');
 const siteInput = document.getElementById('site');
+const loadingDomain = document.getElementById('loading-domain');
 
 function showForm() {
   formSection.classList.remove('d-none');
@@ -15,10 +31,11 @@ function showForm() {
   location.hash = '';
 }
 
-function showLoading() {
+function showLoading(domain) {
   formSection.classList.add('d-none');
   loadingSection.classList.remove('d-none');
   resultsSection.classList.add('d-none');
+  loadingDomain.textContent = domain;
 }
 
 function showResults(html) {
@@ -28,30 +45,44 @@ function showResults(html) {
   resultsSection.classList.remove('d-none');
 }
 
-function statusBadge(success) {
-  if (success) {
-    return '<span class="badge text-bg-success">Success</span>';
-  }
-  return '<span class="badge text-bg-danger">Failed</span>';
+function statusText(success) {
+  return success ? 'Success' : 'Failed';
 }
 
-function renderResults(data) {
+function toAbsoluteUrl(domain) {
+  return /^https?:\/\//i.test(domain) ? domain : `https://${domain}`;
+}
+
+function checkAnotherSiteButton() {
+  return `
+      <div class="d-flex align-items-center gap-3">
+        <a href="/plans" class="btn btn-primary">
+          <i class="fa-solid fa-rocket me-2" aria-hidden="true"></i>Get started</a>
+        <button class="btn btn-outline-primary border mt-0" id="new-check-btn">
+          <i class="fa-solid fa-check me-2" aria-hidden="true"></i>Check another site</button>
+      </div>
+    `;
+}
+
+function renderResults(data, statusDef) {
   const domain = data.url;
   const canScan = data.canScan;
 
   const verdictClass = canScan ? 'success' : 'danger';
+  const verdictIcon = canScan ? 'fa-circle-check' : 'fa-circle-xmark';
+  const domainLink = `<a href="${toAbsoluteUrl(domain)}" target="_blank" rel="noopener noreferrer" class="font-monospace">${domain}</a>`;
   const verdictText = canScan
-    ? 'Yes, we can scan this site'
-    : 'We cannot scan this site';
+    ? `Yes, we can scan ${domainLink}`
+    : `We cannot scan ${domainLink}`;
 
   let fetchDetail = '';
   if (data.fetch) {
     fetchDetail = `
       <tr>
         <td>HTTP fetch</td>
-        <td>${statusBadge(data.fetch.success)}</td>
-        <td>${data.fetch.statusCode || '--'}</td>
-        <td>${data.fetch.error || '--'}</td>
+        <td>${statusText(data.fetch.success)}</td>
+        <td>${data.fetch.statusCode || '—'}</td>
+        <td>${data.fetch.error || '—'}</td>
       </tr>`;
   }
 
@@ -60,88 +91,98 @@ function renderResults(data) {
     playwrightDetail = `
       <tr>
         <td>Playwright browser</td>
-        <td><span class="badge text-bg-secondary">Not needed</span></td>
-        <td>--</td>
-        <td>--</td>
+        <td>Not needed</td>
+        <td>—</td>
+        <td>—</td>
       </tr>`;
   } else if (data.playwright) {
     playwrightDetail = `
       <tr>
         <td>Playwright browser</td>
-        <td>${statusBadge(data.playwright.success)}</td>
-        <td>${data.playwright.statusCode || '--'}</td>
-        <td>${data.playwright.error || '--'}</td>
+        <td>${statusText(data.playwright.success)}</td>
+        <td>${data.playwright.statusCode || '—'}</td>
+        <td>${data.playwright.error || '—'}</td>
       </tr>`;
   }
 
   return `
-    <div class="card text-bg-${verdictClass} mb-4">
-      <div class="card-body text-center py-4">
-        <h2 class="card-title h4 mb-1">${verdictText}</h2>
-        <p class="card-text mb-0">${domain}</p>
+    <div class="alert alert-${verdictClass} mb-4" role="alert">
+      <h2 class="alert-heading h3">${verdictText} <i class="fa-solid ${verdictIcon}" aria-hidden="true"></i></h2>
+    </div>
+
+    ${!canScan ? `
+    <div class="alert alert-info mb-4" role="alert">
+      <h2 class="h3">Why</h2>
+      ${statusDef ? `
+      <h3 class="h4">Description</h3>
+      <p>${statusDef.description}</p>
+      ${statusDef.problem ? `
+      <h3 class="h4">Problem</h3>
+      <p>${statusDef.problem}</p>
+      ` : ''}
+      ${statusDef.recommendation ? `
+      <h3 class="h4">Recommendation</h3>
+      <p>${statusDef.recommendation}</p>
+      ` : ''}
+      ` : ''}
+
+      <h3 class="h4">Details</h3>
+      <div class="table-responsive">
+        <table class="table">
+          <caption class="visually-hidden">Scan check details for ${domain}</caption>
+          <thead>
+            <tr>
+              <th scope="col">Method</th>
+              <th scope="col">Result</th>
+              <th scope="col">Code</th>
+              <th scope="col">Error</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${fetchDetail}
+            ${playwrightDetail}
+          </tbody>
+        </table>
       </div>
-    </div>
 
-    <h3>Details</h3>
-    <div class="table-responsive">
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Method</th>
-            <th>Result</th>
-            <th>Status code</th>
-            <th>Error</th>
-          </tr>
-        </thead>
-        <tbody>
-          ${fetchDetail}
-          ${playwrightDetail}
-        </tbody>
-      </table>
+      <h3 class="h4">ScanGovBot</h3>
+      <p>Learn more: <a href="https://scangov.com/bot" class="font-monospace">https://scangov.com/bot</a></p>
     </div>
+    ` : ''}
 
-    <div class="mt-3">
-      <button class="btn btn-primary me-2" id="retry-btn">Run again</button>
-      <button class="btn btn-outline-secondary" id="new-check-btn">Check another site</button>
-    </div>`;
+    ${checkAnotherSiteButton()}`;
 }
 
 async function runScan(domain) {
-  showLoading();
+  showLoading(domain);
   location.hash = domain;
 
   try {
-    const response = await fetch(`${API_BASE}/scan-check?url=${encodeURIComponent(domain)}`);
+    const [response, statusDefs] = await Promise.all([
+      fetch(`${API_BASE}/scan-check?url=${encodeURIComponent(domain)}`),
+      getStatusDefs(),
+    ]);
 
     if (!response.ok) {
       const err = await response.json().catch(() => ({}));
       showResults(`
-        <div class="alert alert-danger">
+        <div class="alert alert-danger" role="alert">
           Scan check failed: ${err.error || `HTTP ${response.status}`}
         </div>
-        <div class="mt-3">
-          <button class="btn btn-primary me-2" id="retry-btn">Run again</button>
-          <button class="btn btn-outline-secondary" id="new-check-btn">Check another site</button>
-        </div>`);
+        ${checkAnotherSiteButton()}`);
     } else {
       const data = await response.json();
-      showResults(renderResults(data));
+      const statusDef = statusDefs.find((s) => s.code === resolveStatusCode(data));
+      showResults(renderResults(data, statusDef));
     }
   } catch {
     showResults(`
-      <div class="alert alert-danger">
+      <div class="alert alert-danger" role="alert">
         Unable to connect to scan check service. Please try again.
       </div>
-      <div class="mt-3">
-        <button class="btn btn-primary me-2" id="retry-btn">Run again</button>
-        <button class="btn btn-outline-secondary" id="new-check-btn">Check another site</button>
-      </div>`);
+      ${checkAnotherSiteButton()}`);
   }
 
-  const retryBtn = document.getElementById('retry-btn');
-  if (retryBtn) {
-    retryBtn.addEventListener('click', () => runScan(domain));
-  }
   const newCheckBtn = document.getElementById('new-check-btn');
   if (newCheckBtn) {
     newCheckBtn.addEventListener('click', showForm);

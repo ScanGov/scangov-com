@@ -148,12 +148,36 @@ export default async function (eleventyConfig) {
                     {
                         raw: content,
                         extension: 'html' // Indicate the content type
-                    }
+                    },
+                    // Markup built entirely in JS via innerHTML (e.g. public/js/scan-check.js's
+                    // results markup - alerts, tables, buttons) never appears in a page's static
+                    // HTML, so PurgeCSS strips its CSS as "unused" even though JS injects it at
+                    // runtime. Scanning the JS source directly catches literal classes/tags
+                    // (table, th, caption, etc.) without hand-listing every one.
+                    'public/js/*.js',
                 ],
                 css: ['scripts/bundle.css'],
+                // Classes built via template-literal interpolation (e.g. `alert-${verdictClass}`)
+                // aren't literal text PurgeCSS can find even in the JS source above, since the
+                // real class name only exists at runtime. Safelist those patterns explicitly.
+                safelist: [/^alert-/, /^text-bg-/, /^fa-/, /^btn-/, 'font-monospace', 'alert-heading', 'border'],
             })
 
-            let minifiedCSS = new CleanCSS({}).minify(purgeCSSResults[0].css).styles;
+            // bundle.css's Font Awesome @font-face rules use paths relative to its
+            // original location (public/assets/font-awesome/css/all.css), e.g.
+            // url(../webfonts/fa-solid-900.woff2). Once inlined into a page's <style>
+            // tag, relative url()s resolve against the page's own URL instead, which
+            // 404s on every page except one at exactly the right nesting depth. Icons
+            // present in the static HTML get pre-rendered to <svg> at build time (via
+            // the font-awesome eleventy plugin) so they never hit this, but any icon
+            // added client-side via JS (e.g. public/js/scan-check.js) stays a plain
+            // <i> tag relying on the actual webfont file, so the path must be absolute.
+            let purgedCSS = purgeCSSResults[0].css.replaceAll(
+                '../webfonts/',
+                '/assets/font-awesome/webfonts/'
+            );
+
+            let minifiedCSS = new CleanCSS({}).minify(purgedCSS).styles;
 			return content.replace('<!--put inlined css here-->',`<style>${minifiedCSS}</style>`);
 		}
 
