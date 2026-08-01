@@ -1,0 +1,51 @@
+---
+layout: layouts/default
+date: 2026-07-31
+author: ScanGov
+title: "Scan check"
+description: "Check if ScanGov can scan your website."
+permalink: /tools/scan-check/
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-1 col-lg-1 col-xl-1"></div>
+    <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
+
+      <div id="scan-form">
+        <form class="centered-sm" id="scan-check-form">
+          <div class="mb-3">
+            <label for="site" class="form-label">Domain or URL</label>
+            <input type="text" class="form-control" name="site" id="site" placeholder="example.gov" required>
+          </div>
+          <button type="submit" class="btn btn-primary" id="submitbutton">Check</button>
+        </form>
+      </div>
+
+      <div id="scan-loading" class="d-none text-center py-5">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Checking...</span>
+        </div>
+        <p class="mt-3">Checking site accessibility...</p>
+      </div>
+
+      <div id="scan-results" class="d-none"></div>
+
+      <div class="alert alert-secondary mt-4">
+        <h2>About</h2>
+        <p>This tool checks whether ScanGov can reach your website using two methods: a standard HTTP fetch and a Playwright browser fallback. If both methods fail, ScanGov may not be able to audit your site.</p>
+        <h2>Common issues</h2>
+        <ul>
+          <li>Web application firewalls (WAFs) blocking automated requests</li>
+          <li>Server returning error status codes (403, 503, etc.)</li>
+          <li>SSL/TLS certificate problems</li>
+          <li>Site not responding within timeout period</li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="col-12 col-sm-12 col-md-1 col-lg-1 col-xl-1"></div>
+  </div>
+</div>
+
+<script type="module" src="/js/scan-check.js"></script>
