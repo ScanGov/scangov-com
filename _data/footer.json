@@ -5,6 +5,10 @@
       "url": "/about"
     },
     {
+      "title": "ScanGotBot",
+      "url": "/bot"
+    },
+    {
       "title": "People",
       "url": "/people"
     },
@@ -15,10 +19,6 @@
     {
       "title": "Press",
       "url": "/press"
-    },
-    {
-      "title": "Primer",
-      "url": "/government-digital-experience"
     },
     {
       "title": "Contact",
