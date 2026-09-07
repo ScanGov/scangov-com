@@ -57,6 +57,24 @@ function isIntentionallyExcluded(frontmatter) {
     || /(^|\n)\s*sitemap:\s*false/.test(frontmatter);
 }
 
+// A directory data file (content/orgs/orgs.11tydata.js) can decide `sitemap`
+// per page with an eleventyComputed function, e.g. to drop single-domain org
+// pages that duplicate a profile. The decision is not visible in the page's
+// own frontmatter, so treat any page under such a directory as conditionally
+// excluded rather than reporting every excluded page as a bug.
+function hasComputedSitemapFlag(inputPath) {
+  if (!inputPath) return false;
+  const dir = path.dirname(inputPath);
+  const base = path.basename(dir);
+  for (const ext of ['.11tydata.js', '.11tydata.mjs', '.11tydata.cjs']) {
+    const dataFile = path.join(dir, base + ext);
+    if (!existsSync(dataFile)) continue;
+    const src = readFileSync(dataFile, 'utf8');
+    if (/eleventyComputed[\s\S]*?\bsitemap\s*:/.test(src)) return true;
+  }
+  return false;
+}
+
 function isNumberedListingPage(frontmatter) {
   if (!/(^|\n)pagination:\s*\n/.test(frontmatter)) return false;
 
@@ -125,6 +143,7 @@ async function checkViaNdjson(siteRoot, sitemapPaths) {
       continue;
     }
     if (isIntentionallyExcluded(frontmatter)) continue;
+    if (hasComputedSitemapFlag(page.inputPath)) continue;
     if (isNumberedListingPage(frontmatter)) continue;
     missing.push({ url: page.url, inputPath: page.inputPath });
   }
@@ -180,9 +199,26 @@ if (!existsSync(sitemapPath)) {
   process.exit(1);
 }
 
-const sitemapXml = readFileSync(sitemapPath, 'utf8');
+// sitemap.xml may be a plain urlset or a sitemapindex pointing at child
+// sitemaps (scangov.org splits its thousands of pages into per-section files).
+// Either way, collect every listed page URL and every <lastmod> for checking.
+function readSitemapTree(rootPath) {
+  const xml = readFileSync(rootPath, 'utf8');
+  if (!/<sitemapindex[\s>]/.test(xml)) return [xml];
+  return [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map((m) => {
+    const childPath = path.join(siteRoot, '_site', new URL(m[1]).pathname);
+    if (!existsSync(childPath)) {
+      console.error(`check-sitemap-completeness: sitemap index lists ${m[1]} but ${childPath} was not built.`);
+      process.exit(1);
+    }
+    return readFileSync(childPath, 'utf8');
+  });
+}
+
+const sitemapXml = readSitemapTree(sitemapPath).join('\n');
 const sitemapPaths = new Set(
   [...sitemapXml.matchAll(/<loc>(.*?)<\/loc>/g)].map((m) => new URL(m[1]).pathname)
+    .filter((p) => !/^\/sitemap-[a-z]+\.xml$/.test(p))
 );
 
 // Every <lastmod> must be a real W3C datetime (YYYY-MM-DD or full ISO 8601).
