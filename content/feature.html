@@ -13,8 +13,11 @@ breadcrumbParent:
   - url: "/features/"
     title: "Features"
 
+templateModified: "2026-09-06"
+
 eleventyComputed:
     title: "{{ feature.title }}"
+    modified: "{{ feature.modified or templateModified }}"
     permalink: "/features/{{ feature.title | slugify }}/"
     description: "{{ feature.description }}"
     ogImage: "{{ feature.ogImage }}"

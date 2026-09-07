@@ -4,9 +4,10 @@ date: 2025-08-30
 modified:
 author: ScanGov
 title: Thank you!
-description: We look forward to meeting with you.
+description: "Your ScanGov demo is scheduled. We will walk through your website's public scorecard and how continuous monitoring works."
 permalink: /demo-confirm/
 sitemap: false
+noindex: true
 ---
 
 <div class="container">
