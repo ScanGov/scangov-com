@@ -12,8 +12,11 @@ breadcrumbParent:
   - url: "/indicators/"
     title: "Indicators"
 
+templateModified: "2026-09-06"
+
 eleventyComputed:
     title: "{{ indicator.name }}"
+    modified: "{{ indicator.modified or templateModified }}"
     permalink: "/{{ indicator.url }}/"
     description: "{{ indicator.description }}"
     ogImage: "{{ indicator.ogImage }}"

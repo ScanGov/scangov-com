@@ -6,8 +6,10 @@ pagination:
   size: 1
   alias: person
   addAllPagesToCollections: true
+templateModified: "2026-09-06"
 eleventyComputed:
   title: "{{ person.name }}"
+  modified: "{{ person.modified or templateModified }}"
   description: "{{ person.description }}"
   permalink: "/people/{{ person.slug }}/"
 ---
