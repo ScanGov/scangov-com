@@ -3,7 +3,7 @@
   <title>ScanGov News</title>
   <link href="https://scangov.com/news/feed.xml" rel="self"/>
   <link href="https://scangov.com/news/"/>
-  <updated>2026-08-29T18:52:11Z</updated>
+  <updated>2026-09-07T23:15:17Z</updated>
   <id>https://scangov.com/news/</id>
   <author>
     <name>ScanGov</name>
@@ -21,7 +21,7 @@
   <entry>
     <title>Now scanning ... maryland.gov</title>
     <link href="https://scangov.com/now-scanning/maryland-gov/"/>
-    <updated>2026-08-29T18:52:11Z</updated>
+    <updated>2026-09-07T23:15:17Z</updated>
     <id>https://scangov.com/now-scanning/maryland-gov/</id>
     <summary>A ScanGov government digital experience review of maryland.gov.</summary>
   </entry>
@@ -29,7 +29,7 @@
   <entry>
     <title>Now scanning ... colorado.gov</title>
     <link href="https://scangov.com/now-scanning/colorado-gov/"/>
-    <updated>2026-08-29T18:52:11Z</updated>
+    <updated>2026-09-07T23:15:17Z</updated>
     <id>https://scangov.com/now-scanning/colorado-gov/</id>
     <summary>A ScanGov government digital experience review of colorado.gov.</summary>
   </entry>
@@ -39,13 +39,13 @@
     <link href="https://scangov.com/news/scangov-data-supports-judging-for-2025-government-experience-awards/"/>
     <updated>2025-10-08T00:00:00Z</updated>
     <id>https://scangov.com/news/scangov-data-supports-judging-for-2025-government-experience-awards/</id>
-    <summary>Provided quantitative website scan data to e.Republic’s Center for Digital Government annual awards program.</summary>
+    <summary>ScanGov&#39;s quantitative website scan data supported the judges of the 2025 Government Experience Awards, run by e.Republic&#39;s Center for Digital Government.</summary>
   </entry>
   
   <entry>
     <title>Now scanning ... nyc.gov</title>
     <link href="https://scangov.com/now-scanning/nyc-gov/"/>
-    <updated>2026-08-29T18:52:11Z</updated>
+    <updated>2026-09-07T23:15:17Z</updated>
     <id>https://scangov.com/now-scanning/nyc-gov/</id>
     <summary>A ScanGov government digital experience review of nyc.gov.</summary>
   </entry>
@@ -53,7 +53,7 @@
   <entry>
     <title>Now scanning ... georgia.gov</title>
     <link href="https://scangov.com/now-scanning/georgia-gov/"/>
-    <updated>2026-08-29T18:52:11Z</updated>
+    <updated>2026-09-07T23:15:17Z</updated>
     <id>https://scangov.com/now-scanning/georgia-gov/</id>
     <summary>A ScanGov government digital experience review of georgia.gov.</summary>
   </entry>
@@ -61,7 +61,7 @@
   <entry>
     <title>Now scanning ... ms.gov</title>
     <link href="https://scangov.com/now-scanning/ms-gov/"/>
-    <updated>2026-08-29T18:52:11Z</updated>
+    <updated>2026-09-07T23:15:17Z</updated>
     <id>https://scangov.com/now-scanning/ms-gov/</id>
     <summary>A ScanGov government digital experience review of ms.gov.</summary>
   </entry>
@@ -69,7 +69,7 @@
   <entry>
     <title>Now scanning ... texas.gov</title>
     <link href="https://scangov.com/now-scanning/texas-gov/"/>
-    <updated>2026-08-29T18:52:11Z</updated>
+    <updated>2026-09-07T23:15:17Z</updated>
     <id>https://scangov.com/now-scanning/texas-gov/</id>
     <summary>A ScanGov government digital experience review of texas.gov.</summary>
   </entry>
@@ -103,7 +103,7 @@
     <link href="https://scangov.com/news/welcome-aaron-hans/"/>
     <updated>2025-02-12T00:00:00Z</updated>
     <id>https://scangov.com/news/welcome-aaron-hans/</id>
-    <summary>New ScanGov maintainer.</summary>
+    <summary>Aaron Hans joins ScanGov as a maintainer after civic tech work at Code for America, California&#39;s Alpha project, the state COVID-19 site, and the Office of Data and Innovation.</summary>
   </entry>
   
   <entry>
