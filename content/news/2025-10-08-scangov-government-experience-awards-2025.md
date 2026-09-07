@@ -1,6 +1,6 @@
 ---
 title: "ScanGov data supports judging for 2025 Government Experience Awards"
-description: "Provided quantitative website scan data to e.Republic’s Center for Digital Government annual awards program."
+description: "ScanGov's quantitative website scan data supported the judges of the 2025 Government Experience Awards, run by e.Republic's Center for Digital Government."
 date: 2025-10-08
 ogImage: govx-og.png
 ogImageAlt: "Government Experience Awards 2025"

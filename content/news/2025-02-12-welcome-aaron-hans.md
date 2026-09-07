@@ -3,7 +3,7 @@ date: 2025-02-12
 #modified: 
 author: scangov
 title: "Welcome Aaron Hans"
-description: "New ScanGov maintainer."
+description: "Aaron Hans joins ScanGov as a maintainer after civic tech work at Code for America, California's Alpha project, the state COVID-19 site, and the Office of Data and Innovation."
 #ogImage: posts/.png
 #ogImageAlt: ""
 #img_caption: ""

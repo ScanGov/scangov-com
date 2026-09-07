@@ -13,7 +13,7 @@
     <meta name="author" content="{{ author }}">
     {% endif %}
     {% if isGuidance %}<meta name="keywords" content="{{ guide.topics | join(', ') }}">{% endif %}
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="robots" content="{% if noindex %}noindex, follow{% else %}index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1{% endif %}">
     {% for id in site.googleVerify %}
     <meta name="google-site-verification" content="{{ id }}">
     {% endfor %}
@@ -43,18 +43,18 @@
     <meta property="og:image:alt" content="ScanGov logo">
     {% endif %}
     {% if date %}
-    <meta property="article:published_time" content="{{ date }}" />
+    <meta property="article:published_time" content="{{ date.toISOString() if date.toISOString else date }}">
     {% endif %}
     {% if author %}
     <meta property="article:author" content="{{ author }}">
     {% endif %}
     {% if modified %}
-    <meta property="article:modified_time" content="{{ modified }}">
+    <meta property="article:modified_time" content="{{ modified.toISOString() if modified.toISOString else modified }}">
     {% endif %}
     {% if isStandard %}{% include "schema-standard.html" %}{% endif %}
     {% if isGuidance %}{% include "schema-guidance.html" %}{% endif %}
-    {% if isDoc %}{% include "schema-docs.html" %}{% endif %}
     {% if isTool %}{% include "schema-tool.html" %}{% endif %}
+    {% if softwareSchema %}{% include "schema-software.html" %}{% endif %}
     {% if isPost %}
     <script type="application/ld+json">
     {
@@ -88,6 +88,7 @@
     }
     </script>
     {% elif not schema %}
+    {% include "schema-webpage.html" %}
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",

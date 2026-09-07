@@ -4,7 +4,7 @@ date: 2025-07-26
 modified: 
 author: ScanGov
 title: "Contact"
-description: "Contact ScanGov."
+description: "Contact ScanGov with questions about government website monitoring, plans, demos, partnerships, or press."
 hideDescription: true
 ---
 

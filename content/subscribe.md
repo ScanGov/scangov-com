@@ -4,7 +4,7 @@ date: 2025-08-08
 modified: 
 author: ScanGov
 title: "Subscribe"
-description: "Sign up for ScanGov newsletters."
+description: "Get ScanGov updates by email or RSS: new standards, scan findings, product changes, and government website news."
 permalink: /subscribe/
 ---
 
