@@ -69,7 +69,7 @@ function renderResults(data, statusDef) {
   const domainLink = `<a href="${toAbsoluteUrl(domain)}" target="_blank" rel="noopener noreferrer" class="font-monospace">${domain}</a>`;
   const verdictText = canScan
     ? `ScanGov can scan ${domainLink}`
-    : `ScanGov cannot scan ${domainLink}`;
+    : `We can't scan ${domainLink}`;
 
   let fetchDetail = '';
   if (data.fetch) {
