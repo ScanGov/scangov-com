@@ -16,7 +16,9 @@ isTool: true
       <div id="scan-form">
         <form id="scan-check-form">
           <div class="mb-3">
-            <label for="site" class="form-label">Domain <i class="fa-solid fa-asterisk" aria-hidden="true"></i></label>
+            <label for="site" class="form-label">Domain
+              <i class="fa-solid fa-asterisk" aria-hidden="true"></i>
+            </label>
             <input
               type="text"
               class="form-control form-control-lg"
@@ -36,7 +38,9 @@ isTool: true
         <div class="spinner-border" role="status">
           <span class="visually-hidden">Checking ...</span>
         </div>
-        <p class="mt-3">Checking if we can reach <span id="loading-domain" class="font-monospace"></span> ...</p>
+        <p class="mt-3">Checking if we can reach
+          <span id="loading-domain" class="font-monospace"></span>
+          ...</p>
       </div>
 
       <div id="scan-results" class="d-none"></div>
@@ -44,27 +48,41 @@ isTool: true
       <div class="alert alert-info mt-4">
         <h2>What is a good bot?</h2>
         <ul>
-          <li>It crawls slowly and follows the rules in your robots.txt.</li>
-          <li>It says who it is on every request, using a user-agent that names the bot.</li>
-          <li>It publishes a page explaining that user-agent, so you can look up who is visiting.</li>
+          <li>It visits slowly and follows the rules in your robots.txt file.</li>
+          <li>It gives its name on every visit, so you can see who is there.</li>
+          <li>It has a page that explains who runs it and why.</li>
         </ul>
         <h2>About</h2>
-        <p>This tool checks whether <a href="/bot">ScanGovBot</a> can reach your website using two methods:</p>
-
+        <p>This tool checks whether
+          <a href="/bot">ScanGovBot</a>
+          can reach your website. It looks at three things:</p>
         <ul>
-          <li>Standard HTTP fetch</li>
-          <li>Playwright browser fallback</li>
+          <li>Your robots.txt file, to see if ScanGovBot is allowed in and how long it is asked to wait between visits</li>
+          <li>A basic request, like the one your browser makes</li>
+          <li>A full browser, in case the basic request is turned away</li>
         </ul>
-        <p>If both methods fail, ScanGov may not be able to audit your site, and other good bots are likely being turned away too.</p>
+        <p>If we cannot get in, we cannot scan your site. Other good bots are probably being turned away too.</p>
+        <p>This tool only tells you about ScanGovBot. Another good bot may get a different result on the same site. If we were blocked, check your robots.txt file and your firewall, WAF, and CDN bot settings. The block may be a setting no one chose.</p>
         <h2>Common issues</h2>
         <ul>
-          <li>Web application firewalls (WAFs) blocking automated requests</li>
-          <li>Server returning error status codes (403, 503, etc.)</li>
-          <li>SSL/TLS certificate problems</li>
-          <li>Site not responding within timeout period</li>
+          <li>Your robots.txt file tells ScanGovBot to stay out, or asks it to wait too long between visits</li>
+          <li>A firewall blocks visits that do not come from a person</li>
+          <li>The server sends back an error, such as 403 or 503</li>
+          <li>The site has a security certificate problem</li>
+          <li>The site takes too long to answer</li>
+        </ul>
+        <h2>Access is nuanced</h2>
+        <p>A failed check does not always mean your site blocks every good bot. Most sites let some bots in and keep others out in these ways:</p>
+        <ul>
+          <li>robots.txt: your file can name one bot and tell it to stay out, while the rest are welcome.</li>
+          <li>Allow lists: the site lets in a few well-known bots and blocks the rest.</li>
+          <li>Block lists: one bot is named and blocked, while the others still get in.</li>
+          <li>Firewall defaults: many firewalls and CDNs block bots they do not recognize, even if no one asked them to.</li>
+          <li>Traffic limits: a bot you allow can still be shut out for visiting too often, or for the network it comes from.</li>
         </ul>
         <h2>ScanGovBot</h2>
-        <p>Learn more about <a href="/bot">ScanGovBot</a>.</p>
+        <p>Learn more about
+          <a href="/bot">ScanGovBot</a>.</p>
       </div>
 
     </div>
