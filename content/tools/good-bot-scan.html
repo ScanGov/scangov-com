@@ -2,9 +2,10 @@
 layout: layouts/default
 date: 2026-07-31
 author: ScanGov
-title: "Scan check"
-description: "Enter a domain to confirm ScanGov can reach and scan your government website before you start a plan."
-permalink: /tools/scan-check/
+title: "Good bot scan"
+description: "Check whether your website lets good bots in. Enter a domain to see if ScanGovBot can reach and scan it."
+permalink: /tools/good-bot-scan/
+isTool: true
 ---
 
 <div class="container">
@@ -41,14 +42,20 @@ permalink: /tools/scan-check/
       <div id="scan-results" class="d-none"></div>
 
       <div class="alert alert-info mt-4">
+        <h2>What is a good bot?</h2>
+        <ul>
+          <li>It crawls slowly and follows the rules in your robots.txt.</li>
+          <li>It says who it is on every request, using a user-agent that names the bot.</li>
+          <li>It publishes a page explaining that user-agent, so you can look up who is visiting.</li>
+        </ul>
         <h2>About</h2>
-        <p>This tool checks whether ScanGov can reach your website using two methods:</p>
+        <p>This tool checks whether <a href="/bot">ScanGovBot</a> can reach your website using two methods:</p>
 
         <ul>
           <li>Standard HTTP fetch</li>
           <li>Playwright browser fallback</li>
         </ul>
-        <p>If both methods fail, ScanGov may not be able to audit your site.</p>
+        <p>If both methods fail, ScanGov may not be able to audit your site, and other good bots are likely being turned away too.</p>
         <h2>Common issues</h2>
         <ul>
           <li>Web application firewalls (WAFs) blocking automated requests</li>
@@ -56,6 +63,8 @@ permalink: /tools/scan-check/
           <li>SSL/TLS certificate problems</li>
           <li>Site not responding within timeout period</li>
         </ul>
+        <h2>ScanGovBot</h2>
+        <p>Learn more about <a href="/bot">ScanGovBot</a>.</p>
       </div>
 
     </div>

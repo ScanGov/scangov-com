@@ -57,12 +57,8 @@ function toAbsoluteUrl(domain) {
 
 function checkAnotherSiteButton() {
   return `
-      <div class="d-flex align-items-center gap-3">
-        <a href="/plans" class="btn btn-primary">
-          <i class="fa-solid fa-rocket me-2" aria-hidden="true"></i>Get started</a>
-        <button class="btn btn-outline-primary border mt-0" id="new-check-btn">
-          <i class="fa-solid fa-check me-2" aria-hidden="true"></i>Check another site</button>
-      </div>
+      <button class="btn btn-outline-primary border mt-0" id="new-check-btn">
+        <i class="fa-solid fa-check me-2" aria-hidden="true"></i>Check another site</button>
     `;
 }
 
@@ -74,8 +70,8 @@ function renderResults(data, statusDef) {
   const verdictIcon = canScan ? 'fa-circle-check' : 'fa-circle-xmark';
   const domainLink = `<a href="${toAbsoluteUrl(domain)}" target="_blank" rel="noopener noreferrer" class="font-monospace">${domain}</a>`;
   const verdictText = canScan
-    ? `Yes, we can scan ${domainLink}`
-    : `We cannot scan ${domainLink}`;
+    ? `ScanGov can scan ${domainLink}`
+    : `We can't scan ${domainLink}`;
 
   let fetchDetail = '';
   if (data.fetch) {
@@ -127,22 +123,23 @@ function renderResults(data, statusDef) {
 
   return `
     <div class="alert alert-${verdictClass} mb-4" role="alert">
-      <h2 class="alert-heading h3">${verdictText} <i class="fa-solid ${verdictIcon}" aria-hidden="true"></i></h2>
+      <h2 class="alert-heading h3"><i class="fa-solid ${verdictIcon} me-2" aria-hidden="true"></i>${verdictText}</h2>
     </div>
 
-    ${!canScan ? `
     <div class="alert alert-info mb-4" role="alert">
-      <h2 class="h3">Why</h2>
+      ${!canScan ? `
       ${statusDef ? `
-      <h3 class="h4">Description</h3>
-      <p>${statusDef.description}</p>
       ${statusDef.problem ? `
-      <h3 class="h4">Problem</h3>
+      <h2 class="h3">Problem</h2>
       <p>${statusDef.problem}</p>
       ` : ''}
       ${statusDef.recommendation ? `
-      <h3 class="h4">Recommendation</h3>
+      <h2 class="h3">Recommendation</h2>
       <p>${statusDef.recommendation}</p>
+      ` : ''}
+      ${statusDef.recommendationTechnical ? `
+      <h2 class="h3">Technical recommendation</h2>
+      <p>${statusDef.recommendationTechnical}</p>
       ` : ''}
       ` : ''}
 
@@ -150,10 +147,10 @@ function renderResults(data, statusDef) {
       <p>The site loads, but its <code>robots.txt</code> tells ScanGovBot not to crawl it. ScanGov honours robots.txt, so this site is not scanned until the file allows <code>ScanGovBot</code>.</p>
       ` : ''}
 
-      <h3 class="h4">Details</h3>
+      <h2 class="h3">Details</h2>
       <div class="table-responsive">
         <table class="table">
-          <caption class="visually-hidden">Scan check details for ${domain}</caption>
+          <caption class="visually-hidden">Good bot scan details for ${domain}</caption>
           <thead>
             <tr>
               <th scope="col">Method</th>
@@ -169,13 +166,42 @@ function renderResults(data, statusDef) {
           </tbody>
         </table>
       </div>
+      ` : ''}
 
-      <h3 class="h4">ScanGovBot</h3>
-      <p>Learn more: <a href="https://scangov.com/bot" class="font-monospace">https://scangov.com/bot</a></p>
+      <h2 class="h3">Report</h2>
+      <p>Copy this link to share these results:</p>
+      <div class="input-group">
+        <label for="report-url" class="visually-hidden">Report link</label>
+        <input type="text" class="form-control font-monospace" id="report-url" readonly>
+        <button class="btn btn-outline-primary border mt-0" type="button" id="copy-report-btn">
+          <i class="fa-solid fa-copy me-2" aria-hidden="true"></i>Copy</button>
+      </div>
+
     </div>
-    ` : ''}
 
     ${checkAnotherSiteButton()}`;
+}
+
+function wireReportLink(domain) {
+  const input = document.getElementById('report-url');
+  const button = document.getElementById('copy-report-btn');
+  if (!input || !button) return;
+
+  input.value = `${location.origin}${location.pathname}#${encodeURIComponent(domain)}`;
+
+  button.addEventListener('click', async () => {
+    input.select();
+    try {
+      await navigator.clipboard.writeText(input.value);
+      const original = button.innerHTML;
+      button.innerHTML = '<i class="fa-solid fa-check me-2" aria-hidden="true"></i>Copied';
+      setTimeout(() => {
+        button.innerHTML = original;
+      }, 2000);
+    } catch {
+      // Clipboard unavailable - the link stays selected for a manual copy.
+    }
+  });
 }
 
 async function runScan(domain) {
@@ -192,7 +218,7 @@ async function runScan(domain) {
       const err = await response.json().catch(() => ({}));
       showResults(`
         <div class="alert alert-danger" role="alert">
-          Scan check failed: ${err.error || `HTTP ${response.status}`}
+          Good bot scan failed: ${err.error || `HTTP ${response.status}`}
         </div>
         ${checkAnotherSiteButton()}`);
     } else {
@@ -203,7 +229,7 @@ async function runScan(domain) {
   } catch {
     showResults(`
       <div class="alert alert-danger" role="alert">
-        Unable to connect to scan check service. Please try again.
+        Unable to connect to the good bot scan service. Please try again.
       </div>
       ${checkAnotherSiteButton()}`);
   }
@@ -212,6 +238,8 @@ async function runScan(domain) {
   if (newCheckBtn) {
     newCheckBtn.addEventListener('click', showForm);
   }
+
+  wireReportLink(domain);
 }
 
 form.addEventListener('submit', (event) => {
