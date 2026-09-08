@@ -1,5 +1,6 @@
 const API_BASE = 'https://audits.my.scangov.com';
-const STATUS_DEFS_URL = 'https://raw.githubusercontent.com/ScanGov/data/refs/heads/main/status.json';
+// Published at build time from ScanGov/data status.json (see _data/statusDefs.js).
+const STATUS_DEFS_URL = '/data/status.json';
 
 let statusDefsPromise = null;
 function getStatusDefs() {
@@ -10,6 +11,9 @@ function getStatusDefs() {
 }
 
 function resolveStatusCode(data) {
+  // robots.txt outcomes have their own definitions in status.json
+  if (data.blockedBy === 'robots') return 998;
+  if (data.blockedBy === 'crawl-delay') return 997;
   if (data.fetch && data.fetch.statusCode) return data.fetch.statusCode;
   if (data.playwright && data.playwright.statusCode) return data.playwright.statusCode;
   return null;
@@ -101,6 +105,22 @@ function renderResults(data, statusDef) {
       </tr>`;
   }
 
+  let robotsDetail = '';
+  if (data.robots) {
+    const r = data.robots;
+    const result = r.fetchStatus !== 'success' ? 'No robots.txt (allowed)'
+      : !r.allowed ? 'Disallowed for ScanGovBot'
+      : r.crawlDelayBlocked ? `Crawl-delay too long (${r.crawlDelay}s)`
+      : 'Allowed';
+    robotsDetail = `
+      <tr>
+        <td>robots.txt</td>
+        <td>${result}</td>
+        <td>${r.crawlDelay ? `delay ${r.crawlDelay}s` : '—'}</td>
+        <td>${!r.allowed ? 'ScanGovBot is disallowed by the site\'s robots.txt' : r.crawlDelayBlocked ? 'Requested crawl-delay is above our limit' : '—'}</td>
+      </tr>`;
+  }
+
   return `
     <div class="alert alert-${verdictClass} mb-4" role="alert">
       <h2 class="alert-heading h3"><i class="fa-solid ${verdictIcon} me-2" aria-hidden="true"></i>${verdictText}</h2>
@@ -138,6 +158,7 @@ function renderResults(data, statusDef) {
           <tbody>
             ${fetchDetail}
             ${playwrightDetail}
+            ${robotsDetail}
           </tbody>
         </table>
       </div>
