@@ -10,6 +10,8 @@ function getStatusDefs() {
 }
 
 function resolveStatusCode(data) {
+  // robots.txt blocks map to the "Request Denied" definition
+  if (data.blockedBy === 'robots' || data.blockedBy === 'crawl-delay') return 999;
   if (data.fetch && data.fetch.statusCode) return data.fetch.statusCode;
   if (data.playwright && data.playwright.statusCode) return data.playwright.statusCode;
   return null;
@@ -105,6 +107,24 @@ function renderResults(data, statusDef) {
       </tr>`;
   }
 
+  let robotsDetail = '';
+  if (data.robots) {
+    const r = data.robots;
+    const result = r.fetchStatus !== 'success' ? 'No robots.txt (allowed)'
+      : !r.allowed ? 'Disallowed for ScanGovBot'
+      : r.crawlDelayBlocked ? `Crawl-delay too long (${r.crawlDelay}s)`
+      : 'Allowed';
+    robotsDetail = `
+      <tr>
+        <td>robots.txt</td>
+        <td>${result}</td>
+        <td>${r.crawlDelay ? `delay ${r.crawlDelay}s` : '—'}</td>
+        <td>${!r.allowed ? 'ScanGovBot is disallowed by the site\'s robots.txt' : r.crawlDelayBlocked ? 'Requested crawl-delay is above our limit' : '—'}</td>
+      </tr>`;
+  }
+
+  const robotsBlocked = data.blockedBy === 'robots' || data.blockedBy === 'crawl-delay';
+
   return `
     <div class="alert alert-${verdictClass} mb-4" role="alert">
       <h2 class="alert-heading h3">${verdictText} <i class="fa-solid ${verdictIcon}" aria-hidden="true"></i></h2>
@@ -126,6 +146,10 @@ function renderResults(data, statusDef) {
       ` : ''}
       ` : ''}
 
+      ${robotsBlocked ? `
+      <p>The site loads, but its <code>robots.txt</code> tells ScanGovBot not to crawl it. ScanGov honours robots.txt, so this site is not scanned until the file allows <code>ScanGovBot</code>.</p>
+      ` : ''}
+
       <h3 class="h4">Details</h3>
       <div class="table-responsive">
         <table class="table">
@@ -141,6 +165,7 @@ function renderResults(data, statusDef) {
           <tbody>
             ${fetchDetail}
             ${playwrightDetail}
+            ${robotsDetail}
           </tbody>
         </table>
       </div>
