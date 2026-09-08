@@ -1,5 +1,6 @@
 const API_BASE = 'https://audits.my.scangov.com';
-const STATUS_DEFS_URL = 'https://raw.githubusercontent.com/ScanGov/data/refs/heads/main/status.json';
+// Published at build time from ScanGov/data status.json (see _data/statusDefs.js).
+const STATUS_DEFS_URL = '/data/status.json';
 
 let statusDefsPromise = null;
 function getStatusDefs() {
@@ -10,8 +11,9 @@ function getStatusDefs() {
 }
 
 function resolveStatusCode(data) {
-  // robots.txt blocks map to the "Request Denied" definition
-  if (data.blockedBy === 'robots' || data.blockedBy === 'crawl-delay') return 999;
+  // robots.txt outcomes have their own definitions in status.json
+  if (data.blockedBy === 'robots') return 998;
+  if (data.blockedBy === 'crawl-delay') return 997;
   if (data.fetch && data.fetch.statusCode) return data.fetch.statusCode;
   if (data.playwright && data.playwright.statusCode) return data.playwright.statusCode;
   return null;
@@ -119,8 +121,6 @@ function renderResults(data, statusDef) {
       </tr>`;
   }
 
-  const robotsBlocked = data.blockedBy === 'robots' || data.blockedBy === 'crawl-delay';
-
   return `
     <div class="alert alert-${verdictClass} mb-4" role="alert">
       <h2 class="alert-heading h3"><i class="fa-solid ${verdictIcon} me-2" aria-hidden="true"></i>${verdictText}</h2>
@@ -141,10 +141,6 @@ function renderResults(data, statusDef) {
       <h2 class="h3">Technical recommendation</h2>
       <p>${statusDef.recommendationTechnical}</p>
       ` : ''}
-      ` : ''}
-
-      ${robotsBlocked ? `
-      <p>The site loads, but its <code>robots.txt</code> tells ScanGovBot not to crawl it. ScanGov honours robots.txt, so this site is not scanned until the file allows <code>ScanGovBot</code>.</p>
       ` : ''}
 
       <h2 class="h3">Details</h2>
