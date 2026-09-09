@@ -1,6 +1,8 @@
 [
   {
     "title": "Sites dashboard",
+    "slug": "sites-dashboard",
+    "job": "Gives a web manager one view of every domain the agency runs, so nothing falls through the cracks.",
     "description": "Monitor every domain you manage from one dashboard, with grades and scores at a glance.",
     "icon": "fa-table-columns",
     "video": "zAGistF44Ag",
@@ -21,6 +23,8 @@
   },
   {
     "title": "Indicator monitoring",
+    "slug": "indicator-monitoring",
+    "job": "Tells your team which of the four indicators is dragging a grade down and which standards are behind it.",
     "description": "Track grades and scores for every indicator, then drill into the standards driving each one.",
     "icon": "fa-chart-line",
     "video": "4RxwszK3K34",
@@ -42,6 +46,8 @@
   },
   {
     "title": "Domain dashboards",
+    "slug": "domain-dashboards",
+    "job": "Lets a director see how one site is doing without reading a report.",
     "description": "View domain performance from the top down, then drill into individual indicators.",
     "icon": "fa-gauge-high",
     "video": "xMA7KLnLvng",
@@ -56,6 +62,8 @@
   },
   {
     "title": "Status bar",
+    "slug": "status-bar",
+    "job": "Shows how much of the site still has issues, so you can report progress in one number.",
     "description": "See how many pages still have issues out of your total, right on the dashboard and indicator pages.",
     "icon": "fa-bars-progress",
     "docsPath": "/status-bar/",
@@ -73,6 +81,8 @@
   },
   {
     "title": "Tasklist",
+    "slug": "tasklist",
+    "job": "Turns thousands of findings into a fix order your team can actually work through.",
     "description": "Prioritize fixes by their impact, so your team works on what matters most.",
     "icon": "fa-list-check",
     "video": "gH2d_a7n8oo",
@@ -91,6 +101,8 @@
   },
   {
     "title": "Pages",
+    "slug": "pages",
+    "job": "Points developers at the exact pages that need work instead of the whole site.",
     "description": "Pinpoint exactly which pages have issues and how many, broken down by indicator.",
     "icon": "fa-file-lines",
     "video": "6CCHn7DqBjU",
@@ -108,6 +120,8 @@
   },
   {
     "title": "Issue reports",
+    "slug": "issue-reports",
+    "job": "Hands a developer or vendor a ticket they can act on without a meeting.",
     "description": "Generate pre-populated issue reports your developers can act on immediately.",
     "icon": "fa-bug",
     "video": "ncIBUxnX7vc",
@@ -125,6 +139,8 @@
   },
   {
     "title": "Download issues",
+    "slug": "download-issues",
+    "job": "Gets the issue list into whatever your team already uses: a spreadsheet, a project board, or a coding agent.",
     "description": "Export every issue as CSV, JSON, or Markdown for spreadsheets, project boards, or AI coding agents.",
     "icon": "fa-download",
     "docsPath": "/download-issues/",
@@ -142,6 +158,8 @@
   },
   {
     "title": "Scorecards",
+    "slug": "scorecards",
+    "job": "Gives the public and your leadership a live grade you did not have to write up.",
     "description": "Publish a public scorecard that shows your digital experience grades and builds trust.",
     "icon": "fa-star",
     "video": "8LErMmgYUDg",
@@ -164,6 +182,8 @@
   },
   {
     "title": "Readability",
+    "slug": "readability",
+    "job": "Shows which pages are written above the reading level of the people who need them.",
     "description": "Measure how easy your content is to read, using established readability standards.",
     "icon": "fa-book-open-reader",
     "video": "0OZ8ZJN8br4",
@@ -182,6 +202,8 @@
   },
   {
     "title": "Feedback",
+    "slug": "feedback",
+    "job": "Lets residents tell you what is broken, and lets everyone see what you did about it.",
     "description": "Collect public feedback and respond in the open, building accountability into your process.",
     "icon": "fa-comments",
     "video": "1ci_wAt4a0k",
@@ -200,6 +222,8 @@
   },
   {
     "title": "Single sign-on",
+    "slug": "single-sign-on",
+    "job": "Keeps access managed by your IT team through the identity provider you already use.",
     "description": "Let your team sign in with your organization's existing identity provider, so access stays centrally managed.",
     "icon": "fa-key",
     "docsPath": "/single-sign-on/",
@@ -217,6 +241,8 @@
   },
   {
     "title": "URL management",
+    "slug": "url-management",
+    "job": "Keeps the list of monitored pages accurate as your site grows, moves, and retires content.",
     "description": "Control exactly which pages are monitored, and keep your page list in sync as your site changes.",
     "icon": "fa-link",
     "docsPath": "/urlset/",
@@ -234,6 +260,8 @@
   },
   {
     "title": "GitHub integration",
+    "slug": "github-integration",
+    "job": "Puts findings into the repo where your developers already track work.",
     "description": "Connect your GitHub repo so issues flow straight into your team's existing developer workflow.",
     "icon": "fa-code-branch",
     "items": [
@@ -250,6 +278,8 @@
   },
   {
     "title": "Scan management",
+    "slug": "scan-management",
+    "job": "Lets you rescan after a fix instead of waiting for the next scheduled scan.",
     "description": "Keep your monitoring data fresh with on-demand rescans and full visibility into scan status.",
     "icon": "fa-rotate",
     "docsPath": "/scans/",
@@ -267,6 +297,8 @@
   },
   {
     "title": "Changelog",
+    "slug": "changelog",
+    "job": "Explains why a grade changed, and when, so you can answer the question before it is asked.",
     "description": "See exactly what changed and when, with a dated history of every indicator score change.",
     "icon": "fa-timeline",
     "docsPath": "/changelog/",
@@ -287,6 +319,8 @@
   },
   {
     "title": "Pulse",
+    "slug": "pulse",
+    "job": "Shows whether the site is getting better over time, in one chart you can put in a slide.",
     "description": "Watch your scores trend over time, for every indicator, in one chart.",
     "icon": "fa-wave-square",
     "docsPath": "/pulse/",

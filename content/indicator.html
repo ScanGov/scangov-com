@@ -15,10 +15,10 @@ breadcrumbParent:
 templateModified: "2026-09-06"
 
 eleventyComputed:
-    title: "{{ indicator.name }}"
+    title: "{{ indicator.pageTitle }}"
     modified: "{{ indicator.modified or templateModified }}"
     permalink: "/{{ indicator.url }}/"
-    description: "{{ indicator.description }}"
+    description: "{{ indicator.pageDescription }}"
     ogImage: "{{ indicator.ogImage }}"
     ogImageAlt: "{{ indicator.ogImageAlt }}"
     breadcrumbCurrent: "{{ indicator.name }}"

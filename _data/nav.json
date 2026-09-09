@@ -10,6 +10,16 @@
     "url": "/plans"
   },
   {
+    "title": "Standards",
+    "icon": "fa-solid fa-certificate",
+    "url": "https://standards.scangov.org/"
+  },
+  {
+    "title": "Rankings",
+    "icon": "fa-solid fa-ranking-star",
+    "url": "https://scangov.org/rankings/"
+  },
+  {
     "title": "Demo",
     "icon": "fa-solid fa-wand-magic-sparkles",
     "url": "/demo"

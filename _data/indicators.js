@@ -7,6 +7,21 @@ export default async () => {
         usability: 'Optimize content and design so visitors quickly find what they need.'
     };
 
+    const pageTitles = {
+        accessibility: 'Government Website Accessibility Monitoring',
+        botability: 'AI and Search Readiness (Botability) for Government Websites',
+        security: 'Government Website Security Headers Monitoring',
+        usability: 'Government Website Usability and Core Web Vitals'
+    };
+
+    // Meta description and lead for the indicator page. `description` stays short for cards.
+    const pageDescriptions = {
+        accessibility: n => `Monitor government website accessibility against ${n} WCAG, ADA Title II, and Section 508 standards, with a prioritized fix list and a public scorecard.`,
+        botability: n => `Check whether AI tools and search engines can find and understand your government website: robots.txt, sitemaps, canonical tags, schema, and crawlability.`,
+        security: n => `Monitor government website security headers and practices on every page: HTTPS, HSTS, CSP, X-Content-Type-Options, security.txt, and the .gov TLD.`,
+        usability: n => `Monitor government website usability and Core Web Vitals on every page: performance, readability, viewport and mobile settings, and content structure.`
+    };
+
     const whatCopy = {
         botability: 'the technical issues that keep AI tools and search engines from finding, crawling, and understanding your website',
         accessibility: 'the barriers that keep people with disabilities from using your website',
@@ -36,6 +51,8 @@ export default async () => {
             link: key,
             color: value.color,
             description: descriptionOverrides[key] ?? value.description,
+            pageTitle: pageTitles[key] ?? value.displayName,
+            pageDescription: pageDescriptions[key] ? pageDescriptions[key](value.attributes.length) : (descriptionOverrides[key] ?? value.description),
             standards: value.attributes,
             guidance,
             videos: value.videos,
