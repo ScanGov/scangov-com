@@ -1,10 +1,10 @@
 ---
 layout: "layouts/default"
 date: 2025-08-30
-modified:
+modified: 2026-09-08
 author: ScanGov
-title: Features
-description: "Tools to monitor your government website, fix what's broken, and prove your progress to the public."
+title: "Features for Government Web Teams"
+description: "Dashboards, a prioritized tasklist, GitHub integration, and public scorecards so government web teams can monitor sites, fix issues, and prove progress."
 ---
 
 <div class="container">
@@ -13,7 +13,7 @@ description: "Tools to monitor your government website, fix what's broken, and p
       <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
         <div class="card"><div class="card-body">
           <i class="fa-solid {{ item.icon }} fa-lg d-block mb-2" aria-hidden="true"></i>
-          <h2 class="h4 mb-2 mt-3"><a href="/features/{{ item.title | slugify }}/" class="stretched-link">{{ item.title }}</a></h2>
+          <h2 class="h4 mb-2 mt-3"><a href="/features/{{ item.slug }}/" class="stretched-link">{{ item.title }}</a></h2>
           <p class="card-text small">{{ item.description }}</p>
         </div></div>
       </div>

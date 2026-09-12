@@ -14,7 +14,7 @@ pagination:
 
 eleventyComputed:
     title: "{{ website.page_title }}"
-    permalink: "/now-scanning/{{ website.title | slugify }}/"
+    permalink: "/now-scanning/{{ website.slug }}/"
     description: "{{ website.description }}"
     ogImage: "{{ website.ogImage }}"
     ogImageAlt: "{{ website.page_title }}"
@@ -28,6 +28,9 @@ eleventyComputed:
       <a href="{{ website.scorecard }}">ScanGov {{ website.title }} scorecard</a>
     </li>
   {% endif %}
+  <li>
+    <a href="https://scangov.org/profile/{{ website.slug }}/overall/">Project ScanGov profile for {{ website.title }}</a>
+  </li>
   <li>
     <a
       href="{{ website.url }}"
