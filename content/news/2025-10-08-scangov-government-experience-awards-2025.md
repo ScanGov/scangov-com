@@ -9,7 +9,7 @@ topics:
   - GovX
 ---
 
-[ScanGov](https://scangov.com) is proud to have supported e.Republic’s [Center for Digital Government](https://www.govtech.com/cdg) 2025 [Government Experience Awards](https://www.govtech.com/cdg/government-experience) (GovX) judging with quantitative website scan data from [Project ScanGov](https://scangov.org).
+[ScanGov](https://scangov.com) is proud to have supported e.Republic’s [Center for Digital Government](https://www.govtech.com/cdg) (CDG) 2025 [Government Experience Awards](https://www.govtech.com/cdg/government-experience) (GovX) judging with quantitative website scan data from [Project ScanGov](https://scangov.org).
 
 From the [2025 award winners announcement](https://www.govtech.com/government-experience-awards-2025-winners-announced):
 

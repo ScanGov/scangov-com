@@ -3,28 +3,35 @@ layout: "layouts/default"
 date: 2025-08-30
 modified: 2026-09-08
 author: ScanGov
-title: "Features for Government Web Teams"
-description: "Dashboards, a prioritized tasklist, GitHub integration, and public scorecards so government web teams can monitor sites, fix issues, and prove progress."
+title: "Features"
+description: "Dashboards, a prioritized tasklist, GitHub integration, and public scorecards so teams can monitor sites, fix issues, and prove progress."
 ---
 
 <div class="container">
-  <div id="features-pool" style="display:none" aria-hidden="true">
+  <div
+    id="features-pool"
+    style="display:none"
+    aria-hidden="true">
     {% for item in features %}
       <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
-        <div class="card"><div class="card-body">
-          <i class="fa-solid {{ item.icon }} fa-lg d-block mb-2" aria-hidden="true"></i>
-          <h2 class="h4 mb-2 mt-3"><a href="/features/{{ item.slug }}/" class="stretched-link">{{ item.title }}</a></h2>
-          <p class="card-text small">{{ item.description }}</p>
-        </div></div>
+        <div class="card">
+          <div class="card-body">
+            <i class="fa-solid {{ item.icon }} fa-lg d-block mb-2" aria-hidden="true"></i>
+            <h2 class="h4 mb-2 mt-3">
+              <a href="/features/{{ item.slug }}/" class="stretched-link">{{ item.title }}</a>
+            </h2>
+            <p class="card-text small">{{ item.description }}</p>
+          </div>
+        </div>
       </div>
     {% endfor %}
   </div>
   <div class="row g-3" id="features-cards"></div>
 </div>
 <script>
-(function() {
+  (function() {
   var pool = Array.from(document.getElementById('features-pool').children);
   var target = document.getElementById('features-cards');
   pool.forEach(function(el) { target.appendChild(el); });
-})();
+  })();
 </script>

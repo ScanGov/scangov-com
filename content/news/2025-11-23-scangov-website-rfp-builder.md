@@ -8,7 +8,7 @@ topics:
   - ScanGov
 ---
 
-ScanGov is proud to introduce our free [website request for proposal builder](https://scangov.com/rfp-builder/). 
+ScanGov is proud to introduce our free [website request for proposal (RFP) builder](https://scangov.com/rfp-builder/). 
 
 You can now quickly create website RFPs based on [ScanGov Standards](https://standards.scangov.org) that include comprehensive compliance specifications for:
 
