@@ -22,6 +22,13 @@ export default async () => {
         usability: n => `Monitor government website usability and Core Web Vitals on every page: performance, readability, viewport and mobile settings, and content structure.`
     };
 
+    // Topic pages under an indicator (plan 13 topic layer). Rendered by content/indicator.html.
+    const topics = {
+        usability: [
+            { title: 'Readability', url: '/usability/readability/', description: 'Reading grade level of government web content, scored against the plain language standard.' }
+        ]
+    };
+
     const whatCopy = {
         botability: 'the technical issues that keep AI tools and search engines from finding, crawling, and understanding your website',
         accessibility: 'the barriers that keep people with disabilities from using your website',
@@ -57,6 +64,7 @@ export default async () => {
             guidance,
             videos: value.videos,
             what: whatCopy[key] ?? '',
+            topics: topics[key] ?? [],
             why: value.why,
             risk: value.risk,
             ogImage: value.ogImage

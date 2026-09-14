@@ -20,16 +20,18 @@ form.addEventListener('submit', async (event) => {
     const readabilityReq = await fetch(`https://my.scangov.com/tools/readabilityreview?url=${site}`);
     const readabilityInfo = await readabilityReq.json();
 
-    const ari = parseInt(readabilityInfo.automatedReadabilityIndex);
-    const fk = parseInt(readabilityInfo.fleschKincaidGrade);
+    // Round the way the ScanGov scan does (Math.round(ARI) <= 8 passes), so this
+    // tool agrees with the public scorecards.
+    const ari = Math.round(readabilityInfo.automatedReadabilityIndex);
+    const fk = Math.round(readabilityInfo.fleschKincaidGrade);
 
     let cardClass = 'warning';
-    if (readabilityInfo.automatedReadabilityIndex > 9) cardClass = 'danger';
-    else if (readabilityInfo.automatedReadabilityIndex <= 8) cardClass = 'success';
+    if (ari > 9) cardClass = 'danger';
+    else if (ari <= 8) cardClass = 'success';
 
     let fleschKCardClass = 'warning';
-    if (readabilityInfo.fleschKincaidGrade > 9) fleschKCardClass = 'danger';
-    else if (readabilityInfo.fleschKincaidGrade <= 8) fleschKCardClass = 'success';
+    if (fk > 9) fleschKCardClass = 'danger';
+    else if (fk <= 8) fleschKCardClass = 'success';
 
     if (readabilityInfo.status === 'error' || isNaN(ari)) {
       const reason = readabilityInfo.message
@@ -51,7 +53,7 @@ form.addEventListener('submit', async (event) => {
               <span class="card-body text-center pt-5 text-decoration-none">
                 <p class="display-1">${isNaN(ari) ? '--' : ari}</p>
               </span>
-              <span class="card-footer text-center cardlink">Goal: 8 (or below)</span>
+              <span class="card-footer text-center cardlink">Goal: 8 or below. Mature teams aim for 6.</span>
             </div>
           </div>
           <div class="col-12 col-sm-12 col-md-6 col-lg-5 d-flex align-items-stretch">
