@@ -85,6 +85,10 @@
     <lastmod>2025-10-08T00:00:00.000Z</lastmod>
   </url>
   <url>
+    <loc>https://scangov.com/news/new-scangov-website-rfp-builder/</loc>
+    <lastmod>2025-11-23T00:00:00.000Z</lastmod>
+  </url>
+  <url>
     <loc>https://scangov.com/who-we-serve/</loc>
     <lastmod>2026-09-08T00:00:00.000Z</lastmod>
   </url>
@@ -231,5 +235,8 @@
   <url>
     <loc>https://scangov.com/people/aaron-hans/</loc>
     <lastmod>2026-09-06</lastmod>
+  </url>
+  <url>
+    <loc>https://scangov.com/rfp-builder/</loc>
   </url>
 </urlset>
