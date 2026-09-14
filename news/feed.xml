@@ -3,7 +3,7 @@
   <title>ScanGov News</title>
   <link href="https://scangov.com/news/feed.xml" rel="self"/>
   <link href="https://scangov.com/news/"/>
-  <updated>2026-09-14T01:06:52Z</updated>
+  <updated>2026-09-14T01:07:31Z</updated>
   <id>https://scangov.com/news/</id>
   <author>
     <name>ScanGov</name>
@@ -35,9 +35,17 @@
   </entry>
   
   <entry>
+    <title>New ScanGov readability scanner</title>
+    <link href="https://scangov.com/news/new-scangov-readability-scanner/"/>
+    <updated>2025-10-27T00:00:00Z</updated>
+    <id>https://scangov.com/news/new-scangov-readability-scanner/</id>
+    <summary>Helping web managers evaluate content readability.</summary>
+  </entry>
+  
+  <entry>
     <title>maryland.gov government website scorecard and review</title>
     <link href="https://scangov.com/now-scanning/maryland-gov/"/>
-    <updated>2026-09-14T01:06:52Z</updated>
+    <updated>2026-09-14T01:07:31Z</updated>
     <id>https://scangov.com/now-scanning/maryland-gov/</id>
     <summary>A ScanGov review of maryland.gov: accessibility, security, usability, and AI-readiness scores, a video walkthrough, and links to its public scorecards.</summary>
   </entry>
@@ -45,7 +53,7 @@
   <entry>
     <title>colorado.gov government website scorecard and review</title>
     <link href="https://scangov.com/now-scanning/colorado-gov/"/>
-    <updated>2026-09-14T01:06:52Z</updated>
+    <updated>2026-09-14T01:07:31Z</updated>
     <id>https://scangov.com/now-scanning/colorado-gov/</id>
     <summary>A ScanGov review of colorado.gov: accessibility, security, usability, and AI-readiness scores, a video walkthrough, and links to its public scorecards.</summary>
   </entry>
@@ -61,7 +69,7 @@
   <entry>
     <title>nyc.gov government website scorecard and review</title>
     <link href="https://scangov.com/now-scanning/nyc-gov/"/>
-    <updated>2026-09-14T01:06:52Z</updated>
+    <updated>2026-09-14T01:07:31Z</updated>
     <id>https://scangov.com/now-scanning/nyc-gov/</id>
     <summary>A ScanGov review of nyc.gov: accessibility, security, usability, and AI-readiness scores, a video walkthrough, and links to its public scorecards.</summary>
   </entry>
@@ -69,7 +77,7 @@
   <entry>
     <title>georgia.gov government website scorecard and review</title>
     <link href="https://scangov.com/now-scanning/georgia-gov/"/>
-    <updated>2026-09-14T01:06:52Z</updated>
+    <updated>2026-09-14T01:07:31Z</updated>
     <id>https://scangov.com/now-scanning/georgia-gov/</id>
     <summary>A ScanGov review of georgia.gov: accessibility, security, usability, and AI-readiness scores, a video walkthrough, and links to its public scorecards.</summary>
   </entry>
@@ -77,7 +85,7 @@
   <entry>
     <title>ms.gov government website scorecard and review</title>
     <link href="https://scangov.com/now-scanning/ms-gov/"/>
-    <updated>2026-09-14T01:06:52Z</updated>
+    <updated>2026-09-14T01:07:31Z</updated>
     <id>https://scangov.com/now-scanning/ms-gov/</id>
     <summary>A ScanGov review of ms.gov: accessibility, security, usability, and AI-readiness scores, a video walkthrough, and links to its public scorecards.</summary>
   </entry>
@@ -85,7 +93,7 @@
   <entry>
     <title>texas.gov government website scorecard and review</title>
     <link href="https://scangov.com/now-scanning/texas-gov/"/>
-    <updated>2026-09-14T01:06:52Z</updated>
+    <updated>2026-09-14T01:07:31Z</updated>
     <id>https://scangov.com/now-scanning/texas-gov/</id>
     <summary>A ScanGov review of texas.gov: accessibility, security, usability, and AI-readiness scores, a video walkthrough, and links to its public scorecards.</summary>
   </entry>
