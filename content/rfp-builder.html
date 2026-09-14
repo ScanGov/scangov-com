@@ -1,0 +1,206 @@
+---
+layout: "layouts/default"
+title: "Government website redesign RFP builder"
+description: "Build a city, county, or agency website redesign RFP with accessibility, security, performance, and AI-readiness requirements from ScanGov Standards. Free."
+ogImage: pages/website-rfp-og.png
+ogImageAlt: "File with signature icon"
+isTool: true
+faq:
+  - q: What does the RFP builder include?
+    a: >-
+      A complete website redesign request for proposal: executive summary, background,
+      compliance requirements, functional and technical requirements, design, deliverables,
+      timeline, proposal requirements, evaluation criteria, and contract terms. Section 3 writes
+      the <a href="https://standards.scangov.org/">ScanGov Standards</a> in as requirements across
+      accessibility, botability, security, and usability, with a link to each standard so vendors
+      know exactly what will be checked. Fill in your organization and contact details and the
+      builder produces a document you can copy, print, or edit.
+  - q: How do I verify that a vendor's website work is actually accessible before signing?
+    a: >-
+      Ask for an Accessibility Conformance Report (ACR, produced from the VPAT template) for the
+      platform, then test rather than trust it. Run the vendor's existing government sites through
+      an automated scan and a manual check with a screen reader and keyboard. Every government site
+      ScanGov has scanned has a public scorecard on
+      <a href="https://scangov.org/">scangov.org</a>, so you can look up a vendor's current clients
+      before you shortlist them. GSA's
+      <a href="https://www.section508.gov/manage/accessibility-faq/">Section 508 accessibility FAQ</a>
+      covers verification in more depth.
+  - q: Should the RFP require a VPAT or ACR?
+    a: >-
+      Yes, for any platform or product the vendor supplies. A VPAT is the template; the completed
+      document is the ACR. Require a current ACR against WCAG 2.1 Level AA, ask how old it is and
+      which version of the product it covers, and treat "partially supports" entries as items the
+      vendor must remediate or explain. GSA's
+      <a href="https://www.section508.gov/sell/acr-vpat-faq/">ACR and VPAT FAQ</a> explains what
+      each document is and is not.
+  - q: What contract language makes vendor-developed content meet WCAG 2.1 AA?
+    a: >-
+      Require that all content, templates, and features delivered under the contract conform to
+      WCAG 2.1 Level AA; that the vendor fixes failures found in acceptance testing before launch
+      and failures found after launch within a set period; and that compliance is measured by an
+      automated scan plus manual review, not by the vendor's own statement. The builder's contract
+      terms section includes this. MRSC's guidance on the
+      <a href="https://mrsc.org/stay-informed/mrsc-insight/february-2026/ada-standards-websites-apps">ADA
+      web rule for local governments</a> recommends the same approach.
+  - q: What if no vendor can promise full compliance?
+    a: >-
+      Pick the most accessible option and write the gaps into the contract as remediation
+      obligations with dates. The Department of Justice's rule allows for minor failures that do not
+      affect access, but not for known barriers left unfixed. GSA's Section 508 FAQ addresses
+      choosing between products when none is fully accessible, and the
+      <a href="https://www.ada.gov/resources/2024-03-08-web-rule/">ADA Title II web rule fact sheet</a>
+      describes the minor-failure provision.
+  - q: When does the ADA Title II web accessibility deadline apply?
+    a: >-
+      April 26, 2027 for state and local governments serving 50,000 or more people, and
+      April 26, 2028 for those under 50,000 and for all special district governments, under the
+      Department of Justice's ADA Title II web rule. A redesign contracted now should be scoped to
+      launch compliant before your deadline. Confirm the dates for your entity on
+      <a href="https://www.ada.gov/resources/2024-03-08-web-rule/">ada.gov</a>.
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
+    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+      <p>Writing a website redesign RFP means turning accessibility, security, performance, and
+        search and AI readiness into requirements a vendor can be held to. This builder does that
+        for you. It writes the <a href="https://standards.scangov.org/">ScanGov Standards</a> into
+        section 3 of a complete RFP, links every requirement to the standard that defines it, and
+        adds contract terms so compliance is verified by scans rather than promised. Free, no
+        signup, and nothing you enter is stored.</p>
+
+      <p>ScanGov checks government websites against these same standards, so a vendor who meets
+        the RFP will also pass the <a href="https://scangov.org/">public scorecard</a> your
+        residents and your council can see.</p>
+      <form action="/rfp-builder-done/" id="rfp-form">
+        <div class="mb-4">
+          <label for="organization" class="form-label">Organization *</label>
+          <input
+            class="form-control"
+            type="text"
+            id="organization"
+            name="organization"
+            required
+            aria-required="true">
+        </div>
+
+        <div class="mb-4">
+          <label for="website" class="form-label">Website URL</label>
+          <input
+            class="form-control"
+            type="url"
+            id="website"
+            name="website"
+            placeholder="https://example.com">
+        </div>
+
+        <div class="mb-4">
+          <label for="instructions" class="form-label">General instructions</label>
+          <textarea
+            class="form-control"
+            id="instructions"
+            name="instructions"
+            rows="3"
+            aria-describedby="instructionsHelp"></textarea>
+        </div>
+
+        <div class="mb-4">
+          <label for="name" class="form-label">Contact name *</label>
+          <input
+            class="form-control"
+            type="text"
+            id="contact"
+            name="name"
+            required
+            aria-required="true">
+        </div>
+
+        <div class="mb-4">
+          <label for="email" class="form-label">Contact email *</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            aria-describedby="emailHelp"
+            required
+            aria-required="true">
+        </div>
+
+        <div class="mb-4">
+          <label for="phone" class="form-label">Contact phone number</label>
+          <input
+            class="form-control"
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="(555) 123-4567">
+        </div>
+
+        <div class="mb-4">
+          <label for="submission-deadline" class="form-label">Submission deadline</label>
+          <input
+            class="form-control"
+            type="date"
+            id="submission-deadline"
+            name="submission-deadline">
+        </div>
+
+        <div class="mb-4">
+          <label for="launch-date" class="form-label">Website launch date</label>
+          <input
+            class="form-control"
+            type="date"
+            id="launch-date"
+            name="launch-date">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Build the RFP</button>
+      </form>
+
+      <section class="mt-5" id="scorecard">
+        <h2>See how your current site scores first</h2>
+        <p>Before you write requirements for the new site, look up the old one. ScanGov has already
+          scanned most US government websites and publishes a scorecard for each. The failing
+          standards on your current site are the ones to put in the RFP.</p>
+        <form action="https://scangov.org/search/" method="get" class="mb-2">
+          <label for="scorecard-domain" class="form-label">Your website domain</label>
+          <div class="input-group">
+            <input type="text" class="form-control" id="scorecard-domain" name="search"
+              placeholder="example.gov" autocomplete="off">
+            <button type="submit" class="btn btn-outline-primary">See scorecard</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="mt-5" id="whats-in-it">
+        <h2>What the RFP requires</h2>
+        <p>Section 3 of the generated RFP covers the four categories ScanGov scores, with each
+          requirement linked to its standard and guidance:</p>
+        <ul>
+          <li><a href="/accessibility/">Accessibility</a>: WCAG 2.1 AA and all 66 ScanGov
+            accessibility standards, from color contrast to touch target size.</li>
+          <li><a href="/botability/">Botability</a>: the site can be crawled and understood by
+            search engines and AI assistants, with content in the HTML rather than only after
+            JavaScript runs.</li>
+          <li><a href="/security/">Security</a>: HTTPS, HSTS, a content security policy, security.txt,
+            and the other headers CISA and OWASP recommend.</li>
+          <li><a href="/usability/">Usability</a>: Core Web Vitals thresholds, plain-language
+            readability, page titles and descriptions, mobile viewport, and social sharing tags.</li>
+        </ul>
+        <p>The rest of the document is a conventional RFP skeleton you can edit: background,
+          functional requirements, CMS and integrations, design, deliverables, timeline, proposal
+          requirements, evaluation criteria, and contract terms.</p>
+      </section>
+
+      {% include "faq.html" %}
+    </div>
+  </div>
+  <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
+</div>
+<script>
+  document.getElementById('rfp-form').addEventListener('submit', function () {
+    if (typeof gtag === 'function') gtag('event', 'tool_run', { tool: 'rfp-builder' });
+  });
+</script>
