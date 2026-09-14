@@ -6,7 +6,7 @@ ogImage: pages/website-rfp-og.png
 ogImageAlt: "File with signature icon"
 isTool: true
 faq:
-  - q: What does the RFP builder include?
+  - q: What does the Request for Proposal (RFP) builder include?
     a: >-
       A complete website redesign request for proposal: executive summary, background,
       compliance requirements, functional and technical requirements, design, deliverables,
@@ -17,18 +17,20 @@ faq:
       builder produces a document you can copy, print, or edit.
   - q: How do I verify that a vendor's website work is actually accessible before signing?
     a: >-
-      Ask for an Accessibility Conformance Report (ACR, produced from the VPAT template) for the
+      Ask for an Accessibility Conformance Report (ACR)—produced from the Voluntary Product
+      Accessibility Template (VPAT)—for the
       platform, then test rather than trust it. Run the vendor's existing government sites through
       an automated scan and a manual check with a screen reader and keyboard. Every government site
       ScanGov has scanned has a public scorecard on
       <a href="https://scangov.org/">scangov.org</a>, so you can look up a vendor's current clients
-      before you shortlist them. GSA's
+      before you shortlist them. The General Services Administration's (GSA)
       <a href="https://www.section508.gov/manage/accessibility-faq/">Section 508 accessibility FAQ</a>
       covers verification in more depth.
   - q: Should the RFP require a VPAT or ACR?
     a: >-
       Yes, for any platform or product the vendor supplies. A VPAT is the template; the completed
-      document is the ACR. Require a current ACR against WCAG 2.1 Level AA, ask how old it is and
+      document is the ACR. Require a current ACR against the Web Content Accessibility Guidelines
+      (WCAG) 2.1 Level AA, ask how old it is and
       which version of the product it covers, and treat "partially supports" entries as items the
       vendor must remediate or explain. GSA's
       <a href="https://www.section508.gov/sell/acr-vpat-faq/">ACR and VPAT FAQ</a> explains what
@@ -39,9 +41,10 @@ faq:
       WCAG 2.1 Level AA; that the vendor fixes failures found in acceptance testing before launch
       and failures found after launch within a set period; and that compliance is measured by an
       automated scan plus manual review, not by the vendor's own statement. The builder's contract
-      terms section includes this. MRSC's guidance on the
-      <a href="https://mrsc.org/stay-informed/mrsc-insight/february-2026/ada-standards-websites-apps">ADA
-      web rule for local governments</a> recommends the same approach.
+      terms section includes this. The Municipal Research and Services Center's (MRSC) guidance on the
+      Americans with Disabilities Act (ADA)
+      <a href="https://mrsc.org/stay-informed/mrsc-insight/february-2026/ada-standards-websites-apps">web
+      rule for local governments</a> recommends the same approach.
   - q: What if no vendor can promise full compliance?
     a: >-
       Pick the most accessible option and write the gaps into the contract as remediation
@@ -63,7 +66,7 @@ faq:
   <div class="row">
     <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
     <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-      <p>Writing a website redesign RFP means turning accessibility, security, performance, and
+      <p>Writing a website redesign request for proposal (RFP) means turning accessibility, security, performance, and
         search and AI readiness into requirements a vendor can be held to. This builder does that
         for you. It writes the <a href="https://standards.scangov.org/">ScanGov Standards</a> into
         section 3 of a complete RFP, links every requirement to the standard that defines it, and
@@ -184,14 +187,16 @@ faq:
           <li><a href="/botability/">Botability</a>: the site can be crawled and understood by
             search engines and AI assistants, with content in the HTML rather than only after
             JavaScript runs.</li>
-          <li><a href="/security/">Security</a>: HTTPS, HSTS, a content security policy, security.txt,
-            and the other headers CISA and OWASP recommend.</li>
+          <li><a href="/security/">Security</a>: HTTPS, HTTP Strict Transport Security (HSTS), a content
+            security policy, security.txt, and the other headers the Cybersecurity and Infrastructure
+            Security Agency (CISA) and the Open Worldwide Application Security Project (OWASP)
+            recommend.</li>
           <li><a href="/usability/">Usability</a>: Core Web Vitals thresholds, plain-language
             readability, page titles and descriptions, mobile viewport, and social sharing tags.</li>
         </ul>
         <p>The rest of the document is a conventional RFP skeleton you can edit: background,
-          functional requirements, CMS and integrations, design, deliverables, timeline, proposal
-          requirements, evaluation criteria, and contract terms.</p>
+          functional requirements, content management system (CMS) and integrations, design,
+          deliverables, timeline, proposal requirements, evaluation criteria, and contract terms.</p>
       </section>
 
       {% include "faq.html" %}

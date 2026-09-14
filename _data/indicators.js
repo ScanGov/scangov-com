@@ -4,22 +4,22 @@ export default async () => {
     const data = await getData('https://github.com/ScanGov/data/raw/refs/heads/main/standards/audits.json', true);
 
     const descriptionOverrides = {
-        usability: 'Optimize content and design so visitors quickly find what they need.'
+        usability: 'Optimize content and design so users can quickly find what they need.'
     };
 
     const pageTitles = {
-        accessibility: 'Government Website Accessibility Monitoring',
-        botability: 'AI and Search Readiness (Botability) for Government Websites',
-        security: 'Government Website Security Headers Monitoring',
-        usability: 'Government Website Usability and Core Web Vitals'
+        accessibility: 'Digital accessibility monitoring',
+        botability: 'AI and search readiness (Botability) for digital services',
+        security: 'Digital security headers monitoring',
+        usability: 'Digital usability and Core Web Vitals'
     };
 
     // Meta description and lead for the indicator page. `description` stays short for cards.
     const pageDescriptions = {
-        accessibility: n => `Monitor government website accessibility against ${n} WCAG, ADA Title II, and Section 508 standards, with a prioritized fix list and a public scorecard.`,
-        botability: n => `Check whether AI tools and search engines can find and understand your government website: robots.txt, sitemaps, canonical tags, schema, and crawlability.`,
-        security: n => `Monitor government website security headers and practices on every page: HTTPS, HSTS, CSP, X-Content-Type-Options, security.txt, and the .gov TLD.`,
-        usability: n => `Monitor government website usability and Core Web Vitals on every page: performance, readability, viewport and mobile settings, and content structure.`
+        accessibility: n => `Check your site against accessibility standards like WCAG, ADA Title II, and Section 508, with a prioritized fix list and a public scorecard.`,
+        botability: n => `Check whether AI tools and search engines can find and understand your site: robots.txt, sitemaps, canonical tags, schema, and crawlability.`,
+        security: n => `Check security headers and practices on every page: HTTPS, HSTS, CSP, X-Content-Type-Options, and security.txt.`,
+        usability: n => `Check usability and Core Web Vitals on every page: performance, readability, viewport and mobile settings, and content structure.`
     };
 
     // Topic pages under an indicator (plan 13 topic layer). Rendered by content/indicator.html.
@@ -59,6 +59,7 @@ export default async () => {
             color: value.color,
             description: descriptionOverrides[key] ?? value.description,
             pageTitle: pageTitles[key] ?? value.displayName,
+            h1: value.displayName,
             pageDescription: pageDescriptions[key] ? pageDescriptions[key](value.attributes.length) : (descriptionOverrides[key] ?? value.description),
             standards: value.attributes,
             guidance,

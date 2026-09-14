@@ -44,9 +44,9 @@ If you need to allowlist our crawler, use the IP address below along with our us
 
 ScanGovBot evaluates:
 
-- Accessibility: WCAG compliance via Lighthouse accessibility audits
+- Accessibility: Web Content Accessibility Guidelines (WCAG) compliance via Lighthouse accessibility audits
 - Botability: robots.txt validity, sitemap presence, crawlability
-- Security: HTTPS, HSTS, CSP, security.txt, X-Content-Type-Options
+- Security: HTTPS, HTTP Strict Transport Security (HSTS), a content security policy (CSP), security.txt, X-Content-Type-Options
 - Usability: Page readability, performance metrics, mobile-friendliness, social metadata
 
 ## Blocking ScanGovBot
