@@ -14,6 +14,8 @@ function resolveStatusCode(data) {
   // robots.txt outcomes have their own definitions in status.json
   if (data.blockedBy === 'robots') return 998;
   if (data.blockedBy === 'crawl-delay') return 997;
+  // a captcha or browser-check page instead of the page (definition in status.json)
+  if (data.blockedBy === 'challenge' || data.challenge) return 996;
   if (data.fetch && data.fetch.statusCode) return data.fetch.statusCode;
   if (data.playwright && data.playwright.statusCode) return data.playwright.statusCode;
   return null;
