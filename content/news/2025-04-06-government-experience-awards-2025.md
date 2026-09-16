@@ -38,8 +38,8 @@ Awards call for entries are now open. Deadline for submissions is May 8, 2025\. 
 
 ## About Center for Digital Government (CDG)
 
-[Center for Digital Government](https://www.govtech.com/cdg) is a national research and advisory institute on information technology policies and best practices in state and local government. The Center provides public and private sector leaders with decision support, knowledge and opportunities to help them effectively incorporate new technologies in the 21st century.
+[Center for Digital Government](https://www.govtech.com/cdg) is a national research and advisory institute on information technology policies and best practices in state and local government. The Center provides public and private sector leaders with decision support, knowledge, and opportunities to help them effectively incorporate new technologies in the 21st century.
 
 ## About ScanGov
 
-[ScanGov](https://scangov.com) is a holistic government digital experience monitoring, reporting and remediation service. It maintains [Project ScanGov](https://scangov.org), an open source digital experience monitor that grades government websites based on key digital experience indicators, It also maintains [ScanGov Standards](https://standards.scangov.org), a publicly-available set of standards based on public policy and established web protocol, guidelines and best practices.
+[ScanGov](https://scangov.com) is a holistic government digital experience monitoring, reporting, and remediation service. It maintains [Project ScanGov](https://scangov.org), an open source digital experience monitor that grades government websites based on key digital experience indicators, It also maintains [ScanGov Standards](https://standards.scangov.org), a publicly-available set of standards based on public policy and established web protocol, guidelines, and best practices.

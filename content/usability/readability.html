@@ -1,0 +1,182 @@
+---
+layout: "layouts/default"
+title: "Government website readability"
+description: "How readable US government websites are, what grade level to aim for, what the law requires, and how ScanGov scores readability on every page it scans."
+permalink: /usability/readability/
+date: 2026-09-13
+modified: 2026-09-13
+breadcrumbParent:
+  - url: "/indicators/"
+    title: "Indicators"
+  - url: "/usability/"
+    title: "Usability"
+breadcrumbCurrent: "Readability"
+faq:
+  - q: What is the difference between the Automated Readability Index and Flesch-Kincaid?
+    a: >-
+      Both estimate the US school grade a reader needs. ARI uses characters per word and words per
+      sentence; Flesch-Kincaid uses syllables per word and words per sentence. They usually land
+      within a grade of each other. ScanGov records both and scores the pass or fail on ARI.
+  - q: Does readability count toward accessibility compliance?
+    a: >-
+      WCAG 2.2 has a reading level criterion (3.1.5) at Level AAA, above the Level AA the ADA
+      Title II rule requires, so a hard-to-read page does not by itself fail Title II. It does fail
+      the people the rule exists for. Plain language is the standard federal sites are held to
+      under the Plain Writing Act and 21st Century IDEA, and most state and local style guides adopt
+      it.
+  - q: Why does my site fail readability on its ScanGov scorecard?
+    a: >-
+      The public scorecard on scangov.org scores the homepage, and homepages are mostly links and
+      labels, which read as fragments. A fail there means the homepage text rounds above grade 8.
+      A ScanGov subscription scans every page, so you can see which pages actually carry the
+      hard-to-read prose and fix those first.
+  - q: How often is readability re-scored?
+    a: >-
+      Public scorecards on scangov.org are refreshed on ScanGov's regular scan schedule, and each
+      profile's Pulse view charts the homepage's indicators over time. Sites monitored in the
+      ScanGov product are scanned on their plan's cadence, and the readability section under
+      usability lists every page above the target grade after each scan, so a content team can
+      measure the effect of a rewrite page by page.
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
+    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+
+      <p>Plain language is the difference between a resident finding the answer and a resident
+        calling the office. Federal law requires it, most state and local governments adopt it as
+        a standard, and it is one of the easiest things on a website to measure. ScanGov scores
+        the reading grade level of every government web page it scans and publishes the result on
+        each site's public scorecard.</p>
+
+      <section class="mt-4" id="check-a-page">
+        <h2>Check a page</h2>
+        <p>Enter the URL of any public web page to get its Automated Readability Index (ARI) and
+          Flesch-Kincaid grade, scored the same way as the ScanGov scan.</p>
+        <form class="input-validation-required" id="readability-form">
+          <div class="mb-3">
+            <label for="site" class="form-label">Page URL</label>
+            <input type="text" class="form-control" name="site" id="site" placeholder="https://www.yoursite.gov/page-to-review/" required>
+          </div>
+          <button type="submit" class="btn btn-primary mb-3" id="submitbutton">Check readability</button>
+          <div id="scan_results" aria-live="polite"></div>
+        </form>
+      </section>
+
+      <section class="mt-5" id="how-sites-score">
+        <h2>How government websites score</h2>
+        <p>ScanGov has readability scores for the homepages of 3,792 US government websites, as of
+          September 2026. About six in ten meet the grade-8 standard ScanGov scores against. About
+          one in three meet the grade-6 target that experienced government content teams set for
+          themselves.</p>
+        <div class="table-responsive">
+          <table class="table table-sm">
+            <caption class="small">Share of homepages at or below each reading grade, by domain
+              type. Automated Readability Index, rounded, public ScanGov dataset, September 2026.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Domain type</th>
+                <th scope="col" class="text-end">Homepages</th>
+                <th scope="col" class="text-end">Grade 8 or below</th>
+                <th scope="col" class="text-end">Grade 6 or below</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">All</th><td class="text-end">3,792</td><td class="text-end">61.5%</td><td class="text-end">32.4%</td></tr>
+              <tr><th scope="row">.gov</th><td class="text-end">1,915</td><td class="text-end">62.8%</td><td class="text-end">33.2%</td></tr>
+              <tr><th scope="row">.edu</th><td class="text-end">654</td><td class="text-end">65.3%</td><td class="text-end">32.7%</td></tr>
+              <tr><th scope="row">Other (.org, .com, .net)</th><td class="text-end">870</td><td class="text-end">59.0%</td><td class="text-end">32.2%</td></tr>
+              <tr><th scope="row">.us</th><td class="text-end">353</td><td class="text-end">53.8%</td><td class="text-end">28.6%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The <code>.us</code> group, where many cities, counties, and special districts live, is
+          the weakest on both measures. Those are also the governments facing the April 26, 2028
+          Americans with Disabilities Act (ADA) Title II deadline. Homepages are the least representative page for readability, since
+          they are mostly navigation; interior pages with real prose usually score higher grades,
+          which is where the work is.</p>
+        <p>Every site in that count has a public scorecard on
+          <a href="https://scangov.org/">scangov.org</a>, with readability among its usability
+          checks. Browse the <a href="https://scangov.org/rankings/usability/">usability
+          rankings</a> to find yours.</p>
+      </section>
+
+      <section class="mt-5" id="what-scangov-checks">
+        <h2>What ScanGov checks</h2>
+        <p>The <a href="https://standards.scangov.org/readability/">readability standard</a> takes
+          the main content of a page, drops navigation and boilerplate, and runs two public formulas:
+          the <a href="https://standards.scangov.org/automated-readability-index/">Automated
+          Readability Index</a> and
+          <a href="https://standards.scangov.org/flesch-kincaid/">Flesch-Kincaid</a>. A page passes
+          when its ARI rounds to grade 8 or below. The score sits in the
+          <a href="/usability/">usability</a> indicator alongside page titles, descriptions, mobile
+          viewport and Core Web Vitals.</p>
+        <p>Check any single page with the free
+          <a href="/tools/readability/">readability checker</a>. It uses the same formulas and the
+          same pass rule as the scan, and shows the exact text it scored.</p>
+      </section>
+
+      <section class="mt-5" id="what-to-aim-for">
+        <h2>What grade level to aim for</h2>
+        <p>Grade 8 is the common target for a general audience and the level ScanGov scores against.
+          Government style guides set targets between grade 6 and grade 8, and content teams with
+          a mature plain-language practice aim for grade 6, especially for the pages people need
+          most: applying, paying, reporting, and finding out what happens next. Treat 8 as the floor
+          and 6 as the goal for essential services.</p>
+        <p>The formulas only see sentence and word length, so the fastest wins are the plainest:
+          one idea per sentence, common words over official ones, the action first, and headings and
+          lists in place of paragraphs. The
+          <a href="https://www.plainlanguage.gov/guidelines/">federal plain language guidelines</a>
+          and <a href="https://digital.gov/topics/plain-language">digital.gov's plain language
+          resources</a> cover the rest.</p>
+      </section>
+
+      <section class="mt-5" id="what-the-law-requires">
+        <h2>What the law requires</h2>
+        <ul>
+          <li>The <a href="https://standards.scangov.org/plain-writing-act/">Plain Writing Act of
+            2010</a> requires federal agencies to write public communications clearly. See
+            <a href="https://www.plainlanguage.gov/law/">plainlanguage.gov</a> for the statute and
+            agency requirements.</li>
+          <li>The <a href="https://standards.scangov.org/21stcenturyidea/">21st Century Integrated
+            Digital Experience Act (IDEA)</a>, implemented by an Office of Management and Budget
+            (OMB) memo, M-23-22, requires federal websites to use plain language, and the
+            <a href="https://standards.scangov.org/federal-website-standards/">US federal website
+            standards</a> carry it into design guidance.</li>
+          <li>Web Content Accessibility Guidelines (WCAG) 2.2 success criterion
+            <a href="https://www.w3.org/WAI/WCAG22/Understanding/reading-level.html">3.1.5 Reading
+            level</a> asks for a lower-secondary reading level, or a simpler alternative, at Level
+            AAA. It is above the Level AA the ADA Title II web rule requires of state and local
+            governments, but it is the accessibility community's own statement that readability is
+            an access issue.</li>
+        </ul>
+      </section>
+
+      <section class="mt-5" id="track-it">
+        <h2>Track it over time</h2>
+        <p>A readability project is a rewrite of many pages over months, and it only shows up in a
+          measurement that covers every page and repeats. Two views do that:</p>
+        <ul>
+          <li>The <a href="https://scangov.org/">public scorecard</a> for your site charts its
+            homepage indicators over time in the profile's Pulse view, free, for every scanned
+            government site.</li>
+          <li>The ScanGov monitoring product scans every page of the site and has a
+            <a href="/features/readability/">readability section</a> under usability that lists
+            the pages written above the target grade, so the team can work through them and watch
+            the list shrink as pages are rewritten, and catch new content that slips.</li>
+        </ul>
+      </section>
+
+      {% include "faq.html" %}
+
+    </div>
+    <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
+  </div>
+</div>
+<script type="module" src="/js/readit.js"></script>
+<script>
+  document.getElementById('readability-form').addEventListener('submit', function () {
+    if (typeof gtag === 'function') gtag('event', 'tool_run', { tool: 'readability', page: 'topic' });
+  });
+</script>

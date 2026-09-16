@@ -1,0 +1,21 @@
+---
+layout: "layouts/print"
+title: "Website RFP (print view)"
+description: "Printable version of a website request for proposal built with the ScanGov RFP builder."
+sitemap: false
+noindex: true
+---
+
+<style>
+    @media print {
+        #back-link {
+            display: none;
+        }
+    }
+</style>
+<a id="back-link" href="javascript:void(0);" onclick="window.history.back()">Back</a>
+
+{% include "rfp_content.html" %}
+<script>
+    window.print();
+</script>

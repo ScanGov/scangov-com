@@ -1,0 +1,12 @@
+{#
+  Print layout: the shared <head> (title, description, robots, styles) with no
+  nav, jumbotron or footer, for pages whose only job is to be printed or copied.
+  Pages using it should set `noindex: true` and `sitemap: false`.
+#}
+{% include "header.html" %}
+<main id="main-content" tabindex="-1" class="container py-4">
+    {{ content | safe }}
+</main>
+{% getBundle "fontawesome" %}
+</body>
+</html>

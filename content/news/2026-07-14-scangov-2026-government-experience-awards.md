@@ -35,4 +35,4 @@ CDG is a trusted brand of e.Republic. Learn more at [www.erepublic.com](https://
 
 ## About ScanGov
 
-[ScanGov](https://scangov.com/) is a government digital experience monitoring, reporting and remediation service. It maintains [Project ScanGov](https://scangov.org/), an open source digital experience monitor that grades government websites based on key digital experience indicators. It also maintains [ScanGov Standards](https://standards.scangov.org/), a publicly-available set of digital experience standards based on public policy and established web protocol, guidelines, and best practices.
+[ScanGov](https://scangov.com/) is a government digital experience monitoring, reporting, and remediation service. It maintains [Project ScanGov](https://scangov.org/), an open source digital experience monitor that grades government websites based on key digital experience indicators. It also maintains [ScanGov Standards](https://standards.scangov.org/), a publicly-available set of digital experience standards based on public policy and established web protocol, guidelines, and best practices.

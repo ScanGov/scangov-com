@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-12">
         {% if breadcrumbParent or breadcrumbCurrent %}{% include "breadcrumb-default.html" %}{% endif %}
-        {% if title %}<h1 class="display-5">{{ title | safe }}</h1>{% endif %}
+        {% if h1 or title %}<h1 class="display-5">{{ (h1 or title) | safe }}</h1>{% endif %}
         {% if not search and not hideDescription %}
           {% if descriptionHtml %}
             <p class="lead fs-5">{{ descriptionHtml | safe }}</p>

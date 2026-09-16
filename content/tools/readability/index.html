@@ -1,0 +1,131 @@
+---
+layout: layouts/default-plain.html
+date: 2025-10-19
+modified: 2026-09-13
+author: ScanGov
+title: "Government website readability checker"
+ogImage: pages/readability-scanner.png
+ogImageAlt: "Readability checker"
+description: "Check the reading grade level of any government web page. Scores Automated Readability Index and Flesch-Kincaid against the plain language standard. Free."
+permalink: /tools/readability/
+isTool: true
+home: false
+faq:
+  - q: What reading grade level should government web content be?
+    a: >-
+      ScanGov scores a page as passing when its Automated Readability Index rounds to grade 8 or
+      below, which is the common plain-language target for a general audience. Mature government
+      content teams, including state teams ScanGov works with, set their own goal at grade 6. Aim
+      for 8 as the floor and 6 for essential services, forms, and instructions.
+  - q: What is the Automated Readability Index?
+    a: >-
+      A formula that estimates the US school grade needed to understand a text from the average
+      characters per word and words per sentence. Flesch-Kincaid does the same using syllables. Both
+      reward short words and short sentences. See the
+      <a href="https://standards.scangov.org/automated-readability-index/">ARI</a> and
+      <a href="https://standards.scangov.org/flesch-kincaid/">Flesch-Kincaid</a> standards for the
+      formulas.
+  - q: Is plain language required by law?
+    a: >-
+      For federal agencies, yes. The
+      <a href="https://standards.scangov.org/plain-writing-act/">Plain Writing Act of 2010</a>
+      requires clear communication the public can understand, and the
+      <a href="https://standards.scangov.org/21stcenturyidea/">21st Century Integrated Digital
+      Experience Act (IDEA)</a>, implemented
+      by an Office of Management and Budget (OMB) memo, M-23-22, requires federal websites to use
+      plain language. State and local governments are not bound by those laws but most adopt the
+      same standard, and readable content is part of the accessibility work the Americans with
+      Disabilities Act (ADA) Title II web rule requires.
+  - q: How does this checker decide what text to score?
+    a: >-
+      It fetches the page, extracts the main content, and drops navigation, scripts and boilerplate.
+      Headings and other fragments without punctuation are appended with a period so the formulas
+      count them fairly. The "content" section of the result shows exactly what was scored. Pages
+      that block automated tools cannot be scanned.
+  - q: Why does a homepage score differently from an article page?
+    a: >-
+      Homepages are mostly links, labels, and short fragments, which score low. Long-form pages with
+      real sentences are the better test of your writing. Check the pages residents actually read:
+      permits, payments, notices, and instructions.
+  - q: Does ScanGov check readability across a whole site?
+    a: >-
+      Yes. This tool checks one page. The ScanGov monitoring product scans every page of a site
+      and its <a href="/features/readability/">readability section</a> under
+      <a href="/usability/">usability</a> lists the pages written above the target grade, so a
+      content team can work through them and measure an improvement project. The public scorecard
+      for your site's homepage is already on <a href="https://scangov.org/">scangov.org</a>.
+---
+
+<p>Plain language is a legal requirement for federal websites and the standard most state and
+  local governments hold themselves to. This checker fetches a page, pulls out the main content,
+  and scores it with the two formulas ScanGov uses across every government site it scans:
+  Automated Readability Index and Flesch-Kincaid. A page passes at grade 8 or below; mature
+  content teams aim for 6. Free, no signup, results on the page.</p>
+
+<form class="input-validation-required" id="readability-form">
+  <div class="mb-3">
+    <label for="site" class="form-label">Page URL</label>
+    <input type="text" class="form-control" name="site" id="site" placeholder="https://www.yoursite.gov/page-to-review/" required>
+  </div>
+  <button type="submit" class="btn btn-primary mb-3" id="submitbutton">Check readability</button>
+  <div id="scan_results" aria-live="polite"></div>
+</form>
+
+<section class="mt-5" id="scorecard">
+  <h2>How your whole site scores</h2>
+  <p>ScanGov has scanned most US government websites and publishes a public scorecard for each on
+    <a href="https://scangov.org/">scangov.org</a>, with readability among the usability checks.
+    Browse the <a href="https://scangov.org/rankings/usability/">usability rankings</a> to find
+    your site, and read more about
+    <a href="/usability/readability/">government website readability</a>.</p>
+</section>
+
+<div class="alert alert-info small mt-4" role="alert">
+  <h2 class="h4 mt-0">About</h2>
+  <p>Readability measures how easy text is to understand by looking at words and layout. Formulas
+    like Flesch-Kincaid and the Automated Readability Index (ARI) estimate a reading grade level. ARI uses
+    the average number of characters per word and words per sentence to give a US school grade;
+    8 means eighth grade. Simple words, short sentences, clear design, and legible fonts make text
+    easier to read.</p>
+  <h2 class="h4">Why it matters</h2>
+  <p>Residents get what they need the first time, without calling or visiting. As of September 2026,
+    about six in ten government homepages ScanGov has scanned meet the grade-8 standard and about
+    one in three meet the grade-6 target.</p>
+  <h2 class="h4">Guidance</h2>
+  <ul class="mb-0">
+    <li><a href="/usability/readability/">Government website readability</a>: how sites score, what grade to aim for, and what the law requires</li>
+    <li><a href="https://standards.scangov.org/readability/">Readability standard</a></li>
+    <li><a href="https://standards.scangov.org/automated-readability-index/">Automated Readability Index</a></li>
+    <li><a href="https://standards.scangov.org/flesch-kincaid/">Flesch-Kincaid</a></li>
+    <li><a href="https://standards.scangov.org/plain-writing-act/">Plain Writing Act of 2010</a></li>
+    <li><a href="https://standards.scangov.org/21stcenturyidea/">21st Century Integrated Digital Experience Act</a></li>
+    <li><a href="https://standards.scangov.org/federal-website-standards/">US federal website standards</a></li>
+  </ul>
+</div>
+
+{% include "faq.html" %}
+
+<script type="module" src="/js/readit.js"></script>
+<script>
+  document.getElementById('readability-form').addEventListener('submit', function () {
+    if (typeof gtag === 'function') gtag('event', 'tool_run', { tool: 'readability' });
+  });
+</script>
+
+<!-- all the code for this feature is in the js file, 
+ this html is here to let the css trimmer keep the classes associated with the cards we will display -->
+<div class="card mb-3 text-bg-danger col-12 col-sm-12 col-md-6 col-lg-5 d-flex align-items-stretch d-none">
+  <div class="card-header">
+    <a href="https://standards.scangov.org/readability/" class="cardlink">Readability (ARI) <i class="fa-solid fa-circle-question"></i></a>
+  </div>
+  <span class="card-body text-center pt-5 text-decoration-none">
+    <p class="display-1">
+      10
+    </p>
+  </span>
+  <span class="card-footer text-center cardlink">ARI goal: 8 (or below)</span>
+</div>
+<div class="alert alert-danger d-none">
+  <i class="fa-solid fa-face-frown"></i>
+  <i class="fa-solid fa-circle-question"></i>
+</div>

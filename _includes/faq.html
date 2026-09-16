@@ -1,0 +1,21 @@
+{#
+  FAQ block with FAQPage structured data.
+
+  Usage: add a `faq` list to a page's front matter, each item with `q` and `a`
+  (the answer may contain simple HTML such as links), then include this file
+  where the questions should render:
+
+    {% include "faq.html" %}
+
+  Renders nothing when the page has no `faq` list.
+#}
+{% if faq %}
+<section id="faq" class="mt-5">
+  <h2>Frequently asked questions</h2>
+  {% for item in faq %}
+  <h3 class="h5 mt-4">{{ item.q }}</h3>
+  <p>{{ item.a | safe }}</p>
+  {% endfor %}
+</section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for item in faq %}{% if not loop.first %},{% endif %}{"@type":"Question","name":{{ item.q | dump | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ item.a | dump | safe }}}}{% endfor %}]}</script>
+{% endif %}
