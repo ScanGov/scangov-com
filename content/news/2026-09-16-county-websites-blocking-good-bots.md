@@ -37,7 +37,7 @@ We made Up to 3 requests per site. We start with a basic HTTP request using node
 ## What we learned
 
 - 85.2% (2,435 counties) let the bot in.
-- 9.9% (284 counties) turned us away. We encountered firewall , CDN rules and CAPTCHAs.
+- 9.9% (284 counties) turned us away. We encountered firewall , CDN(Content Delivery Network) rules and CAPTCHAs.
 - 3.7% (107 counties) ask bots to stay out in robots.txt. Our bot follows these restrictions and will not interact with the site.
 - 13.7% (391 counties) cannot be read by a well-behaved bot, put together.
 
