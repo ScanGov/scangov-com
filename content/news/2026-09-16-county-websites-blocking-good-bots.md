@@ -14,33 +14,34 @@ topics:
 <script src="/js/chartjs-vendor.js"></script>
 <script src="/js/report-charts-init.js"></script>
 
-Last week we introduced the [good bot scan](/tools/good-bot-scan/), a tool that tells you whether your website lets a well-behaved bot in. This is the follow-up we promised: what happens when that bot knocks on the door of every county government website in the United States.        
+Last week we introduced the good bot scan, a tool that tells you whether your website lets a well-behaved bot in. This is an anaysis of how many county government websites let our well behaved bot scan them.
 
-We keep a list of 2,858 county, parish, and borough homepages. [ScanGovBot](https://scangov.com/bot/) scans every one of them, following robots.txt, waiting between visits, and identifying itself on every single request, including the Lighthouse run. Nothing we send looks like a person's browser. In September 2026 we went back through the whole list to answer one question: is the digital front door open?
+We scanned our list of 2,858 county, parish, and borough websites. Our bot identifies itself clearly as ScanGovBot on every request. We follow all rules in every robots.txt file. We scan slowly so we don't overwhelm a small site with traffic. The rules our bot follows are detailed on our (bot page)[https://scangov.com/bot/]. If our well behaved bot is explicitly denied access we respect that. We do not attempt to circumvent crawling security measures. If our scan requests are denied we will record the failure and stop current scan attempts. We hope that all public websites allow retrieval by well behaved bots.
 
 ## Why this matters
 
-Government websites operate as a public service. Their whole purpose is to be found and read. The bots these sites turn away are not scrapers hammering the server; they are the tools that make public information usable:
+Government websites are a public service. They are created with public resources to be found and read. If our bot is turned away these sites are probably blocking all unknown bots by default. This security stance disables useful public tools. Useful public tools might be:
 
-- search engines and the AI assistants people now use to ask "when is the county clerk open" or "how do I appeal my property assessment"
-- accessibility and quality checkers, like ours
-- link checkers, uptime monitors, archive crawlers and the state and federal tools that inventory government sites
+- AI assistants people might use to ask questions about their county services
+- archive crawlers 
+- tools evaluating web appication quality like ScanGov
 
-A well-behaved bot announces itself, follows robots.txt, and visits slowly. Blocking it by user agent does nothing to a bot that pretends to be Chrome, which is exactly what the abusive ones do. The only bots a user-agent block reliably stops are the honest ones.
+A well-behaved bot announces itself, follows robots.txt, and visits slowly. Site owners may be blocking all bots by default or only letting in a short list of known crawlers. This locks out all the well behaved, less well known tools. It isn't possible to fully lock out Bots not concerned with good behavior. They can take steps to more closely mimic real users.
 
 ## What we scanned
 
-- **100% (2,858 counties)** — every U.S. county, parish, and borough homepage, one per county, compiled and checked by hand over the summer of 2026.
-- **Up to 3 requests per site** — a basic HTTP request, a headless browser, and a Google Lighthouse audit, all identified as ScanGovBot.
-- **September 2026** — checked on ScanGov's regular scan schedule (August or September 2026), plus one fresh request to every homepage on September 13, 2026.
+- All counties where we identified a public website: 2,858 US counties.
+
+We made Up to 3 requests per site. We start with a basic HTTP request using node.js fetch, if that fails we try the same request with headless browser. Then we run a Google Lighthouse audit. All requests identify as ScanGovBot in the user agent header.
 
 ## What we learned
 
-- **85.2% (2,435 counties)** let the bot in — most of the country is doing fine.
-- **9.9% (284 counties)** turn an identified, polite bot away — with a firewall, a content delivery network (CDN) rule, or a captcha.
-- **3.7% (107 counties)** ask bots to stay out in robots.txt — that is the site's call and we honor it, but it has the same effect on the public.
-- **13.7% (391 counties)** cannot be read by a well-behaved bot, put together.
-- Most of the blocking is not a decision a county made. **A handful of hosting platforms and CDN defaults account for most of it.**
+- 85.2% (2,435 counties) let the bot in.
+- 9.9% (284 counties) turned us away. We encountered firewall , CDN(Content Delivery Network) rules and CAPTCHAs.
+- 3.7% (107 counties) ask bots to stay out in robots.txt. Our bot follows these restrictions and will not interact with the site.
+- 13.7% (391 counties) cannot be read by a well-behaved bot, put together.
+
+Most of the blocking is not a decision a county made. A handful of hosting platforms and CDN defaults account for most of it.
 
 {% set chartCaption = "What happens when ScanGovBot asks for a county homepage" %}
 {% set chartSubcaption = "2,858 U.S. county websites, September 2026" %}
@@ -60,13 +61,13 @@ A well-behaved bot announces itself, follows robots.txt, and visits slowly. Bloc
 
 ## What counts as a block          
 
-An audit makes up to three kinds of request, all with the same ScanGovBot identity:
+An audit makes up to three types of requests. Every request identify as ScanGovBot:
 
-- **A basic request.** The kind of HTTP request any script, feed reader, link checker or accessibility tool makes. We use it to read the page's title, description, social tags and reading level.
-- **A headless browser.** If the site refuses the basic request, we try again with a headless Chromium browser, still identified as ScanGovBot.
-- **Lighthouse.** Google's page-quality tool, running in headless Chrome, which produces the accessibility, performance, and best-practice scores.
+- **A basic request.** A server side HTTP fetch call.
+- **A headless browser.** If the site refuses the basic request, we try calling the same url again with a headless Chromium browser. This request still identifies as ScanGovBot.
+- **Lighthouse.** Google's page-quality tool, running in headless Chrome. This tool returns performance metrics and embeds axe core to run accessibility audits.
 
-All three requests carry the same name. The basic request and the headless browser send `Mozilla/5.0 (compatible; ScanGovBot/1.0; +https://scangov.com/bot)`, and Lighthouse sends the same string with ` Lighthouse` appended. Anyone reading a server log can see exactly who visited and follow the link to [our bot page](https://scangov.com/bot/), which explains what the bot does, how often it visits, and how to keep it out if you want to. That is the whole point of a good bot: you never have to guess.
+The basic request and the headless browser send the user agent `Mozilla/5.0 (compatible; ScanGovBot/1.0; +https://scangov.com/bot)`, and Lighthouse sends the same string with ` Lighthouse` appended. Anyone reading a server log can see exactly who visited and follow the link to [our bot page](https://scangov.com/bot/). We are transparent about what the bot does and how to identify it.
 
 That gives us four outcomes for the 284 sites that block something:
 
