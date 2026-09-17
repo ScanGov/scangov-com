@@ -130,6 +130,10 @@ export default async function (eleventyConfig) {
         return param.replace(/\. +/g, ".<br>");
     })
 
+    eleventyConfig.addFilter('numberFormat', (num) => {
+        return Number(num).toLocaleString('en-US');
+    })
+
     eleventyConfig.addFilter('exclude', (arr, key, value) => {
         if (!arr) return [];
         return arr.filter(item => item[key] !== value);

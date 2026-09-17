@@ -57,26 +57,27 @@ isTool: true
           <a href="/bot">ScanGovBot</a>
           can reach your website. It looks at three things:</p>
         <ul>
-          <li>Your robots.txt file, to see if ScanGovBot is allowed in and how long it is asked to wait between visits</li>
+          <li>Your robots.txt file, to see whether it allows ScanGovBot in and how long it asks the bot to wait between visits</li>
           <li>A basic request, like the one your browser makes</li>
-          <li>A full browser, in case the basic request is turned away</li>
+          <li>A full browser, in case the site turns away the basic request</li>
         </ul>
-        <p>If we cannot get in, we cannot scan your site. Other good bots are probably being turned away too.</p>
-        <p>This tool only tells you about ScanGovBot. Another good bot may get a different result on the same site. If we were blocked, check your robots.txt file and your firewall, web application firewall (WAF), and content delivery network (CDN) bot settings. The block may be a setting no one chose.</p>
+        <p>If we cannot get in, we cannot scan your site. The site probably turns away other good bots too.</p>
+        <p>This tool only tells you about ScanGovBot. Another good bot may get a different result on the same site. If your site blocked us, check your robots.txt file and your firewall, web application firewall (WAF), and content delivery network (CDN) bot settings. The block may be a setting no one chose.</p>
         <h2>Common issues</h2>
         <ul>
           <li>Your robots.txt file tells ScanGovBot to stay out, or asks it to wait too long between visits</li>
           <li>A firewall blocks visits that do not come from a person</li>
+          <li>A captcha or "checking your browser" page is shown instead of the page (status 996)</li>
           <li>The server sends back an error, such as 403 or 503</li>
           <li>The site has a security certificate problem</li>
           <li>The site takes too long to answer</li>
         </ul>
-        <h2>Access is nuanced</h2>
+        <h2>Access isn't all-or-nothing</h2>
         <p>A failed check does not always mean your site blocks every good bot. Most sites let some bots in and keep others out in these ways:</p>
         <ul>
           <li>robots.txt: your file can name one bot and tell it to stay out, while the rest are welcome.</li>
           <li>Allow lists: the site lets in a few well-known bots and blocks the rest.</li>
-          <li>Block lists: one bot is named and blocked, while the others still get in.</li>
+          <li>Block lists: the site names and blocks one bot, while the others still get in.</li>
           <li>Firewall defaults: many firewalls and CDNs block bots they do not recognize, even if no one asked them to.</li>
           <li>Traffic limits: a bot you allow can still be shut out for visiting too often, or for the network it comes from.</li>
         </ul>
