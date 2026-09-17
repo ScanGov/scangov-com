@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 date: 2026-09-16
 author: ScanGov
 title: "One in 10 county government websites block good bots"
