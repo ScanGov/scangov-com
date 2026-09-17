@@ -1,56 +1,137 @@
 [
   {
     "title": "Executives",
+    "slug": "executives",
     "icon": "fa-expand",
     "description": "Check your organization's digital performance and risk at a glance.",
-    "detail": "One clear view of compliance, accessibility, and performance across your entire web portfolio — the summary you need before board meetings, budget reviews, or public scrutiny."
+    "detail": "One clear view of compliance, accessibility, and performance across your entire web portfolio — the summary you need before board meetings, budget reviews, or public scrutiny.",
+    "job": "You're accountable for digital performance you can't see day to day. ScanGov turns accessibility, security, and performance into a scorecard you can act on, not just monitor.",
+    "items": [
+      { "title": "One dashboard for every site your organization runs" },
+      { "title": "Grades and trends that translate technical issues into risk" },
+      { "title": "A record you can point to before a board meeting or public scrutiny" },
+      { "title": "No manual audits or waiting on IT for a status update" }
+    ],
+    "relatedFeatures": ["sites-dashboard", "pulse", "scorecards"]
   },
   {
     "title": "Digital service teams",
+    "slug": "digital-service-teams",
     "icon": "fa-code",
     "description": "Monitor, track, and improve website health at scale.",
-    "detail": "Continuous scanning across your entire web portfolio. Accessibility, security, and performance issues surface in a prioritized task list so your team fixes what matters most."
+    "detail": "Continuous scanning across your entire web portfolio. Accessibility, security, and performance issues surface in a prioritized task list so your team fixes what matters most.",
+    "job": "Your team can't fix what it can't see across dozens of sites. ScanGov finds every issue and turns it into a clear, prioritized list — not a pile of raw findings.",
+    "items": [
+      { "title": "A single prioritized tasklist across every site and indicator" },
+      { "title": "Issue reports developers can act on immediately" },
+      { "title": "GitHub integration so issues flow into your existing workflow" },
+      { "title": "Continuous scanning, not a once-a-year audit" }
+    ],
+    "relatedFeatures": ["tasklist", "issue-reports", "github-integration"]
   },
   {
     "title": "Third-party vendors",
+    "slug": "third-party-vendors",
     "icon": "fa-arrow-right-arrow-left",
     "description": "Demonstrate compliance and performance to clients.",
-    "detail": "A verified, shareable compliance record that proves digital standards are being met — building client trust and simplifying renewals."
+    "detail": "A verified, shareable compliance record that proves digital standards are being met — building client trust and simplifying renewals.",
+    "job": "Clients want proof you're meeting the standard, not just your word for it. ScanGov gives you a public, verifiable scorecard that does the convincing for you.",
+    "items": [
+      { "title": "A shareable public scorecard clients can check anytime" },
+      { "title": "A dated changelog that shows steady improvement, not just a snapshot" },
+      { "title": "A built-in feedback loop that builds trust with the people you serve" },
+      { "title": "One less thing to explain at contract renewal" }
+    ],
+    "relatedFeatures": ["scorecards", "changelog", "feedback"]
   },
   {
     "title": "Government leaders",
+    "slug": "government-leaders",
     "icon": "fa-landmark",
     "description": "Get executive visibility into agency digital performance and compliance.",
-    "detail": "Real-time compliance and performance data across all your websites — so you can report progress, spot risk, and decide without waiting on manual audits."
+    "detail": "Real-time compliance and performance data across all your websites — so you can report progress, spot risk, and decide without waiting on manual audits.",
+    "job": "You're responsible for digital performance across agencies you don't manage day to day. ScanGov gives you the visibility to ask the right questions before problems become public.",
+    "items": [
+      { "title": "Real-time compliance and performance data across every agency site" },
+      { "title": "Grades and trends you can report on without waiting for IT" },
+      { "title": "Early visibility into risk, not just after-the-fact incident reports" },
+      { "title": "One shared standard across every team and vendor" }
+    ],
+    "relatedFeatures": ["sites-dashboard", "pulse", "scorecards"]
   },
   {
     "title": "Website managers",
+    "slug": "website-managers",
     "icon": "fa-window-maximize",
     "description": "Identify and fix issues before they impact visitors.",
-    "detail": "Around-the-clock monitoring with alerts for new issues before they affect users — so you can prioritize fixes and show measurable progress."
+    "detail": "Around-the-clock monitoring with alerts for new issues before they affect users — so you can prioritize fixes and show measurable progress.",
+    "job": "You find out about problems when a user reports them or a browser flags them. ScanGov catches accessibility, security, and performance issues before they become someone else's complaint.",
+    "items": [
+      { "title": "Around-the-clock monitoring with alerts on new issues" },
+      { "title": "A status bar showing exactly how many pages still need work" },
+      { "title": "Every issue exportable to CSV, JSON, or Markdown for your team" },
+      { "title": "Clear, prioritized fixes instead of a wall of raw data" }
+    ],
+    "relatedFeatures": ["status-bar", "tasklist", "download-issues"]
   },
   {
     "title": "IT staff",
+    "slug": "it-staff",
     "icon": "fa-terminal",
     "description": "Automate scanning and integrate performance data into your workflows.",
-    "detail": "API access and automated scanning that fits your existing workflows — compliance and performance data flows into the tools your team already uses."
+    "detail": "API access and automated scanning that fits your existing workflows — compliance and performance data flows into the tools your team already uses.",
+    "job": "Manual scans and one-off audits don't scale across dozens of domains. ScanGov automates the scanning and plugs the results straight into the tools your team already uses.",
+    "items": [
+      { "title": "API access for scanning and results, not just a dashboard" },
+      { "title": "Single sign-on through your existing identity provider" },
+      { "title": "Automated URL management that stays in sync as sites change" },
+      { "title": "On-demand rescans whenever you ship a fix" }
+    ],
+    "relatedFeatures": ["single-sign-on", "url-management", "scan-management"]
   },
   {
     "title": "Hosting providers",
+    "slug": "hosting-providers",
     "icon": "fa-server",
     "description": "Prove the value of your hosting environment with verified data.",
-    "detail": "Independent verification of the performance, security, and compliance of your hosted sites — credible third-party data that proves the value of your infrastructure."
+    "detail": "Independent verification of the performance, security, and compliance of your hosted sites — credible third-party data that proves the value of your infrastructure.",
+    "job": "Customers judge your infrastructure by the sites running on it. ScanGov gives you independent, verifiable data that shows exactly how well those sites perform.",
+    "items": [
+      { "title": "Domain-level dashboards for every site you host" },
+      { "title": "Independent, third-party verified performance and security data" },
+      { "title": "A changelog that documents improvement over time" },
+      { "title": "Data you can point to in renewal conversations, not just claims" }
+    ],
+    "relatedFeatures": ["domain-dashboards", "indicator-monitoring", "changelog"]
   },
   {
     "title": "Procurement officers",
+    "slug": "procurement-officers",
     "icon": "fa-file-contract",
     "description": "Evaluate and enforce digital delivery standards across vendor contracts.",
-    "detail": "Objective, verified data on whether vendors are meeting digital requirements — so you can write standards into RFPs and hold vendors accountable at renewal."
+    "detail": "Objective, verified data on whether vendors are meeting digital requirements — so you can write standards into RFPs and hold vendors accountable at renewal.",
+    "job": "RFPs set a digital standard, but there's rarely a way to check whether a vendor actually meets it. ScanGov gives you objective, verified data to write into contracts and enforce at renewal.",
+    "items": [
+      { "title": "Objective scores you can set as a contract requirement" },
+      { "title": "A public scorecard vendors can't dispute or fake" },
+      { "title": "A changelog that shows whether performance improved or slipped" },
+      { "title": "Feedback data that surfaces problems before renewal, not after" }
+    ],
+    "relatedFeatures": ["scorecards", "changelog", "feedback"]
   },
   {
     "title": "Oversight offices",
+    "slug": "oversight-offices",
     "icon": "fa-magnifying-glass-chart",
     "description": "Track digital compliance across agencies and identify systemic issues at the portfolio level.",
-    "detail": "Compliance and performance data across multiple agency websites — so you can identify patterns, prioritize reviews, and report on government-wide digital health."
+    "detail": "Compliance and performance data across multiple agency websites — so you can identify patterns, prioritize reviews, and report on government-wide digital health.",
+    "job": "Spotting systemic problems across dozens of agencies takes more than a spot check. ScanGov gives you portfolio-wide data so you can find patterns, not just one-off findings.",
+    "items": [
+      { "title": "Compliance and performance data across every agency site at once" },
+      { "title": "Trends over time, not a single point-in-time snapshot" },
+      { "title": "A shared standard for comparing agencies fairly" },
+      { "title": "Data that supports a finding, not just an impression" }
+    ],
+    "relatedFeatures": ["sites-dashboard", "indicator-monitoring", "pulse"]
   }
 ]

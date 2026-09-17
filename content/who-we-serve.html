@@ -1,19 +1,22 @@
 ---
 layout: layouts/default
 date: 2026-06-22
-modified: 2026-09-08
+modified: 2026-09-17
 author: ScanGov
-title: "Who Uses ScanGov: State, City, County, and Federal Web Teams"
-description: "ScanGov helps executives, digital service teams, city and county web managers, federal agencies, and vendors monitor and prove government website quality."
+title: "Who Uses ScanGov"
+h1: "Who we serve"
+description: "ScanGov helps executives, digital teams, IT staff, and vendors monitor accessibility, security, and performance across every site they manage."
 ---
 
 <div class="container page-section">
   <div class="row g-4">
     {% for item in who %}
       <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-        <div class="card p-4 w-100 text-center d-flex flex-column align-items-center">
+        <div class="card p-4 w-100 text-center d-flex flex-column align-items-center position-relative">
           <i class="fa-solid {{ item.icon }} fa-3x mt-2 mb-3" aria-hidden="true"></i>
-          <h2 class="h5 mt-2 mb-2">{{ item.title }}</h2>
+          <h2 class="h5 mt-2 mb-2">
+            <a href="/who-we-serve/{{ item.slug }}/" class="stretched-link">{{ item.title }}</a>
+          </h2>
           <p class="small text-body-secondary mb-0">{{ item.description }}</p>
           <p class="small border-top w-100 pt-3 mt-3 mb-0">{{ item.detail }}</p>
         </div>
