@@ -1,0 +1,89 @@
+---
+layout: "layouts/default"
+author: ScanGov
+tags: audience
+wideHero: true
+
+pagination:
+    data: who
+    size: 1
+    alias: audience
+    addAllPagesToCollections: true
+
+breadcrumbParent:
+  - url: "/who-we-serve/"
+    title: "Who we serve"
+
+templateModified: "2026-09-17"
+
+eleventyComputed:
+    title: "{{ audience.title }}"
+    modified: "{{ audience.modified or templateModified }}"
+    permalink: "/who-we-serve/{{ audience.slug }}/"
+    description: "{{ audience.job }}"
+    breadcrumbCurrent: "{{ audience.title }}"
+---
+
+{% if audience.items %}
+<div class="container page-section">
+  <div class="row">
+    <div class="col-12 col-md-8">
+      <h2 class="mb-3">What you get</h2>
+      <ul class="list-unstyled">
+        {% for item in audience.items %}
+          <li class="mb-2"><i class="fa-solid fa-circle-check me-2" aria-hidden="true"></i>{{ item.title }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% if audience.relatedFeatures %}
+<div class="container page-section">
+  <h2>See it in action</h2>
+  <p class="text-body-secondary mb-3">ScanGov features important to {{ audience.title | lower }}.</p>
+  <div class="row g-3">
+    {% for slug in audience.relatedFeatures %}
+      {% for f in features %}
+        {% if f.slug == slug %}
+        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+          <div class="card"><div class="card-body">
+            <i class="fa-solid {{ f.icon }} fa-lg d-block mb-2" aria-hidden="true"></i>
+            <h3 class="h5 mb-2 mt-3"><a href="/features/{{ f.slug }}/" class="stretched-link">{{ f.title }}</a></h3>
+            <p class="card-text small">{{ f.description }}</p>
+          </div></div>
+        </div>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </div>
+  <a href="/features/" class="btn btn-outline-primary mt-3">Features</a>
+</div>
+{% endif %}
+
+<div class="container">
+  <h2 class="mb-3">Who else we serve</h2>
+  <div id="who-pool" style="display:none" aria-hidden="true">
+    {% for item in who %}
+      {% if item.title != audience.title %}
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
+        <div class="card"><div class="card-body">
+          <i class="fa-solid {{ item.icon }} fa-lg d-block mb-2" aria-hidden="true"></i>
+          <h3 class="h4 mb-2 mt-3"><a href="/who-we-serve/{{ item.slug }}/" class="stretched-link">{{ item.title }}</a></h3>
+          <p class="card-text small">{{ item.description }}</p>
+        </div></div>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div class="row g-3" id="who-cards"></div>
+  <a href="/who-we-serve/" class="btn btn-outline-primary">Who we serve</a>
+</div>
+<script>
+(function() {
+  var pool = Array.from(document.getElementById('who-pool').children).slice(0, 6);
+  var target = document.getElementById('who-cards');
+  pool.forEach(function(el) { target.appendChild(el); });
+})();
+</script>

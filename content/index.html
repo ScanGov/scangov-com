@@ -95,9 +95,11 @@ softwareSchema: true
       <div class="row g-3">
         {% for item in who | head(3) %}
           <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
-            <div class="card p-4 text-center d-flex flex-column align-items-center">
+            <div class="card p-4 text-center d-flex flex-column align-items-center position-relative">
               <i class="fa-solid {{ item.icon }} fa-3x mt-2 mb-2" aria-hidden="true"></i>
-              <h3 class="h5 mt-3">{{ item.title }}</h3>
+              <h3 class="h5 mt-3">
+                <a href="/who-we-serve/{{ item.slug }}/" class="stretched-link">{{ item.title }}</a>
+              </h3>
               <p class="small text-body-secondary mb-0">{{ item.description }}</p>
             </div>
           </div>
