@@ -23446,3 +23446,9 @@ blockquote .lead {
 .report-chart-credit {
   margin: .25rem 0 0;
 }
+
+/* "Who's responsible" report section (_includes/who-list.html) — a plain
+   bulleted list of role names from who.json, text only, no icons. */
+.who-list li {
+  margin-bottom: .5rem;
+}
