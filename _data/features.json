@@ -1,27 +1,5 @@
 [
   {
-    "title": "Sites dashboard",
-    "slug": "sites-dashboard",
-    "job": "Gives a web manager one view of every domain the agency runs, so nothing falls through the cracks.",
-    "description": "Monitor every domain you manage from one dashboard, with grades and scores at a glance.",
-    "icon": "fa-table-columns",
-    "video": "zAGistF44Ag",
-    "items": [
-      {
-        "title": "Track multiple domains in one place"
-      },
-      {
-        "title": "See grades and scores at a glance"
-      },
-      {
-        "title": "Drill into any domain for details"
-      },
-      {
-        "title": "Filter and sort every domain by any indicator"
-      }
-    ]
-  },
-  {
     "title": "Indicator monitoring",
     "slug": "indicator-monitoring",
     "job": "Tells your team which of the four indicators is dragging a grade down and which standards are behind it.",
@@ -115,6 +93,28 @@
       },
       {
         "title": "Filter page issues by indicator"
+      }
+    ]
+  },
+  {
+    "title": "Broken links",
+    "slug": "broken-links",
+    "job": "Finds dead links on your site before your visitors do, so they land on the page they wanted, not a dead end.",
+    "description": "Find broken links across your site, recheck them after a fix, and track which ones need a second look.",
+    "icon": "fa-link-slash",
+    "docsPath": "/status/",
+    "items": [
+      {
+        "title": "Flags confirmed broken, likely broken, and needs-review links"
+      },
+      {
+        "title": "One-click recheck re-verifies a link without a full site rescan"
+      },
+      {
+        "title": "Dismiss known false positives so they stop showing up"
+      },
+      {
+        "title": "Detects redirects and login-required links, not just 404s"
       }
     ]
   },
@@ -255,6 +255,28 @@
       },
       {
         "title": "Track redirected and retired pages separately"
+      }
+    ]
+  },
+  {
+    "title": "Sites dashboard",
+    "slug": "sites-dashboard",
+    "job": "Gives a web manager one view of every domain the agency runs, so nothing falls through the cracks.",
+    "description": "Monitor every domain you manage from one dashboard, with grades and scores at a glance.",
+    "icon": "fa-table-columns",
+    "video": "zAGistF44Ag",
+    "items": [
+      {
+        "title": "Track multiple domains in one place"
+      },
+      {
+        "title": "See grades and scores at a glance"
+      },
+      {
+        "title": "Drill into any domain for details"
+      },
+      {
+        "title": "Filter and sort every domain by any indicator"
       }
     ]
   },
