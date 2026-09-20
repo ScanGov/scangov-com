@@ -165,10 +165,6 @@
     <lastmod>2026-09-17</lastmod>
   </url>
   <url>
-    <loc>https://scangov.com/features/sites-dashboard/</loc>
-    <lastmod>2026-09-06</lastmod>
-  </url>
-  <url>
     <loc>https://scangov.com/features/indicator-monitoring/</loc>
     <lastmod>2026-09-06</lastmod>
   </url>
@@ -186,6 +182,10 @@
   </url>
   <url>
     <loc>https://scangov.com/features/pages/</loc>
+    <lastmod>2026-09-06</lastmod>
+  </url>
+  <url>
+    <loc>https://scangov.com/features/broken-links/</loc>
     <lastmod>2026-09-06</lastmod>
   </url>
   <url>
@@ -214,6 +214,10 @@
   </url>
   <url>
     <loc>https://scangov.com/features/url-management/</loc>
+    <lastmod>2026-09-06</lastmod>
+  </url>
+  <url>
+    <loc>https://scangov.com/features/sites-dashboard/</loc>
     <lastmod>2026-09-06</lastmod>
   </url>
   <url>
