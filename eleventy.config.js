@@ -14,6 +14,7 @@ import * as fs from 'fs';
 import CleanCSS from "clean-css";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import htmlmin from "html-minifier-terser";
+import { execSync } from "child_process";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function (eleventyConfig) {
@@ -23,6 +24,17 @@ export default async function (eleventyConfig) {
     // not .gitignore, which would otherwise stop the dev server from
     // rebuilding them on change.
     eleventyConfig.setUseGitIgnore(false);
+
+    // Rebuild scripts/bundle.css from its sources before every build (and
+    // every --serve rebuild), so editing public/css/scangov.css can never
+    // serve a stale inlined <style> block again - the cssinliner transform
+    // below reads bundle.css from disk, and previously required someone to
+    // remember to run `npm run concat:css` by hand first.
+    const { scripts: pkgScripts } = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
+    eleventyConfig.on('eleventy.before', () => {
+        execSync(pkgScripts['concat:css'], { stdio: 'inherit' });
+    });
+    eleventyConfig.addWatchTarget('public/css/*.css');
 
     eleventyConfig.addPlugin(fontAwesomePlugin);
     eleventyConfig.addPlugin(rssPlugin);
