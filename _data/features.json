@@ -94,15 +94,15 @@
   {
     "title": "Broken links",
     "slug": "broken-links",
-    "description": "Find broken links across your site, recheck them after a fix, and track which ones need a second look.",
+    "description": "Find broken links across your site, rescan them after a fix, and track which ones need a second look.",
     "icon": "fa-link-slash",
-    "docsPath": "/status/",
+    "docsPath": "/broken-links/",
     "items": [
       {
         "title": "Flags confirmed broken, likely broken, and needs-review links"
       },
       {
-        "title": "One-click recheck re-verifies a link without a full site rescan"
+        "title": "Export the list as CSV or Markdown, or copy it straight into a spreadsheet"
       },
       {
         "title": "Dismiss known false positives so they stop showing up"
