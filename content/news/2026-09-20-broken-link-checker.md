@@ -12,14 +12,17 @@ We built the broken link checker to find dead links across your site automatical
 
 ## What it does
 
-The broken link checker reviews every link found while scanning your site and flags the ones that fail. Each link gets one status badge that combines what we found with our confidence in it. The <a href="https://docs.scangov.org/broken-links/">broken links docs</a> explain how it works.
+The broken link checker reviews every link found while scanning your site and flags the ones that fail. Each link gets one status badge that combines what we found with our confidence in it.
 
 ## How it works
 
 - ScanGov checks every link found on your pages during a scan.
 - Links that fail get a confidence badge: Broken, Probably broken, or Needs review.
-- Recheck a single link with one click instead of waiting for the next full scan.
+- Rescan a single link with one click instead of waiting for the next full scan.
 - Dismiss a link once you've confirmed it's a false positive, so it stops showing up.
+- Download the list as CSV or Markdown, or copy it straight into a spreadsheet.
+
+The <a href="https://docs.scangov.org/broken-links/">broken links docs</a> explain how it works.
 
 ## Find your broken links
 
