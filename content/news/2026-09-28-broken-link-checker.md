@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 date: 2026-09-28
 author: ScanGov
 title: "Introducing the broken link checker"
