@@ -1,6 +1,6 @@
 ---
 draft: true
-date: 2026-09-20
+date: 2026-09-28
 author: ScanGov
 title: "Introducing the broken link checker"
 description: "ScanGov's new tool to find broken links across your site, so you can fix them before your visitors run into them."
@@ -20,7 +20,8 @@ The broken link checker reviews every link found while scanning your site and fl
 - Links that fail get a confidence badge: Broken, Probably broken, or Needs review.
 - Rescan a single link with one click instead of waiting for the next full scan.
 - Dismiss a link once you've confirmed it's a false positive, so it stops showing up.
-- Download the list as CSV or Markdown, or copy it straight into a spreadsheet.
+- Download the list as a .csv or .md file.
+- Copy the list straight into a spreadsheet with one click.
 
 The <a href="https://docs.scangov.org/broken-links/">broken links docs</a> explain how it works.
 
