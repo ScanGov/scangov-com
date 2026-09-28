@@ -61,6 +61,12 @@ eleventyComputed:
           loading="lazy"
           allowfullscreen></iframe>
       </div>
+      {% if transcripts[feature.video] %}
+      <div class="mt-3">
+        {% set transcriptId = feature.video %}
+        {% include "transcript.html" %}
+      </div>
+      {% endif %}
     </div>
     {% endif %}
   </div>

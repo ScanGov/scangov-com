@@ -69,6 +69,7 @@
       "embedUrl": {{ ("https://www.youtube.com/embed/" + video) | dump | safe }},
       "thumbnailUrl": {{ ("https://i.ytimg.com/vi/" + video + "/hqdefault.jpg") | dump | safe }},
       "uploadDate": {{ date | dump | safe }},
+      {% if transcripts[video] %}"transcript": {{ transcripts[video] | join(" ") | dump | safe }},{% endif %}
       {% endif %}
       "author": {
         "@type": "Organization",

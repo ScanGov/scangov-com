@@ -2,6 +2,7 @@
 draft: false
 date: 2026-09-28
 author: ScanGov
+video: zyHFV-zhK-A
 title: "Introducing the broken link checker"
 description: "ScanGov's new tool to find broken links across your site, so you can fix them before your visitors run into them."
 topics:
