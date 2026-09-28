@@ -96,6 +96,7 @@
     "slug": "broken-links",
     "description": "Find broken links across your site, rescan them after a fix, and track which ones need a second look.",
     "icon": "fa-link-slash",
+    "video": "zyHFV-zhK-A",
     "docsPath": "/broken-links/",
     "items": [
       {

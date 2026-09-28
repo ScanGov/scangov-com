@@ -9,7 +9,7 @@ description: ""
 # ogImageAlt: ""
 # img_caption: ""
 # img_link:
-# video: youtube-id-here
+# video: youtube-id-here  (transcript, if any, goes in _data/transcripts.json keyed by this ID)
 topics:
   -
 ---
