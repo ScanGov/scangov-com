@@ -340,5 +340,23 @@
         "title": "Shown on the dashboard, indicator pages, and its own page"
       }
     ]
+  },
+  {
+    "title": "Video accessibility",
+    "slug": "video-accessibility",
+    "description": "Find videos without captions and embeds without titles, then fix them from your prioritized tasklist.",
+    "icon": "fa-video",
+    "docsPath": "/video-accessibility/",
+    "items": [
+      {
+        "title": "Captions check on every page video"
+      },
+      {
+        "title": "Title check on embedded video players"
+      },
+      {
+        "title": "Video issues in the prioritized tasklist"
+      }
+    ]
   }
 ]
