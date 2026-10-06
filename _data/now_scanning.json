@@ -1,9 +1,21 @@
 [
     {
+        "title": "proudlyservingbook.com",
+        "slug": "proudlyservingbook-com",
+        "page_title": "Now scanning ... proudlyservingbook.com",
+        "description": "A ScanGov review of proudlyservingbook.com: accessibility, security, usability, and AI-readiness scores and a video walkthrough.",
+        "date": "2026-10-06",
+        "url": "https://proudlyservingbook.com",
+        "img": "proudlyservingbook-com.png",
+        "video": "db3LIy7VHrs",
+        "profile": false,
+        "ogImage": "pages/proudlyservingbook-com.png"
+    },
+    {
         "title": "maryland.gov",
         "slug": "maryland-gov",
-        "page_title": "maryland.gov government website scorecard and review",
-        "description": "A ScanGov review of maryland.gov: accessibility, security, usability, and AI-readiness scores, a video walkthrough, and links to its public scorecards.",
+        "page_title": "Now scanning ... maryland.gov",
+        "description": "A ScanGov review of maryland.gov: accessibility, security, usability, and AI-readiness scores and a video walkthrough.",
         "date": "2025-10-27",
         "url": "https://maryland.gov",
         "img": "maryland-gov.png",
@@ -14,8 +26,8 @@
     {
         "title": "colorado.gov",
         "slug": "colorado-gov",
-        "page_title": "colorado.gov government website scorecard and review",
-        "description": "A ScanGov review of colorado.gov: accessibility, security, usability, and AI-readiness scores, a video walkthrough, and links to its public scorecards.",
+        "page_title": "Now scanning ... colorado.gov",
+        "description": "A ScanGov review of colorado.gov: accessibility, security, usability, and AI-readiness scores and a video walkthrough.",
         "date": "2025-10-13",
         "url": "https://colorado.gov",
         "img": "colorado-gov.png",
@@ -26,8 +38,8 @@
     {
         "title": "nyc.gov",
         "slug": "nyc-gov",
-        "page_title": "nyc.gov government website scorecard and review",
-        "description": "A ScanGov review of nyc.gov: accessibility, security, usability, and AI-readiness scores, a video walkthrough, and links to its public scorecards.",
+        "page_title": "Now scanning ... nyc.gov",
+        "description": "A ScanGov review of nyc.gov: accessibility, security, usability, and AI-readiness scores and a video walkthrough.",
         "date": "2025-08-25",
         "url": "https://nyc.gov",
         "img": "nyc-gov.png",
@@ -38,8 +50,8 @@
     {
         "title": "georgia.gov",
         "slug": "georgia-gov",
-        "page_title": "georgia.gov government website scorecard and review",
-        "description": "A ScanGov review of georgia.gov: accessibility, security, usability, and AI-readiness scores, a video walkthrough, and links to its public scorecards.",
+        "page_title": "Now scanning ... georgia.gov",
+        "description": "A ScanGov review of georgia.gov: accessibility, security, usability, and AI-readiness scores and a video walkthrough.",
         "date": "2025-08-18",
         "url": "https://georgia.gov",
         "img": "georgia-gov.png",
@@ -50,8 +62,8 @@
     {
         "title": "ms.gov",
         "slug": "ms-gov",
-        "page_title": "ms.gov government website scorecard and review",
-        "description": "A ScanGov review of ms.gov: accessibility, security, usability, and AI-readiness scores, a video walkthrough, and links to its public scorecards.",
+        "page_title": "Now scanning ... ms.gov",
+        "description": "A ScanGov review of ms.gov: accessibility, security, usability, and AI-readiness scores and a video walkthrough.",
         "date": "2025-08-12",
         "url": "https://ms.gov",
         "img": "ms-gov.png",
@@ -62,8 +74,8 @@
     {
         "title": "texas.gov",
         "slug": "texas-gov",
-        "page_title": "texas.gov government website scorecard and review",
-        "description": "A ScanGov review of texas.gov: accessibility, security, usability, and AI-readiness scores, a video walkthrough, and links to its public scorecards.",
+        "page_title": "Now scanning ... texas.gov",
+        "description": "A ScanGov review of texas.gov: accessibility, security, usability, and AI-readiness scores and a video walkthrough.",
         "date": "2025-08-04",
         "url": "https://texas.gov",
         "img": "texas-gov.png",
