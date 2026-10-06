@@ -28,9 +28,11 @@ eleventyComputed:
       <a href="{{ website.scorecard }}">ScanGov {{ website.title }} scorecard</a>
     </li>
   {% endif %}
-  <li>
-    <a href="https://scangov.org/profile/{{ website.slug }}/overall/">Project ScanGov profile for {{ website.title }}</a>
-  </li>
+  {% if website.profile != false %}
+    <li>
+      <a href="https://scangov.org/profile/{{ website.slug }}/overall/">Project ScanGov profile for {{ website.title }}</a>
+    </li>
+  {% endif %}
   <li>
     <a
       href="{{ website.url }}"
