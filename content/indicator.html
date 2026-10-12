@@ -12,7 +12,7 @@ breadcrumbParent:
   - url: "/indicators/"
     title: "Indicators"
 
-templateModified: "2026-09-06"
+templateModified: "2026-10-11"
 
 eleventyComputed:
     title: "{{ indicator.pageTitle }}"
@@ -62,7 +62,7 @@ eleventyComputed:
         <div class="card-body">
           <i class="fa-solid fa-bolt fa-lg d-block mb-2"></i>
           <h2>What</h2>
-          <p>ScanGov uses {{ indicator.standards.length }} {{ indicator.name | lower }} standards to help monitor and fix {{ indicator.what }}.</p>
+          <p>ScanGov uses {{ indicator.standards.length }} {{ indicator.name | lower }} standard{% if indicator.standards.length != 1 %}s{% endif %} to help monitor and fix {{ indicator.what }}.</p>
         </div>
       </div>
     </div>
@@ -86,29 +86,6 @@ eleventyComputed:
     </div>
   </div>
 </div>
-{% if indicator.topics and indicator.topics.length %}
-<div class="container page-section">
-  <div class="row">
-    <div class="col-12">
-      <h2>Topics</h2>
-      <p>Guides to the biggest {{ indicator.name | lower }} topics.</p>
-      <div class="row g-3">
-        {% for topic in indicator.topics %}
-        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
-          <div class="card">
-            <div class="card-body">
-              <i class="fa-solid fa-book-open-reader fa-lg d-block mb-2" aria-hidden="true"></i>
-              <h3 class="h4 mb-2 mt-3"><a href="{{ topic.url }}" class="stretched-link">{{ topic.title }}</a></h3>
-              <p class="card-text small">{{ topic.description }}</p>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</div>
-{% endif %}
 <div class="container page-section">
   <div class="row">
     <div class="col-12">
@@ -197,8 +174,9 @@ eleventyComputed:
     </div>
   </div>
 {% endif %} #}
+{% if indicator.extraInclude %}{% include indicator.extraInclude %}{% endif %}
 <div class="container">
   <h2 class="mb-3">Indicators</h2>
-  <p>The four key areas ScanGov monitors.</p>
+  <p>The key areas ScanGov monitors on every scan.</p>
   {% include "indicator_list.html" %}
 </div>

@@ -4,10 +4,10 @@ date: 2025-07-01
 modified: 
 author: ScanGov
 title: "About"
-description: "ScanGov monitors government websites against open accessibility, botability, security, and usability standards, and publishes the results as public scorecards."
+description: "ScanGov monitors government websites against open accessibility, botability, security, usability, and readability standards, and publishes the results as public scorecards."
 ---
 
-[ScanGov](/) is a digital experience platform that helps organizations monitor, improve, and maintain their websites. We use automated scanning based on [accessibility](/accessibility), [botability](/botability), [security](/security), and [usability](/usability) standards to help teams deliver better online services to their users.
+[ScanGov](/) is a digital experience platform that helps organizations monitor, improve, and maintain their websites. We use automated scanning based on [accessibility](/accessibility), [botability](/botability), [security](/security), [usability](/usability), and [readability](/readability) standards to help teams deliver better online services to their users.
 
 We maintain [Project ScanGov](https://scangov.org), [ScanGov Standards](https://standards.scangov.org/), and [ScanGovBot](/bot).
 

@@ -22,6 +22,7 @@ The scans evaluate key [government digital experience indicators](https://scango
 - [Botability](https://scangov.com/botability/)
 - [Security](https://scangov.com/security)
 - [Usability](https://scangov.com/usability/)
+- [Readability](https://scangov.com/readability/)
 
 ## About GovX
 

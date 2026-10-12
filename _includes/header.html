@@ -30,11 +30,10 @@
     {% if title %}<meta property="og:title" content="{{ title }}">{% endif %}
     {% if description %}<meta property="og:description" content="{{ description }}">{% endif %}
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-    {% if ogImage %}
-    <meta property="og:image" content="{{ site.url }}/assets/img/{{ ogImage }}">
-    {% else %}
-    <meta property="og:image" content="https://scangov.com/assets/img/avatar-og.png">
-    {% endif %}
+    {#- ogImage is either a path under /assets/img/ (pages, posts) or an absolute URL (audits.json topic ogImage). -#}
+    {% set ogImageUrl = "https://scangov.com/assets/img/avatar-og.png" %}
+    {% if ogImage %}{% set ogImageUrl = ogImage if "://" in ogImage else site.url + "/assets/img/" + ogImage %}{% endif %}
+    <meta property="og:image" content="{{ ogImageUrl }}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     {% if ogImageAlt %}
@@ -85,7 +84,7 @@
           "url": "https://scangov.com/assets/img/avatar-og.png"
         }
       }
-      {% if ogImage %},"image": {{ (site.url + "/assets/img/" + ogImage) | dump | safe }}{% endif %}
+      {% if ogImage %},"image": {{ ogImageUrl | dump | safe }}{% endif %}
     }
     </script>
     {% elif not schema %}

@@ -122,7 +122,7 @@ TODO: one row per TODO:
 
 ## About ScanGov
 
-ScanGov monitors websites for [AI-readiness](/botability/), [accessibility](/accessibility/), [security](/security/), and [usability](/usability/), and helps teams build better digital experiences. [Learn more about ScanGov](/about).
+ScanGov monitors websites for [AI-readiness](/botability/), [accessibility](/accessibility/), [security](/security/), [usability](/usability/), and [readability](/readability/), and helps teams build better digital experiences. [Learn more about ScanGov](/about).
 `;
 
 fs.writeFileSync(filePath, frontmatter + body);

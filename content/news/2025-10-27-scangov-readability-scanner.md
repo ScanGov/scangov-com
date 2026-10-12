@@ -7,7 +7,7 @@ ogImageAlt: "Readability scanner"
 topics:
   - ScanGov
 indicators:
-  - usability
+  - readability
 ---
 
 ScanGov is proud to introduce our free [readability scanner](https://scangov.com/tools/readability) to help website managers evaluate content readability.
