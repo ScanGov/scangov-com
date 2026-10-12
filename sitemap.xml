@@ -58,7 +58,7 @@
   </url>
   <url>
     <loc>https://scangov.com/indicators/</loc>
-    <lastmod>2026-09-08T00:00:00.000Z</lastmod>
+    <lastmod>2026-10-11T00:00:00.000Z</lastmod>
   </url>
   <url>
     <loc>https://scangov.com/news/</loc>
@@ -119,10 +119,6 @@
   <url>
     <loc>https://scangov.com/news/introducing-the-good-bot-scan/</loc>
     <lastmod>2026-09-08T00:00:00.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://scangov.com/usability/readability/</loc>
-    <lastmod>2026-09-13T00:00:00.000Z</lastmod>
   </url>
   <url>
     <loc>https://scangov.com/news/one-in-ten-county-websites-blocks-good-bots/</loc>
@@ -245,20 +241,24 @@
     <lastmod>2026-09-06</lastmod>
   </url>
   <url>
-    <loc>https://scangov.com/botability/</loc>
-    <lastmod>2026-09-06</lastmod>
-  </url>
-  <url>
     <loc>https://scangov.com/accessibility/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://scangov.com/usability/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <loc>https://scangov.com/botability/</loc>
+    <lastmod>2026-10-11</lastmod>
   </url>
   <url>
     <loc>https://scangov.com/security/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-10-11</lastmod>
+  </url>
+  <url>
+    <loc>https://scangov.com/usability/</loc>
+    <lastmod>2026-10-11</lastmod>
+  </url>
+  <url>
+    <loc>https://scangov.com/readability/</loc>
+    <lastmod>2026-10-11</lastmod>
   </url>
   <url>
     <loc>https://scangov.com/now-scanning/proudlyservingbook-com/</loc>
