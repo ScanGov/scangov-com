@@ -1,6 +1,6 @@
 <div class="row g-3">
-  {% for item in indicators | sort(false, false, 'name') %}
-    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 d-flex align-items-stretch">
+  {% for item in indicators %}
+    <div class="col-12 col-sm-6 col-md-4 col-lg d-flex align-items-stretch">
       <div class="card p-4 w-100 text-center d-flex flex-column align-items-center">
         <a href="/{{ item.link }}" class="nav-link stretched-link">
           <i

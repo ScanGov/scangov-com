@@ -1,45 +1,9 @@
----
-layout: "layouts/default"
-title: "Government website readability"
-description: "How readable US government websites are, what grade level to aim for, what the law requires, and how ScanGov scores readability on every page it scans."
-permalink: /usability/readability/
-date: 2026-09-13
-modified: 2026-09-13
-breadcrumbParent:
-  - url: "/indicators/"
-    title: "Indicators"
-  - url: "/usability/"
-    title: "Usability"
-breadcrumbCurrent: "Readability"
-faq:
-  - q: What is the difference between the Automated Readability Index and Flesch-Kincaid?
-    a: >-
-      Both estimate the US school grade a reader needs. ARI uses characters per word and words per
-      sentence; Flesch-Kincaid uses syllables per word and words per sentence. They usually land
-      within a grade of each other. ScanGov records both and scores the pass or fail on ARI.
-  - q: Does readability count toward accessibility compliance?
-    a: >-
-      WCAG 2.2 has a reading level criterion (3.1.5) at Level AAA, above the Level AA the ADA
-      Title II rule requires, so a hard-to-read page does not by itself fail Title II. It does fail
-      the people the rule exists for. Plain language is the standard federal sites are held to
-      under the Plain Writing Act and 21st Century IDEA, and most state and local style guides adopt
-      it.
-  - q: Why does my site fail readability on its ScanGov scorecard?
-    a: >-
-      The public scorecard on scangov.org scores the homepage, and homepages are mostly links and
-      labels, which read as fragments. A fail there means the homepage text rounds above grade 8.
-      A ScanGov subscription scans every page, so you can see which pages actually carry the
-      hard-to-read prose and fix those first.
-  - q: How often is readability re-scored?
-    a: >-
-      Public scorecards on scangov.org are refreshed on ScanGov's regular scan schedule, and each
-      profile's Pulse view charts the homepage's indicators over time. Sites monitored in the
-      ScanGov product are scanned on their plan's cadence, and the readability section under
-      usability lists every page above the target grade after each scan, so a content team can
-      measure the effect of a rewrite page by page.
----
-
-<div class="container">
+{#
+  Hand-written sections for the readability indicator page, rendered by
+  content/indicator.html after the generic sections (set as `extraInclude`
+  in _data/indicators.js). The FAQ list lives on the indicator entry too.
+#}
+<div class="container page-section">
   <div class="row">
     <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
     <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
@@ -66,7 +30,7 @@ faq:
 
       <section class="mt-5" id="how-sites-score">
         <h2>How government websites score</h2>
-        <p>ScanGov has readability scores for the homepages of 3,792 US government websites, as of
+        <p>ScanGov has readability scores for the homepages of 3,792 U.S. government websites, as of
           September 2026. About six in ten meet the grade-8 standard ScanGov scores against. About
           one in three meet the grade-6 target that experienced government content teams set for
           themselves.</p>
@@ -97,8 +61,8 @@ faq:
           they are mostly navigation; interior pages with real prose usually score higher grades,
           which is where the work is.</p>
         <p>Every site in that count has a public scorecard on
-          <a href="https://scangov.org/">scangov.org</a>, with readability among its usability
-          checks. Browse the <a href="https://scangov.org/rankings/usability/">usability
+          <a href="https://scangov.org/">scangov.org</a>, with a readability score of its own.
+          Browse the <a href="https://scangov.org/rankings/readability/">readability
           rankings</a> to find yours.</p>
       </section>
 
@@ -109,9 +73,10 @@ faq:
           the <a href="https://standards.scangov.org/automated-readability-index/">Automated
           Readability Index</a> and
           <a href="https://standards.scangov.org/flesch-kincaid/">Flesch-Kincaid</a>. A page passes
-          when its ARI rounds to grade 8 or below. The score sits in the
-          <a href="/usability/">usability</a> indicator alongside page titles, descriptions, mobile
-          viewport and Core Web Vitals.</p>
+          when its ARI rounds to grade 8 or below. Readability is its own indicator, scored
+          alongside <a href="/accessibility/">accessibility</a>, <a href="/botability/">botability</a>,
+          <a href="/security/">security</a>, and <a href="/usability/">usability</a>, so a site's
+          plain-language work shows up as a grade of its own rather than one check among many.</p>
         <p>Check any single page with the free
           <a href="/tools/readability/">readability checker</a>. It uses the same formulas and the
           same pass rule as the scan, and shows the exact text it scored.</p>
@@ -142,7 +107,7 @@ faq:
           <li>The <a href="https://standards.scangov.org/21stcenturyidea/">21st Century Integrated
             Digital Experience Act (IDEA)</a>, implemented by an Office of Management and Budget
             (OMB) memo, M-23-22, requires federal websites to use plain language, and the
-            <a href="https://standards.scangov.org/federal-website-standards/">US federal website
+            <a href="https://standards.scangov.org/federal-website-standards/">U.S. federal website
             standards</a> carry it into design guidance.</li>
           <li>Web Content Accessibility Guidelines (WCAG) 2.2 success criterion
             <a href="https://www.w3.org/WAI/WCAG22/Understanding/reading-level.html">3.1.5 Reading
@@ -162,12 +127,13 @@ faq:
             homepage indicators over time in the profile's Pulse view, free, for every scanned
             government site.</li>
           <li>The ScanGov monitoring product scans every page of the site and has a
-            <a href="/features/readability/">readability section</a> under usability that lists
+            <a href="/features/readability/">readability section</a> that lists
             the pages written above the target grade, so the team can work through them and watch
             the list shrink as pages are rewritten, and catch new content that slips.</li>
         </ul>
       </section>
 
+      {% set faq = indicator.faq %}
       {% include "faq.html" %}
 
     </div>
