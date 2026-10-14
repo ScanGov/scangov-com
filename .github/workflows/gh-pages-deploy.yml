@@ -37,6 +37,16 @@ jobs:
       - run: npm run build
       - run: node scripts/check-sitemap-completeness.js
 
+      # Audit the built site against ScanGov standards before it deploys.
+      # Report only: results go to the job summary and never hold up the
+      # deploy. Add `block: true` under `with:` to gate the deploy on a
+      # clean audit. https://github.com/ScanGov/action
+      - name: ScanGov audit
+        uses: ScanGov/action@v1.0.1
+        with:
+          site-dir: _site
+          canonical-domain: scangov.com
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/main'
