@@ -42,7 +42,7 @@ jobs:
       # deploy. Add `block: true` under `with:` to gate the deploy on a
       # clean audit. https://github.com/ScanGov/action
       - name: ScanGov audit
-        uses: ScanGov/action@v1.0.1
+        uses: ScanGov/action@v1.0.2
         with:
           site-dir: _site
           canonical-domain: scangov.com
