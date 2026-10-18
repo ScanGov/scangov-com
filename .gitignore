@@ -7,3 +7,7 @@ content/news/drafts/
 # Claude Code local/generated content
 .claude/
 docs/plans/
+
+# CI audit reports (ramp-check and the ScanGov action)
+ramp-check-report/
+scangov-report/

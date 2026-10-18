@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write   # ramp-check posts one PR comment with its report
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
@@ -37,15 +38,38 @@ jobs:
       - run: npm run build
       - run: node scripts/check-sitemap-completeness.js
 
-      # Audit the built site against ScanGov standards before it deploys.
-      # Report only: results go to the job summary and never hold up the
-      # deploy. Add `block: true` under `with:` to gate the deploy on a
-      # clean audit. https://github.com/ScanGov/action
+      # Two audits before the deploy. ramp-check owns accessibility (axe plus
+      # motion, keyboard, reflow, text spacing, consistency); the ScanGov
+      # action covers the other four topics, so nothing is reported twice.
+      # Both write to the job summary; ramp-check also comments on PRs.
+
+      # ramp-check needs the site reachable over HTTP. Python ships on the
+      # runner, so no extra dependency. Port and pages: ramp-check.config.js
+      - name: Serve the built site
+        run: |
+          python3 -m http.server 8080 --directory _site --bind 127.0.0.1 >/dev/null 2>&1 &
+          for i in $(seq 1 20); do curl -fs http://127.0.0.1:8080/ >/dev/null && break; sleep 0.5; done
+
+      # continue-on-error until a baseline is recorded (npm run a11y:baseline,
+      # commit a11y-baseline.json); after that remove it so new accessibility
+      # findings fail the job. https://github.com/Mayor-s-Office-of-Innovation/ramp-check
+      - name: Accessibility (ramp-check)
+        uses: Mayor-s-Office-of-Innovation/ramp-check/action@main
+        continue-on-error: true
+        with:
+          config: ramp-check.config.js
+
+      # Audit the built site against ScanGov standards. Accessibility is
+      # left out of topics because ramp-check covers it. Report only: results
+      # go to the job summary and never hold up the deploy. Add `block: true`
+      # and a `fail-on` topic under `with:` to gate the deploy.
+      # https://github.com/ScanGov/action
       - name: ScanGov audit
-        uses: ScanGov/action@v1.0.2
+        uses: ScanGov/action@v1.0.4
         with:
           site-dir: _site
           canonical-domain: scangov.com
+          topics: usability,botability,security,readability
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
