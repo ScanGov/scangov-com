@@ -11,6 +11,26 @@ export default function(eleventyConfig) {
 		return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat('yyyy-LL-dd');
 	});
 
+	// Scan results: "2026-10-16" -> "Oct 16, 2026"
+	eleventyConfig.addFilter("shortDate", (isoDate) => {
+		return DateTime.fromISO(String(isoDate), { zone: "utc" }).toFormat("LLL d, yyyy");
+	});
+
+	// Scan results: same thresholds as the share text in my.scangov.com
+	eleventyConfig.addFilter("gradeLetter", (score) => {
+		if (score >= 90) return "A";
+		if (score >= 80) return "B";
+		if (score >= 70) return "C";
+		if (score >= 60) return "D";
+		return "F";
+	});
+
+	eleventyConfig.addFilter("gradeEmoji", (score) => {
+		if (score >= 90) return "🟢";
+		if (score >= 70) return "🟡";
+		return "🔴";
+	});
+
 	// Get the first `n` elements of a collection.
 	eleventyConfig.addFilter("head", (array, n) => {
 		if(!Array.isArray(array) || array.length === 0) {

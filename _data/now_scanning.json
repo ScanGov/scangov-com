@@ -6,9 +6,23 @@
         "description": "A ScanGov review of alaska.gov: accessibility, security, usability, AI-readiness, and readability scores and a video walkthrough.",
         "date": "2026-10-20",
         "url": "https://alaska.gov",
+        "scorecard": "https://my.scangov.com/public/key5279-1751598352407/alaska-gov/report",
         "img": "alaska-gov.png",
         "video": "EkncD11cGh8",
-        "ogImage": "pages/alaska-gov.png"
+        "ogImage": "pages/alaska-gov.png",
+        "results": {
+            "scanDate": "2026-10-16",
+            "pages": 4,
+            "scores": {
+                "overall": 65,
+                "accessibility": 88,
+                "botability": 84,
+                "readability": 75,
+                "security": 84,
+                "usability": 37
+            },
+            "brokenLinks": 2
+        }
     },
     {
         "title": "proudlyservingbook.com",
