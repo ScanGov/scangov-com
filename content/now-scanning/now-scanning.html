@@ -22,15 +22,39 @@ eleventyComputed:
     date: "{{ website.date }}"
 ---
 
+{% if website.results %}
+<p>Scan results for {{ website.title }} ({{ website.results.scanDate | shortDate }} / {{ website.results.pages }} {% if website.results.pages == 1 %}page{% else %}pages{% endif %}):</p>
+{% set scoreTopics = [
+  ["overall", "Overall"],
+  ["accessibility", "Accessibility"],
+  ["botability", "Botability"],
+  ["readability", "Readability"],
+  ["security", "Security"],
+  ["usability", "Usability"]
+] %}
+<ul class="list-unstyled">
+  {% for topic in scoreTopics %}
+    {% set score = website.results.scores[topic[0]] %}
+    {% if score is defined %}
+      <li>{{ score | gradeEmoji }} {{ topic[1] }} ({{ score | gradeLetter }} / {{ score }}%)</li>
+    {% endif %}
+  {% endfor %}
+  {% if website.results.brokenLinks is defined %}
+    <li>🔗 Broken links ({{ website.results.brokenLinks }})</li>
+  {% endif %}
+</ul>
+{% endif %}
+
+<p>Learn more:</p>
 <ul>
   {% if website.scorecard %}
     <li>
-      <a href="{{ website.scorecard }}">ScanGov {{ website.title }} scorecard</a>
+      <a href="{{ website.scorecard }}">{{ website.title }} ScanGov scorecard</a>
     </li>
   {% endif %}
   {% if website.profile != false %}
     <li>
-      <a href="https://scangov.org/profile/{{ website.slug }}/overall/">Project ScanGov profile for {{ website.title }}</a>
+      <a href="https://scangov.org/profile/{{ website.slug }}/overall/">{{ website.title }} Project ScanGov profile</a>
     </li>
   {% endif %}
   <li>
