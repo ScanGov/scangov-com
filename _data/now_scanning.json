@@ -1,5 +1,16 @@
 [
     {
+        "title": "alaska.gov",
+        "slug": "alaska-gov",
+        "page_title": "Now scanning ... alaska.gov",
+        "description": "A ScanGov review of alaska.gov: accessibility, security, usability, AI-readiness, and readability scores and a video walkthrough.",
+        "date": "2026-10-20",
+        "url": "https://alaska.gov",
+        "img": "alaska-gov.png",
+        "video": "EkncD11cGh8",
+        "ogImage": "pages/alaska-gov.png"
+    },
+    {
         "title": "proudlyservingbook.com",
         "slug": "proudlyservingbook-com",
         "page_title": "Now scanning ... proudlyservingbook.com",
