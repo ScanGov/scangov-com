@@ -21,7 +21,7 @@ export default async () => {
         botability: n => `Check whether AI tools and search engines can find and understand your site: robots.txt, sitemaps, canonical tags, schema, and crawlability.`,
         security: n => `Check security headers and practices on every page: HTTPS, HSTS, CSP, X-Content-Type-Options, and security.txt.`,
         usability: n => `Check usability and Core Web Vitals on every page: performance, page titles and descriptions, viewport and mobile settings, and social sharing tags.`,
-        readability: n => `Check the reading grade level of every page against the plain language standard, with Automated Readability Index and Flesch-Kincaid scores, a public scorecard, and the law behind it.`
+        readability: n => `Check the reading grade level of every page against the plain language standard, with Automated Readability Index and Flesch-Kincaid scores.`
     };
 
     const whatCopy = {
@@ -34,29 +34,29 @@ export default async () => {
 
     // Hand-written sections rendered after the generic ones by content/indicator.html.
     // Nunjucks cannot test whether an include file exists, so the path is set here.
-    const extraIncludes = {
-        readability: 'indicators/readability.html'
-    };
+    const extraIncludes = {};
 
     // FAQ lists for the hand-written sections. Rendered by _includes/faq.html,
     // which also emits the FAQPage JSON-LD.
-    const faqs = {
+    const faqs = {};
+
+    // Free tools related to each indicator, shown in a Tools section on the
+    // indicator page by content/indicator.html.
+    const tools = {
         readability: [
             {
-                q: 'What is the difference between the Automated Readability Index and Flesch-Kincaid?',
-                a: 'Both estimate the U.S. school grade a reader needs. ARI uses characters per word and words per sentence; Flesch-Kincaid uses syllables per word and words per sentence. They usually land within a grade of each other. ScanGov records both and scores the pass or fail on ARI.'
-            },
+                name: 'Readability scan',
+                url: '/tools/readability/',
+                icon: 'fa-book-open-reader',
+                description: 'Check the reading grade level of any web page against the plain language standard.'
+            }
+        ],
+        botability: [
             {
-                q: 'Does readability count toward accessibility compliance?',
-                a: 'WCAG 2.2 has a reading level criterion (3.1.5) at Level AAA, above the Level AA the ADA Title II rule requires, so a hard-to-read page does not by itself fail Title II. It does fail the people the rule exists for. Plain language is the standard federal sites are held to under the Plain Writing Act and 21st Century IDEA, and most state and local style guides adopt it.'
-            },
-            {
-                q: 'Why does my site fail readability on its ScanGov scorecard?',
-                a: 'The public scorecard on scangov.org scores the homepage, and homepages are mostly links and labels, which read as fragments. A fail there means the homepage text rounds above grade 8. A ScanGov subscription scans every page, so you can see which pages actually carry the hard-to-read prose and fix those first.'
-            },
-            {
-                q: 'How often is readability re-scored?',
-                a: 'Public scorecards on scangov.org are refreshed on ScanGov\'s regular scan schedule, and each profile\'s Pulse view charts the homepage\'s indicators over time. Sites monitored in the ScanGov product are scanned on their plan\'s cadence, and the readability section lists every page above the target grade after each scan, so a content team can measure the effect of a rewrite page by page.'
+                name: 'Good bot scan',
+                url: '/tools/good-bot-scan/',
+                icon: 'fa-plug-circle-check',
+                description: 'Check if good bots like ScanGovBot can scan your website.'
             }
         ]
     };
@@ -92,6 +92,7 @@ export default async () => {
             what: whatCopy[key] ?? '',
             extraInclude: extraIncludes[key],
             faq: faqs[key],
+            tools: tools[key],
             why: value.why,
             risk: value.risk,
             ogImage: value.ogImage
