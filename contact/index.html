@@ -40,12 +40,12 @@
   }</script><a href="https://scangov.com/plans" id="feedback-button" class="feedback btn btn-sm" aria-hidden="true" tabindex="-1"><svg class="fa-solid fa-rocket" aria-hidden="true"><use href="#fas-fa-rocket" xlink:href="#fas-fa-rocket"></use></svg> Get ScanGov</a><script>const feedbackButton = document.getElementById("feedback-button");
   const footer = document.querySelector("footer");
 
-  const ctaSection = document.getElementById('cta-section');
+  // The fixed CTA band already carries the Get started button
+  const ctaBand = document.getElementById('cta-band');
   function updateButton() {
     const scrolled = document.documentElement.scrollTop > window.innerHeight * 0.3;
     const footerVisible = footer && footer.getBoundingClientRect().top < window.innerHeight;
-    const ctaVisible = ctaSection && ctaSection.getBoundingClientRect().top < window.innerHeight;
-    const visible = scrolled && !footerVisible && !ctaVisible;
+    const visible = scrolled && !footerVisible && !ctaBand;
     feedbackButton.classList.toggle('is-visible', visible);
     feedbackButton.setAttribute('aria-hidden', visible ? 'false' : 'true');
     feedbackButton.setAttribute('tabindex', visible ? '0' : '-1');
