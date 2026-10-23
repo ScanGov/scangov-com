@@ -1,7 +1,7 @@
 ---
 layout: layouts/default
 date: 2025-02-23
-modified: 2026-09-08
+modified: 2026-10-23
 author: ScanGov
 title: "Optimize your digital experience"
 description: "ScanGov monitors websites for AI-readiness, accessibility, security, usability, and readability, and helps teams build better digital experiences."
@@ -10,6 +10,28 @@ home: true
 softwareSchema: true
 ---
 
+<div class="container page-section">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="mb-3">Who we serve</h2>
+      <div class="row g-3">
+        {% for item in who | head(3) %}
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
+            <div class="card p-4 text-center d-flex flex-column align-items-center position-relative">
+              <i class="fa-solid {{ item.icon }} fa-3x mt-2 mb-2" aria-hidden="true"></i>
+              <h3 class="h5 mt-3">
+                <a href="/who-we-serve/{{ item.slug }}/" class="stretched-link">{{ item.title }}</a>
+              </h3>
+              <p class="small text-body-secondary mb-0">{{ item.description }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <a href="/who-we-serve/" class="btn btn-outline-primary">Who we serve<i class="fa-solid fa-arrow-right-long ms-2" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</div>
 <div class="container page-section">
   <h2 class="mb-3">What we scan</h2>
   {% include "indicator_list.html" %}
@@ -85,28 +107,6 @@ softwareSchema: true
           </div>
         </li>
       </ul>
-    </div>
-  </div>
-</div>
-<div class="container page-section">
-  <div class="row">
-    <div class="col-12">
-      <h2 class="mb-3">Who we serve</h2>
-      <div class="row g-3">
-        {% for item in who | head(3) %}
-          <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
-            <div class="card p-4 text-center d-flex flex-column align-items-center position-relative">
-              <i class="fa-solid {{ item.icon }} fa-3x mt-2 mb-2" aria-hidden="true"></i>
-              <h3 class="h5 mt-3">
-                <a href="/who-we-serve/{{ item.slug }}/" class="stretched-link">{{ item.title }}</a>
-              </h3>
-              <p class="small text-body-secondary mb-0">{{ item.description }}</p>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-      <a href="/who-we-serve/" class="btn btn-outline-primary">Who we serve<i class="fa-solid fa-arrow-right-long ms-2" aria-hidden="true"></i>
-      </a>
     </div>
   </div>
 </div>
