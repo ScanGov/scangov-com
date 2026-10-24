@@ -22,6 +22,8 @@ export default {
     "/news/new-scangov-readability-scanner/",
     "/tools/",
     "/rfp-builder/",
+    "/tools/policy-generator/",
+    "/tools/policy-generator/done/",
     "/search/",
     "/demo/",
     "/plans/",

@@ -1,0 +1,26 @@
+---
+layout: "layouts/print"
+title: "Digital experience policy (print view)"
+description: "Printable version of a digital experience policy generated with the ScanGov policy generator."
+permalink: /tools/policy-generator/print/
+sitemap: false
+noindex: true
+---
+
+<style>
+  @media print {
+    #back-link {
+      display: none;
+    }
+  }
+</style>
+<a id="back-link" href="/tools/policy-generator/done/">Back</a>
+
+<h1>Digital experience policy</h1>
+<p class="lead"><span class="field-organization"></span></p>
+
+{% include "policy_content.html" %}
+<script>
+  document.getElementById('back-link').href += location.search;
+  window.print();
+</script>
