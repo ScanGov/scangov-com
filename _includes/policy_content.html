@@ -1,0 +1,206 @@
+{#
+  Digital experience policy, generated from the form at /tools/policy-generator/.
+  The script at the end fills every <span class="field-*"> from the query string.
+  Sections carry data-category so unchecked categories can be hidden. The
+  adopted standards list is built from the live audits data (indicators.js).
+#}
+
+<p>
+  <strong>Policy owner:</strong> <span class="field-owner"></span><br>
+  <strong>Effective date:</strong> <span class="field-effective-date"></span><br>
+  <strong>Review cycle:</strong> every <span class="field-review-cycle"></span><br>
+  <strong>Version:</strong> 1.0
+</p>
+
+<hr>
+
+<h2>1. Purpose</h2>
+
+<p><span class="field-organization"></span> serves people online. This policy sets one standard for everything we publish, so people can find it, read it, trust it, and use it. It covers accessibility, AI and search readiness, security, usability, and plain language.</p>
+
+<p>We adopt the <a href="https://standards.scangov.org/">ScanGov Standards</a> as our floor. They are open, public, and based on law and web guidelines. A scan checks them. A failing scan is a defect. The standards change over time, and we adopt the changes (Appendix A). The scan is the floor, not the whole job. Each section below also lists what we do beyond the scan.</p>
+
+<h2>2. Scope</h2>
+
+<p>This policy covers:</p>
+<ul>
+  <li>Our website, <span class="field-website"></span>, and every page on it</li>
+  <li class="scope-item" data-scope="subdomains">Every subdomain and microsite we own or control</li>
+  <li class="scope-item" data-scope="apps">Our mobile and web apps</li>
+  <li class="scope-item" data-scope="vendors">Sites that vendors build, host, or run for us</li>
+  <li class="scope-item" data-scope="social">What we post on other platforms, as far as the platform allows</li>
+</ul>
+
+<p>It applies to every employee, contractor, and vendor who writes, builds, or publishes for these properties.</p>
+
+<h2>3. Policy statement</h2>
+
+<p>For every property in scope, <span class="field-organization"></span> commits to the following. Each category has four parts: the outcome we want, the floor a scan measures, what we do beyond the scan, and how we check.</p>
+
+<section data-category="accessibility">
+  <h3>3.1 Accessibility</h3>
+  <p><strong>Outcome.</strong> People with disabilities can use every service we publish, with the assistive technology they choose.</p>
+  <p><strong>Floor.</strong> Every property meets the Web Content Accessibility Guidelines (WCAG) <span class="field-wcag"></span> and the ScanGov accessibility standards.</p>
+  <p><strong>What we do.</strong></p>
+  <ul>
+    <li>We test with a keyboard alone and with a screen reader before every launch or major change.</li>
+    <li>We test with people with disabilities when we design or redesign a service.</li>
+    <li>We buy accessible products. Every contract requires a current Accessibility Conformance Report and a plan to fix what the product does not support.</li>
+    <li>We publish an accessibility statement with a way to report a barrier. We respond within <span class="field-response-days"></span> business days.</li>
+    <li>We train everyone who publishes content or code.</li>
+    <li>If we cannot fix something by its deadline, we offer an accessible alternative on request.</li>
+    <li class="legal-item" data-legal="title-ii">This section carries out the Americans with Disabilities Act (ADA) Title II web rule (28 Code of Federal Regulations (CFR) part 35, subpart H).</li>
+    <li class="legal-item" data-legal="section-508">This section carries out Section 508 of the Rehabilitation Act (36 CFR part 1194).</li>
+    <li class="legal-item" data-legal="state">This section carries out the state accessibility law and any local ordinance that applies to us.</li>
+  </ul>
+  <p><strong>How we check.</strong> A scan on the scan schedule. A keyboard and screen reader review on the policy review cycle.</p>
+</section>
+
+<section data-category="botability">
+  <h3>3.2 AI and search readiness</h3>
+  <p><strong>Outcome.</strong> People can find our information with the search engine or AI assistant they already use.</p>
+  <p><strong>Floor.</strong> Every property meets the ScanGov botability standards. Crawlers can reach it. It has a valid robots file and sitemap. Every page names its canonical address. The main content is in the HTML. Structured data names the organization.</p>
+  <p><strong>What we do.</strong></p>
+  <ul>
+    <li>We let well-behaved crawlers in. We block one only for a documented security reason.</li>
+    <li>We publish content as web pages, not as files to download.</li>
+    <li>We keep sitemaps and structured data current when the site changes.</li>
+    <li>We write links and page titles that say where they lead.</li>
+  </ul>
+  <p><strong>How we check.</strong> A scan on the scan schedule.</p>
+</section>
+
+<section data-category="security">
+  <h3>3.3 Security</h3>
+  <p><strong>Outcome.</strong> People can trust that our sites are ours and that what they share with us stays safe.</p>
+  <p><strong>Floor.</strong> Every property serves every page over HTTPS and meets the ScanGov security standards. These include the response headers that the Cybersecurity and Infrastructure Security Agency (CISA) recommends and a public security.txt file.</p>
+  <p><strong>What we do.</strong></p>
+  <ul>
+    <li>We patch software and dependencies on a schedule. We remove what we no longer use.</li>
+    <li>We review application security on a schedule, from inside and outside perspectives.</li>
+    <li>We keep a channel open for security reports and answer every one.</li>
+    <li>We limit admin access to what each role needs, and we require multi-factor authentication for it.</li>
+    <li>We fix a failure a scan reports within <span class="field-fix-days"></span> days.</li>
+    <li class="legal-item" data-legal="dotgov">We serve our main site from a .gov domain, or another sponsored top-level domain, where we qualify.</li>
+  </ul>
+  <p><strong>How we check.</strong> A scan on the scan schedule. A security review on the policy review cycle.</p>
+</section>
+
+<section data-category="usability">
+  <h3>3.4 Usability and performance</h3>
+  <p><strong>Outcome.</strong> People can finish the task they came for, on any device and any connection.</p>
+  <p><strong>Floor.</strong> Every page meets the ScanGov usability standards. These include the Core Web Vitals thresholds, a unique title and description, a mobile viewport, and sharing tags.</p>
+  <p><strong>What we do.</strong></p>
+  <ul>
+    <li>We design for mobile first and test on real devices.</li>
+    <li>We do user research and task-based testing for every new or redesigned service.</li>
+    <li>We use analytics and feedback to find the tasks people fail. We fix those first.</li>
+  </ul>
+  <p><strong>How we check.</strong> A scan on the scan schedule. Task-based testing before launch.</p>
+</section>
+
+<section data-category="readability">
+  <h3>3.5 Plain language</h3>
+  <p><strong>Outcome.</strong> People understand what we publish the first time they read it.</p>
+  <p><strong>Floor.</strong> Every page reads at grade <span class="field-reading-grade"></span> or below on the Automated Readability Index (ARI), the ScanGov readability standard.</p>
+  <p><strong>What we do.</strong></p>
+  <ul>
+    <li>We use short sentences, common words, active voice, and headings that say what follows.</li>
+    <li>We spell out acronyms the first time. We define jargon or cut it.</li>
+    <li>We review content before we publish it. We train everyone who writes for the public.</li>
+    <li>We offer content in the languages the people we serve use.</li>
+    <li class="legal-item" data-legal="plain-writing">This section carries out the Plain Writing Act of 2010 and Office of Management and Budget (OMB) memorandum M-23-22.</li>
+  </ul>
+  <p><strong>How we check.</strong> A scan on the scan schedule. Editorial review before publishing.</p>
+</section>
+
+<h2>4. Roles</h2>
+
+<ul>
+  <li><strong><span class="field-owner"></span></strong> owns this policy, keeps the accessibility statement current, reviews scan results, and reports progress to leadership on the review cycle.</li>
+  <li><strong>Content authors</strong> write in plain language, add alt text and captions, and use headings and link text well.</li>
+  <li><strong>Developers and web administrators</strong> keep templates, code, headers, and hosting in line with this policy, and fix scan failures on time.</li>
+  <li><strong>Procurement</strong> writes the ScanGov Standards into every request for proposal and contract, and requires an Accessibility Conformance Report for any platform we buy.</li>
+  <li><strong>Vendors</strong> deliver work that meets this policy, and fix failures found in acceptance testing before launch.</li>
+</ul>
+
+<h2>5. Measurement</h2>
+
+<p>We measure with scans, not statements. <span class="field-organization"></span> will:</p>
+<ul>
+  <li>Scan every property in scope at least every <span class="field-scan-cycle"></span>.</li>
+  <li>Track the public scorecard for each property. A falling score is a defect.</li>
+  <li>Review results on the review cycle and publish a summary.</li>
+  <li>Fix the barriers that block a service first.</li>
+</ul>
+
+<h2>6. New work</h2>
+
+<p>No new site, redesign, or major feature launches until it passes a scan in every category in section 3 and a manual accessibility check. Contracts require vendors to fix failures found after launch within <span class="field-fix-days"></span> days, and a scan confirms the fix.</p>
+
+<h2>7. Exceptions</h2>
+
+<p>To request an exception, write to <span class="field-owner"></span>. Name the property, the standard, the reason, the accessible alternative you will offer, and the date the exception ends. The policy owner reviews exceptions on the review cycle. An exception ends after one year unless renewed.</p>
+
+<h2>8. Review</h2>
+
+<p>This policy takes effect on <span class="field-effective-date"></span>. <span class="field-owner"></span> reviews it every <span class="field-review-cycle"></span>, when the ScanGov Standards change, and when a law that applies to us changes.</p>
+
+<hr>
+
+<h2>Appendix A. Adopted standards</h2>
+
+<p>This policy adopts the <a href="https://standards.scangov.org/">ScanGov Standards</a> in the categories below, as published on <span class="field-effective-date"></span> and as updated after that. The standards are open and public. Each one links to the law and guidance behind it. The policy owner reviews major changes on the review cycle. The current standards in each category, and our score against them, are public.</p>
+
+<ul>
+{% for indicator in indicators %}
+  <li data-category="{{ indicator.url }}"><a href="https://standards.scangov.org/{{ indicator.url }}/">{{ indicator.name }}</a>: {{ indicator.description }}</li>
+{% endfor %}
+</ul>
+
+<script>
+  (function () {
+    const params = new URLSearchParams(location.search);
+
+    // Text fields, with defaults for anything left blank.
+    const defaults = {
+      organization: 'Our organization',
+      website: 'our primary website',
+      owner: 'the digital services lead',
+      'effective-date': new Date().toISOString().slice(0, 10),
+      'review-cycle': 'year',
+      'scan-cycle': 'month',
+      'response-days': '10',
+      'fix-days': '30',
+      wcag: '2.1 Level AA',
+      'reading-grade': '8'
+    };
+    for (const key in defaults) {
+      const value = (params.get(key) || '').trim() || defaults[key];
+      for (const element of document.getElementsByClassName('field-' + key)) element.innerText = value;
+    }
+
+    // Checkbox groups: hide anything the form did not select. A group with no
+    // selections (the form was bypassed) shows everything.
+    function filter(selector, attribute, name) {
+      const chosen = params.getAll(name);
+      if (!chosen.length) return;
+      for (const element of document.querySelectorAll(selector))
+        if (!chosen.includes(element.dataset[attribute])) element.remove();
+    }
+    filter('[data-category]', 'category', 'category');
+    filter('.scope-item', 'scope', 'scope');
+    filter('.legal-item', 'legal', 'legal');
+
+    // Renumber the policy statement subsections after sections were removed.
+    ['3'].forEach(function (prefix) {
+      const pattern = new RegExp('^' + prefix + '\\.\\d+ ');
+      let index = 0;
+      document.querySelectorAll('section[data-category] h3').forEach(function (heading) {
+        if (!pattern.test(heading.textContent)) return;
+        index += 1;
+        heading.textContent = heading.textContent.replace(pattern, prefix + '.' + index + ' ');
+      });
+    });
+  })();
+</script>
