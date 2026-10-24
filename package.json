@@ -5,7 +5,7 @@
 	"scripts": {
 		"build": "npm run concat:css && npx @11ty/eleventy --quiet",
 		"build-ghpages": "npm run concat:css && npx @11ty/eleventy --pathprefix=/scangov/",
-		"concat:css": "cat public/assets/bootstrap/css/bootstrap.css public/assets/font-awesome/css/all.css public/css/scangov.css > scripts/bundle.css",
+		"concat:css": "cat public/assets/bootstrap/css/bootstrap.css public/assets/font-awesome/css/all.css public/css/lite-yt-embed.css public/css/scangov.css > scripts/bundle.css",
 		"start": "node scripts/getcomponents.js && npm run concat:css && npx @11ty/eleventy --serve --quiet",
 		"a11y": "ramp-check",
 		"a11y:baseline": "ramp-check baseline"
@@ -30,8 +30,8 @@
 		"linkify-it": "^5.0.2"
 	},
 	"devDependencies": {
-		"png-to-ico": "^3.0.2",
 		"@playwright/test": "1.63.0",
-		"ramp-check": "github:Mayor-s-Office-of-Innovation/ramp-check#9f9e41b"
+		"png-to-ico": "^3.0.2",
+		"ramp-check": "github:Mayor-s-Office-of-Innovation/ramp-check#ca23f40"
 	}
 }

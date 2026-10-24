@@ -54,13 +54,7 @@ eleventyComputed:
     {% if feature.video %}
     <div class="col-12 col-md-7">
       <h2 class="mb-3">Watch</h2>
-      <div class="ratio ratio-16x9 border">
-        <iframe
-          src="https://www.youtube.com/embed/{{ feature.video }}?modestbranding=1&rel=0"
-          title="{{ feature.title }}"
-          loading="lazy"
-          allowfullscreen></iframe>
-      </div>
+      {% youtube feature.video, feature.title, "border" %}
       {% if transcripts[feature.video] %}
       <div class="mt-3">
         {% set transcriptId = feature.video %}
