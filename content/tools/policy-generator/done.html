@@ -68,7 +68,7 @@ noindex: true
     document.getElementById('edit-link').href += location.search;
     // Placeholders until the PDF export and publishing flows are built.
     for (const id of ['download-pdf', 'publish-site'])
-      document.getElementById(id).addEventListener('click', function () { alert('TODO: not built yet'); });
+      document.getElementById(id).addEventListener('click', function () { alert('To do: not built yet'); });
     document.getElementById('copy-link').addEventListener('click', function () {
       navigator.clipboard.writeText(location.href).then(function () { status.textContent = 'Link copied.'; });
     });
