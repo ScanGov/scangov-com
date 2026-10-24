@@ -94,6 +94,21 @@ export default async function (eleventyConfig) {
         return new Date().toISOString()
     })
 
+    // YouTube embed via lite-youtube-embed (public/js/lite-yt-embed.js,
+    // public/css/lite-yt-embed.css): a poster image and a labelled play
+    // button on load, YouTube's iframe only after the click. The page
+    // therefore ships no third-party frame, cookies, or player script until
+    // someone asks for the video, and accessibility audits see one button
+    // instead of YouTube's player internals. The module script is emitted
+    // next to every embed; browsers run a module URL once per page, so a
+    // page with several videos loads it once. Wrapper classes are optional.
+    //   {% youtube id, title, "mb-4 border" %}
+    eleventyConfig.addShortcode('youtube', (id, title, classes = '') => {
+        const attr = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+        const wrapper = classes ? ` class="${attr(classes)}"` : '';
+        return `<div${wrapper}><lite-youtube videoid="${attr(id)}" playlabel="Play: ${attr(title)}" params="modestbranding=1&amp;rel=0"></lite-youtube></div><script type="module" src="/js/lite-yt-embed.js"></script>`;
+    });
+
     eleventyConfig.addShortcode('thisYear', () => {
         return new Date().getFullYear();
     })

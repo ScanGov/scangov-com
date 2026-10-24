@@ -21,12 +21,7 @@ eleventyComputed:
   <div class="container page-section">
     <div class="row">
       <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-        <div class="ratio ratio-16x9 mb-4 border">
-          <iframe
-            src="https://www.youtube.com/embed/{{ item.id }}?modestbranding=1&rel=0"
-            title="{{ item.title }}"
-            allowfullscreen></iframe>
-        </div>
+        {% youtube item.id, item.title, "mb-4 border" %}
         <div class="border-bottom pb-4 mb-5">
           <h1 class="mb-3 h4">{{ item.title }}</h1>
           <p>{{ item.description }}</p>
