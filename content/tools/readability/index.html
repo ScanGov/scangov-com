@@ -1,14 +1,16 @@
 ---
-layout: layouts/default-plain.html
+layout: layouts/default
 date: 2025-10-19
 modified: 2026-10-21
 author: ScanGov
-title: "Readability scan"
+title: "Reading level checker"
+toolName: "Readability scan"
 ogImage: pages/readability-scanner.png
-ogImageAlt: "Readability scan"
-description: "Check the reading grade level of any web page. Scores Automated Readability Index and Flesch-Kincaid against the plain language standard. Free."
+ogImageAlt: "Reading level checker"
+description: "Free reading level checker. Find the reading grade level of any web page with the Automated Readability Index and Flesch–Kincaid, scored against the plain language standard."
 permalink: /tools/readability/
 isTool: true
+indicator: readability
 home: false
 faq:
   - q: What reading grade should web content be?
@@ -52,14 +54,20 @@ faq:
       lists every page above the target grade. A content team can measure each rewrite page by page.
 ---
 
-<form class="input-validation-required" id="readability-form">
-  <div class="mb-3">
-    <label for="site" class="form-label">Page URL</label>
-    <input type="text" class="form-control" name="site" id="site" placeholder="https://www.example.com/page-to-review/" required>
-  </div>
-  <button type="submit" class="btn btn-primary mb-3" id="submitbutton">Check readability</button>
-  <div id="scan_results" aria-live="polite"></div>
-</form>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
+    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+
+      <div id="scan-form">
+        {% set toolFormId = "readability-form" %}
+        {% set toolFieldLabel = "Page URL" %}
+        {% set toolPlaceholder = "https://www.example.com/page-to-review/" %}
+        {% set toolButtonLabel = "Check" %}
+        {% include "tool-form.html" %}
+      </div>
+
+      <div id="scan_results" class="mt-4" aria-live="polite"></div>
 
 <div class="alert alert-info mt-4" role="alert">
   <h2>About readability scan</h2>
@@ -67,6 +75,15 @@ faq:
     It scores that text with two formulas: the Automated Readability Index (ARI) and Flesch-Kincaid.
     A page passes at grade 8 or below. Strong content teams aim for grade 6. The scan is free, needs
     no signup, and shows results on this page.</p>
+  <h2>Method</h2>
+  <p>The scan uses the public equations for the
+    <a href="https://standards.scangov.org/automated-readability-index/">Automated Readability Index (ARI)</a>
+    and the
+    <a href="https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests">Flesch–Kincaid readability tests</a>.
+    ARI counts characters, words, and sentences. Flesch–Kincaid also counts syllables. The scan
+    reviews the page and pulls out the main content. Some parts of a page, like headings, have no
+    punctuation. The scan adds a period to the end of each one, so the formulas grade all the
+    content fairly.</p>
   <h2>About readability</h2>
   <p>Readability measures how easy text is to understand. It looks at words and layout. Formulas
     like Flesch-Kincaid and ARI guess a reading grade. ARI uses letters per word and words per
@@ -112,12 +129,19 @@ faq:
   {% include "faq.html" %}
 </div>
 
+    </div>
+    <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
+  </div>
+</div>
+
 <script type="module" src="/js/readit.js"></script>
 <script>
   document.getElementById('readability-form').addEventListener('submit', function () {
     if (typeof gtag === 'function') gtag('event', 'tool_run', { tool: 'readability' });
   });
 </script>
+
+{% include "tool-related.html" %}
 
 <!-- all the code for this feature is in the js file, 
  this html is here to let the css trimmer keep the classes associated with the cards we will display -->
@@ -130,8 +154,11 @@ faq:
       10
     </p>
   </span>
-  <span class="card-footer text-center cardlink">ARI goal: 8 (or below)</span>
+  <span class="card-footer cardlink">ARI goal: 8 (or below)</span>
 </div>
+<div class="d-flex flex-wrap gap-2 mt-3 d-none"><button type="button" class="btn btn-outline-primary"><i class="fa-solid fa-rotate-left"></i> <i class="fa-solid fa-link"></i> <i class="fa-solid fa-copy"></i> <i class="fa-solid fa-file-lines"></i></button><span class="align-self-center"></span></div>
+<div class="accordion d-none"><div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button"></button></h2><div class="accordion-collapse collapse"><div class="accordion-body"></div></div></div></div>
+<div class="card-body d-flex align-items-center justify-content-center d-none"><div class="display-1">5</div></div>
 <div class="alert alert-danger d-none">
   <i class="fa-solid fa-face-frown"></i>
   <i class="fa-solid fa-circle-question"></i>

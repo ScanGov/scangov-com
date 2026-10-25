@@ -66,6 +66,36 @@ eleventyComputed:
   </div>
 </div>
 
+{% if feature.indicator %}
+{% for ind in indicators %}
+{% if ind.url == feature.indicator and ind.tools %}
+<div class="container page-section">
+  <div class="row">
+    <div class="col-12">
+      <h2>Tools</h2>
+      <p>Free {{ ind.name | lower }} tools from ScanGov.</p>
+      <div class="row g-3">
+        {% for tool in ind.tools %}
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
+            <div class="card">
+              <div class="card-body">
+                <i class="fa-solid {{ tool.icon }} fa-lg d-block mb-2" aria-hidden="true"></i>
+                <h3 class="h4 mb-2 mt-3">
+                  <a href="{{ tool.url }}" class="stretched-link">{{ tool.name }}</a>
+                </h3>
+                <p class="card-text small">{{ tool.description }}</p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+{% endfor %}
+{% endif %}
+
 <div class="container">
   <h2 class="mb-3">Features</h2>
   <div id="features-pool" style="display:none" aria-hidden="true">

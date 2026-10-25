@@ -1,18 +1,64 @@
-const form = document.querySelector('.input-validation-required');
+
+function shareLink(site) {
+  return `${location.origin}${location.pathname}?url=${encodeURIComponent(site)}`;
+}
+
+function wireCopyButtons(site, ari, fk, info) {
+  const status = document.getElementById('copy-status');
+  const copy = async (text, message) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      status.textContent = message;
+    } catch {
+      status.textContent = 'Could not copy.';
+    }
+  };
+  document.getElementById('copy-text').addEventListener('click', () => {
+    const text = [
+      'Readability scan',
+      `URL: ${site}`,
+      `Automated Readability Index (ARI): ${isNaN(ari) ? '--' : ari} (goal: 8 or below)`,
+      `Flesch-Kincaid (FK): ${isNaN(fk) ? '--' : fk} (goal: 8 or below)`,
+      `Characters: ${info.characters}`,
+      `Words: ${info.words}`,
+      `Sentences: ${info.sentences}`,
+      `Text length: ${info.textLength}`,
+      `Details: ${shareLink(site)}`,
+    ].join('\n');
+    copy(text, 'Copied the results.');
+  });
+  document.getElementById('copy-link').addEventListener('click', () => {
+    copy(shareLink(site), 'Copied the link.');
+  });
+}
+
+const form = document.getElementById('readability-form');
+const formSection = document.getElementById('scan-form');
+
+function resetScan() {
+  const resultsEl = document.getElementById('scan_results');
+  const siteInput = document.querySelector('input[name="site"]');
+  resultsEl.innerHTML = '';
+  form.reset();
+  siteInput.value = '';
+  formSection.classList.remove('d-none');
+  siteInput.focus();
+  history.replaceState(null, '', location.pathname);
+}
 form.addEventListener('submit', async (event) => {
   event.preventDefault()
 
   const site = document.querySelector('input[name="site"]').value;
   const submitButton = document.getElementById('submitbutton');
   const resultsEl = document.getElementById('scan_results');
-  submitButton.innerHTML = 'Scanning...'
+  submitButton.innerHTML = 'Checking...'
 
   if (/localhost|127\.0\.0\.1/.test(site)) {
     resultsEl.innerHTML = `
       <div class="alert alert-warning">
         <strong>Public URL required.</strong> <p>Enter a publicly accessible URL. Local addresses cannot be scanned.</p>
       </div>`;
-    submitButton.innerHTML = 'Scan';
+    submitButton.innerHTML = 'Check';
     return;
   }
 
@@ -48,23 +94,23 @@ form.addEventListener('submit', async (event) => {
           <div class="col-12 col-sm-12 col-md-6 col-lg-5 d-flex align-items-stretch">
             <div class="card mb-3 text-bg-${cardClass}">
               <div class="card-header">
-                Automated Readability Index (ARI) <a href="https://standards.scangov.org/readability" class="cardlink"><svg class="fa-solid fa-circle-question" aria-hidden="true"><use href="#fas-fa-circle-question"></use></svg></a>
+                Automated Readability Index (ARI) <a href="https://standards.scangov.org/automated-readability-index/" class="cardlink"><svg class="fa-solid fa-circle-question" aria-hidden="true"><use href="#fas-fa-circle-question"></use></svg></a>
               </div>
-              <span class="card-body text-center pt-5 text-decoration-none">
-                <p class="display-1">${isNaN(ari) ? '--' : ari}</p>
+              <span class="card-body d-flex align-items-center justify-content-center text-decoration-none">
+                <div class="display-1">${isNaN(ari) ? '--' : ari}</div>
               </span>
-              <span class="card-footer text-center cardlink">Goal: 8 or below. Mature teams aim for 6.</span>
+              <span class="card-footer cardlink">Goal: 8 (or below)</span>
             </div>
           </div>
           <div class="col-12 col-sm-12 col-md-6 col-lg-5 d-flex align-items-stretch">
             <div class="card mb-3 text-bg-${fleschKCardClass}">
               <div class="card-header">
-                Flesch-Kincaid (FK) <a href="https://standards.scangov.org/readability" class="cardlink"><svg class="fa-solid fa-circle-question" aria-hidden="true"><use href="#fas-fa-circle-question"></use></svg></a>
+                Flesch-Kincaid (FK) <a href="https://standards.scangov.org/flesch-kincaid/" class="cardlink"><svg class="fa-solid fa-circle-question" aria-hidden="true"><use href="#fas-fa-circle-question"></use></svg></a>
               </div>
-              <span class="card-body text-center pt-5 text-decoration-none">
-                <p class="display-1">${isNaN(fk) ? '--' : fk}</p>
+              <span class="card-body d-flex align-items-center justify-content-center text-decoration-none">
+                <div class="display-1">${isNaN(fk) ? '--' : fk}</div>
               </span>
-              <span class="card-footer text-center cardlink">Goal: 8 (or below)</span>
+              <span class="card-footer cardlink">Goal: 8 (or below)</span>
             </div>
           </div>
         </div>
@@ -76,11 +122,30 @@ form.addEventListener('submit', async (event) => {
           <li>Sentences: ${readabilityInfo.sentences}</li>
           <li>Text length: ${readabilityInfo.textLength}</li>
         </ul>
-        <h2>Content</h2>
-        <label>What we scanned:</label>
-        <textarea class="form-control">${readabilityInfo.textContent}</textarea>
-        <h2>Method</h2>
-        <p>We use the public equations for the <a href="https://standards.scangov.org/automated-readability-index/">Automated Readability Index (ARI)</a> and <a href="https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests">Flesch Kincaid</a> to determine these grades. The ARI counts characters, words, and sentences in the text. Flesch Kincaid takes syllable counts into account as well. We reviewed the webpage and pulled out the main content. Some parts of the page, like headers, didn't have punctuation marks. We added these sections to the end of the main text and put periods at the end of them. This lets the ARI program grade all the content fairly.</p>`;
+        <div class="accordion mt-4">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="scanned-heading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#scanned-collapse" aria-expanded="false" aria-controls="scanned-collapse">
+                <svg class="fa-solid fa-file-lines me-2" aria-hidden="true"><use href="#fas-fa-file-lines"></use></svg>What we scanned
+              </button>
+            </h2>
+            <div id="scanned-collapse" class="accordion-collapse collapse" aria-labelledby="scanned-heading">
+              <div class="accordion-body">
+                <div id="scanned-text" style="white-space: pre-line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <button type="button" class="btn btn-outline-primary" id="reset-scan"><svg class="fa-solid fa-rotate-left" aria-hidden="true"><use href="#fas-fa-rotate-left"></use></svg> Reset</button>
+          <button type="button" class="btn btn-outline-primary" id="copy-link"><svg class="fa-solid fa-link" aria-hidden="true"><use href="#fas-fa-link"></use></svg> Copy link</button>
+          <button type="button" class="btn btn-outline-primary" id="copy-text"><svg class="fa-solid fa-copy" aria-hidden="true"><use href="#fas-fa-copy"></use></svg> Copy text</button>
+          <span id="copy-status" class="align-self-center" role="status"></span>
+        </div>`;
+      document.getElementById('scanned-text').textContent = readabilityInfo.textContent;
+      wireCopyButtons(site, ari, fk, readabilityInfo);
+      formSection.classList.add('d-none');
+      document.getElementById('reset-scan').addEventListener('click', resetScan);
     }
   } catch {
     resultsEl.innerHTML = `
@@ -88,6 +153,13 @@ form.addEventListener('submit', async (event) => {
         <svg class="fa-solid fa-face-frown" aria-hidden="true"><use href="#fas-fa-face-frown"></use></svg> Scan error: Unable to connect. Please try again.
       </div>`;
   } finally {
-    submitButton.innerHTML = 'Scan';
+    submitButton.innerHTML = 'Check';
   }
 })
+
+// A shared link carries the page in ?url=. Fill the field and run the check.
+const sharedUrl = new URLSearchParams(location.search).get('url');
+if (sharedUrl) {
+  document.querySelector('input[name="site"]').value = sharedUrl;
+  form.requestSubmit();
+}

@@ -6,6 +6,7 @@ title: "Good bot scan"
 description: "Check whether your website lets good bots in. Enter a domain to see if ScanGovBot can reach and scan it."
 permalink: /tools/good-bot-scan/
 isTool: true
+indicator: botability
 ---
 
 <div class="container">
@@ -14,24 +15,11 @@ isTool: true
     <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
 
       <div id="scan-form">
-        <form id="scan-check-form">
-          <div class="mb-3">
-            <label for="site" class="form-label">Domain
-              <i class="fa-solid fa-asterisk" aria-hidden="true"></i>
-            </label>
-            <input
-              type="text"
-              class="form-control form-control-lg"
-              name="site"
-              id="site"
-              placeholder="example.gov"
-              required>
-          </div>
-          <button
-            type="submit"
-            class="btn btn-primary btn-lg"
-            id="submitbutton">Check</button>
-        </form>
+        {% set toolFormId = "scan-check-form" %}
+        {% set toolFieldLabel = "Domain" %}
+        {% set toolPlaceholder = "example.gov" %}
+        {% set toolButtonLabel = "Check" %}
+        {% include "tool-form.html" %}
       </div>
 
       <div id="scan-loading" class="d-none text-center py-5">
@@ -92,3 +80,5 @@ isTool: true
 </div>
 
 <script type="module" src="/js/scan-check.js"></script>
+
+{% include "tool-related.html" %}
