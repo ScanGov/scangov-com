@@ -1,0 +1,96 @@
+{#
+  Related news and features for a tool page. Set `indicator` in the tool's front
+  matter (e.g. indicator: readability). Shows the indicator the tool checks, then
+  related features and news. News posts match on their `indicators` list,
+  features on their `indicator` field in features.json.
+#}
+{% if indicator %}
+{% for ind in indicators %}
+{% if ind.url == indicator %}
+<div class="container page-section">
+  <div class="row">
+    <div class="col-12 col-md-2"></div>
+    <div class="col-12 col-md-8">
+      <h2>Indicator</h2>
+      <div class="row g-3">
+        <div class="col-12 col-md-6 d-flex align-items-stretch">
+          <div class="card">
+            <div class="card-body">
+              <i class="fa-solid fa-{{ ind.icon }} fa-lg d-block mb-2" aria-hidden="true"></i>
+              <h3 class="h4 mb-2 mt-3"><a href="/{{ ind.url }}/" class="stretched-link">{{ ind.name }}</a></h3>
+              <p class="card-text small">{{ ind.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-2"></div>
+  </div>
+</div>
+{% endif %}
+{% endfor %}
+{% set hasRelatedNews = false %}
+{% for post in collections.postsByDate %}
+  {% if post.data.indicators and indicator in post.data.indicators %}
+    {% set hasRelatedNews = true %}
+  {% endif %}
+{% endfor %}
+{% set hasRelatedFeatures = false %}
+{% for item in features %}
+  {% if item.indicator == indicator %}
+    {% set hasRelatedFeatures = true %}
+  {% endif %}
+{% endfor %}
+{% if hasRelatedFeatures %}
+<div class="container page-section">
+  <div class="row">
+    <div class="col-12 col-md-2"></div>
+    <div class="col-12 col-md-8">
+      <h2>Features</h2>
+      <div class="row g-3">
+        {% for item in features %}
+          {% if item.indicator == indicator %}
+            <div class="col-12 col-md-6 d-flex align-items-stretch">
+              <div class="card">
+                <div class="card-body">
+                  <i class="fa-solid {{ item.icon }} fa-lg d-block mb-2" aria-hidden="true"></i>
+                  <h3 class="h4 mb-2 mt-3"><a href="/features/{{ item.slug }}/" class="stretched-link">{{ item.title }}</a></h3>
+                  <p class="card-text small">{{ item.description }}</p>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-12 col-md-2"></div>
+  </div>
+</div>
+{% endif %}
+{% if hasRelatedNews %}
+<div class="container page-section">
+  <div class="row">
+    <div class="col-12 col-md-2"></div>
+    <div class="col-12 col-md-8">
+      <h2>News</h2>
+      <div class="row g-3">
+        {% for post in collections.postsByDate %}
+          {% if post.data.indicators and indicator in post.data.indicators %}
+            <div class="col-12 col-md-6 d-flex align-items-stretch">
+              <div class="card">
+                <div class="card-body">
+                  <i class="fa-solid fa-newspaper fa-lg d-block mb-2" aria-hidden="true"></i>
+                  <h3 class="h4 mb-2 mt-3"><a href="{{ post.url }}" class="stretched-link">{{ post.data.title }}</a></h3>
+                  <p class="card-text small">{{ post.data.description }}</p>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-12 col-md-2"></div>
+  </div>
+</div>
+{% endif %}
+{% endif %}

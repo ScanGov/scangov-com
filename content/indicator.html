@@ -140,6 +140,31 @@ eleventyComputed:
   </div>
 </div>
 {% endif %}
+{% if indicator.features.length %}
+<div class="container page-section">
+  <div class="row">
+    <div class="col-12">
+      <h2>Features</h2>
+      <p>ScanGov features for {{ indicator.name | lower }}.</p>
+      <div class="row g-3">
+        {% for item in indicator.features %}
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-stretch">
+            <div class="card">
+              <div class="card-body">
+                <i class="fa-solid {{ item.icon }} fa-lg d-block mb-2" aria-hidden="true"></i>
+                <h3 class="h4 mb-2 mt-3">
+                  <a href="/features/{{ item.slug }}/" class="stretched-link">{{ item.title }}</a>
+                </h3>
+                <p class="card-text small">{{ item.description }}</p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
 {% if indicator.tools %}
 <div class="container page-section">
   <div class="row">

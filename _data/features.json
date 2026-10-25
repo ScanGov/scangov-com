@@ -175,16 +175,20 @@
   {
     "title": "Readability",
     "slug": "readability",
-    "description": "Measure how easy your content is to read, using established readability standards.",
+    "description": "Find the pages that are hard to read and set a reading level for your team.",
     "icon": "fa-book-open-reader",
+    "indicator": "readability",
     "video": "0OZ8ZJN8br4",
     "docsPath": "/readability/",
     "items": [
       {
-        "title": "Automated Readability Index (ARI)"
+        "title": "Automated Readability Index (ARI) decides pass or fail"
       },
       {
-        "title": "Flesch-Kincaid grade level"
+        "title": "Flesch–Kincaid readability tests for a second view"
+      },
+      {
+        "title": "A reading level target for each site"
       },
       {
         "title": "Readability report cards by page"

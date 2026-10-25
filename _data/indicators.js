@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import { getData } from '../scripts/getdata.js';
 
 export default async () => {
@@ -61,6 +62,10 @@ export default async () => {
         ]
     };
 
+    // Features that name an indicator ("indicator" in features.json), shown in a
+    // Features section on the indicator page by content/indicator.html.
+    const features = JSON.parse(readFileSync(new URL('./features.json', import.meta.url), 'utf8'));
+
     const indicators = [];
     for (const key in data) {
         const value = data[key];
@@ -93,20 +98,14 @@ export default async () => {
             extraInclude: extraIncludes[key],
             faq: faqs[key],
             tools: tools[key],
+            features: features.filter(f => f.indicator === key),
             why: value.why,
             risk: value.risk,
             ogImage: value.ogImage
         });
     };
 
-    // Alphabetical, with readability pinned last: its hue was validated next to
-    // usability's, not between botability's and security's (see the auditor's
-    // docs/readability-topic-plan.md, "Topic color").
-    indicators.sort((a, b) => {
-        if (a.url === 'readability') return 1;
-        if (b.url === 'readability') return -1;
-        return a.name.localeCompare(b.name);
-    });
+    indicators.sort((a, b) => a.name.localeCompare(b.name));
 
     return indicators;
 };
