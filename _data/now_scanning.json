@@ -1,5 +1,30 @@
 [
     {
+        "title": "delaware.gov",
+        "slug": "delaware-gov",
+        "page_title": "Now scanning ... delaware.gov",
+        "description": "A ScanGov review of delaware.gov: accessibility, security, usability, AI-readiness, and readability scores and a video walkthrough.",
+        "date": "2026-10-26",
+        "url": "https://delaware.gov",
+        "scorecard": "https://my.scangov.com/public/key5279-1751598352407/delaware-gov/report",
+        "img": "delaware-gov.png",
+        "video": "BkpZfThIFgo",
+        "ogImage": "pages/delaware-gov.png",
+        "results": {
+            "scanDate": "2026-10-26",
+            "pages": 4,
+            "scores": {
+                "overall": 89,
+                "accessibility": 95,
+                "botability": 92,
+                "readability": 50,
+                "security": 96,
+                "usability": 72
+            },
+            "brokenLinks": 1
+        }
+    },
+    {
         "title": "alaska.gov",
         "slug": "alaska-gov",
         "page_title": "Now scanning ... alaska.gov",

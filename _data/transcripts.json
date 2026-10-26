@@ -26,5 +26,14 @@
     "Botability. Let's see what's going on here. So looks like their site map, they're challenge with a site map. And that is a very important part of making the site accessible, especially for search engines and AI bots and just bots in general.",
     "Security is just, there's some console issues. And usability, it looks like there's some performance and open graph issues. So mostly performance and readability. We have a grade on the readability of grade C of the readability.",
     "And that's it. That is alaska.gov and four pages. To learn more, go to scangov.com. Thank you."
+  ],
+  "BkpZfThIFgo": [
+    "Hello, this is Luke with ScanGov, and today we are going to scan delaware.gov.",
+    "You can see this is delaware.gov. It looks like they have a standard state government website: news, team, guide to services. Looks like they've got a little bit of motion going on, which I wouldn't advise. A little bit more here, and looks like they've got a lot of motion going on here, so I would advise to remove that. Looks like a substantial amount of space is taken up for statewide officials. I'm not sure I'd recommend that.",
+    "We're going to go over to... I scanned four pages. I scanned the Tax Center, the State Directory, the homepage, and the Guides, which is their services page. Quickly, looks like there is one broken link in the Tax Center, so that should probably be fixed.",
+    "If we go over to the dashboard, we can see that there are 18 tasks. Overall, the grade is a B, which is good. We've got an A in accessibility, botability, and security, a C in usability, an F for readability, and then the broken link.",
+    "So I'll go over to the task list and see what's going on here. Looks like they've got some Open Graph, generally aren't adhering to Open Graph protocol. And then there are some touch target issues, which means folks on a phone may touch the wrong link when they're trying to access something. The reading level doesn't meet the default, which is grade eight or higher, or grade eight or lower.",
+    "And looks like there are some inputs. I know this is a WordPress site, so it's operating off a database. If it's not folding into a Cloudflare or something, it may cause load issues, FCP, LCP, performance issues. Looks like they're not referring to the sitemap and robots, which is good for search engine optimization and AI bots. Links don't have proper underlining. Some X-Content-Type-Options and some HTML ordering issues on... let me see what page this is. This is an issue you don't see often, but looks like the Tax Center guides need to be cleaned up a little bit.",
+    "That's it for this review of delaware.gov. You can learn more at scangov.com. Thank you."
   ]
 }

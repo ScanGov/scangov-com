@@ -121,6 +121,7 @@ export default async function (eleventyConfig) {
 
     eleventyConfig.addFilter('dateFormat', (time) => {
         return new Date(time).toLocaleString('en-US', {
+            timeZone: 'UTC',
             month: 'long',
             day: 'numeric',
             year: 'numeric'
