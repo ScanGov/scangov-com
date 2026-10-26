@@ -25,9 +25,21 @@
       { "title": "A single prioritized tasklist across every site and indicator" },
       { "title": "Issue reports developers can act on immediately" },
       { "title": "GitHub integration so issues flow into your existing workflow" },
-      { "title": "Continuous scanning, not a once-a-year audit" }
+      { "title": "Continuous scanning, not a once-a-year audit" },
+      { "title": "A GitHub Action that audits every deploy before it goes live" }
     ],
-    "relatedFeatures": ["tasklist", "issue-reports", "github-integration"]
+    "modified": "2026-10-26",
+    "relatedFeatures": [
+      "tasklist",
+      {
+        "title": "GitHub Action",
+        "description": "Add one step to your deploy workflow and ScanGov audits your site before it goes live. Free on GitHub Marketplace.",
+        "icon": "fa-brands fa-github",
+        "url": "https://github.com/marketplace/actions/scangov"
+      },
+      "issue-reports",
+      "github-integration"
+    ]
   },
   {
     "title": "Third-party vendors",

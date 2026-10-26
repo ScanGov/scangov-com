@@ -43,11 +43,24 @@ eleventyComputed:
 <div class="container page-section">
   <h2>See it in action</h2>
   <p class="text-body-secondary mb-3">ScanGov features important to {{ audience.title | lower }}.</p>
+  {# Entries are feature slugs from features.json, or an inline card object
+     ({ title, description, icon, url }) for something that is not a feature
+     page, such as the GitHub Action. Four cards fit in one row. #}
+  {% set relatedCol = "col-md-3" if audience.relatedFeatures | length == 4 else "col-md-4" %}
   <div class="row g-3">
-    {% for slug in audience.relatedFeatures %}
+    {% for entry in audience.relatedFeatures %}
+      {% if entry.url %}
+        <div class="col-12 col-sm-6 {{ relatedCol }} d-flex align-items-stretch">
+          <div class="card"><div class="card-body">
+            <i class="{{ entry.icon }} fa-lg d-block mb-2" aria-hidden="true"></i>
+            <h3 class="h5 mb-2 mt-3"><a href="{{ entry.url }}" class="stretched-link" target="_blank" rel="noopener">{{ entry.title }}</a></h3>
+            <p class="card-text small">{{ entry.description }}</p>
+          </div></div>
+        </div>
+      {% else %}
       {% for f in features %}
-        {% if f.slug == slug %}
-        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+        {% if f.slug == entry %}
+        <div class="col-12 col-sm-6 {{ relatedCol }} d-flex align-items-stretch">
           <div class="card"><div class="card-body">
             <i class="fa-solid {{ f.icon }} fa-lg d-block mb-2" aria-hidden="true"></i>
             <h3 class="h5 mb-2 mt-3"><a href="/features/{{ f.slug }}/" class="stretched-link">{{ f.title }}</a></h3>
@@ -56,6 +69,7 @@ eleventyComputed:
         </div>
         {% endif %}
       {% endfor %}
+      {% endif %}
     {% endfor %}
   </div>
   <a href="/features/" class="btn btn-outline-primary mt-3">Features</a>
