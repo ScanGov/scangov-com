@@ -3,7 +3,7 @@
 // Accessibility checks for the built site: everything axe checks, plus
 // motion, keyboard, reflow, text spacing and cross-page consistency. Runs in
 // the deploy workflow against _site served on port 8080, and locally with
-// `npm run build`, a static server on 8080, then `npm run a11y`.
+// `npm run build`, `npm run serve` in one shell, then `npm run a11y`.
 //
 // The ScanGov action covers usability, botability, security and readability
 // in the same workflow; this tool owns accessibility.

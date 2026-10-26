@@ -9,6 +9,14 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    # Playwright's official image ships Chromium and its system libraries, so
+    # ramp-check skips the apt-get and browser download that used to take
+    # most of the job. Keep the tag aligned with @playwright/test in
+    # package.json; bump both together. --ipc=host is Playwright's
+    # recommendation for Chromium in Docker.
+    container:
+      image: mcr.microsoft.com/playwright:v1.63.0-noble
+      options: --ipc=host
     permissions:
       contents: write
       pull-requests: write   # ramp-check posts one PR comment with its report
@@ -43,11 +51,12 @@ jobs:
       # action covers the other four topics, so nothing is reported twice.
       # Both write to the job summary; ramp-check also comments on PRs.
 
-      # ramp-check needs the site reachable over HTTP. Python ships on the
-      # runner, so no extra dependency. Port and pages: ramp-check.config.js
+      # ramp-check needs the site reachable over HTTP. The container has no
+      # Python, so a built-ins-only Node server does it. Port and pages:
+      # ramp-check.config.js
       - name: Serve the built site
         run: |
-          python3 -m http.server 8080 --directory _site --bind 127.0.0.1 >/dev/null 2>&1 &
+          node scripts/serve-site.mjs _site 8080 >/dev/null 2>&1 &
           for i in $(seq 1 20); do curl -fs http://127.0.0.1:8080/ >/dev/null && break; sleep 0.5; done
 
       # continue-on-error until a baseline is recorded (npm run a11y:baseline,
@@ -58,6 +67,12 @@ jobs:
         continue-on-error: true
         with:
           config: ramp-check.config.js
+
+      # Lighthouse (chrome-launcher) looks for Chrome on PATH or at
+      # CHROME_PATH. The container has no system Chrome; point it at the
+      # Chromium Playwright baked into the image.
+      - name: Point Lighthouse at the image's Chromium
+        run: echo "CHROME_PATH=$(node -e 'console.log(require("playwright-core").chromium.executablePath())')" >> "$GITHUB_ENV"
 
       # Audit the built site against ScanGov standards. Accessibility is
       # left out of topics because ramp-check covers it. Report only: results
