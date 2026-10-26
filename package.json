@@ -7,6 +7,7 @@
 		"build-ghpages": "npm run concat:css && npx @11ty/eleventy --pathprefix=/scangov/",
 		"concat:css": "cat public/assets/bootstrap/css/bootstrap.css public/assets/font-awesome/css/all.css public/css/lite-yt-embed.css public/css/scangov.css > scripts/bundle.css",
 		"start": "node scripts/getcomponents.js && npm run concat:css && npx @11ty/eleventy --serve --quiet",
+		"serve": "node scripts/serve-site.mjs",
 		"a11y": "ramp-check",
 		"a11y:baseline": "ramp-check baseline"
 	},
