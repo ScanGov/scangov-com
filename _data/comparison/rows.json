@@ -1,0 +1,36 @@
+{
+  "_comment": "Row definitions for /compare/. Every tool answers the same rows. `level` is executive or detail. Detail rows carry an `indicator` (accessibility, botability, security, usability, readability) or `platform` for cross-cutting capabilities. `concerns` on executive rows map to comparison/concerns.json.",
+  "executive": [
+    { "id": "covers", "label": "What it checks", "hint": "The scope of what the tool looks at.", "concerns": ["compliance"] },
+    { "id": "cost", "label": "What it costs", "hint": "Whether the price is public and what buyers report paying.", "concerns": ["budget"] },
+    { "id": "public", "label": "Who can see the results", "hint": "Whether results are private to the account or public.", "concerns": ["scrutiny", "vendor"] },
+    { "id": "alongside", "label": "Do you have to switch", "hint": "Whether it replaces what you have or runs next to it.", "concerns": ["budget", "compliance"] },
+    { "id": "proves", "label": "What you can show a board or auditor", "hint": "The record it leaves behind.", "concerns": ["scrutiny", "compliance", "vendor"] }
+  ],
+  "detail": [
+    { "id": "whole-site", "indicator": "platform", "label": "Scans the whole site on a schedule" },
+    { "id": "history", "indicator": "platform", "label": "Keeps a history of scores over time" },
+    { "id": "scoped-views", "indicator": "platform", "label": "Scoped views for a team or section" },
+    { "id": "sso", "indicator": "platform", "label": "Single sign-on" },
+    { "id": "auth-pages", "indicator": "platform", "label": "Scans pages behind a login" },
+    { "id": "ci", "indicator": "platform", "label": "Checks every deploy before it goes live" },
+    { "id": "issue-tracker", "indicator": "platform", "label": "Sends issues to GitHub or a ticket system" },
+    { "id": "public-scorecard", "indicator": "platform", "label": "Public scorecard and peer rankings" },
+    { "id": "open-standards", "indicator": "platform", "label": "Open, published standards with fix guidance" },
+    { "id": "public-pricing", "indicator": "platform", "label": "Public pricing and self-serve signup" },
+    { "id": "a11y-automated", "indicator": "accessibility", "label": "Automated Web Content Accessibility Guidelines (WCAG) checks" },
+    { "id": "a11y-pdf", "indicator": "accessibility", "label": "PDF accessibility" },
+    { "id": "a11y-video", "indicator": "accessibility", "label": "Video captions and embed titles" },
+    { "id": "bot-robots", "indicator": "botability", "label": "Robots.txt, sitemap, canonical, and schema checks" },
+    { "id": "bot-render", "indicator": "botability", "label": "Content visible to crawlers that do not run JavaScript" },
+    { "id": "bot-ai", "indicator": "botability", "label": "AI crawler access and readiness" },
+    { "id": "sec-headers", "indicator": "security", "label": "Security headers on every page" },
+    { "id": "sec-txt", "indicator": "security", "label": "Security.txt" },
+    { "id": "sec-tld", "indicator": "security", "label": ".gov domain check" },
+    { "id": "use-cwv-lab", "indicator": "usability", "label": "Core Web Vitals, lab data" },
+    { "id": "use-cwv-field", "indicator": "usability", "label": "Core Web Vitals, real-user field data" },
+    { "id": "use-meta", "indicator": "usability", "label": "Titles, descriptions, viewport, and social tags" },
+    { "id": "read-grade", "indicator": "readability", "label": "Reading grade level per page" },
+    { "id": "read-target", "indicator": "readability", "label": "A reading level target for the site" }
+  ]
+}

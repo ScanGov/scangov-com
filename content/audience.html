@@ -39,6 +39,14 @@ eleventyComputed:
 </div>
 {% endif %}
 
+<div class="container page-section">
+  <h2>Compare tools</h2>
+  {% set concernLabel = "" %}
+  {% for c in compare.concerns %}{% if c.id == audience.concern %}{% set concernLabel = c.label | lower %}{% endif %}{% endfor %}
+  <p>See how ScanGov compares with Siteimprove, Lighthouse, and other tools on the five questions an executive asks{% if audience.concern %}, with {{ concernLabel }} as the starting concern{% endif %}.</p>
+  <a href="/compare/{% if audience.concern %}#concern-{{ audience.concern }}{% endif %}" class="btn btn-outline-primary">Compare tools</a>
+</div>
+
 {% if audience.relatedFeatures %}
 <div class="container page-section">
   <h2>See it in action</h2>

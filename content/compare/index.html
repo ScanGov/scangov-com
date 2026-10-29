@@ -1,0 +1,99 @@
+---
+layout: "layouts/default"
+date: 2026-10-28
+author: ScanGov
+title: "Compare ScanGov with other digital monitoring tools"
+h1: "Compare ScanGov with other tools"
+description: "How ScanGov compares with Siteimprove, Lighthouse, and other paid and free tools on what they check, what they cost, who can see the results, and what you can show a board or auditor."
+permalink: /compare/
+breadcrumbCurrent: "Compare"
+eleventyComputed:
+  modified: "{{ compare.modified }}"
+faq:
+  - q: "Do I have to switch tools to use ScanGov?"
+    a: "No. ScanGov scans public pages and reports to its own dashboard, so it runs next to whatever you use today. Most teams add it for the checks their current tool leaves out and for the public scorecard."
+  - q: "How do you check what other tools do?"
+    a: "Every claim about another tool links to a public page from that vendor or a published pricing source, with the date we checked it. Where we could not confirm something, the cell says so instead of guessing. If you see an error, <a href='/contact/'>tell us</a> and we will fix it and note the change."
+  - q: "Why does ScanGov compare itself with free tools?"
+    a: "Because they are what most small teams already use, and ScanGov runs Lighthouse as part of its own scan. The honest comparison is what a free tool gives you on one page today and what ScanGov adds across every page over time."
+---
+
+<div class="container page-section">
+  <div class="row">
+    <div class="col-12 col-lg-10">
+      <p class="lead">Start with the five questions an executive asks. Pick a concern to see the one-line answer for each tool. Open the detail table for the full capability list by indicator.</p>
+    </div>
+  </div>
+  {% include "compare-styles.html" %}
+  {% set cmpTools = compare.published %}
+  {% set cmpId = "hub" %}
+  {% set cmpLinkTools = true %}
+  {% include "compare-executive.html" %}
+  <p class="small text-body-secondary">Bracketed numbers link to the source and the date we checked it on each tool's page. ScanGov's column links to the feature or plan it describes.</p>
+</div>
+
+<div class="container page-section">
+  <div class="row">
+    <div class="col-12">
+      <details class="mb-3" id="detail">
+        <summary class="h2 mb-3">Compare in detail</summary>
+        <p>Every tool answers the same capability rows. Use the tabs to show one indicator at a time.</p>
+        {% set cmpId = "hub-detail" %}
+        {% include "compare-detail.html" %}
+      </details>
+    </div>
+  </div>
+</div>
+
+<div class="container page-section">
+  <h2>One-to-one comparisons</h2>
+  <p>Each page carries the same two tables for one tool, with a summary, questions buyers ask, and every source.</p>
+  <div class="row g-3">
+    {% for tool in compare.published %}
+    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+      <div class="card">
+        <div class="card-body">
+          <i class="fa-solid {% if tool.type == 'free' %}fa-gift{% else %}fa-building{% endif %} fa-lg d-block mb-2" aria-hidden="true"></i>
+          <h3 class="h4 mb-2 mt-3"><a href="/compare/scangov-vs-{{ tool.slug }}/" class="stretched-link">ScanGov vs {{ tool.name }}</a></h3>
+          <p class="card-text small">{{ tool.tagline }}</p>
+          <p class="card-text small text-body-secondary mb-0">{% if tool.type == 'free' %}Free tool{% else %}Paid product{% endif %}. Checked {{ tool.checked }}.</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="container page-section">
+  <h2>By indicator</h2>
+  <p>The same tools, one indicator at a time.</p>
+  <div class="row g-3">
+    {% for ind in compare.indicatorPages %}
+    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="h4 mb-2 mt-3"><a href="/compare/{{ ind.id }}/" class="stretched-link">{{ ind.name }}</a></h3>
+          <p class="card-text small">{{ ind.description }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="container page-section">
+  <div class="row">
+    <div class="col-12 col-lg-10">
+      <h2>How we compare</h2>
+      <ul>
+        <li>Every claim about another tool links to a public source with the date we checked it. We re-check each quarter.</li>
+        <li>Where we could not confirm a capability, the cell says so. We do not fill gaps with guesses.</li>
+        <li>Where another tool has something ScanGov does not, such as FedRAMP or authenticated scanning, the row says so.</li>
+        <li>ScanGov runs next to your current tool. None of these pages ask you to drop one.</li>
+      </ul>
+      <p>See how your own site scores first: <a href="https://scangov.org/">find your public scorecard on scangov.org</a>, or <a href="/demo/">book a demo</a>.</p>
+      {% include "faq.html" %}
+    </div>
+  </div>
+</div>
+{% include "compare-hash.html" %}

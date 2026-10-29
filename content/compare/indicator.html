@@ -1,0 +1,67 @@
+---
+layout: "layouts/default"
+author: ScanGov
+tags: compare
+
+pagination:
+    data: compare.indicatorPages
+    size: 1
+    alias: ind
+    addAllPagesToCollections: true
+
+breadcrumbParent:
+  - url: "/compare/"
+    title: "Compare"
+
+templateModified: "2026-10-28"
+
+eleventyComputed:
+    title: "{{ ind.name }} tools compared with ScanGov"
+    h1: "{{ ind.name }}: ScanGov compared with other tools"
+    description: "{{ ind.description }} How ScanGov, Siteimprove, Lighthouse, and other tools compare on {{ ind.name | lower }} checks."
+    modified: "{{ compare.modified }}"
+    permalink: "/compare/{{ ind.id }}/"
+    breadcrumbCurrent: "{{ ind.name }}"
+---
+
+<div class="container page-section">
+  <div class="row">
+    <div class="col-12 col-lg-10">
+      <p class="lead">{{ ind.description }} This page shows only the {{ ind.name | lower }} rows for every tool we compare. The <a href="/{{ ind.id }}/">ScanGov {{ ind.name | lower }} page</a> lists the standards behind ScanGov's column.</p>
+    </div>
+  </div>
+  {% include "compare-styles.html" %}
+  {% set cmpTools = ind.tools %}
+  {% set cmpId = "ind-" + ind.id %}
+  {% set cmpGroups = [ind] %}
+  {% set cmpTabs = false %}
+  {% set cmpLinkTools = true %}
+  {% include "compare-detail.html" %}
+  <p class="small text-body-secondary">Bracketed numbers link to the source and the date we checked it on each tool's page.</p>
+</div>
+
+<div class="container page-section">
+  <h2>Other indicators</h2>
+  <div class="row g-3">
+    {% for other in compare.indicatorPages %}
+    {% if other.id != ind.id %}
+    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="h4 mb-2 mt-3"><a href="/compare/{{ other.id }}/" class="stretched-link">{{ other.name }}</a></h3>
+          <p class="card-text small">{{ other.description }}</p>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="h4 mb-2 mt-3"><a href="/compare/" class="stretched-link">All indicators</a></h3>
+          <p class="card-text small">The executive view and the full capability table for every tool we compare.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

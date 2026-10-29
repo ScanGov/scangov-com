@@ -1,0 +1,62 @@
+{
+  "slug": "lighthouse",
+  "name": "Lighthouse",
+  "vendor": "Google",
+  "type": "free",
+  "published": true,
+  "order": 20,
+  "url": "https://developer.chrome.com/docs/lighthouse/overview",
+  "tagline": "Free, open-source page audit built into Chrome, and the engine behind PageSpeed Insights.",
+  "indicators": ["accessibility", "botability", "security", "usability"],
+  "checked": "2026-10-28",
+  "modified": "2026-10-28",
+  "summary": "Lighthouse powers part of ScanGov's scan, so this is not a contest. Lighthouse is free, runs in Chrome, and audits one page at a time for performance, accessibility, best practices, and SEO. PageSpeed Insights adds real-user Core Web Vitals from the Chrome User Experience Report. ScanGov runs those checks across every page on a schedule, adds readability, security.txt, crawler access, and the .gov check, keeps the history, and publishes a scorecard you can compare with peers.",
+  "executive": {
+    "covers": { "text": "Performance, accessibility, best practices, and SEO for one page at a time, including HTTPS, HSTS, CSP, robots.txt validity, and structured data.", "source": 1 },
+    "cost": { "text": "Free and open source.", "source": 1 },
+    "public": { "text": "A report on your screen. Nothing is stored or published unless you save it.", "source": 1 },
+    "alongside": { "text": "Nothing to switch. ScanGov runs Lighthouse as part of its own scan, across every page, on a schedule.", "source": 1 },
+    "proves": { "text": "A one-page snapshot. There is no history, no site-wide grade, and no comparison population.", "source": 1 }
+  },
+  "detail": {
+    "whole-site": { "status": "no", "text": "One URL per run. The CLI can be scripted, but you build and host the loop.", "source": 1 },
+    "history": { "status": "no", "text": "No. Each run is a fresh report.", "source": 1 },
+    "scoped-views": { "status": "na", "text": "Not applicable. There are no accounts." },
+    "sso": { "status": "na", "text": "Not applicable. There are no accounts." },
+    "auth-pages": { "status": "yes", "text": "Yes, from DevTools on any page you are signed in to.", "source": 1 },
+    "ci": { "status": "partial", "text": "The Node module and CLI can run in CI. You write the thresholds and the workflow.", "source": 1 },
+    "issue-tracker": { "status": "no", "text": "No. Findings stay in the report." },
+    "public-scorecard": { "status": "no", "text": "No. There is no comparison population." },
+    "open-standards": { "status": "yes", "text": "Open source, with a public description for every audit.", "source": 1 },
+    "public-pricing": { "status": "yes", "text": "Free. Nothing to sign up for.", "source": 1 },
+    "a11y-automated": { "status": "yes", "text": "An accessibility category scored from automated checks.", "source": 1 },
+    "a11y-pdf": { "status": "no", "text": "No. Lighthouse audits HTML pages only." },
+    "a11y-video": { "status": "no", "text": "Not audited." },
+    "bot-robots": { "status": "partial", "text": "Checks that robots.txt is valid and structured data parses. No sitemap or canonical check across the site.", "source": 1 },
+    "bot-render": { "status": "no", "text": "No. Lighthouse runs JavaScript, so it cannot tell you what a crawler that does not run it sees." },
+    "bot-ai": { "status": "no", "text": "Not audited." },
+    "sec-headers": { "status": "partial", "text": "Flags missing HTTPS, HSTS, and CSP on the audited page under best practices.", "source": 1 },
+    "sec-txt": { "status": "no", "text": "Not audited." },
+    "sec-tld": { "status": "no", "text": "Not audited." },
+    "use-cwv-lab": { "status": "yes", "text": "Lab Core Web Vitals with detailed diagnostics. Deeper than ScanGov on a single page.", "source": 1 },
+    "use-cwv-field": { "status": "yes", "text": "Through PageSpeed Insights, which adds Chrome User Experience Report field data for LCP, INP, and CLS.", "source": 2 },
+    "use-meta": { "status": "partial", "text": "Title, meta description, and viewport under SEO. No social sharing tags.", "source": 1 },
+    "read-grade": { "status": "no", "text": "Not audited.", "source": 1 },
+    "read-target": { "status": "no", "text": "Not audited." }
+  },
+  "concerns": {
+    "compliance": "Lighthouse grades one page at a time and keeps nothing. ScanGov runs the same checks across every page and keeps the record a deadline requires.",
+    "budget": "Lighthouse is free, and ScanGov uses it. What you pay ScanGov for is the whole site, the schedule, the history, and the scorecard.",
+    "scrutiny": "Anyone can run Lighthouse on your homepage. ScanGov shows you the same grade before they do, for every page.",
+    "vendor": "A Lighthouse score in a contract is one page, one day, one laptop. A ScanGov scorecard is every page, every month, in public."
+  },
+  "faq": [
+    { "q": "Does ScanGov use Lighthouse?", "a": "Yes. Lighthouse runs as part of ScanGov's scan for performance and accessibility checks. ScanGov adds its own checks for security headers, security.txt, the .gov domain, crawler access, and readability, then scores everything against 103 open standards." },
+    { "q": "Is Lighthouse enough for an accessibility compliance deadline?", "a": "Lighthouse finds a useful share of automated accessibility issues on one page. It does not cover PDFs or video, keeps no history, and cannot tell you how many pages still fail. For a deadline you need every page, on a schedule, with a record." },
+    { "q": "Why does ScanGov not report real-user Core Web Vitals?", "a": "ScanGov reports lab data from its own scans. PageSpeed Insights adds field data from the Chrome User Experience Report, so run it on your busiest pages alongside ScanGov. ScanGov's standards pages for First Contentful Paint, Largest Contentful Paint, and Time to First Byte include videos that show how to fix each one." }
+  ],
+  "sources": [
+    { "title": "Lighthouse overview, Chrome for Developers", "url": "https://developer.chrome.com/docs/lighthouse/overview", "checked": "2026-10-28" },
+    { "title": "About PageSpeed Insights", "url": "https://developers.google.com/speed/docs/insights/v5/about", "checked": "2026-10-28" }
+  ]
+}

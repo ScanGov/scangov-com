@@ -1,0 +1,19 @@
+{
+  "slug": "debugbear",
+  "name": "DebugBear",
+  "vendor": "DebugBear",
+  "type": "paid",
+  "published": false,
+  "order": 50,
+  "url": "https://www.debugbear.com/",
+  "tagline": "Page speed and Core Web Vitals monitoring with lab and real-user data.",
+  "indicators": ["usability", "security"],
+  "checked": null,
+  "summary": "",
+  "executive": {},
+  "detail": {},
+  "concerns": {},
+  "faq": [],
+  "sources": [],
+  "_todo": "Research pass needed: fill executive, detail, concerns, faq, and sources with a URL and checked date on every claim, then set published to true."
+}

@@ -1,0 +1,94 @@
+---
+layout: "layouts/default"
+author: ScanGov
+tags: compare
+
+pagination:
+    data: compare.published
+    size: 1
+    alias: tool
+    addAllPagesToCollections: true
+
+breadcrumbParent:
+  - url: "/compare/"
+    title: "Compare"
+
+templateModified: "2026-10-28"
+
+eleventyComputed:
+    title: "ScanGov vs {{ tool.name }}"
+    description: "{{ tool.tagline }} How {{ tool.name }} and ScanGov compare on what they check, what they cost, who sees the results, and what you can show a board or auditor."
+    modified: "{{ tool.modified or tool.checked or templateModified }}"
+    permalink: "/compare/scangov-vs-{{ tool.slug }}/"
+    breadcrumbCurrent: "{{ tool.name }}"
+---
+
+<div class="container page-section">
+  <div class="row">
+    <div class="col-12 col-lg-10">
+      <p class="lead">{{ tool.summary }}</p>
+      <p class="small text-body-secondary">{% if tool.type == 'free' %}Free tool{% else %}Paid product{% endif %} from {{ tool.vendor }}. <a href="{{ tool.url }}" rel="noopener">{{ tool.name }} website</a>. Claims checked {{ tool.checked }}; sources at the end of this page.</p>
+    </div>
+  </div>
+  {% include "compare-styles.html" %}
+  {% set cmpTools = [tool] %}
+  {% set cmpId = tool.slug %}
+  {% set cmpOnToolPage = true %}
+  <h2>The executive view</h2>
+  {% include "compare-executive.html" %}
+</div>
+
+<div class="container page-section">
+  <h2>Compare in detail</h2>
+  <p>Every tool on this site answers the same capability rows. Use the tabs to show one indicator at a time.</p>
+  {% set cmpId = tool.slug + "-detail" %}
+  {% include "compare-detail.html" %}
+</div>
+
+<div class="container page-section">
+  <div class="row">
+    <div class="col-12 col-lg-10">
+      <p>See how your own site scores first: <a href="https://scangov.org/">find your public scorecard on scangov.org</a>, or <a href="/demo/">book a demo</a>.</p>
+      {% set faq = tool.faq %}
+      {% include "faq.html" %}
+      <section class="mt-5" id="sources">
+        <h2>Sources</h2>
+        <p>Every bracketed number in the tables links here. Dates are when we last checked the page. <a href="/contact/">Tell us</a> if something has changed.</p>
+        <ol>
+          {% for src in tool.sources %}
+          <li id="source-{{ loop.index }}"><a href="{{ src.url }}" rel="noopener">{{ src.title }}</a>, checked {{ src.checked }}.</li>
+          {% endfor %}
+        </ol>
+      </section>
+    </div>
+  </div>
+</div>
+
+<div class="container page-section">
+  <h2>Other comparisons</h2>
+  <div class="row g-3">
+    {% for other in compare.published %}
+    {% if other.slug != tool.slug %}
+    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+      <div class="card">
+        <div class="card-body">
+          <i class="fa-solid {% if other.type == 'free' %}fa-gift{% else %}fa-building{% endif %} fa-lg d-block mb-2" aria-hidden="true"></i>
+          <h3 class="h4 mb-2 mt-3"><a href="/compare/scangov-vs-{{ other.slug }}/" class="stretched-link">ScanGov vs {{ other.name }}</a></h3>
+          <p class="card-text small">{{ other.tagline }}</p>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+      <div class="card">
+        <div class="card-body">
+          <i class="fa-solid fa-table-list fa-lg d-block mb-2" aria-hidden="true"></i>
+          <h3 class="h4 mb-2 mt-3"><a href="/compare/" class="stretched-link">All tools side by side</a></h3>
+          <p class="card-text small">The executive view and the full capability table for every tool we compare.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% include "compare-hash.html" %}

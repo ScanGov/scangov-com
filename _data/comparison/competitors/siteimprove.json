@@ -1,0 +1,67 @@
+{
+  "slug": "siteimprove",
+  "name": "Siteimprove",
+  "vendor": "Siteimprove",
+  "type": "paid",
+  "published": true,
+  "order": 10,
+  "url": "https://www.siteimprove.com/",
+  "tagline": "Enterprise web governance platform with accessibility, search, analytics, and content modules.",
+  "indicators": ["accessibility", "botability", "usability", "readability"],
+  "checked": "2026-10-28",
+  "modified": "2026-10-28",
+  "summary": "Siteimprove is the incumbent in most large public-sector web teams. It sells a suite of modules for accessibility, search, analytics, and content, scans whole sites on a recurring schedule, and reaches pages behind a login. Pricing is by quote. ScanGov covers security headers, crawler access, and readability that Siteimprove does not list, publishes its prices and its standards, and gives every domain a public scorecard. Most teams that try ScanGov run it next to Siteimprove rather than in place of it.",
+  "executive": {
+    "covers": { "text": "Accessibility, search visibility, analytics, and content, sold as separate modules. Marketed against WCAG, ADA Title II, Section 508, and the 21st Century IDEA Act.", "source": 1 },
+    "cost": { "text": "By quote. Buyers report $15,000 to $40,000 a year for small organizations and $25,000 to $100,000 or more for government and higher education, plus onboarding fees.", "source": 4 },
+    "public": { "text": "Private to the account. We found no public scorecard or public report option.", "source": 1 },
+    "alongside": { "text": "Siteimprove is usually the tool already in place. ScanGov adds the checks Siteimprove does not list and does not require dropping it.", "source": 1 },
+    "proves": { "text": "Dashboards and reports inside the platform. Siteimprove's federal platform is FedRAMP Ready, which ScanGov is not.", "source": 1 }
+  },
+  "detail": {
+    "whole-site": { "status": "yes", "text": "Crawls the whole site on a recurring schedule.", "source": 6 },
+    "history": { "status": "unknown", "text": "Trend reporting is not described on the pages we checked." },
+    "scoped-views": { "status": "unknown", "text": "Role-based views are mentioned, but not how they are scoped.", "source": 2 },
+    "sso": { "status": "unknown", "text": "Not described on the pages we checked." },
+    "auth-pages": { "status": "yes", "text": "Covers internal and authenticated pages.", "source": 2 },
+    "ci": { "status": "partial", "text": "CI/CD and an MCP server for VS Code and Claude Code are listed. We did not confirm a deploy gate.", "source": 2 },
+    "issue-tracker": { "status": "yes", "text": "Jira connector and Azure DevOps. No GitHub integration is listed.", "source": 3 },
+    "public-scorecard": { "status": "no", "text": "Results stay inside the platform. No public scorecard or peer ranking.", "source": 1 },
+    "open-standards": { "status": "no", "text": "Checks are proprietary. Guidance lives inside the product and help center.", "source": 6 },
+    "public-pricing": { "status": "no", "text": "No public pricing. Every call to action is a demo request.", "source": 1 },
+    "a11y-automated": { "status": "yes", "text": "WCAG checks across the digital estate, with AI-generated fixes for WordPress and Drupal.", "source": 2 },
+    "a11y-pdf": { "status": "yes", "text": "PDF scanning and a PDF remediation agent that writes alt text.", "source": 2 },
+    "a11y-video": { "status": "unknown", "text": "Not described on the pages we checked." },
+    "bot-robots": { "status": "partial", "text": "The Search module covers SEO visibility and answer engine optimization. We did not confirm robots.txt or sitemap checks.", "source": 1 },
+    "bot-render": { "status": "unknown", "text": "Not described on the pages we checked." },
+    "bot-ai": { "status": "partial", "text": "Markets AI answer engine optimization. We did not confirm an AI crawler access check.", "source": 1 },
+    "sec-headers": { "status": "no", "text": "Security is not among the modules listed.", "source": 1 },
+    "sec-txt": { "status": "no", "text": "Not offered.", "source": 1 },
+    "sec-tld": { "status": "no", "text": "Not offered.", "source": 1 },
+    "use-cwv-lab": { "status": "unknown", "text": "Performance checks are not described on the pages we checked." },
+    "use-cwv-field": { "status": "unknown", "text": "Not described on the pages we checked." },
+    "use-meta": { "status": "partial", "text": "Covered by the Search module. We did not confirm the exact checks.", "source": 1 },
+    "read-grade": { "status": "unknown", "text": "Readability scoring is not described on the pages we checked." },
+    "read-target": { "status": "unknown", "text": "Not described on the pages we checked." }
+  },
+  "concerns": {
+    "compliance": "Siteimprove covers WCAG, PDF, and authenticated pages. ScanGov adds a public record of where every site stands and the checks Siteimprove leaves out.",
+    "budget": "Siteimprove contracts for public bodies run from $25,000 a year. ScanGov's top plan is $12,000 a year, published, and does not require a quote.",
+    "scrutiny": "Siteimprove results stay inside the account. A ScanGov scorecard shows what anyone with a browser can already find.",
+    "vendor": "Siteimprove reports are yours alone. A ScanGov scorecard is a neutral record you can put in a vendor contract."
+  },
+  "faq": [
+    { "q": "Do I have to replace Siteimprove to use ScanGov?", "a": "No. ScanGov scans public pages and reports to its own dashboard, so it runs next to Siteimprove. Most teams keep Siteimprove for authenticated pages and analytics and use ScanGov for security headers, crawler access, readability, and the public scorecard." },
+    { "q": "How much does Siteimprove cost?", "a": "Siteimprove does not publish prices. Vendr reports $15,000 to $40,000 a year for 1,000 to 5,000 pages and one or two modules, and $25,000 to $100,000 or more a year for government and higher education, plus $2,000 to $10,000 in onboarding. The UK G-Cloud listing shows £1,500 to £11,100 per licence for one add-on. ScanGov plans run $50 to $1,000 a month." },
+    { "q": "Is ScanGov FedRAMP authorized?", "a": "No. Siteimprove's federal platform is FedRAMP Ready. ScanGov does not hold FedRAMP, StateRAMP, or SOC 2, and only scans public pages, so no non-public data passes through it." },
+    { "q": "What does ScanGov check that Siteimprove does not?", "a": "Security headers and security.txt on every page, whether the site is on a .gov domain, whether crawlers and AI tools that do not run JavaScript can read the content, and reading grade level against the plain language standard. Siteimprove does not list these among its modules." }
+  ],
+  "sources": [
+    { "title": "Siteimprove for Government", "url": "https://www.siteimprove.com/industries/government/", "checked": "2026-10-28" },
+    { "title": "Siteimprove web accessibility software", "url": "https://www.siteimprove.com/platform/accessibility/web-accessibility-software/", "checked": "2026-10-28" },
+    { "title": "Siteimprove integrations", "url": "https://www.siteimprove.com/integrations/", "checked": "2026-10-28" },
+    { "title": "Vendr: Siteimprove pricing and plans", "url": "https://www.vendr.com/marketplace/siteimprove", "checked": "2026-09-10" },
+    { "title": "UK G-Cloud: Siteimprove Content Analytics listing", "url": "https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/566048410439080", "checked": "2026-09-10" },
+    { "title": "Siteimprove help center: the scan process", "url": "https://help.siteimprove.com/support/solutions/articles/80000863869-the-siteimprove-scan-process", "checked": "2026-10-28" }
+  ]
+}
