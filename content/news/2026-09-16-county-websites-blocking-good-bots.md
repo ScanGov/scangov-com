@@ -1,6 +1,7 @@
 ---
 draft: false
 date: 2026-09-16
+modified: 2026-10-29
 author: ScanGov
 title: "One in 10 county government websites block good bots"
 isReport: true
@@ -201,7 +202,7 @@ One row per county:
 - `cloudflare` — whether Cloudflare sits in front of the site
 - `last_audit` — date of the most recent audit
 
-<a href="/data/county-bot-blocking-2026-09.csv" class="btn btn-outline-primary btn-sm">Download CSV</a>
+<a href="/data/county-bot-blocking-2026-09.csv" class="btn btn-outline-primary">Download CSV</a>
 
 ## What to do next
 

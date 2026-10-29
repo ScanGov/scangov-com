@@ -1,13 +1,13 @@
 ---
 layout: layouts/default-plain
 date: 2025-07-26
-modified: 
+modified: 2026-10-29
 author: ScanGov
 title: "Contact"
 description: "Contact ScanGov with questions about government website monitoring, plans, demos, partnerships, or press."
 hideDescription: true
 ---
 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSeKiSG0f07leAwW1QqIMSoDIgTA92m0jVy6NADtiaoPhg4rww/viewform?usp=header" class="btn btn-primary btn-lg">Contact us
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSeKiSG0f07leAwW1QqIMSoDIgTA92m0jVy6NADtiaoPhg4rww/viewform?usp=header" class="btn btn-primary">Contact us
   <i class="fa-solid fa-arrow-right"></i>
 </a>
