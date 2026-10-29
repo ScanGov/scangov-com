@@ -1,0 +1,60 @@
+{#
+  Detail comparison: capability rows grouped by indicator, with indicator tabs
+  (Luke, 2026-10-28) that default to All. Set before including:
+    cmpTools   - array of competitor records (published)
+    cmpId      - unique prefix for the radio group on this page
+    cmpGroups  - optional; defaults to compare.groups (all indicators)
+    cmpTabs    - set false to hide the tab row (single-indicator pages)
+#}
+{% set groups = cmpGroups or compare.groups %}
+{% set statusLabel = { "yes": "Yes", "partial": "Partly", "no": "No", "unknown": "Not confirmed", "na": "Not applicable" } %}
+{% set statusIcon = { "yes": "fa-circle-check", "partial": "fa-circle-half-stroke", "no": "fa-circle-xmark", "unknown": "fa-circle-question", "na": "fa-circle-minus" } %}
+<div class="cmp">
+  {% if cmpTabs !== false %}
+  <fieldset class="cmp-controls">
+    <legend>Show rows for</legend>
+    <input type="radio" class="btn-check cmp-tab" name="{{ cmpId }}-tab" id="{{ cmpId }}-tab-all" value="all" checked>
+    <label class="btn btn-outline-primary btn-sm" for="{{ cmpId }}-tab-all">All</label>
+    {% for ind in groups %}
+    <input type="radio" class="btn-check cmp-tab" name="{{ cmpId }}-tab" id="{{ cmpId }}-tab-{{ ind.id }}" value="{{ ind.id }}">
+    <label class="btn btn-outline-primary btn-sm" for="{{ cmpId }}-tab-{{ ind.id }}">{{ ind.tab }}</label>
+    {% endfor %}
+  </fieldset>
+  {% endif %}
+  <div class="table-responsive">
+    <table class="table">
+      <caption class="visually-hidden">Capability comparison of ScanGov and {{ cmpTools | length }} other tool{% if cmpTools | length != 1 %}s{% endif %}, grouped by indicator</caption>
+      <thead>
+        <tr>
+          <th scope="col">Capability</th>
+          <th scope="col" class="cmp-tool cmp-ours">ScanGov</th>
+          {% for tool in cmpTools %}
+          <th scope="col" class="cmp-tool">{% if cmpLinkTools %}<a href="/compare/scangov-vs-{{ tool.slug }}/">{{ tool.name }}</a>{% else %}{{ tool.name }}{% endif %}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      {% for ind in groups %}
+      <tbody data-indicator="{{ ind.id }}" id="{{ cmpId }}-{{ ind.id }}">
+        <tr>
+          <th scope="rowgroup" colspan="{{ (cmpTools | length) + 2 }}" class="cmp-group">{% if ind.id != 'platform' %}<a href="/compare/{{ ind.id }}/">{{ ind.name }}</a>{% else %}{{ ind.name }}{% endif %}</th>
+        </tr>
+        {% for row in ind.rows %}
+        <tr>
+          <th scope="row">{{ row.label }}</th>
+          {% set cell = compare.scangov.detail[row.id] %}
+          <td class="cmp-ours">
+            {% if cell %}<span class="cmp-status cmp-status-{{ cell.status }}"><i class="fa-solid {{ statusIcon[cell.status] }}" aria-hidden="true"></i>{{ statusLabel[cell.status] }}</span><br>{{ cell.text }}{% if cell.url %} <a href="{{ cell.url }}" class="small">More</a>{% endif %}{% else %}<span class="cmp-status cmp-status-unknown">Not recorded</span>{% endif %}
+          </td>
+          {% for tool in cmpTools %}
+          {% set cell = tool.detail[row.id] %}
+          <td>
+            {% if cell %}<span class="cmp-status cmp-status-{{ cell.status }}"><i class="fa-solid {{ statusIcon[cell.status] }}" aria-hidden="true"></i>{{ statusLabel[cell.status] }}</span><br>{{ cell.text }}{% if cell.source %}<a class="cmp-source" href="{% if not cmpOnToolPage %}/compare/scangov-vs-{{ tool.slug }}/{% endif %}#source-{{ cell.source }}" aria-label="Source {{ cell.source }} for {{ tool.name }}"><sup>[{{ cell.source }}]</sup></a>{% endif %}{% else %}<span class="cmp-status cmp-status-unknown"><i class="fa-solid fa-circle-question" aria-hidden="true"></i>Not confirmed</span>{% endif %}
+          </td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+      {% endfor %}
+    </table>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+{
+  "slug": "silktide",
+  "name": "Silktide",
+  "vendor": "Silktide",
+  "type": "paid",
+  "published": false,
+  "order": 40,
+  "url": "https://silktide.com/",
+  "tagline": "Accessibility and content platform with a public accessibility league table, the Silktide Index.",
+  "indicators": ["accessibility", "usability", "readability"],
+  "checked": null,
+  "summary": "",
+  "executive": {},
+  "detail": {},
+  "concerns": {},
+  "faq": [],
+  "sources": [],
+  "_todo": "Research pass needed: fill executive, detail, concerns, faq, and sources with a URL and checked date on every claim, then set published to true."
+}

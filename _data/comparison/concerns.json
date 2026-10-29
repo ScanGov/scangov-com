@@ -1,0 +1,6 @@
+[
+  { "id": "compliance", "label": "A compliance deadline", "short": "Compliance", "icon": "fa-calendar-check", "lead": "You need to know where every site stands against accessibility rules, and you need it before the deadline." },
+  { "id": "budget", "label": "Budget", "short": "Budget", "icon": "fa-coins", "lead": "You need to know what each option costs before anyone asks for a quote, and whether adding a tool means dropping one." },
+  { "id": "scrutiny", "label": "Public scrutiny", "short": "Scrutiny", "icon": "fa-eye", "lead": "A reporter, a council member, or a resident can grade your site. You want to see what they see first." },
+  { "id": "vendor", "label": "Vendor accountability", "short": "Vendors", "icon": "fa-handshake", "lead": "Someone else builds or hosts your sites. You need a neutral record you can put in a contract and check every month." }
+]

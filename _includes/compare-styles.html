@@ -1,0 +1,34 @@
+{#
+  Styles for the /compare/ pages. Inline rather than in scangov.css because
+  the per-page PurgeCSS pass cannot see :has() selectors keyed on radio
+  values. Filtering is pure CSS: a checked radio inside .cmp hides the
+  <tbody> groups for other indicators, or dims executive rows that do not
+  carry the chosen concern and reveals that concern's takeaway row.
+#}
+<style>
+  .cmp-controls { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1rem; }
+  .cmp-controls legend { font-size: 1rem; font-weight: 600; margin-bottom: .5rem; float: none; width: auto; }
+  .cmp-controls .btn { margin: 0; }
+  .cmp table { min-width: 42rem; }
+  .cmp th[scope="row"] { font-weight: 600; width: 16rem; }
+  .cmp th.cmp-tool { white-space: nowrap; }
+  .cmp tbody th.cmp-group { font-size: .875rem; text-transform: uppercase; letter-spacing: .04em; }
+  .cmp td { vertical-align: top; font-size: .9375rem; }
+  .cmp-status { display: inline-flex; align-items: center; gap: .35rem; font-weight: 600; font-size: .8125rem; margin-bottom: .25rem; }
+  .cmp-status svg, .cmp-status i { width: 1em; }
+  .cmp-status-unknown, .cmp-status-na { font-weight: 400; color: var(--bs-secondary-color); }
+  .cmp-source { font-size: .75rem; margin-inline-start: .25rem; text-decoration: none; }
+  .cmp-hint { display: block; font-weight: 400; font-size: .8125rem; color: var(--bs-secondary-color); }
+  .cmp-takeaway { display: none; }
+  .cmp-takeaway td, .cmp-takeaway th { background: var(--bs-tertiary-bg); }
+  .cmp-ours { background: var(--bs-tertiary-bg); }
+
+  {% for ind in compare.indicators %}
+  .cmp:has(.cmp-tab[value="{{ ind.id }}"]:checked) tbody[data-indicator]:not([data-indicator="{{ ind.id }}"]) { display: none; }
+  {% endfor %}
+  {% for c in compare.concerns %}
+  .cmp:has(.cmp-concern[value="{{ c.id }}"]:checked) .cmp-exec-row:not([data-concerns~="{{ c.id }}"]) { opacity: .55; }
+  .cmp:has(.cmp-concern[value="{{ c.id }}"]:checked) .cmp-takeaway[data-concern="{{ c.id }}"] { display: table-row; }
+  {% endfor %}
+  @media (prefers-reduced-motion: no-preference) { .cmp-exec-row { transition: opacity .2s ease; } }
+</style>

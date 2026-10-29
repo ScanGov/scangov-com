@@ -1,0 +1,55 @@
+{#
+  Executive comparison: five verdict rows, ScanGov first, then one column per
+  tool. Set before including:
+    cmpTools  - array of competitor records (published)
+    cmpId     - unique prefix for the radio group on this page
+  The concern picker reorders nothing and hides nothing; it dims rows that do
+  not carry the chosen concern and shows a one-line takeaway per tool.
+#}
+<div class="cmp">
+  <fieldset class="cmp-controls">
+    <legend>What are you most concerned about?</legend>
+    <input type="radio" class="btn-check cmp-concern" name="{{ cmpId }}-concern" id="{{ cmpId }}-concern-all" value="all" checked>
+    <label class="btn btn-outline-primary btn-sm" for="{{ cmpId }}-concern-all">Everything</label>
+    {% for c in compare.concerns %}
+    <input type="radio" class="btn-check cmp-concern" name="{{ cmpId }}-concern" id="{{ cmpId }}-concern-{{ c.id }}" value="{{ c.id }}">
+    <label class="btn btn-outline-primary btn-sm" for="{{ cmpId }}-concern-{{ c.id }}"><i class="fa-solid {{ c.icon }} me-1" aria-hidden="true"></i>{{ c.label }}</label>
+    {% endfor %}
+  </fieldset>
+  <div class="table-responsive">
+    <table class="table">
+      <caption class="visually-hidden">Executive comparison of ScanGov and {{ cmpTools | length }} other tool{% if cmpTools | length != 1 %}s{% endif %} across five questions</caption>
+      <thead>
+        <tr>
+          <th scope="col">Question</th>
+          <th scope="col" class="cmp-tool cmp-ours">ScanGov</th>
+          {% for tool in cmpTools %}
+          <th scope="col" class="cmp-tool">{% if cmpLinkTools %}<a href="/compare/scangov-vs-{{ tool.slug }}/">{{ tool.name }}</a>{% else %}{{ tool.name }}{% endif %}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for c in compare.concerns %}
+        <tr class="cmp-takeaway" data-concern="{{ c.id }}">
+          <th scope="row">If {{ c.label | lower }} is the concern</th>
+          <td class="cmp-ours">{{ compare.scangov.concerns[c.id] }}</td>
+          {% for tool in cmpTools %}
+          <td>{{ tool.concerns[c.id] }}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+        {% for row in compare.rows.executive %}
+        <tr class="cmp-exec-row" data-concerns="{{ row.concerns | join(' ') }}">
+          <th scope="row">{{ row.label }}<span class="cmp-hint">{{ row.hint }}</span></th>
+          {% set cell = compare.scangov.executive[row.id] %}
+          <td class="cmp-ours">{{ cell.text }}{% if cell.url %} <a href="{{ cell.url }}" class="small">More</a>{% endif %}</td>
+          {% for tool in cmpTools %}
+          {% set cell = tool.executive[row.id] %}
+          <td>{{ cell.text }}{% if cell.source %}<a class="cmp-source" href="{% if not cmpOnToolPage %}/compare/scangov-vs-{{ tool.slug }}/{% endif %}#source-{{ cell.source }}" aria-label="Source {{ cell.source }} for {{ tool.name }}"><sup>[{{ cell.source }}]</sup></a>{% endif %}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,148 @@
+{
+  "name": "ScanGov",
+  "url": "https://scangov.com/",
+  "checked": "2026-10-28",
+  "executive": {
+    "covers": {
+      "text": "Accessibility, security headers, usability and Core Web Vitals, readability, and whether AI tools and search engines can read the site. Every page, against 103 open standards.",
+      "url": "/indicators/"
+    },
+    "cost": {
+      "text": "Public. $50 to $1,000 a month, by number of domains and page scans. No quote needed.",
+      "url": "/plans/"
+    },
+    "public": {
+      "text": "Public by default. Every scanned domain has a scorecard anyone can open, and your team's full dashboard is private to your account.",
+      "url": "/features/scorecards/"
+    },
+    "alongside": {
+      "text": "No. ScanGov runs next to whatever you use today and covers checks most suites leave out.",
+      "url": "/features/"
+    },
+    "proves": {
+      "text": "A dated history of every score change, a public scorecard, and a trend line for every indicator.",
+      "url": "/features/changelog/"
+    }
+  },
+  "detail": {
+    "whole-site": {
+      "status": "yes",
+      "text": "Every page in your sitemap, on a schedule, with on-demand rescans.",
+      "url": "/features/scan-management/"
+    },
+    "history": {
+      "status": "yes",
+      "text": "Pulse trend lines and a dated changelog for every indicator.",
+      "url": "/features/pulse/"
+    },
+    "scoped-views": {
+      "status": "yes",
+      "text": "Filters by site, topic, and URL path, with members attached.",
+      "url": "/filter-setup-guide/"
+    },
+    "sso": {
+      "status": "partial",
+      "text": "Okta through OpenID Connect (OIDC) on Business and Enterprise plans. Microsoft Entra ID is not supported yet.",
+      "url": "/features/single-sign-on/"
+    },
+    "auth-pages": {
+      "status": "no",
+      "text": "No. ScanGov scans public pages only."
+    },
+    "ci": {
+      "status": "yes",
+      "text": "A free GitHub Action audits your site on every deploy.",
+      "url": "https://github.com/marketplace/actions/scangov"
+    },
+    "issue-tracker": {
+      "status": "yes",
+      "text": "GitHub integration, pre-filled issue reports, and CSV, JSON, or Markdown export.",
+      "url": "/features/github-integration/"
+    },
+    "public-scorecard": {
+      "status": "yes",
+      "text": "A public scorecard for every domain and rankings against peers on scangov.org.",
+      "url": "https://scangov.org/rankings/"
+    },
+    "open-standards": {
+      "status": "yes",
+      "text": "103 published standards, each with guidance on how to fix it.",
+      "url": "https://standards.scangov.org/"
+    },
+    "public-pricing": {
+      "status": "yes",
+      "text": "Four plans from $50 a month. Pay and start scanning in minutes.",
+      "url": "/plans/"
+    },
+    "a11y-automated": {
+      "status": "yes",
+      "text": "Automated WCAG checks on every page, ranked by impact in the tasklist.",
+      "url": "/accessibility/"
+    },
+    "a11y-pdf": {
+      "status": "yes",
+      "text": "PDF checks are included in the scan."
+    },
+    "a11y-video": {
+      "status": "yes",
+      "text": "Captions on page videos and titles on embedded players.",
+      "url": "/features/video-accessibility/"
+    },
+    "bot-robots": {
+      "status": "yes",
+      "text": "Robots.txt, sitemap, canonical tags, and schema on every page.",
+      "url": "/botability/"
+    },
+    "bot-render": {
+      "status": "yes",
+      "text": "Reports whether a crawler that does not run JavaScript sees your content."
+    },
+    "bot-ai": {
+      "status": "yes",
+      "text": "Checks whether good bots, including AI crawlers, can reach the site.",
+      "url": "/tools/good-bot-scan/"
+    },
+    "sec-headers": {
+      "status": "yes",
+      "text": "HTTPS, HSTS, Content Security Policy (CSP), and X-Content-Type-Options on every page.",
+      "url": "/security/"
+    },
+    "sec-txt": {
+      "status": "yes",
+      "text": "Checks for a valid security.txt."
+    },
+    "sec-tld": {
+      "status": "yes",
+      "text": "Flags government sites not on a .gov domain."
+    },
+    "use-cwv-lab": {
+      "status": "yes",
+      "text": "Lab Core Web Vitals on every page, scored against the standards.",
+      "url": "/usability/"
+    },
+    "use-cwv-field": {
+      "status": "no",
+      "text": "No. ScanGov reports lab data only."
+    },
+    "use-meta": {
+      "status": "yes",
+      "text": "Titles, descriptions, viewport, and social sharing tags on every page."
+    },
+    "read-grade": {
+      "status": "yes",
+      "text": "Automated Readability Index and Flesch-Kincaid on every page.",
+      "url": "/readability/"
+    },
+    "read-target": {
+      "status": "yes",
+      "text": "Set a reading level target per site.",
+      "url": "/features/readability/"
+    }
+  },
+  "concerns": {
+    "compliance": "Every page, every indicator, on a schedule, with a dated record of what changed and when.",
+    "budget": "Published prices from $50 a month. The top plan is $12,000 a year.",
+    "scrutiny": "A public scorecard for every domain, so you see your grade before anyone else does.",
+    "vendor": "A neutral, public, monthly record you can write into a contract and check without asking the vendor."
+  }
+}

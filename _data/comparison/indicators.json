@@ -1,0 +1,8 @@
+[
+  { "id": "platform", "name": "Platform", "tab": "Platform", "description": "How the tool runs, who can use it, and what it connects to." },
+  { "id": "accessibility", "name": "Accessibility", "tab": "Accessibility", "description": "Checks that find barriers for people with disabilities." },
+  { "id": "botability", "name": "Botability", "tab": "AI and search", "description": "Whether AI tools and search engines can find and read your site." },
+  { "id": "security", "name": "Security", "tab": "Security", "description": "Security headers and practices on every page." },
+  { "id": "usability", "name": "Usability", "tab": "Usability", "description": "Core Web Vitals, titles, descriptions, and mobile settings." },
+  { "id": "readability", "name": "Readability", "tab": "Readability", "description": "Reading grade level against the plain language standard." }
+]

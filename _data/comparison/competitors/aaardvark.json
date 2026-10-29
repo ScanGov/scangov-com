@@ -1,0 +1,19 @@
+{
+  "slug": "aaardvark",
+  "name": "AAArdvark",
+  "vendor": "AAArdvark",
+  "type": "paid",
+  "published": false,
+  "order": 60,
+  "url": "https://aaardvarkaccessibility.com/",
+  "tagline": "Accessibility scanner and WordPress plugin for site-wide WCAG checks.",
+  "indicators": ["accessibility"],
+  "checked": null,
+  "summary": "",
+  "executive": {},
+  "detail": {},
+  "concerns": {},
+  "faq": [],
+  "sources": [],
+  "_todo": "Research pass needed: fill executive, detail, concerns, faq, and sources with a URL and checked date on every claim, then set published to true."
+}

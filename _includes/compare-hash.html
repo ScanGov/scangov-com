@@ -1,0 +1,26 @@
+{#
+  Deep links for the compare filters. /compare/#concern-budget or
+  #indicator-accessibility checks the matching radio on load, and changing a
+  radio writes the hash back, so a filtered view has a shareable URL and the
+  who-we-serve pages can land a reader on their concern. Filtering itself is
+  CSS; this only syncs the hash.
+#}
+<script>
+(function () {
+  function apply() {
+    var m = /^#(concern|indicator)-([a-z-]+)$/.exec(location.hash);
+    if (!m) return;
+    var cls = m[1] === 'concern' ? 'cmp-concern' : 'cmp-tab';
+    document.querySelectorAll('input.' + cls + '[value="' + m[2] + '"]').forEach(function (r) { r.checked = true; });
+  }
+  apply();
+  window.addEventListener('hashchange', apply);
+  document.addEventListener('change', function (e) {
+    var t = e.target;
+    if (!t.classList || !(t.classList.contains('cmp-concern') || t.classList.contains('cmp-tab'))) return;
+    var kind = t.classList.contains('cmp-concern') ? 'concern' : 'indicator';
+    var hash = t.value === 'all' ? '' : '#' + kind + '-' + t.value;
+    history.replaceState(null, '', location.pathname + location.search + hash);
+  });
+})();
+</script>

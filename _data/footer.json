@@ -39,6 +39,10 @@
       "url": "/plans"
     },
     {
+      "title": "Compare",
+      "url": "/compare/"
+    },
+    {
       "title": "Demo",
       "url": "/demo"
     },

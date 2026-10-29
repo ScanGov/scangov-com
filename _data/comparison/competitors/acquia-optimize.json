@@ -1,0 +1,19 @@
+{
+  "slug": "acquia-optimize",
+  "name": "Acquia Optimize",
+  "vendor": "Acquia",
+  "type": "paid",
+  "published": false,
+  "order": 30,
+  "url": "https://www.acquia.com/products/acquia-optimize",
+  "tagline": "Web governance module inside Acquia, formerly Monsido, resold to local government by CivicPlus.",
+  "indicators": ["accessibility", "usability", "readability"],
+  "checked": null,
+  "summary": "",
+  "executive": {},
+  "detail": {},
+  "concerns": {},
+  "faq": [],
+  "sources": [],
+  "_todo": "Research pass needed: fill executive, detail, concerns, faq, and sources with a URL and checked date on every claim, then set published to true."
+}
