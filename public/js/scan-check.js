@@ -61,8 +61,8 @@ function toAbsoluteUrl(domain) {
 
 function checkAnotherSiteButton() {
   return `
-      <button class="btn btn-outline-primary border mt-0" id="new-check-btn">
-        <i class="fa-solid fa-check me-2" aria-hidden="true"></i>Check another site</button>
+      <button class="btn btn-outline-primary mt-0" id="new-check-btn">
+        <i class="fa-solid fa-check" aria-hidden="true"></i>Check another site</button>
     `;
 }
 
@@ -171,8 +171,8 @@ function renderResults(data, statusDef) {
       <div class="input-group">
         <label for="report-url" class="visually-hidden">Report link</label>
         <input type="text" class="form-control font-monospace" id="report-url" readonly>
-        <button class="btn btn-outline-primary border mt-0" type="button" id="copy-report-btn">
-          <i class="fa-solid fa-copy me-2" aria-hidden="true"></i>Copy</button>
+        <button class="btn btn-outline-primary mt-0" type="button" id="copy-report-btn">
+          <i class="fa-solid fa-copy" aria-hidden="true"></i>Copy</button>
       </div>
 
     </div>

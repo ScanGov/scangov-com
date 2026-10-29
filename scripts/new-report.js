@@ -111,7 +111,7 @@ TODO: one row per TODO:
 
 - \`TODO_field\` — TODO short description
 
-<a href="/data/TODO.csv" class="btn btn-outline-primary btn-sm">Download CSV</a>
+<a href="/data/TODO.csv" class="btn btn-outline-primary">Download CSV</a>
 
 ## What to do next
 

@@ -1,6 +1,7 @@
 ---
 draft: false
 date: 2026-09-16
+modified: 2026-10-29
 author: ScanGov
 title: "One in 10 county government websites block good bots"
 isReport: true
@@ -30,14 +31,14 @@ A well-behaved bot announces itself, follows robots.txt, and visits slowly. Site
 
 ## What we scanned
 
-- All counties where we identified a public website: 2,858 US counties.
+- All counties where we identified a public website: 2,858 U.S. counties.
 
 We made Up to 3 requests per site. We start with a basic HTTP request using node.js fetch, if that fails we try the same request with headless browser. Then we run a Google Lighthouse audit. All requests identify as ScanGovBot in the user agent header.
 
 ## What we learned
 
 - 85.2% (2,435 counties) let the bot in.
-- 9.9% (284 counties) turned us away. We encountered firewall , CDN(Content Delivery Network) rules and CAPTCHAs.
+- 9.9% (284 counties) turned us away. We encountered firewall, content delivery network (CDN) rules and CAPTCHAs.
 - 3.7% (107 counties) ask bots to stay out in robots.txt. Our bot follows these restrictions and will not interact with the site.
 - 13.7% (391 counties) cannot be read by a well-behaved bot, put together.
 
@@ -201,7 +202,7 @@ One row per county:
 - `cloudflare` — whether Cloudflare sits in front of the site
 - `last_audit` — date of the most recent audit
 
-<a href="/data/county-bot-blocking-2026-09.csv" class="btn btn-outline-primary btn-sm">Download CSV</a>
+<a href="/data/county-bot-blocking-2026-09.csv" class="btn btn-outline-primary">Download CSV</a>
 
 ## What to do next
 
