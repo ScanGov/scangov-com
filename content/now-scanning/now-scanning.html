@@ -22,6 +22,51 @@ eleventyComputed:
     date: "{{ website.date }}"
 ---
 
+{% if website.blocked %}
+{% set def = statusDefs | statusDef(website.blocked.code) %}
+{% if def %}
+<h2>Status</h2>
+<p>❌ {{ def.scangovStatus }}: {{ def.statusDescription | safe }}</p>
+
+<h2>What happened</h2>
+<ul>
+  <li>We tried: <a href="{{ website.blocked.tried }}" target="_blank" rel="noopener">{{ website.blocked.tried }}</a></li>
+  {% if website.blocked.when %}<li>When: {{ website.blocked.when }}</li>{% endif %}
+  {% if website.blocked.httpStatus %}<li>The site answered: HTTP {{ website.blocked.httpStatus }}</li>{% endif %}
+  {% if website.blocked.saw %}<li>What we saw: {{ website.blocked.saw }}</li>{% endif %}
+</ul>
+
+<h2>Description</h2>
+<p>{{ def.description }}</p>
+
+{% if def.problem %}
+<h2>Problem</h2>
+<p>{{ def.problem }}</p>
+{% endif %}
+
+{% if def.recommendation %}
+<h2>Recommendation</h2>
+<p>{{ def.recommendation | safe }}</p>
+{% endif %}
+
+{% if def.recommendationTechnical %}
+<h2>Technical recommendation</h2>
+<p>{{ def.recommendationTechnical }}</p>
+{% endif %}
+
+<h2>Details</h2>
+<ul class="list-unstyled font-monospace">
+  <li>Site: {{ website.title }}</li>
+  <li>Label: {{ def.label }}</li>
+  <li>Type: {{ def.type }}</li>
+  <li>Code: {{ def.code }}</li>
+</ul>
+
+<h2>ScanGovBot</h2>
+<p>Our scanner identifies itself as ScanGovBot. If your site uses a firewall or bot protection, allow it through: <a href="https://scangov.com/bot">https://scangov.com/bot</a></p>
+{% endif %}
+{% endif %}
+
 {% if website.results %}
 <p>Scan results for {{ website.title }} ({{ website.results.scanDate | shortDate }} / {{ website.results.pages }} {% if website.results.pages == 1 %}page{% else %}pages{% endif %}):</p>
 {% set scoreTopics = [
@@ -45,6 +90,7 @@ eleventyComputed:
 </ul>
 {% endif %}
 
+{% if not website.blocked %}
 <p>Learn more:</p>
 <ul>
   {% if website.scorecard %}
@@ -64,3 +110,4 @@ eleventyComputed:
       rel="noopener">{{ website.title }}</a>
   </li>
 </ul>
+{% endif %}
