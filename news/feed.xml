@@ -3,7 +3,7 @@
   <title>ScanGov News</title>
   <link href="https://scangov.com/news/feed.xml" rel="self"/>
   <link href="https://scangov.com/news/"/>
-  <updated>2026-10-29T17:18:28Z</updated>
+  <updated>2026-10-30T17:03:04Z</updated>
   <id>https://scangov.com/news/</id>
   <author>
     <name>ScanGov</name>
@@ -13,25 +13,33 @@
   <entry>
     <title>Now scanning ... delaware.gov</title>
     <link href="https://scangov.com/now-scanning/delaware-gov/"/>
-    <updated>2026-10-29T17:18:28Z</updated>
+    <updated>2026-10-30T17:03:04Z</updated>
     <id>https://scangov.com/now-scanning/delaware-gov/</id>
-    <summary>A ScanGov review of delaware.gov: accessibility, security, usability, AI-readiness, and readability scores and a video walkthrough.</summary>
+    <summary>A ScanGov review of delaware.gov: AI-readiness, accessibility, security, usability, and readability scores and a video walkthrough.</summary>
+  </entry>
+  
+  <entry>
+    <title>Now scanning ... az.gov</title>
+    <link href="https://scangov.com/now-scanning/az-gov/"/>
+    <updated>2026-10-30T17:03:04Z</updated>
+    <id>https://scangov.com/now-scanning/az-gov/</id>
+    <summary>A ScanGov review of az.gov: AI-readiness, accessibility, security, usability, and readability scores and a video walkthrough.</summary>
   </entry>
   
   <entry>
     <title>Now scanning ... alaska.gov</title>
     <link href="https://scangov.com/now-scanning/alaska-gov/"/>
-    <updated>2026-10-29T17:18:28Z</updated>
+    <updated>2026-10-30T17:03:04Z</updated>
     <id>https://scangov.com/now-scanning/alaska-gov/</id>
-    <summary>A ScanGov review of alaska.gov: accessibility, security, usability, AI-readiness, and readability scores and a video walkthrough.</summary>
+    <summary>A ScanGov review of alaska.gov: AI-readiness, accessibility, security, usability, and readability scores and a video walkthrough.</summary>
   </entry>
   
   <entry>
     <title>Now scanning ... proudlyservingbook.com</title>
     <link href="https://scangov.com/now-scanning/proudlyservingbook-com/"/>
-    <updated>2026-10-29T17:18:28Z</updated>
+    <updated>2026-10-30T17:03:04Z</updated>
     <id>https://scangov.com/now-scanning/proudlyservingbook-com/</id>
-    <summary>A ScanGov review of proudlyservingbook.com: accessibility, security, usability, AI-readiness, and readability scores and a video walkthrough.</summary>
+    <summary>A ScanGov review of proudlyservingbook.com: AI-readiness, accessibility, security, usability, and readability scores and a video walkthrough.</summary>
   </entry>
   
   <entry>
@@ -85,17 +93,17 @@
   <entry>
     <title>Now scanning ... maryland.gov</title>
     <link href="https://scangov.com/now-scanning/maryland-gov/"/>
-    <updated>2026-10-29T17:18:28Z</updated>
+    <updated>2026-10-30T17:03:04Z</updated>
     <id>https://scangov.com/now-scanning/maryland-gov/</id>
-    <summary>A ScanGov review of maryland.gov: accessibility, security, usability, AI-readiness, and readability scores and a video walkthrough.</summary>
+    <summary>A ScanGov review of maryland.gov: AI-readiness, accessibility, security, usability, and readability scores and a video walkthrough.</summary>
   </entry>
   
   <entry>
     <title>Now scanning ... colorado.gov</title>
     <link href="https://scangov.com/now-scanning/colorado-gov/"/>
-    <updated>2026-10-29T17:18:28Z</updated>
+    <updated>2026-10-30T17:03:04Z</updated>
     <id>https://scangov.com/now-scanning/colorado-gov/</id>
-    <summary>A ScanGov review of colorado.gov: accessibility, security, usability, AI-readiness, and readability scores and a video walkthrough.</summary>
+    <summary>A ScanGov review of colorado.gov: AI-readiness, accessibility, security, usability, and readability scores and a video walkthrough.</summary>
   </entry>
   
   <entry>
@@ -109,33 +117,33 @@
   <entry>
     <title>Now scanning ... nyc.gov</title>
     <link href="https://scangov.com/now-scanning/nyc-gov/"/>
-    <updated>2026-10-29T17:18:28Z</updated>
+    <updated>2026-10-30T17:03:04Z</updated>
     <id>https://scangov.com/now-scanning/nyc-gov/</id>
-    <summary>A ScanGov review of nyc.gov: accessibility, security, usability, AI-readiness, and readability scores and a video walkthrough.</summary>
+    <summary>A ScanGov review of nyc.gov: AI-readiness, accessibility, security, usability, and readability scores and a video walkthrough.</summary>
   </entry>
   
   <entry>
     <title>Now scanning ... georgia.gov</title>
     <link href="https://scangov.com/now-scanning/georgia-gov/"/>
-    <updated>2026-10-29T17:18:28Z</updated>
+    <updated>2026-10-30T17:03:04Z</updated>
     <id>https://scangov.com/now-scanning/georgia-gov/</id>
-    <summary>A ScanGov review of georgia.gov: accessibility, security, usability, AI-readiness, and readability scores and a video walkthrough.</summary>
+    <summary>A ScanGov review of georgia.gov: AI-readiness, accessibility, security, usability, and readability scores and a video walkthrough.</summary>
   </entry>
   
   <entry>
     <title>Now scanning ... ms.gov</title>
     <link href="https://scangov.com/now-scanning/ms-gov/"/>
-    <updated>2026-10-29T17:18:28Z</updated>
+    <updated>2026-10-30T17:03:04Z</updated>
     <id>https://scangov.com/now-scanning/ms-gov/</id>
-    <summary>A ScanGov review of ms.gov: accessibility, security, usability, AI-readiness, and readability scores and a video walkthrough.</summary>
+    <summary>A ScanGov review of ms.gov: AI-readiness, accessibility, security, usability, and readability scores and a video walkthrough.</summary>
   </entry>
   
   <entry>
     <title>Now scanning ... texas.gov</title>
     <link href="https://scangov.com/now-scanning/texas-gov/"/>
-    <updated>2026-10-29T17:18:28Z</updated>
+    <updated>2026-10-30T17:03:04Z</updated>
     <id>https://scangov.com/now-scanning/texas-gov/</id>
-    <summary>A ScanGov review of texas.gov: accessibility, security, usability, AI-readiness, and readability scores and a video walkthrough.</summary>
+    <summary>A ScanGov review of texas.gov: AI-readiness, accessibility, security, usability, and readability scores and a video walkthrough.</summary>
   </entry>
   
   <entry>
@@ -160,14 +168,6 @@
     <updated>2025-04-06T00:00:00Z</updated>
     <id>https://scangov.com/news/scangov-to-support-judging-for-2025-government-experience-awards/</id>
     <summary>Will provide holistic, quantitative website scan data to e.Republic’s Center for Digital Government annual GovX awards program.</summary>
-  </entry>
-  
-  <entry>
-    <title>Welcome Aaron Hans</title>
-    <link href="https://scangov.com/news/welcome-aaron-hans/"/>
-    <updated>2025-02-12T00:00:00Z</updated>
-    <id>https://scangov.com/news/welcome-aaron-hans/</id>
-    <summary>Aaron Hans joins ScanGov as a maintainer after civic tech work at Code for America, California&#39;s Alpha project, the state COVID-19 site, and the Office of Data and Innovation.</summary>
   </entry>
   
 </feed>
