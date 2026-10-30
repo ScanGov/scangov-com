@@ -31,6 +31,11 @@ export default function(eleventyConfig) {
 		return "🔴";
 	});
 
+	// A status.json entry (the statusDefs data) by its code
+	eleventyConfig.addFilter("statusDef", (defs, code) => {
+		return (defs || []).find((def) => def.code === code);
+	});
+
 	// Get the first `n` elements of a collection.
 	eleventyConfig.addFilter("head", (array, n) => {
 		if(!Array.isArray(array) || array.length === 0) {
