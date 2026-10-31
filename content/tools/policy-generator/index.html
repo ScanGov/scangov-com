@@ -1,21 +1,32 @@
 ---
 layout: "layouts/default"
+date: 2026-10-30
+modified: 2026-10-30
+author: ScanGov
 title: "Digital experience policy generator"
-description: "Write one policy that covers accessibility, AI readiness, security, usability, and plain language, based on the ScanGov Standards. Free."
+toolName: "Policy generator"
+breadcrumbParent:
+  - url: "/tools/"
+    title: "Tools"
+breadcrumbCurrent: "Policy generator"
+ogImage: pages/website-rfp-og.png
+ogImageAlt: "Policy document with a check mark"
+description: "Write one policy that covers AI readiness, accessibility, security, usability, and readability, based on the ScanGov Standards."
 permalink: /tools/policy-generator/
 isTool: true
+toolIndicators: [accessibility, botability, security, usability, readability]
 faq:
   - q: What is a digital experience policy?
     a: >-
       One policy for everything you publish online. Most organizations have an accessibility
       policy and nothing else. This one also covers AI and search readiness, security, usability,
-      and plain language, names an owner, and says how you measure it. The
+      and readability, names an owner, and says how you measure it. The
       <a href="https://standards.scangov.org/">ScanGov Standards</a> are the baseline.
   - q: Why cover more than accessibility?
     a: >-
       Because people do not experience these as separate things. A page a screen reader can use
       but a search engine cannot find, or that reads at a college level, still fails them. One
-      policy with one owner and one scan is easier to run than five.
+      policy with one owner is easier to run than five.
   - q: Which laws does it cite?
     a: >-
       You choose. State and local governments can cite the Americans with Disabilities Act (ADA)
@@ -25,9 +36,8 @@ faq:
       <a href="https://www.ada.gov/resources/2024-03-08-web-rule/">ada.gov</a>.
   - q: How do you measure compliance?
     a: >-
-      With a scan, not a statement. The policy commits you to scanning every site on a schedule
-      and fixing failures within a set time. ScanGov already scans most U.S. government sites and
-      publishes a <a href="https://scangov.org/">public scorecard</a> for each.
+      Against the baseline, not with a statement. The policy commits you to checking every site
+      against the ScanGov Standards and fixing the failures you find.
   - q: Is this legal advice?
     a: >-
       No. It is a plain language draft for your counsel to review. Edit any section. Keep the
@@ -38,42 +48,43 @@ faq:
       share a link, and nothing is sent to ScanGov.
 ---
 
-<div class="container">
+<div class="container page-section">
   <div class="row">
     <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
     <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-      <p>Write one policy for everything you publish online: accessibility, AI and search
-        readiness, security, usability, and plain language. It uses the
-        <a href="https://standards.scangov.org/">ScanGov Standards</a> as the baseline.</p>
+      <p><a href="/tools/policy-generator/done/?organization=Organization" class="font-monospace small"><i class="fa-solid fa-spray-can-sparkles" aria-hidden="true"></i>Example</a></p>
 
-      <form action="/tools/policy-generator/done/" id="policy-form">
-        <div class="mb-4">
-          <label for="organization" class="form-label">Organization *</label>
-          <input class="form-control form-control-lg" type="text" id="organization" name="organization" required aria-required="true" placeholder="City of Example">
-        </div>
-
-        <details class="mb-4" id="customize">
-          <summary class="mb-3">Options</summary>
-
-          <div class="mb-4">
-            <label for="website" class="form-label">Website</label>
-            <input class="form-control" type="text" id="website" name="website" placeholder="example.gov">
-          </div>
-
-          <div class="mb-4">
-            <label for="owner" class="form-label">Policy owner</label>
-            <input class="form-control" type="text" id="owner" name="owner" placeholder="Digital Services Manager">
-          </div>
-
-          <fieldset class="mb-4">
-            <legend class="form-label">Include</legend>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="category-accessibility" name="category" value="accessibility" checked>
-              <label class="form-check-label" for="category-accessibility">Accessibility</label>
+      {% set toolFormId = "policy-form" %}
+      {% set toolFormAction = "/tools/policy-generator/done/" %}
+      {% set toolFieldName = "organization" %}
+      {% set toolFieldLabel = "Organization" %}
+      {% set toolPlaceholder = "" %}
+      {% set toolButtonLabel = "Generate" %}
+      {% set toolFormExtra %}
+        <div class="col-12">
+          <label for="website" class="form-label">Websites</label>
+          <div class="d-flex flex-column align-items-start gap-2">
+            <div id="website-list" class="d-flex flex-column gap-2 w-100">
+              <input class="form-control form-control-lg" type="text" id="website" name="website">
             </div>
+            <button type="button" id="add-website" class="btn btn-outline-primary btn-sm" disabled>
+              <i class="fa-solid fa-plus" aria-hidden="true"></i> Add website
+            </button>
+          </div>
+        </div>
+        <div class="col-12">
+          <label for="owner" class="form-label">Policy owner (title)</label>
+          <input class="form-control form-control-lg" type="text" id="owner" name="owner">
+        </div>
+        <fieldset class="col-12 col-md-4">
+          <legend class="form-label">Include</legend>
             <div class="form-check">
               <input class="form-check-input" type="checkbox" id="category-botability" name="category" value="botability" checked>
               <label class="form-check-label" for="category-botability">AI and search readiness</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="category-accessibility" name="category" value="accessibility" checked>
+              <label class="form-check-label" for="category-accessibility">Accessibility</label>
             </div>
             <div class="form-check">
               <input class="form-check-input" type="checkbox" id="category-security" name="category" value="security" checked>
@@ -85,12 +96,11 @@ faq:
             </div>
             <div class="form-check">
               <input class="form-check-input" type="checkbox" id="category-readability" name="category" value="readability" checked>
-              <label class="form-check-label" for="category-readability">Plain language</label>
+              <label class="form-check-label" for="category-readability">Readability</label>
             </div>
-          </fieldset>
-
-          <fieldset class="mb-4">
-            <legend class="form-label">Also covers</legend>
+        </fieldset>
+        <fieldset class="col-12 col-md-4">
+          <legend class="form-label">Also covers</legend>
             <div class="form-check">
               <input class="form-check-input" type="checkbox" id="scope-subdomains" name="scope" value="subdomains" checked>
               <label class="form-check-label" for="scope-subdomains">Subdomains and microsites</label>
@@ -107,10 +117,9 @@ faq:
               <input class="form-check-input" type="checkbox" id="scope-social" name="scope" value="social">
               <label class="form-check-label" for="scope-social">Social media</label>
             </div>
-          </fieldset>
-
-          <fieldset class="mb-4">
-            <legend class="form-label">Cite</legend>
+        </fieldset>
+        <fieldset class="col-12 col-md-4">
+          <legend class="form-label">Cite</legend>
             <div class="form-check">
               <input class="form-check-input" type="checkbox" id="legal-title-ii" name="legal" value="title-ii" checked>
               <label class="form-check-label" for="legal-title-ii">ADA Title II (state and local)</label>
@@ -125,83 +134,156 @@ faq:
             </div>
             <div class="form-check">
               <input class="form-check-input" type="checkbox" id="legal-plain-writing" name="legal" value="plain-writing" checked>
-              <label class="form-check-label" for="legal-plain-writing">Plain Writing Act and OMB M-23-22</label>
+              <label class="form-check-label" for="legal-plain-writing">Plain Writing Act</label>
             </div>
             <div class="form-check">
               <input class="form-check-input" type="checkbox" id="legal-dotgov" name="legal" value="dotgov" checked>
               <label class="form-check-label" for="legal-dotgov">.gov domain</label>
             </div>
-          </fieldset>
-
-          <div class="row">
-            <div class="col-12 col-md-6 mb-4">
-              <label for="wcag" class="form-label">WCAG target</label>
-              <select class="form-select" id="wcag" name="wcag">
-                <option value="2.1 Level AA" selected>2.1 Level AA</option>
-                <option value="2.2 Level AA">2.2 Level AA</option>
-              </select>
+        </fieldset>
+        <fieldset class="col-12">
+          <legend class="form-label">Monitor with</legend>
+          <div class="d-flex flex-column align-items-start gap-2">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="monitor-scangov" name="monitor" value="scangov">
+              <label class="form-check-label" for="monitor-scangov">ScanGov</label>
             </div>
-            <div class="col-12 col-md-6 mb-4">
-              <label for="reading-grade" class="form-label">Reading level</label>
-              <select class="form-select" id="reading-grade" name="reading-grade">
-                <option value="8" selected>Grade 8 or below</option>
-                <option value="6">Grade 6 or below</option>
-              </select>
-            </div>
+            <div id="monitor-list" class="d-flex flex-column gap-2 w-100"></div>
+            <button type="button" id="add-monitor" class="btn btn-outline-primary btn-sm">
+              <i class="fa-solid fa-plus" aria-hidden="true"></i> Add another tool
+            </button>
           </div>
-        </details>
+        </fieldset>
+        <div class="col-12 col-md-6">
+          <label for="wcag" class="form-label">WCAG</label>
+          <select class="form-select form-select-lg" id="wcag" name="wcag">
+            <option value="2.1 Level AA">2.1 Level AA</option>
+            <option value="2.2 Level AA" selected>2.2 Level AA</option>
+            <option value="2.1 Level AAA">2.1 Level AAA</option>
+            <option value="2.2 Level AAA">2.2 Level AAA</option>
+          </select>
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="reading-grade" class="form-label">Reading level</label>
+          <select class="form-select form-select-lg" id="reading-grade" name="reading-grade">
+            <option value="1">Kindergarten</option>
+            <option value="2">First grade</option>
+            <option value="3">Second grade</option>
+            <option value="4">Third grade</option>
+            <option value="5">Fourth grade</option>
+            <option value="6">Fifth grade</option>
+            <option value="7">Sixth grade</option>
+            <option value="8" selected>Seventh grade</option>
+            <option value="9">Eighth grade</option>
+            <option value="10">Ninth grade</option>
+            <option value="11">Tenth grade</option>
+            <option value="12">Eleventh grade</option>
+            <option value="13">Twelfth grade</option>
+            <option value="14">College</option>
+          </select>
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="effective-date" class="form-label">Effective date</label>
+          <input class="form-control form-control-lg" type="date" id="effective-date" name="effective-date">
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="review-cycle" class="form-label">Review the policy every</label>
+          <select class="form-select form-select-lg" id="review-cycle" name="review-cycle">
+              <option value="" selected>Not set</option>
+              <option value="year">Year</option>
+              <option value="6 months">6 months</option>
+              <option value="2 years">2 years</option>
+          </select>
+        </div>
+        <div class="col-6 col-md-6">
+          <label for="response-days" class="form-label">Respond in (days)</label>
+          <input class="form-control form-control-lg" type="number" id="response-days" name="response-days" min="1">
+        </div>
+        <div class="col-6 col-md-6">
+          <label for="fix-days" class="form-label">Fix in (days)</label>
+          <input class="form-control form-control-lg" type="number" id="fix-days" name="fix-days" min="1">
+        </div>
+      {% endset %}
+      {% include "tool-form.html" %}
 
-        <button type="submit" class="btn btn-primary">Generate the policy</button>
-      </form>
-
-      <section class="mt-5" id="scorecard">
-        <h2>Check your score first</h2>
-        <p>ScanGov already scores most U.S. government sites. Look yours up to see what the policy
-          will fix.</p>
-        <form action="https://scangov.org/search/" method="get" class="mb-2">
-          <label for="scorecard-domain" class="form-label">Your domain</label>
-          <div class="input-group">
-            <input type="text" class="form-control" id="scorecard-domain" name="search" placeholder="example.gov" autocomplete="off">
-            <button type="submit" class="btn btn-outline-primary">See scorecard</button>
-          </div>
-        </form>
-      </section>
-
-      <section class="mt-5" id="whats-in-it">
-        <h2>What you get</h2>
+      <div class="alert alert-info mt-5" role="alert">
+        <h2>About the policy generator</h2>
+        <p>Most organizations have an accessibility policy and nothing else. This generator writes
+          one policy for everything you publish online. It uses the
+          <a href="https://standards.scangov.org/">ScanGov Standards</a> as the baseline.</p>
+        <h2>What the policy includes</h2>
         <ul>
-          <li><strong>Purpose and scope</strong>: what the policy covers.</li>
-          <li><strong>Policy statement</strong>: an outcome, a floor, and practices for
-            <a href="/accessibility/">accessibility</a>, <a href="/botability/">botability</a>,
+          <li>Purpose and scope: what the policy covers</li>
+          <li>Policy statement: an outcome, a baseline, and practices for
+            <a href="/botability/">botability</a>, <a href="/accessibility/">accessibility</a>,
             <a href="/security/">security</a>, <a href="/usability/">usability</a>, and
-            <a href="/readability/">readability</a>.</li>
-          <li><strong>Roles</strong>: who owns, writes, builds, buys, and delivers.</li>
-          <li><strong>Measurement</strong>: a scan schedule, a fix deadline, and a public scorecard.</li>
-          <li><strong>Procurement, exceptions, and review</strong>: how new work launches and how the policy changes.</li>
-          <li><strong>Adopted standards</strong>: the five ScanGov Standards categories, linked, with the adoption date.</li>
+            <a href="/readability/">readability</a></li>
+          <li>Roles: who owns, writes, builds, buys, and delivers</li>
+          <li>Measurement: how you check against the baseline and fix failures</li>
+          <li>Procurement, exceptions, and review: how new work launches and how the policy changes</li>
+          <li>Adopted standards: the five ScanGov Standards categories, linked</li>
         </ul>
-        <p>Buying a new site? The <a href="/rfp-builder/">request for proposal (RFP) builder</a>
-          writes the same standards into the contract.</p>
-      </section>
+{% include "faq.html" %}
+      </div>
 
-      {% include "faq.html" %}
     </div>
     <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
   </div>
 </div>
 <script>
+  // A list of text fields that grows with a button. Another field can be
+  // added only when every field in the list is filled in.
+  function fieldList(list, button, name, label) {
+    function update() {
+      button.disabled = Array.from(list.children).some(function (input) { return !input.value.trim(); });
+    }
+    function add(value) {
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.name = name;
+      input.className = 'form-control form-control-lg';
+      input.value = value || '';
+      input.setAttribute('aria-label', label + ' ' + (list.children.length + 1));
+      list.appendChild(input);
+      update();
+      return input;
+    }
+    list.addEventListener('input', update);
+    button.addEventListener('click', function () { add().focus(); });
+    return {
+      add: add,
+      update: update,
+      trim: function (keep) {
+        while (list.children.length > keep) list.lastChild.remove();
+        update();
+      }
+    };
+  }
+  const websites = fieldList(document.getElementById('website-list'), document.getElementById('add-website'), 'website', 'Website');
+  const monitors = fieldList(document.getElementById('monitor-list'), document.getElementById('add-monitor'), 'monitor-other', 'Other tool');
+  document.getElementById('policy-form').addEventListener('reset', function () {
+    websites.trim(1);
+    monitors.trim(0);
+  });
+
   // Repopulate the form from the query string so "Edit answers" on the
   // generated policy brings the previous answers back.
   (function () {
     const params = new URLSearchParams(location.search);
     if (!params.has('organization')) return;
     const form = document.getElementById('policy-form');
-    document.getElementById('customize').open = true;
+    params.getAll('website').forEach(function (site, index) {
+      if (index) websites.add(site); else document.getElementById('website').value = site;
+    });
+    params.getAll('monitor-other').forEach(function (tool) { monitors.add(tool); });
+    websites.update();
     for (const box of form.querySelectorAll('input[type=checkbox]')) box.checked = params.getAll(box.name).includes(box.value);
     for (const field of form.querySelectorAll('input:not([type=checkbox]), select'))
-      if (params.has(field.name)) field.value = params.get(field.name);
+      if (field.name !== 'website' && field.name !== 'monitor-other' && params.has(field.name)) field.value = params.get(field.name);
   })();
   document.getElementById('policy-form').addEventListener('submit', function () {
     if (typeof gtag === 'function') gtag('event', 'tool_run', { tool: 'policy-generator' });
   });
 </script>
+
+{% include "tool-related.html" %}

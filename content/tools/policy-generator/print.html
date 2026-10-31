@@ -14,13 +14,12 @@ noindex: true
     }
   }
 </style>
-<a id="back-link" href="/tools/policy-generator/done/">Back</a>
+<p id="back-link"><a href="/tools/policy-generator/done/" class="btn btn-outline-primary"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</a></p>
 
 <h1>Digital experience policy</h1>
-<p class="lead"><span class="field-organization"></span></p>
 
 {% include "policy_content.html" %}
 <script>
-  document.getElementById('back-link').href += location.search;
+  document.querySelector('#back-link a').href += location.search;
   window.print();
 </script>

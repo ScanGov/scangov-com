@@ -162,6 +162,8 @@ export default async function (eleventyConfig) {
         return Number(num).toLocaleString('en-US');
     })
 
+    eleventyConfig.addFilter('sharesAny', (arr, other) => Array.isArray(arr) && arr.some((item) => other.includes(item)));
+
     eleventyConfig.addFilter('exclude', (arr, key, value) => {
         if (!arr) return [];
         return arr.filter(item => item[key] !== value);
