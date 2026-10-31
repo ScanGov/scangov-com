@@ -240,6 +240,7 @@ async function runScan(domain) {
   wireReportLink(domain);
 }
 
+form.addEventListener('reset', showForm);
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const domain = siteInput.value.trim();

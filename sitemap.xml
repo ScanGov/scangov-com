@@ -133,6 +133,14 @@
     <lastmod>2026-10-28</lastmod>
   </url>
   <url>
+    <loc>https://scangov.com/news/introducing-the-digital-experience-policy-generator/</loc>
+    <lastmod>2026-10-30T00:00:00.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://scangov.com/tools/policy-generator/</loc>
+    <lastmod>2026-10-30T00:00:00.000Z</lastmod>
+  </url>
+  <url>
     <loc>https://scangov.com/who-we-serve/executives/</loc>
     <lastmod>2026-09-17</lastmod>
   </url>
@@ -350,8 +358,5 @@
   </url>
   <url>
     <loc>https://scangov.com/rfp-builder/</loc>
-  </url>
-  <url>
-    <loc>https://scangov.com/tools/policy-generator/</loc>
   </url>
 </urlset>
