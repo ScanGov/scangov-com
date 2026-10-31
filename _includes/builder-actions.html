@@ -1,0 +1,41 @@
+{#
+  Action bar for a generated document (policy generator, RFP builder).
+  Set these before including:
+    builderContentId   id of the element that holds the document
+    builderPrintHref   print view address, without the query string
+    builderEditHref    optional, form address, without the query string
+    builderFileName    download file name, without the extension
+  public/js/builder-actions.js binds the buttons and adds the query string to
+  the print and edit links so the answers carry over.
+#}
+<div class="mb-4 pb-4 border-bottom">
+  <div class="d-flex flex-wrap gap-2 mt-2 mb-2" id="builder-actions" data-content="{{ builderContentId }}" data-filename="{{ builderFileName }}">
+    <button type="button" id="copy-link" class="btn btn-outline-primary">
+      <i class="fa-solid fa-link" aria-hidden="true"></i> Copy link
+    </button>
+    <button type="button" id="copy-text" class="btn btn-outline-primary">
+      <i class="fa-solid fa-copy" aria-hidden="true"></i> Copy text
+    </button>
+    <div class="dropdown">
+      <button type="button" id="download-menu" class="btn btn-outline-primary" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fa-solid fa-download" aria-hidden="true"></i> Download
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="download-menu">
+        <li><button type="button" class="dropdown-item" data-download="doc">Word (.doc)</button></li>
+        <li><button type="button" class="dropdown-item" data-download="html">HTML (.html)</button></li>
+        <li><button type="button" class="dropdown-item" data-download="md">Markdown (.md)</button></li>
+        <li><button type="button" class="dropdown-item" data-download="json">JSON (.json)</button></li>
+      </ul>
+    </div>
+    <a id="print-link" href="{{ builderPrintHref }}" class="btn btn-outline-primary">
+      <i class="fa-solid fa-print" aria-hidden="true"></i> Print
+    </a>
+    {% if builderEditHref %}
+    <a id="edit-link" href="{{ builderEditHref }}" class="btn btn-outline-primary">
+      <i class="fa-solid fa-pen" aria-hidden="true"></i> Edit answers
+    </a>
+    {% endif %}
+  </div>
+  <p class="small mb-0" id="copy-status" role="status" aria-live="polite"></p>
+</div>
+<script src="/js/builder-actions.js"></script>

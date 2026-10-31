@@ -2,55 +2,54 @@
   Related news and features for a tool page. Set `indicator` in the tool's front
   matter (e.g. indicator: readability). Shows the indicator the tool checks, then
   related features and news. News posts match on their `indicators` list,
-  features on their `indicator` field in features.json.
+  features on their `indicator` field in features.json. A tool that covers
+  several indicators sets `toolIndicators` (a list of indicator urls) instead.
 #}
-{% if indicator %}
-{% for ind in indicators %}
-{% if ind.url == indicator %}
+{% set relatedList = toolIndicators or ([indicator] if indicator else []) %}
+{% if relatedList | length %}
 <div class="container page-section">
   <div class="row">
-    <div class="col-12 col-md-2"></div>
-    <div class="col-12 col-md-8">
-      <h2>Indicator</h2>
+    <div class="col-12">
+      <h2>{{ "Indicators" if relatedList | length > 1 else "Indicator" }}</h2>
       <div class="row g-3">
-        <div class="col-12 col-md-6 d-flex align-items-stretch">
-          <div class="card">
-            <div class="card-body">
-              <i class="fa-solid fa-{{ ind.icon }} fa-lg d-block mb-2" aria-hidden="true"></i>
-              <h3 class="h4 mb-2 mt-3"><a href="/{{ ind.url }}/" class="stretched-link">{{ ind.name }}</a></h3>
-              <p class="card-text small">{{ ind.description }}</p>
+        {% for ind in indicators %}
+          {% if ind.url in relatedList %}
+            <div class="col-12 col-md-4 d-flex align-items-stretch">
+              <div class="card">
+                <div class="card-body">
+                  <i class="fa-solid fa-{{ ind.icon }} fa-lg d-block mb-2" aria-hidden="true"></i>
+                  <h3 class="h4 mb-2 mt-3"><a href="/{{ ind.url }}/" class="stretched-link">{{ ind.name }}</a></h3>
+                  <p class="card-text small">{{ ind.description }}</p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
-    <div class="col-12 col-md-2"></div>
   </div>
 </div>
-{% endif %}
-{% endfor %}
 {% set hasRelatedNews = false %}
 {% for post in collections.postsByDate %}
-  {% if post.data.indicators and indicator in post.data.indicators %}
+  {% if post.data.indicators and post.data.indicators | sharesAny(relatedList) %}
     {% set hasRelatedNews = true %}
   {% endif %}
 {% endfor %}
 {% set hasRelatedFeatures = false %}
 {% for item in features %}
-  {% if item.indicator == indicator %}
+  {% if item.indicator in relatedList %}
     {% set hasRelatedFeatures = true %}
   {% endif %}
 {% endfor %}
 {% if hasRelatedFeatures %}
 <div class="container page-section">
   <div class="row">
-    <div class="col-12 col-md-2"></div>
-    <div class="col-12 col-md-8">
+    <div class="col-12">
       <h2>Features</h2>
       <div class="row g-3">
         {% for item in features %}
-          {% if item.indicator == indicator %}
-            <div class="col-12 col-md-6 d-flex align-items-stretch">
+          {% if item.indicator in relatedList %}
+            <div class="col-12 col-md-4 d-flex align-items-stretch">
               <div class="card">
                 <div class="card-body">
                   <i class="fa-solid {{ item.icon }} fa-lg d-block mb-2" aria-hidden="true"></i>
@@ -63,20 +62,18 @@
         {% endfor %}
       </div>
     </div>
-    <div class="col-12 col-md-2"></div>
   </div>
 </div>
 {% endif %}
 {% if hasRelatedNews %}
 <div class="container page-section">
   <div class="row">
-    <div class="col-12 col-md-2"></div>
-    <div class="col-12 col-md-8">
+    <div class="col-12">
       <h2>News</h2>
       <div class="row g-3">
         {% for post in collections.postsByDate %}
-          {% if post.data.indicators and indicator in post.data.indicators %}
-            <div class="col-12 col-md-6 d-flex align-items-stretch">
+          {% if post.data.indicators and post.data.indicators | sharesAny(relatedList) %}
+            <div class="col-12 col-md-4 d-flex align-items-stretch">
               <div class="card">
                 <div class="card-body">
                   <i class="fa-solid fa-newspaper fa-lg d-block mb-2" aria-hidden="true"></i>
@@ -89,7 +86,6 @@
         {% endfor %}
       </div>
     </div>
-    <div class="col-12 col-md-2"></div>
   </div>
 </div>
 {% endif %}

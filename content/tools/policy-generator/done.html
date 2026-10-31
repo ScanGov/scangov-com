@@ -5,36 +5,25 @@ description: "A digital experience policy generated with the ScanGov policy gene
 permalink: /tools/policy-generator/done/
 sitemap: false
 noindex: true
+hideCtaCopy: true
+hideDescription: true
+breadcrumbParent:
+  - url: "/tools/"
+    title: "Tools"
+  - url: "/tools/policy-generator/"
+    title: "Policy generator"
+breadcrumbCurrent: "Policy"
 ---
 
 <div class="container">
   <div class="row">
     <div class="col-12 col-sm-12 col-md-1 col-lg-1 col-xl-1"></div>
     <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
-      <div class="mb-4 pb-4 border-bottom">
-        <div class="d-flex flex-wrap gap-2 mt-2 mb-2">
-<button type="button" id="copy-link" class="btn btn-outline-primary">
-              <i class="fa-solid fa-link" aria-hidden="true"></i> Copy link
-            </button>
-<button type="button" id="copy-text" class="btn btn-outline-primary">
-              <i class="fa-solid fa-copy" aria-hidden="true"></i> Copy text
-            </button>
-<a id="print-link" href="/tools/policy-generator/print/" class="btn btn-outline-primary">
-              <i class="fa-solid fa-print" aria-hidden="true"></i> Print
-            </a>
-<button type="button" id="download-pdf" class="btn btn-outline-primary">
-              <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Download as PDF
-            </button>
-<button type="button" id="publish-site" class="btn btn-outline-primary">
-              <i class="fa-solid fa-globe" aria-hidden="true"></i> Publish as website
-            </button>
-<a id="edit-link" href="/tools/policy-generator/" class="btn btn-outline-primary">
-              <i class="fa-solid fa-pen" aria-hidden="true"></i> Edit answers
-            </a>
-        
-</div>
-        <p class="small mb-0" id="copy-status" role="status" aria-live="polite"></p>
-      </div>
+      {% set builderContentId = "policy-content" %}
+      {% set builderPrintHref = "/tools/policy-generator/print/" %}
+      {% set builderEditHref = "/tools/policy-generator/" %}
+      {% set builderFileName = "digital-experience-policy" %}
+      {% include "builder-actions.html" %}
       <div id="policy-content">
         {% include "policy_content.html" %}
       </div>
@@ -42,26 +31,3 @@ noindex: true
     <div class="col-12 col-sm-12 col-md-1 col-lg-1 col-xl-1"></div>
   </div>
 </div>
-<script>
-  (function () {
-    const status = document.getElementById('copy-status');
-    document.querySelector('.lead').textContent = (new URLSearchParams(location.search).get('organization') || '').trim() || 'Our organization';
-    const content = document.getElementById('policy-content');
-    document.getElementById('print-link').href += location.search;
-    document.getElementById('edit-link').href += location.search;
-    // Placeholders until the PDF export and publishing flows are built.
-    for (const id of ['download-pdf', 'publish-site'])
-      document.getElementById(id).addEventListener('click', function () { alert('To do: not built yet'); });
-    document.getElementById('copy-link').addEventListener('click', function () {
-      navigator.clipboard.writeText(location.href).then(function () { status.textContent = 'Link copied.'; });
-    });
-    document.getElementById('copy-text').addEventListener('click', function () {
-      navigator.clipboard.write([
-        new ClipboardItem({
-          'text/html': new Blob([content.innerHTML], { type: 'text/html' }),
-          'text/plain': new Blob([content.innerText], { type: 'text/plain' })
-        })
-      ]).then(function () { status.textContent = 'Policy copied.'; });
-    });
-  })();
-</script>

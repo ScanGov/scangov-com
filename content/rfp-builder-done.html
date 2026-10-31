@@ -6,32 +6,17 @@ ogImage: pages/website-rfp-og.png
 ogImageAlt: "File with signature icon"
 sitemap: false
 noindex: true
+hideCtaCopy: true
 ---
 
 <div class="container">
     <div class="row">
         <div class="col-12 col-sm-12 col-md-1 col-lg-1 col-xl-1"></div>
         <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
-            <div class="mb-4 pb-4 border-bottom">
-                <div class="d-flex flex-wrap gap-2 mt-2 mb-2">
-<a href="javascript:void(0);" onclick="navigator.clipboard.writeText(location.href);" title="Copy link" class="btn btn-outline-primary">
-                            <i class="fa-solid fa-link"></i> Copy link
-                        </a>
-<a href="javascript:void(0);" onclick="
-                            navigator.clipboard.write([
-                                new ClipboardItem({
-                                    'text/html': new Blob([document.getElementById('rfp-content').innerHTML], { type: 'text/html' }),
-                                    'text/plain': new Blob([document.getElementById('rfp-content').innerText], { type: 'text/plain' })
-                                })
-                            ]);" title="Copy text" class="btn btn-outline-primary">
-                            <i class="fa-solid fa-copy"></i> Copy text
-                        </a>
-<a href="javascript:void(0);" onclick="location.href = location.href.replace('rfp-builder-done', 'rfp-builder-print')" title="Print" class="btn btn-outline-primary">
-                            <i class="fa-solid fa-print"></i> Print
-                        </a>
-                
-</div>
-            </div>
+            {% set builderContentId = "rfp-content" %}
+            {% set builderPrintHref = "/rfp-builder-print/" %}
+            {% set builderFileName = "website-rfp" %}
+            {% include "builder-actions.html" %}
             <div id="rfp-content">
                 {% include "rfp_content.html" %}
             </div>

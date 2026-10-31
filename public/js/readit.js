@@ -45,6 +45,10 @@ function resetScan() {
   siteInput.focus();
   history.replaceState(null, '', location.pathname);
 }
+form.addEventListener('reset', () => {
+  document.getElementById('scan_results').innerHTML = '';
+  history.replaceState(null, '', location.pathname);
+});
 form.addEventListener('submit', async (event) => {
   event.preventDefault()
 
