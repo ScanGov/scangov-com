@@ -4,6 +4,8 @@
   Sections carry data-category so unchecked categories can be hidden. The
   adopted standards list is built from the live audits data (indicators.js).
 #}
+{# Heading levels shift down by policyHeadingOffset when the policy sits under another heading. #}
+{% set h2 = 'h' + (2 + (policyHeadingOffset or 0)) %}{% set h3 = 'h' + (3 + (policyHeadingOffset or 0)) %}{% set h4 = 'h' + (4 + (policyHeadingOffset or 0)) %}
 
 <dl>
   <dt>Organization</dt>
@@ -24,13 +26,13 @@
 
 <hr>
 
-<h2>1. Purpose</h2>
+<{{ h2 }}>1. Purpose</{{ h2 }}>
 
 <p><span class="field-organization"></span> serves people online. This policy sets one standard for everything we publish, so people can find it, read it, trust it, and use it. It covers AI and search readiness, accessibility, security, usability, and readability.</p>
 
-<p>We adopt the <a href="https://standards.scangov.org/">ScanGov Standards</a> as our baseline. They are open, public, and based on law and web guidelines. The standards change over time, and we adopt the changes (Appendix A). The baseline is not the whole job. Each section below also lists what we do beyond the baseline.</p>
+<p>We adopt the <a href="https://standards.scangov.org/">ScanGov Standards</a> as our baseline. They are open, public, and based on law and web guidelines. The standards change over time, and we adopt the changes (Appendices A and B). The baseline is not the whole job. Each section below also lists what we do beyond the baseline.</p>
 
-<h2>2. Scope</h2>
+<{{ h2 }}>2. Scope</{{ h2 }}>
 
 <p>This policy covers:</p>
 <ul>
@@ -43,34 +45,34 @@
 
 <p>It applies to every employee, contractor, and vendor who writes, builds, or publishes for these properties.</p>
 
-<h2>3. Policy statement</h2>
+<{{ h2 }}>3. Policy statement</{{ h2 }}>
 
 <p>For every property in scope, <span class="field-organization"></span> commits to the following. Each category has four parts: the outcome we want, the baseline we measure against, what we do beyond the baseline, and how we check.</p>
 
 <section data-category="botability">
-  <h3>3.1 AI and search readiness</h3>
-  <h4>Outcome</h4>
+  <{{ h3 }}>3.1 AI and search readiness</{{ h3 }}>
+  <{{ h4 }}>Outcome</{{ h4 }}>
   <p>People can find our information with the search engine or AI assistant they already use.</p>
-  <h4>Baseline</h4>
+  <{{ h4 }}>Baseline</{{ h4 }}>
   <p>Every property meets the ScanGov botability standards. Crawlers can reach it. It has a valid robots file and sitemap. Every page names its canonical address. The main content is in the HTML. Structured data names the organization.</p>
-  <h4>What we do</h4>
+  <{{ h4 }}>What we do</{{ h4 }}>
   <ul>
     <li>We let well-behaved crawlers in. We block one only for a documented security reason.</li>
     <li>We publish content as web pages, not as files to download.</li>
     <li>We keep sitemaps and structured data current when the site changes.</li>
     <li>We write links and page titles that say where they lead.</li>
   </ul>
-  <h4>How we check</h4>
+  <{{ h4 }}>How we check</{{ h4 }}>
   <p>We check every property against the baseline.</p>
 </section>
 
 <section data-category="accessibility">
-  <h3>3.2 Accessibility</h3>
-  <h4>Outcome</h4>
+  <{{ h3 }}>3.2 Accessibility</{{ h3 }}>
+  <{{ h4 }}>Outcome</{{ h4 }}>
   <p>People with disabilities can use every service we publish, with the assistive technology they choose.</p>
-  <h4>Baseline</h4>
+  <{{ h4 }}>Baseline</{{ h4 }}>
   <p>Every property meets the Web Content Accessibility Guidelines (WCAG) <span class="field-wcag"></span> and the ScanGov accessibility standards.</p>
-  <h4>What we do</h4>
+  <{{ h4 }}>What we do</{{ h4 }}>
   <ul>
     <li>We test with a keyboard alone and with a screen reader before every launch or major change.</li>
     <li>We test with people with disabilities when we design or redesign a service.</li>
@@ -82,52 +84,66 @@
     <li class="legal-item" data-legal="section-508">This section carries out Section 508 of the Rehabilitation Act (36 CFR part 1194).</li>
     <li class="legal-item" data-legal="state">This section carries out the state accessibility law and any local ordinance that applies to us.</li>
   </ul>
-  <h4>How we check</h4>
+  <{{ h4 }}>How we check</{{ h4 }}>
   <p>We check every property against the baseline. A keyboard and screen reader review at each policy review.</p>
 </section>
 
 <section data-category="security">
-  <h3>3.3 Security</h3>
-  <h4>Outcome</h4>
+  <{{ h3 }}>3.3 Security</{{ h3 }}>
+  <{{ h4 }}>Outcome</{{ h4 }}>
   <p>People can trust that our sites are ours and that what they share with us stays safe.</p>
-  <h4>Baseline</h4>
-  <p>Every property serves every page over HTTPS and meets the ScanGov security standards. These include the response headers that the Cybersecurity and Infrastructure Security Agency (CISA) recommends and a public security.txt file.</p>
-  <h4>What we do</h4>
+  <{{ h4 }}>Baseline</{{ h4 }}>
+  <p>Every property meets the ScanGov security standards. These are required:</p>
+  <ul>
+    <li>Every page is served over <a href="https://standards.scangov.org/https/">HTTPS</a>.</li>
+    <li>Every site enables <a href="https://standards.scangov.org/hsts/">HTTP Strict Transport Security (HSTS)</a>, so browsers always use HTTPS.</li>
+    <li class="legal-item" data-legal="dotgov">The main site uses a <a href="https://standards.scangov.org/dotgov/">.gov domain</a>, or another sponsored top-level domain, where we qualify.</li>
+  </ul>
+  <p>These are also expected:</p>
+  <ul>
+    <li>A <a href="https://standards.scangov.org/csp/">Content Security Policy (CSP)</a> limits what outside content can load.</li>
+    <li><a href="https://standards.scangov.org/xcontenttypeoptions/">X-Content-Type-Options</a> is set to nosniff, so browsers do not guess file types.</li>
+    <li>Other sites cannot frame our pages, which blocks <a href="https://standards.scangov.org/clickjacking-mitigation/">clickjacking</a>.</li>
+    <li>A current <a href="https://standards.scangov.org/securitytxt/">security.txt</a> file tells researchers how to report a problem.</li>
+    <li>Forms accept <a href="https://standards.scangov.org/paste-preventing-inputs/">pasted text</a>, so password managers work.</li>
+  </ul>
+  <{{ h4 }}>What we do</{{ h4 }}>
   <ul>
     <li>We patch software and dependencies on a schedule. We remove what we no longer use.</li>
     <li>We review application security on a schedule, from inside and outside perspectives.</li>
     <li>We keep a channel open for security reports and answer every one.</li>
     <li>We limit admin access to what each role needs, and we require multi-factor authentication for it.</li>
     <li>We fix a security failure we find<span data-if="fix-days"> within <span class="field-fix-days"></span> days</span>.</li>
-    <li class="legal-item" data-legal="dotgov">We serve our main site from a .gov domain, or another sponsored top-level domain, where we qualify.</li>
+    <li class="legal-item" data-legal="section-508">As a federal agency, we also follow Office of Management and Budget (OMB) memorandum M-15-13, which requires HTTPS and HSTS on federal websites, and the <a href="https://standards.scangov.org/21stcenturyidea/">21st Century Integrated Digital Experience Act (IDEA)</a>.</li>
   </ul>
-  <h4>How we check</h4>
-  <p>We check every property against the baseline. A security review at each policy review.</p>
+  <{{ h4 }}>How we check</{{ h4 }}>
+  <p>We check every property against the baseline. A failure on a required item is a defect. A failure on an expected item is tracked and fixed. A security review at each policy review.</p>
+  <p>Guidance behind these standards: <a href="https://standards.scangov.org/websitesecurity-cisa/">Cybersecurity and Infrastructure Security Agency (CISA) Website Security</a>, <a href="https://standards.scangov.org/cybersecurity-performance-goals/">CISA Cybersecurity Performance Goals</a>, and the <a href="https://standards.scangov.org/owasp-top-10/">Open Worldwide Application Security Project (OWASP) Top 10</a>.</p>
 </section>
 
 <section data-category="usability">
-  <h3>3.4 Usability and performance</h3>
-  <h4>Outcome</h4>
+  <{{ h3 }}>3.4 Usability and performance</{{ h3 }}>
+  <{{ h4 }}>Outcome</{{ h4 }}>
   <p>People can finish the task they came for, on any device and any connection.</p>
-  <h4>Baseline</h4>
+  <{{ h4 }}>Baseline</{{ h4 }}>
   <p>Every page meets the ScanGov usability standards. These include the Core Web Vitals thresholds, a unique title and description, a mobile viewport, and sharing tags.</p>
-  <h4>What we do</h4>
+  <{{ h4 }}>What we do</{{ h4 }}>
   <ul>
     <li>We design for mobile first and test on real devices.</li>
     <li>We do user research and task-based testing for every new or redesigned service.</li>
     <li>We use analytics and feedback to find the tasks people fail. We fix those first.</li>
   </ul>
-  <h4>How we check</h4>
+  <{{ h4 }}>How we check</{{ h4 }}>
   <p>We check every property against the baseline. Task-based testing before launch.</p>
 </section>
 
 <section data-category="readability">
-  <h3>3.5 Readability</h3>
-  <h4>Outcome</h4>
+  <{{ h3 }}>3.5 Readability</{{ h3 }}>
+  <{{ h4 }}>Outcome</{{ h4 }}>
   <p>People understand what we publish the first time they read it.</p>
-  <h4>Baseline</h4>
+  <{{ h4 }}>Baseline</{{ h4 }}>
   <p>Every page reads at the <span class="field-reading-label"></span> level or lower, measured with the Automated Readability Index (ARI), the ScanGov readability standard.</p>
-  <h4>What we do</h4>
+  <{{ h4 }}>What we do</{{ h4 }}>
   <ul>
     <li>We use short sentences, common words, active voice, and headings that say what follows.</li>
     <li>We spell out acronyms the first time. We define jargon or cut it.</li>
@@ -135,11 +151,11 @@
     <li>We offer content in the languages the people we serve use.</li>
     <li class="legal-item" data-legal="plain-writing">This section carries out the Plain Writing Act of 2010 and Office of Management and Budget (OMB) memorandum M-23-22.</li>
   </ul>
-  <h4>How we check</h4>
+  <{{ h4 }}>How we check</{{ h4 }}>
   <p>We check every property against the baseline. Editorial review before publishing.</p>
 </section>
 
-<h2>4. Roles</h2>
+<{{ h2 }}>4. Roles</{{ h2 }}>
 
 <ul>
   <li><span class="field-owner"></span> owns this policy, keeps the accessibility statement current, reviews results, and reports progress to leadership at each policy review.</li>
@@ -149,7 +165,7 @@
   <li>Vendors deliver work that meets this policy, and fix failures found in acceptance testing before launch.</li>
 </ul>
 
-<h2>5. Measurement</h2>
+<{{ h2 }}>5. Measurement</{{ h2 }}>
 
 <p>We measure against the baseline, not with statements. <span class="field-organization"></span> will:</p>
 <ul>
@@ -159,41 +175,73 @@
   <li>Fix the barriers that block a service first.</li>
 </ul>
 
-<h2>6. Monitoring</h2>
+<{{ h2 }}>6. Monitoring</{{ h2 }}>
 
 <div id="monitoring-tools">
   <p><span class="field-organization"></span> monitors every property in scope against the baseline with:</p>
-  <ul id="monitor-list"></ul>
+  <ul id="policy-monitor-list"></ul>
 </div>
 <p id="monitoring-generic"><span class="field-organization"></span> monitors every property in scope against the baseline. <span class="field-owner"></span> keeps a list of the tools and methods we use.</p>
 
-<h2>7. New work</h2>
+<{{ h2 }}>7. New work</{{ h2 }}>
 
 <p>No new site, redesign, or major feature launches until it meets the baseline in every category in section 3 and passes a manual accessibility check. Contracts require vendors to fix failures found after launch<span data-if="fix-days"> within <span class="field-fix-days"></span> days</span>, and we confirm the fix.</p>
 
-<h2>8. Exceptions</h2>
+<{{ h2 }}>8. Exceptions</{{ h2 }}>
 
 <p>To request an exception, write to <span class="field-owner"></span>. Name the property, the standard, the reason, the accessible alternative you will offer, and the date the exception ends. The policy owner reviews exceptions at each policy review. An exception ends after one year unless renewed.</p>
 
-<h2>9. Review</h2>
+<{{ h2 }}>9. Review</{{ h2 }}>
 
 <p>This policy takes effect <span data-if="effective-date">on <span class="field-effective-date"></span></span><span data-unless="effective-date">when we adopt it</span>. <span class="field-owner"></span> reviews it <span data-if="review-cycle">every <span class="field-review-cycle"></span>, </span>when the ScanGov Standards change, and when a law that applies to us changes.</p>
 
 <hr>
 
-<h2>Appendix A. Adopted standards</h2>
+<{{ h2 }}>Appendix A. Adopted standards</{{ h2 }}>
 
 <p>This policy adopts the <a href="https://standards.scangov.org/">ScanGov Standards</a> in the categories below, as published and as updated after that. The standards are open and public. Each one links to the law and guidance behind it. The policy owner reviews major changes at each policy review. The current standards in each category are public.</p>
 
+{% set order = ['botability', 'accessibility', 'security', 'usability', 'readability'] %}
 <ul>
-{% for indicator in indicators %}
+{% for url in order %}{% for indicator in indicators %}{% if indicator.url == url %}
   <li data-category="{{ indicator.url }}"><a href="https://standards.scangov.org/{{ indicator.url }}/">{{ indicator.name }}</a>: {{ indicator.description }}</li>
-{% endfor %}
+{% endif %}{% endfor %}{% endfor %}
 </ul>
+
+{% set named = {
+  botability: [{ title: '', keys: ['crawlable', 'allowed', 'valid', 'status', 'sitemap-robots', 'canonical', 'text-content', 'schema-government-organization'] }],
+  accessibility: [{ title: '', keys: ['image-alt', 'label', 'color-contrast', 'link-name', 'button-name', 'video-caption', 'html-has-lang', 'bypass', 'target-size', 'heading-order'] }],
+  security: [{ title: 'Required', keys: ['https', 'hsts', 'dotgov'] }, { title: 'Expected', keys: ['csp', 'xcontenttypeoptions', 'clickjacking-mitigation', 'securitytxt', 'paste-preventing-inputs'] }],
+  usability: [{ title: '', keys: ['title', 'description', 'viewport', 'www', 'lcp', 'inp', 'cls', 'fcp', 'ttfb'] }],
+  readability: [{ title: '', keys: ['reading-level'] }]
+} %}
+<div id="appendix-b">
+<hr>
+
+<{{ h2 }}>Appendix B. Named standards</{{ h2 }}>
+
+<p>These are the standards we name in each category, as published and as updated after that. Each one links to the full standard. A failure on a required item is a defect. A failure on an expected item is tracked and fixed.</p>
+
+{% for url in order %}{% for indicator in indicators %}{% if indicator.url == url %}
+<section data-category="{{ indicator.url }}">
+  <{{ h3 }}>{{ indicator.name }}</{{ h3 }}>
+  {% if indicator.url == 'accessibility' %}<p>The ScanGov accessibility standards include {{ indicator.standards | length }} checks. These are the ones we name here.</p>{% endif %}
+  {% for group in named[indicator.url] %}
+  {% if group.title %}<{{ h4 }}>{{ group.title }}</{{ h4 }}>{% endif %}
+  <ul>
+  {% for key in group.keys %}{% for standard in indicator.standards %}{% if standard.key == key %}
+    {% if indicator.url == 'accessibility' %}<li><a href="https://standards.scangov.org/{{ standard.key }}/">{{ standard.description }}</a></li>{% else %}<li><a href="https://standards.scangov.org/{{ standard.key }}/">{{ standard.displayName }}</a>: {{ standard.description }}</li>{% endif %}
+  {% endif %}{% endfor %}{% endfor %}
+  </ul>
+  {% endfor %}
+</section>
+{% endif %}{% endfor %}{% endfor %}
+</div>
 
 <script>
   (function () {
-    const params = new URLSearchParams(location.search);
+    // A page that shows an example sets window.policyParams to fixed answers.
+    const params = window.policyParams || new URLSearchParams(location.search);
 
     // Text fields, with defaults for anything left blank.
     const defaults = {
@@ -207,7 +255,7 @@
     }
 
     // The date the policy was written.
-    for (const element of document.getElementsByClassName('field-date')) element.innerText = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    for (const element of document.getElementsByClassName('field-date')) element.innerText = new Date().toLocaleDateString('en', { year: 'numeric', month: 'long', day: 'numeric' });
 
     // The ARI score scale, as on the ScanGov readability standard.
     const readingLevels = ['kindergarten', 'first grade', 'second grade', 'third grade', 'fourth grade', 'fifth grade', 'sixth grade', 'seventh grade', 'eighth grade', 'ninth grade', 'tenth grade', 'eleventh grade', 'twelfth grade', 'college'];
@@ -234,7 +282,7 @@
     for (const tool of params.getAll('monitor-other')) if (tool.trim()) tools.push(tool.trim());
     if (tools.length) {
       document.getElementById('monitoring-generic').remove();
-      const monitorList = document.getElementById('monitor-list');
+      const monitorList = document.getElementById('policy-monitor-list');
       for (const tool of tools) {
         const item = document.createElement('li');
         if (tool) item.textContent = tool;
@@ -242,6 +290,9 @@
         monitorList.appendChild(item);
       }
     } else document.getElementById('monitoring-tools').remove();
+
+    // Summary detail leaves out the named standards appendix.
+    if (params.get('detail') === 'summary') document.getElementById('appendix-b').remove();
 
     // Checkbox groups: hide anything the form did not select. A group with no
     // selections (the form was bypassed) shows everything.
@@ -259,7 +310,7 @@
     ['3'].forEach(function (prefix) {
       const pattern = new RegExp('^' + prefix + '\\.\\d+ ');
       let index = 0;
-      document.querySelectorAll('section[data-category] h3').forEach(function (heading) {
+      document.querySelectorAll('section[data-category] > :first-child').forEach(function (heading) {
         if (!pattern.test(heading.textContent)) return;
         index += 1;
         heading.textContent = heading.textContent.replace(pattern, prefix + '.' + index + ' ');

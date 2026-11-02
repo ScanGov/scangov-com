@@ -1,12 +1,22 @@
 ---
 layout: "layouts/default"
-title: "Government website redesign RFP builder"
-description: "Build a city, county, or agency website redesign RFP with accessibility, security, performance, and AI-readiness requirements from ScanGov Standards. Free."
+date: 2025-11-23
+modified: 2026-10-31
+author: ScanGov
+title: "Government website redesign RFP generator"
+toolName: "RFP generator"
+breadcrumbParent:
+  - url: "/tools/"
+    title: "Tools"
+breadcrumbCurrent: "RFP generator"
+description: "Generate a city, county, or agency website redesign request for proposal (RFP) template with accessibility, security, performance, and AI-readiness requirements from ScanGov Standards."
+permalink: /tools/rfp-generator/
+toolIndicators: [botability, accessibility, security, usability, readability]
 ogImage: pages/website-rfp-og.png
 ogImageAlt: "File with signature icon"
 isTool: true
 faq:
-  - q: What does the Request for Proposal (RFP) builder include?
+  - q: What does the Request for Proposal (RFP) generator include?
     a: >-
       A complete website redesign request for proposal: executive summary, background,
       compliance requirements, functional and technical requirements, design, deliverables,
@@ -14,7 +24,7 @@ faq:
       the <a href="https://standards.scangov.org/">ScanGov Standards</a> in as requirements across
       accessibility, botability, security, and usability, with a link to each standard so vendors
       know exactly what will be checked. Fill in your organization and contact details and the
-      builder produces a document you can copy, print, or edit.
+      generator produces a document you can copy, print, or edit.
   - q: How do I verify that a vendor's website work is actually accessible before signing?
     a: >-
       Ask for an Accessibility Conformance Report (ACR)—produced from the Voluntary Product
@@ -40,7 +50,7 @@ faq:
       Require that all content, templates, and features delivered under the contract conform to
       WCAG 2.1 Level AA; that the vendor fixes failures found in acceptance testing before launch
       and failures found after launch within a set period; and that compliance is measured by an
-      automated scan plus manual review, not by the vendor's own statement. The builder's contract
+      automated scan plus manual review, not by the vendor's own statement. The generator's contract
       terms section includes this. The Municipal Research and Services Center's (MRSC) guidance on the
       Americans with Disabilities Act (ADA)
       <a href="https://mrsc.org/stay-informed/mrsc-insight/february-2026/ada-standards-websites-apps">web
@@ -62,131 +72,74 @@ faq:
       <a href="https://www.ada.gov/resources/2024-03-08-web-rule/">ada.gov</a>.
 ---
 
-<div class="container">
+<div class="container page-section">
   <div class="row">
     <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
     <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-      <p>Writing a website redesign request for proposal (RFP) means turning accessibility, security, performance, and
-        search and AI readiness into requirements a vendor can be held to. This builder does that
-        for you. It writes the <a href="https://standards.scangov.org/">ScanGov Standards</a> into
-        section 3 of a complete RFP, links every requirement to the standard that defines it, and
-        adds contract terms so compliance is verified by scans rather than promised. Free, no
-        signup, and nothing you enter is stored.</p>
+      <p><a href="/tools/rfp-generator/done/?organization=Organization" class="font-monospace small"><i class="fa-solid fa-spray-can-sparkles" aria-hidden="true"></i>Sample</a></p>
 
-      <p>ScanGov checks government websites against these same standards, so a vendor who meets
-        the RFP will also pass the <a href="https://scangov.org/">public scorecard</a> your
-        residents and your council can see.</p>
-      <form action="/rfp-builder-done/" id="rfp-form">
-        <div class="mb-4">
-          <label for="organization" class="form-label">Organization *</label>
-          <input
-            class="form-control"
-            type="text"
-            id="organization"
-            name="organization"
-            required
-            aria-required="true">
-        </div>
-
-        <div class="mb-4">
-          <label for="website" class="form-label">Website URL</label>
-          <input
-            class="form-control"
-            type="url"
-            id="website"
-            name="website"
-            placeholder="https://example.com">
-        </div>
-
-        <div class="mb-4">
-          <label for="instructions" class="form-label">General instructions</label>
-          <textarea
-            class="form-control"
-            id="instructions"
-            name="instructions"
-            rows="3"
-            aria-describedby="instructionsHelp"></textarea>
-        </div>
-
-        <div class="mb-4">
-          <label for="contact" class="form-label">Contact name *</label>
-          <input
-            class="form-control"
-            type="text"
-            id="contact"
-            name="name"
-            required
-            aria-required="true">
-        </div>
-
-        <div class="mb-4">
-          <label for="email" class="form-label">Contact email *</label>
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            name="email"
-            aria-describedby="emailHelp"
-            required
-            aria-required="true">
-        </div>
-
-        <div class="mb-4">
-          <label for="phone" class="form-label">Contact phone number</label>
-          <input
-            class="form-control"
-            type="tel"
-            id="phone"
-            name="phone"
-            placeholder="(555) 123-4567">
-        </div>
-
-        <div class="mb-4">
-          <label for="submission-deadline" class="form-label">Submission deadline</label>
-          <input
-            class="form-control"
-            type="date"
-            id="submission-deadline"
-            name="submission-deadline">
-        </div>
-
-        <div class="mb-4">
-          <label for="launch-date" class="form-label">Website launch date</label>
-          <input
-            class="form-control"
-            type="date"
-            id="launch-date"
-            name="launch-date">
-        </div>
-
-        <button type="submit" class="btn btn-primary">Build the RFP</button>
-      </form>
-
-      <section class="mt-5" id="scorecard">
-        <h2>See how your current site scores first</h2>
-        <p>Before you write requirements for the new site, look up the old one. ScanGov has already
-          scanned most US government websites and publishes a scorecard for each. The failing
-          standards on your current site are the ones to put in the RFP.</p>
-        <form action="https://scangov.org/search/" method="get" class="mb-2">
-          <label for="scorecard-domain" class="form-label">Your website domain</label>
-          <div class="input-group">
-            <input type="text" class="form-control" id="scorecard-domain" name="search"
-              placeholder="example.gov" autocomplete="off">
-            <button type="submit" class="btn btn-outline-primary">See scorecard</button>
+      {% set toolFormId = "rfp-form" %}
+      {% set toolFormAction = "/tools/rfp-generator/done/" %}
+      {% set toolFieldName = "organization" %}
+      {% set toolFieldLabel = "Organization" %}
+      {% set toolPlaceholder = "" %}
+      {% set toolButtonLabel = "Generate" %}
+      {% set toolFormExtra %}
+        <div class="col-12">
+          <label for="website" class="form-label">Websites</label>
+          <div class="d-flex flex-column align-items-start gap-2">
+            <div id="website-list" class="d-flex flex-column gap-2 w-100">
+              <input class="form-control form-control-lg" type="url" id="website" name="website">
+            </div>
+            <button type="button" id="add-website" class="btn btn-outline-primary btn-sm" disabled>
+              <i class="fa-solid fa-plus" aria-hidden="true"></i> Add website
+            </button>
           </div>
-        </form>
-      </section>
+        </div>
+        <div class="col-12">
+          <label for="instructions" class="form-label">General instructions</label>
+          <textarea class="form-control form-control-lg" id="instructions" name="instructions" rows="3"></textarea>
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="contact" class="form-label">Contact name <i class="fa-solid fa-asterisk" aria-hidden="true"></i></label>
+          <input class="form-control form-control-lg" type="text" id="contact" name="name" required>
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="email" class="form-label">Contact email <i class="fa-solid fa-asterisk" aria-hidden="true"></i></label>
+          <input class="form-control form-control-lg" type="email" id="email" name="email" required>
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="phone" class="form-label">Contact phone number</label>
+          <input class="form-control form-control-lg" type="tel" id="phone" name="phone">
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="submission-deadline" class="form-label">Submission deadline</label>
+          <input class="form-control form-control-lg" type="date" id="submission-deadline" name="submission-deadline">
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="launch-date" class="form-label">Website launch date</label>
+          <input class="form-control form-control-lg" type="date" id="launch-date" name="launch-date">
+        </div>
+      {% endset %}
+      {% include "tool-form.html" %}
 
-      <section class="mt-5" id="whats-in-it">
+      <div class="alert alert-info mt-5" role="alert">
+        <h2>About the RFP generator</h2>
+        <p>Writing a website redesign request for proposal (RFP) means turning accessibility, security,
+          performance, and search and AI readiness into requirements a vendor can be held to. This
+          generator writes the <a href="https://standards.scangov.org/">ScanGov Standards</a> into
+          section 3 of a complete RFP, links every requirement to the standard that defines it, and
+          adds contract terms so compliance is verified by checks, not promises. Nothing you enter is
+          stored.</p>
         <h2>What the RFP requires</h2>
         <p>Section 3 of the generated RFP covers the five categories ScanGov scores, with each
           requirement linked to its standard and guidance:</p>
         <ul>
-          <li><a href="/accessibility/">Accessibility</a>: WCAG 2.1 AA and all 66 ScanGov
-            accessibility standards, from color contrast to touch target size.</li>
-          <li><a href="/botability/">Botability</a>: the site can be crawled and understood by
+          <li><a href="/botability/">AI and search readiness</a>: the site can be crawled and understood by
             search engines and AI assistants, with content in the HTML rather than only after
             JavaScript runs.</li>
+          <li><a href="/accessibility/">Accessibility</a>: WCAG 2.1 AA and all 66 ScanGov
+            accessibility standards, from color contrast to touch target size.</li>
           <li><a href="/security/">Security</a>: HTTPS, HTTP Strict Transport Security (HSTS), a content
             security policy, security.txt, and the other headers the Cybersecurity and Infrastructure
             Security Agency (CISA) and the Open Worldwide Application Security Project (OWASP)
@@ -199,15 +152,36 @@ faq:
         <p>The rest of the document is a conventional RFP skeleton you can edit: background,
           functional requirements, content management system (CMS) and integrations, design,
           deliverables, timeline, proposal requirements, evaluation criteria, and contract terms.</p>
-      </section>
-
-      {% include "faq.html" %}
+        <p>Writing the policy behind the RFP? The <a href="/tools/policy-generator/">digital experience
+          policy generator</a> writes the same standards into a policy.</p>
+        {% include "faq.html" %}
+      </div>
     </div>
+    <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
   </div>
-  <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
 </div>
-<script>
-  document.getElementById('rfp-form').addEventListener('submit', function () {
-    if (typeof gtag === 'function') gtag('event', 'tool_run', { tool: 'rfp-builder' });
+<script type="module">
+  import { fieldList } from '/js/field-list.js';
+
+  const websites = fieldList(document.getElementById('website-list'), document.getElementById('add-website'), 'website', 'Website', 'url');
+  const form = document.getElementById('rfp-form');
+  form.addEventListener('reset', function () { websites.trim(1); });
+
+  // Repopulate the form from the query string so "Edit" on the
+  // generated RFP brings the previous answers back.
+  (function () {
+    const params = new URLSearchParams(location.search);
+    if (!params.has('organization')) return;
+    params.getAll('website').forEach(function (site, index) {
+      if (index) websites.add(site); else document.getElementById('website').value = site;
+    });
+    websites.update();
+    for (const field of form.querySelectorAll('input, textarea'))
+      if (field.name !== 'website' && params.has(field.name)) field.value = params.get(field.name);
+  })();
+  form.addEventListener('submit', function () {
+    if (typeof gtag === 'function') gtag('event', 'tool_run', { tool: 'rfp-generator' });
   });
 </script>
+
+{% include "tool-related.html" %}

@@ -15,7 +15,7 @@
 <h3>1.2 Key requirements</h3>
 <ul>
     <li>Adherence to ScanGov digital experience standards</li>
-    <li>Section 508/WCAG 2.1 AA accessibility compliance</li>
+    <li>Section 508/Web Content Accessibility Guidelines (WCAG) 2.1 AA accessibility compliance</li>
     <li>Mobile-first responsive design</li>
     <li>Content management system (CMS)</li>
     <li>Security best practices implementation</li>
@@ -28,6 +28,7 @@
 
 <h3>2.1 Current situation</h3>
 <p><span class="organization"></span> currently operates a website that requires modernization to better serve our community members and visitors. Our existing platform lacks contemporary functionality, accessibility features, and the digital experience standards expected of modern websites.</p>
+<p id="current-websites"></p>
 
 <h3>2.2 Project goals</h3>
 <ol>
@@ -65,7 +66,7 @@
     <li>
         <strong><a href="https://standards.scangov.org/heading-order/">Headings and structure</a></strong>: Headings in order, none empty, a main landmark, and a skip link or landmark to bypass repeated content</li>
     <li>
-        <strong><a href="https://standards.scangov.org/aria-roles/">ARIA</a></strong>: Valid roles and attributes, required children and parents, and accessible names on every ARIA widget</li>
+        <strong><a href="https://standards.scangov.org/aria-roles/">Accessible Rich Internet Applications (ARIA)</a></strong>: Valid roles and attributes, required children and parents, and accessible names on every ARIA widget</li>
     <li>
         <strong><a href="https://standards.scangov.org/html-has-lang/">Language</a></strong>: A valid language declared on the document and on any passage in another language</li>
     <li>
@@ -106,15 +107,15 @@
     <li>
         <strong><a href="https://standards.scangov.org/https/">HTTPS</a></strong>: Every page served over HTTPS with a valid certificate</li>
     <li>
-        <strong><a href="https://standards.scangov.org/hsts/">HSTS</a></strong>: HTTP Strict Transport Security header on every response</li>
+        <strong><a href="https://standards.scangov.org/hsts/">HTTP Strict Transport Security (HSTS)</a></strong>: The Strict-Transport-Security header on every response</li>
     <li>
-        <strong><a href="https://standards.scangov.org/csp/">Content security policy</a></strong>: A restrictive CSP header</li>
+        <strong><a href="https://standards.scangov.org/csp/">Content security policy (CSP)</a></strong>: A restrictive CSP header</li>
     <li>
-        <strong><a href="https://standards.scangov.org/xcontenttypeoptions/">MIME sniffing protection</a></strong>: X-Content-Type-Options: nosniff on every response</li>
+        <strong><a href="https://standards.scangov.org/xcontenttypeoptions/">Multipurpose Internet Mail Extensions (MIME) sniffing protection</a></strong>: X-Content-Type-Options: nosniff on every response</li>
     <li>
         <strong><a href="https://standards.scangov.org/clickjacking-mitigation/">Clickjacking mitigation</a></strong>: Frame ancestors restricted by CSP or X-Frame-Options</li>
     <li>
-        <strong><a href="https://standards.scangov.org/securitytxt/">security.txt</a></strong>: A security.txt file with current contact information (RFC 9116)</li>
+        <strong><a href="https://standards.scangov.org/securitytxt/">security.txt</a></strong>: A security.txt file with current contact information (Request for Comments (RFC) 9116)</li>
     <li>
         <strong><a href="https://standards.scangov.org/errors-in-console/">No console errors</a></strong>: Pages load without JavaScript errors</li>
     <li>
@@ -151,7 +152,7 @@
 <p>Content must be written in plain language that a general audience can read:</p>
 <ul>
     <li>
-        <strong><a href="https://standards.scangov.org/readability/">Reading level</a></strong>: Content written in plain language. ScanGov scores an Automated Readability Index of grade 8 or below as passing; mature government content teams target grade 6. Applies to the Plain Writing Act and OMB M-23-22</li>
+        <strong><a href="https://standards.scangov.org/readability/">Reading level</a></strong>: Content written in plain language. ScanGov scores an Automated Readability Index of grade 8 or below as passing; mature government content teams target grade 6. Applies to the Plain Writing Act and Office of Management and Budget (OMB) memorandum M-23-22</li>
 </ul>
 
 <hr>
@@ -174,7 +175,7 @@
     <li>Document management system connectivity</li>
     <li>Email newsletter subscription management</li>
     <li>Calendar system synchronization</li>
-    <li>GIS/mapping system integration</li>
+    <li>Geographic information system (GIS) and mapping system integration</li>
 </ul>
 
 <h3>4.3 Search functionality</h3>
@@ -196,8 +197,8 @@
     <li>99.9% uptime guarantee</li>
     <li>Regular automated backups</li>
     <li>Disaster recovery plan</li>
-    <li>CDN implementation for performance</li>
-    <li>SSL certificate management</li>
+    <li>Content delivery network (CDN) implementation for performance</li>
+    <li>Secure Sockets Layer (SSL) certificate management</li>
 </ul>
 
 <h3>5.2 Browser compatibility</h3>
@@ -412,7 +413,7 @@
 <h3>12.1 Proposal format</h3>
 <ul>
     <li>Maximum 50 pages (excluding appendices)</li>
-    <li>Clear section organization matching RFP structure</li>
+    <li>Clear section organization matching the request for proposal (RFP) structure</li>
     <li>Executive summary (2 pages maximum)</li>
 </ul>
 
@@ -486,6 +487,13 @@
     document.getElementById('issue-date').innerText = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
 
     const params = new URLSearchParams(location.search);
+
+    // Current websites: one or many.
+    const sites = params.getAll('website').map(function (site) { return site.trim(); }).filter(Boolean);
+    const sitesElement = document.getElementById('current-websites');
+    if (sites.length) sitesElement.textContent = 'Our current website' + (sites.length > 1 ? 's are ' : ' is ') + sites.join(', ') + '.';
+    else sitesElement.remove();
+
     for (const param of params)
         for (const element of document.getElementsByClassName(param[0]))
             element.innerText = param[1];
