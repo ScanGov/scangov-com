@@ -2,9 +2,7 @@
 title: "New ScanGov website RFP generator"
 description: "Create website request for proposals based on ScanGov Standards."
 date: 2025-11-23
-modified: 2026-10-31
-ogImage: pages/website-rfp-og.png
-ogImageAlt: "Website RFP generator"
+modified: 2026-11-01
 topics:
   - ScanGov
 ---
