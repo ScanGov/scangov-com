@@ -1,4 +1,4 @@
-// Buttons on a generated document (policy generator, RFP builder). See
+// Buttons on a generated document (policy generator, RFP generator). See
 // _includes/builder-actions.html.
 (function () {
   const bar = document.getElementById('builder-actions');

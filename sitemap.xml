@@ -93,8 +93,12 @@
     <lastmod>2025-10-27T00:00:00.000Z</lastmod>
   </url>
   <url>
-    <loc>https://scangov.com/news/new-scangov-website-rfp-builder/</loc>
-    <lastmod>2025-11-23T00:00:00.000Z</lastmod>
+    <loc>https://scangov.com/news/new-scangov-website-rfp-generator/</loc>
+    <lastmod>2026-10-31T00:00:00.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://scangov.com/tools/rfp-generator/</loc>
+    <lastmod>2026-10-31T00:00:00.000Z</lastmod>
   </url>
   <url>
     <loc>https://scangov.com/who-we-serve/</loc>
@@ -131,10 +135,6 @@
   <url>
     <loc>https://scangov.com/compare/</loc>
     <lastmod>2026-10-28</lastmod>
-  </url>
-  <url>
-    <loc>https://scangov.com/news/introducing-the-digital-experience-policy-generator/</loc>
-    <lastmod>2026-10-30T00:00:00.000Z</lastmod>
   </url>
   <url>
     <loc>https://scangov.com/tools/policy-generator/</loc>
@@ -355,8 +355,5 @@
   <url>
     <loc>https://scangov.com/people/aaron-hans/</loc>
     <lastmod>2026-09-06</lastmod>
-  </url>
-  <url>
-    <loc>https://scangov.com/rfp-builder/</loc>
   </url>
 </urlset>
