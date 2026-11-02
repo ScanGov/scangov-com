@@ -1,7 +1,14 @@
 ---
 layout: "layouts/default"
-title: "Website RFP"
-description: "Website request for proposals."
+title: "Website request for proposal (RFP)"
+permalink: /tools/rfp-generator/done/
+breadcrumbParent:
+  - url: "/tools/"
+    title: "Tools"
+  - url: "/tools/rfp-generator/"
+    title: "Request for proposal generator"
+breadcrumbCurrent: "Request for proposal"
+description: "A website request for proposal generated with the ScanGov RFP generator."
 ogImage: pages/website-rfp-og.png
 ogImageAlt: "File with signature icon"
 sitemap: false
@@ -14,7 +21,8 @@ hideCtaCopy: true
         <div class="col-12 col-sm-12 col-md-1 col-lg-1 col-xl-1"></div>
         <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
             {% set builderContentId = "rfp-content" %}
-            {% set builderPrintHref = "/rfp-builder-print/" %}
+            {% set builderPrintHref = "/tools/rfp-generator/print/" %}
+            {% set builderEditHref = "/tools/rfp-generator/" %}
             {% set builderFileName = "website-rfp" %}
             {% include "builder-actions.html" %}
             <div id="rfp-content">

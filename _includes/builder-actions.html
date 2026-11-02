@@ -1,20 +1,26 @@
 {#
-  Action bar for a generated document (policy generator, RFP builder).
+  Action bar for a generated document (policy generator, request for proposal generator).
   Set these before including:
     builderContentId   id of the element that holds the document
     builderPrintHref   print view address, without the query string
     builderEditHref    optional, form address, without the query string
     builderFileName    download file name, without the extension
   public/js/builder-actions.js binds the buttons and adds the query string to
-  the print and edit links so the answers carry over.
+  the print and edit links so the answers carry over. Reset is a link to the
+  blank form (no query string), so it clears the answers.
 #}
 <div class="mb-4 pb-4 border-bottom">
   <div class="d-flex flex-wrap gap-2 mt-2 mb-2" id="builder-actions" data-content="{{ builderContentId }}" data-filename="{{ builderFileName }}">
+    {% if builderEditHref %}
+    <a id="edit-link" href="{{ builderEditHref }}" class="btn btn-outline-primary">
+      <i class="fa-solid fa-pen" aria-hidden="true"></i> Edit
+    </a>
+    {% endif %}
     <button type="button" id="copy-link" class="btn btn-outline-primary">
-      <i class="fa-solid fa-link" aria-hidden="true"></i> Copy link
+      <i class="fa-solid fa-link" aria-hidden="true"></i> Link
     </button>
     <button type="button" id="copy-text" class="btn btn-outline-primary">
-      <i class="fa-solid fa-copy" aria-hidden="true"></i> Copy text
+      <i class="fa-solid fa-copy" aria-hidden="true"></i> Copy
     </button>
     <div class="dropdown">
       <button type="button" id="download-menu" class="btn btn-outline-primary" data-bs-toggle="dropdown" aria-expanded="false">
@@ -31,8 +37,8 @@
       <i class="fa-solid fa-print" aria-hidden="true"></i> Print
     </a>
     {% if builderEditHref %}
-    <a id="edit-link" href="{{ builderEditHref }}" class="btn btn-outline-primary">
-      <i class="fa-solid fa-pen" aria-hidden="true"></i> Edit answers
+    <a id="reset-link" href="{{ builderEditHref }}" class="btn btn-outline-primary">
+      <i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Reset
     </a>
     {% endif %}
   </div>
