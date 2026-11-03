@@ -1,0 +1,16 @@
+{#
+  Demo video for a tool. Set `video` (a YouTube ID) in the tool's front matter.
+  Include this as the last thing in the tool's alert-info box. Renders nothing
+  when the tool has no video. The post-content wrapper gives the video and its
+  transcript the same spacing and styles as on a news post, not the alert's.
+#}
+{% if video %}
+<div class="post-content">
+  <h2>Demo</h2>
+  {% youtube video, title, ("mb-3" if transcripts[video] else "") + " border rounded overflow-hidden" %}
+  {% if transcripts[video] %}
+  {% set transcriptId = video %}
+  {% include "transcript.html" %}
+  {% endif %}
+</div>
+{% endif %}

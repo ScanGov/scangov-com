@@ -1,7 +1,8 @@
 ---
-draft: true
-date: 2026-10-30
+draft: false
+date: 2026-11-02
 author: ScanGov
+video: vXONZgkTzyM
 title: "Introducing the digital experience policy generator"
 description: "Start from a sample policy for AI readiness, accessibility, security, usability, and readability, then customize it."
 topics:
