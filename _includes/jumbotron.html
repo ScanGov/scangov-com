@@ -2,9 +2,11 @@
   <div class="pt-5 pb-4 mb-4 border-bottom text-center">
     <div class="container">
       <h1 class="display-4 mb-3">{{ title }}</h1>
-      {% if tagline %}<p class="fs-4 text-body-secondary mb-3">{{ tagline }}</p>{% endif %}
+      {% if tagline %}
+        <p class="fs-4 text-body-secondary mb-3">{{ tagline }}</p>
+      {% endif %}
       {% if description %}
-        <p class="lead fs-5 mb-5 col-lg-8 mx-auto">{{ description }}</p>
+        <p class="lead fs-5 col-lg-8 mx-auto">{{ description }}</p>
         <a href="/plans" class="btn btn-primary">
           <i class="fa-solid fa-rocket" aria-hidden="true"></i>Get started</a>
         &nbsp;

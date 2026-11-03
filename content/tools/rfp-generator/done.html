@@ -18,11 +18,12 @@ hideCtaCopy: true
     <div class="row">
         <div class="col-12 col-sm-12 col-md-1 col-lg-1 col-xl-1"></div>
         <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
-            {% set builderContentId = "rfp-content" %}
-            {% set builderPrintHref = "/tools/rfp-generator/print/" %}
-            {% set builderEditHref = "/tools/rfp-generator/" %}
-            {% set builderFileName = "website-rfp" %}
-            {% include "builder-actions.html" %}
+            {% set actionsContentId = "#rfp-content" %}
+            {% set actionsPrintHref = "/tools/rfp-generator/print/" %}
+            {% set actionsEditHref = "/tools/rfp-generator/" %}
+            {% set actionsResetHref = "/tools/rfp-generator/" %}
+            {% set actionsFileName = "website-rfp" %}
+            {% include "action-buttons.html" %}
             <div id="rfp-content">
                 {% include "rfp_content.html" %}
             </div>
