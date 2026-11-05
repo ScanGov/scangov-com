@@ -1,5 +1,29 @@
 [
     {
+        "title": "alabama.gov",
+        "slug": "alabama-gov",
+        "page_title": "Now scanning ... alabama.gov",
+        "description": "A ScanGov review of alabama.gov: AI-readiness, accessibility, security, usability, and readability scores and a video walkthrough.",
+        "date": "2026-11-05",
+        "url": "https://alabama.gov",
+        "scorecard": "https://my.scangov.com/public/key5279-1751598352407/alabama-gov/report",
+        "img": "alabama-gov.png",
+        "video": "pJs7-5puVWc",
+        "ogImage": "pages/alabama-gov.png",
+        "results": {
+            "scanDate": "2026-11-01",
+            "pages": 1,
+            "scores": {
+                "overall": 77,
+                "accessibility": 100,
+                "botability": 55,
+                "security": 87,
+                "usability": 50
+            },
+            "brokenLinks": 1
+        }
+    },
+    {
         "title": "az.gov",
         "slug": "az-gov",
         "page_title": "Now scanning ... az.gov",
