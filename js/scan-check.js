@@ -1,6 +1,22 @@
+/*
+ * Good bot scan page: start a scan-check job on the auditor, poll it, and show
+ * each step as it lands. Rendering lives in scan-check-render.js (tested).
+ *
+ * Flow (auditor docs/good-bot-scan-lighthouse-plan.md): GET /scan-check?url=
+ * starts the job and returns { jobId, status, robots }; GET /scan-check?jobId=
+ * returns the job with steps, verdict, code, reason, refusals and attribution.
+ * The job runs the same requests the audit runs, Lighthouse's Chrome included,
+ * so the verdict is what an audit of this site would conclude today.
+ */
+import {
+  resolveStatusCode, renderProgress, renderResults, renderError, renderTooLong,
+} from './scan-check-render.js';
+
 const API_BASE = 'https://audits.my.scangov.com';
 // Published at build time from ScanGov/data status.json (see _data/statusDefs.js).
 const STATUS_DEFS_URL = '/data/status.json';
+const POLL_INTERVAL_MS = 4000;
+const GIVE_UP_AFTER_MS = 90000;
 
 let statusDefsPromise = null;
 function getStatusDefs() {
@@ -10,25 +26,17 @@ function getStatusDefs() {
   return statusDefsPromise;
 }
 
-function resolveStatusCode(data) {
-  // robots.txt outcomes have their own definitions in status.json
-  if (data.blockedBy === 'robots') return 998;
-  if (data.blockedBy === 'crawl-delay') return 997;
-  // a captcha or browser-check page instead of the page (definition in status.json)
-  if (data.blockedBy === 'challenge' || data.challenge) return 996;
-  if (data.fetch && data.fetch.statusCode) return data.fetch.statusCode;
-  if (data.playwright && data.playwright.statusCode) return data.playwright.statusCode;
-  return null;
-}
-
 const form = document.getElementById('scan-check-form');
 const formSection = document.getElementById('scan-form');
 const loadingSection = document.getElementById('scan-loading');
+const progressSection = document.getElementById('scan-progress');
 const resultsSection = document.getElementById('scan-results');
 const siteInput = document.getElementById('site');
-const loadingDomain = document.getElementById('loading-domain');
+
+let activeRun = 0; // a new check abandons the polling of the previous one
 
 function showForm() {
+  activeRun++;
   formSection.classList.remove('d-none');
   loadingSection.classList.add('d-none');
   resultsSection.classList.add('d-none');
@@ -37,11 +45,11 @@ function showForm() {
   location.hash = '';
 }
 
-function showLoading(domain) {
+function showLoading(html) {
   formSection.classList.add('d-none');
-  loadingSection.classList.remove('d-none');
   resultsSection.classList.add('d-none');
-  loadingDomain.textContent = domain;
+  progressSection.innerHTML = html;
+  loadingSection.classList.remove('d-none');
 }
 
 function showResults(html) {
@@ -49,135 +57,8 @@ function showResults(html) {
   loadingSection.classList.add('d-none');
   resultsSection.innerHTML = html;
   resultsSection.classList.remove('d-none');
-}
-
-function statusText(success) {
-  return success ? 'Success' : 'Failed';
-}
-
-function toAbsoluteUrl(domain) {
-  return /^https?:\/\//i.test(domain) ? domain : `https://${domain}`;
-}
-
-function checkAnotherSiteButton() {
-  return `
-      <button class="btn btn-outline-primary mt-0" id="new-check-btn">
-        <i class="fa-solid fa-check" aria-hidden="true"></i>Check another site</button>
-    `;
-}
-
-function renderResults(data, statusDef) {
-  const domain = data.url;
-  const canScan = data.canScan;
-
-  const verdictClass = canScan ? 'success' : 'danger';
-  const verdictIcon = canScan ? 'fa-circle-check' : 'fa-circle-xmark';
-  const domainLink = `<a href="${toAbsoluteUrl(domain)}" target="_blank" rel="noopener noreferrer" class="font-monospace">${domain}</a>`;
-  const verdictText = canScan
-    ? `ScanGov can scan ${domainLink}`
-    : `We can't scan ${domainLink}`;
-
-  let fetchDetail = '';
-  if (data.fetch) {
-    fetchDetail = `
-      <tr>
-        <td>HTTP fetch</td>
-        <td>${statusText(data.fetch.success)}</td>
-        <td>${data.fetch.statusCode || '—'}</td>
-        <td>${data.fetch.error || '—'}</td>
-      </tr>`;
-  }
-
-  let playwrightDetail = '';
-  if (data.playwright === null) {
-    playwrightDetail = `
-      <tr>
-        <td>Playwright browser</td>
-        <td>Not needed</td>
-        <td>—</td>
-        <td>—</td>
-      </tr>`;
-  } else if (data.playwright) {
-    playwrightDetail = `
-      <tr>
-        <td>Playwright browser</td>
-        <td>${statusText(data.playwright.success)}</td>
-        <td>${data.playwright.statusCode || '—'}</td>
-        <td>${data.playwright.error || '—'}</td>
-      </tr>`;
-  }
-
-  let robotsDetail = '';
-  if (data.robots) {
-    const r = data.robots;
-    const result = r.fetchStatus !== 'success' ? 'No robots.txt (allowed)'
-      : !r.allowed ? 'Disallowed for ScanGovBot'
-      : r.crawlDelayBlocked ? `Crawl-delay too long (${r.crawlDelay}s)`
-      : 'Allowed';
-    robotsDetail = `
-      <tr>
-        <td>robots.txt</td>
-        <td>${result}</td>
-        <td>${r.crawlDelay ? `delay ${r.crawlDelay}s` : '—'}</td>
-        <td>${!r.allowed ? 'ScanGovBot is disallowed by the site\'s robots.txt' : r.crawlDelayBlocked ? 'Requested crawl-delay is above our limit' : '—'}</td>
-      </tr>`;
-  }
-
-  return `
-    <div class="alert alert-${verdictClass} mb-4" role="alert">
-      <h2 class="alert-heading h3"><i class="fa-solid ${verdictIcon} me-2" aria-hidden="true"></i>${verdictText}</h2>
-    </div>
-
-    <div class="alert alert-info mb-4" role="alert">
-      ${!canScan ? `
-      ${statusDef ? `
-      ${statusDef.problem ? `
-      <h2 class="h3">Problem</h2>
-      <p>${statusDef.problem}</p>
-      ` : ''}
-      ${statusDef.recommendation ? `
-      <h2 class="h3">Recommendation</h2>
-      <p>${statusDef.recommendation}</p>
-      ` : ''}
-      ${statusDef.recommendationTechnical ? `
-      <h2 class="h3">Technical recommendation</h2>
-      <p>${statusDef.recommendationTechnical}</p>
-      ` : ''}
-      ` : ''}
-
-      <h2 class="h3">Details</h2>
-      <div class="table-responsive">
-        <table class="table">
-          <caption class="visually-hidden">Good bot scan details for ${domain}</caption>
-          <thead>
-            <tr>
-              <th scope="col">Method</th>
-              <th scope="col">Result</th>
-              <th scope="col">Code</th>
-              <th scope="col">Error</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${fetchDetail}
-            ${playwrightDetail}
-            ${robotsDetail}
-          </tbody>
-        </table>
-      </div>
-      ` : ''}
-
-      <h2 class="h3">Report</h2>
-      <p>Copy this link to share these results:</p>
-      <div class="input-group">
-        <label for="report-url" class="visually-hidden">Report link</label>
-        <input type="text" class="form-control font-monospace" id="report-url" readonly>
-        <button class="btn btn-outline-primary mt-0" type="button" id="copy-report-btn">
-          <i class="fa-solid fa-copy" aria-hidden="true"></i>Copy</button>
-      </div>
-
-    </div>
-
-    ${checkAnotherSiteButton()}`;
+  const newCheckBtn = document.getElementById('new-check-btn');
+  if (newCheckBtn) newCheckBtn.addEventListener('click', showForm);
 }
 
 function wireReportLink(domain) {
@@ -202,45 +83,57 @@ function wireReportLink(domain) {
   });
 }
 
-async function runScan(domain) {
-  showLoading(domain);
-  location.hash = domain;
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-  try {
-    const [response, statusDefs] = await Promise.all([
-      fetch(`${API_BASE}/scan-check?url=${encodeURIComponent(domain)}`),
-      getStatusDefs(),
-    ]);
-
-    if (!response.ok) {
-      const err = await response.json().catch(() => ({}));
-      showResults(`
-        <div class="alert alert-danger" role="alert">
-          Good bot scan failed: ${err.error || `HTTP ${response.status}`}
-        </div>
-        ${checkAnotherSiteButton()}`);
-    } else {
-      const data = await response.json();
-      const statusDef = statusDefs.find((s) => s.code === resolveStatusCode(data));
-      showResults(renderResults(data, statusDef));
-    }
-  } catch {
-    showResults(`
-      <div class="alert alert-danger" role="alert">
-        Unable to connect to the good bot scan service. Please try again.
-      </div>
-      ${checkAnotherSiteButton()}`);
-  }
-
-  const newCheckBtn = document.getElementById('new-check-btn');
-  if (newCheckBtn) {
-    newCheckBtn.addEventListener('click', showForm);
-  }
-
-  wireReportLink(domain);
+async function readJson(response) {
+  const body = await response.json().catch(() => ({}));
+  if (!response.ok) throw new Error(body.error || `HTTP ${response.status}`);
+  return body;
 }
 
-form.addEventListener('reset', showForm);
+async function runScan(domain) {
+  const run = ++activeRun;
+  location.hash = domain;
+  showLoading(renderProgress({ steps: {}, robots: null }, domain));
+
+  let job;
+  try {
+    const [started, statusDefs] = await Promise.all([
+      fetch(`${API_BASE}/scan-check?url=${encodeURIComponent(domain)}`).then(readJson),
+      getStatusDefs(),
+    ]);
+    job = started;
+    if (run !== activeRun) return;
+    showLoading(renderProgress(job, domain));
+
+    const startedAt = Date.now();
+    while (job.status === 'running') {
+      if (Date.now() - startedAt > GIVE_UP_AFTER_MS) {
+        showResults(renderTooLong(domain));
+        return;
+      }
+      await wait(POLL_INTERVAL_MS);
+      if (run !== activeRun) return;
+      job = await fetch(`${API_BASE}/scan-check?jobId=${encodeURIComponent(job.jobId)}`).then(readJson);
+      if (run !== activeRun) return;
+      if (job.status === 'running') showLoading(renderProgress(job, domain));
+    }
+
+    if (job.status === 'error') {
+      showResults(renderError(`Good bot scan failed: ${job.error || 'the check did not finish'}`));
+      return;
+    }
+    const statusDef = statusDefs.find((s) => s.code === resolveStatusCode(job));
+    showResults(renderResults(job, statusDef, domain));
+    wireReportLink(domain);
+  } catch (error) {
+    if (run !== activeRun) return;
+    showResults(renderError(error.message && !/fetch/i.test(error.message)
+      ? `Good bot scan failed: ${error.message}`
+      : 'Unable to connect to the good bot scan service. Please try again.'));
+  }
+}
+
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const domain = siteInput.value.trim();
