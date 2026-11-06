@@ -26,13 +26,13 @@ indicator: botability
         {% include "tool-form.html" %}
       </div>
 
-      <div id="scan-loading" class="d-none text-center py-5">
-        <div class="spinner-border" role="status">
-          <span class="visually-hidden">Checking ...</span>
+      <div id="scan-loading" class="d-none py-3" aria-live="polite">
+        <div class="text-center">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Checking ...</span>
+          </div>
         </div>
-        <p class="mt-3">Checking if we can reach
-          <span id="loading-domain" class="font-monospace"></span>
-          ...</p>
+        <div id="scan-progress"></div>
       </div>
 
       <div id="scan-results" class="d-none"></div>
@@ -45,22 +45,22 @@ indicator: botability
           <li>It has a page that explains who runs it and why.</li>
         </ul>
         <h2>About</h2>
-        <p>This tool checks whether
-          <a href="/bot">ScanGovBot</a>
-          can reach your website. It looks at three things:</p>
+        <p>This tool makes the same requests a ScanGov scan makes, in the same order, and tells you what each one got back:</p>
         <ul>
           <li>Your robots.txt file, to see whether it allows ScanGovBot in and how long it asks the bot to wait between visits</li>
           <li>A basic request, like the one your browser makes</li>
-          <li>A full browser, in case the site turns away the basic request</li>
+          <li>A headless browser, only if the site turns away the basic request</li>
+          <li>The browser that runs the scan, which is Lighthouse's Chrome</li>
         </ul>
-        <p>If we cannot get in, we cannot scan your site. The site probably turns away other good bots too.</p>
+        <p>Every request names ScanGovBot. If the scan browser cannot get in, we cannot scan your site, and the site probably turns away other good bots too. If some requests get in and others don't, your site treats the same bot differently from one request to the next. Those are the sites whose scans fail at times, so we tell you about it.</p>
+        <p>When a request is refused, we also report who answered: the security service, whose account holds its rules, and who hosts the site, with the evidence for each. That tells you who to ask.</p>
         <p>This tool only tells you about ScanGovBot. Another good bot may get a different result on the same site. If your site blocked us, check your robots.txt file and your firewall, web application firewall (WAF), and content delivery network (CDN) bot settings. The block may be a setting no one chose.</p>
         <h2>Common issues</h2>
         <ul>
           <li>Your robots.txt file tells ScanGovBot to stay out, or asks it to wait too long between visits</li>
           <li>A firewall blocks visits that do not come from a person</li>
           <li>A captcha or "checking your browser" page is shown instead of the page (status 996)</li>
-          <li>The server sends back an error, such as 403 or 503</li>
+          <li>The server sends back an error, such as 403 or 503, to some or all of our requests (status 999 when it refuses the scan browser)</li>
           <li>The site has a security certificate problem</li>
           <li>The site takes too long to answer</li>
         </ul>

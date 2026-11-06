@@ -9,7 +9,8 @@
 		"start": "node scripts/getcomponents.js && npm run concat:css && npx @11ty/eleventy --serve --quiet",
 		"serve": "node scripts/serve-site.mjs",
 		"a11y": "ramp-check",
-		"a11y:baseline": "ramp-check baseline"
+		"a11y:baseline": "ramp-check baseline",
+		"test": "node --test test/*.test.mjs"
 	},
 	"dependencies": {
 		"@11ty/eleventy": "^3.1.0",
