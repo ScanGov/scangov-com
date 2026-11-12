@@ -10,7 +10,7 @@ faq:
   - q: Can someone sue us before the federal deadline for governments?
     a: >-
       Yes. The current dates in the federal web rule for state and local governments are
-      April 26, 2027 and April 26, 2028. The duty to give people with disabilities equal access
+      April 26, 2027, and April 26, 2028. The duty to give people with disabilities equal access
       to your services is older than that rule, and it applies today. See the
       <a href="https://www.ada.gov/resources/2024-03-08-web-rule/">ADA.gov fact sheet on the web rule</a>.
   - q: Does a passing scan mean we are compliant?
@@ -22,7 +22,7 @@ faq:
   - q: Will an accessibility widget or overlay solve this?
     a: >-
       No tool can promise that. The U.S. Department of Justice says automated checkers and overlays
-      "can be helpful tools" but "need to be used carefully." A widget does not change the code,
+      "can be helpful tools" and warns people to use them with care. A widget does not change the code,
       documents, or videos behind your pages, so the repair work is still there to do.
   - q: Should we take our site or our documents offline?
     a: >-
@@ -42,7 +42,7 @@ We all want the same thing: digital services that work smoothly for everyone. Th
 
 ## Scan your whole site now
 
-ScanGov scans every page you choose to monitor against open [accessibility standards](/accessibility). You get a list of what is wrong, which pages are affected, and what to fix first.
+ScanGov scans every page you choose to monitor against open [accessibility standards](/accessibility). You get a list of what is wrong, which pages have problems, and what to fix first.
 
 <p class="mt-3">
   <a href="/plans/" class="btn btn-primary">Start scanning</a>
@@ -50,7 +50,7 @@ ScanGov scans every page you choose to monitor against open [accessibility stand
   <a href="/contact/" class="btn btn-outline-primary">Contact us</a>
 </p>
 
-Plans start at $50 a month. You don't need to install anything or change your site.
+You don't need to install anything.
 
 ## What you get
 
@@ -74,7 +74,7 @@ Plans start at $50 a month. You don't need to install anything or change your si
 
 Some problems live in software a vendor runs for you, such as your content management system, a payment portal, or a hosted form.
 
-- [Issue reports](/features/issue-reports/) are filled in for you with the page, the problem, and the standard it fails. Copy one into a support ticket for your vendor.
+- ScanGov fills in [issue reports](/features/issue-reports/) for you with the page, the problem, and the standard it fails. Copy one into a support ticket for your vendor.
 - [Download issues](/features/download-issues/) exports every issue as a spreadsheet you can attach to a ticket or bring to a contract discussion.
 
 ### Tools for your developers and their AI agents
@@ -100,7 +100,7 @@ The same scan looks at more than accessibility. Fixing what it finds makes your 
 
 We want to be honest about limits. Automated scans find many common barriers on every page, such as images with no description, text that is hard to see, and form fields with no label. They can't find everything. Some barriers only show up when a person uses a page with a keyboard or a screen reader.
 
-No tool can promise that you won't be sued, and ScanGov doesn't replace your lawyer. What it gives you is the facts, a plan, and a record that the work is under way.
+No tool can promise that no one will sue you, and ScanGov doesn't replace your lawyer. What it gives you is the facts, a plan, and a record that the work is under way.
 
 ## If you received legal papers
 
@@ -109,7 +109,7 @@ We are not lawyers, and this page is not legal advice. A few things are worth kn
 - **Lawsuits have response deadlines.** In federal court it is often about three weeks. The papers state the date.
 - **Insurers and risk pools often require fast notice.** Ask if your coverage applies.
 - **Taking content offline hurts everyone.** Ask your lawyer before you remove pages or documents.
-- **A widget is not a repair.** The U.S. Department of Justice says automated checkers and overlays ["can be helpful tools"](https://www.ada.gov/resources/web-guidance/) but "need to be used carefully." In 2025, the Federal Trade Commission ordered one overlay company to [pay $1 million over claims that its product could make any site compliant](https://www.ftc.gov/news-events/news/press-releases/2025/01/ftc-order-requires-online-marketer-pay-1-million-deceptive-claims-its-ai-product-could-make-websites).
+- **A widget is not a repair.** The U.S. Department of Justice says automated checkers and overlays ["can be helpful tools"](https://www.ada.gov/resources/web-guidance/) and warns people to use them with care. In 2025, the Federal Trade Commission ordered one overlay company to [pay $1 million over claims that its product could make any site compliant](https://www.ftc.gov/news-events/news/press-releases/2025/01/ftc-order-requires-online-marketer-pay-1-million-deceptive-claims-its-ai-product-could-make-websites).
 - **A way to reach you helps.** Publish an [accessibility statement](https://www.w3.org/WAI/planning/statements/) with a contact, and answer every report. People who get a quick, helpful answer often don't need a lawyer.
 
 ## Which rules apply
@@ -117,7 +117,7 @@ We are not lawyers, and this page is not legal advice. A few things are worth kn
 Your lawyer will tell you which laws apply to you. These are the common ones in the U.S.:
 
 - **State and local governments:** Title II of the Americans with Disabilities Act (ADA). A federal rule sets the technical standard as the Web Content Accessibility Guidelines (WCAG) 2.1, Level AA. The current dates to meet it are April 26, 2027 for governments that serve 50,000 or more people, and April 26, 2028 for smaller governments and special districts. The duty to give equal access applies now, before those dates. Read the [ADA.gov fact sheet on the web rule](https://www.ada.gov/resources/2024-03-08-web-rule/).
-- **Businesses open to the public:** Title III of the ADA. Read the [ADA.gov guidance on web accessibility](https://www.ada.gov/resources/web-guidance/).
+- **Businesses open to the public:** the part of the ADA that covers businesses, called Title 3. Read the [ADA.gov guidance on web accessibility](https://www.ada.gov/resources/web-guidance/).
 - **Organizations that get federal money:** Section 504 of the Rehabilitation Act.
 - **State laws:** Some states have their own rules and penalties.
 
@@ -127,7 +127,7 @@ Accessibility is not a one-time project. A site that passes today can fail after
 
 - ScanGov keeps scanning, so you see new problems when they appear.
 - The [policy generator](/tools/policy-generator/) writes a policy that names an owner and a standard.
-- The [RFP generator](/tools/rfp-generator/) writes vendor requirements for your next contract.
+- The [request for proposal (RFP) generator](/tools/rfp-generator/) writes vendor requirements for your next contract.
 
 <p class="mt-4">
   <a href="/plans/" class="btn btn-primary">Start scanning</a>
