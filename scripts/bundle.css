@@ -21608,6 +21608,11 @@ a.card {
 }
 
 .card-grade .card-body {
+    /* The value sits in the vertical middle of the body, whatever the height of the
+       footer beside it or the cards next to it in the row. */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
@@ -21620,6 +21625,9 @@ a.card {
 }
 
 .card-grade-sm .card-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
