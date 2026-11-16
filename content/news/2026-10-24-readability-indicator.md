@@ -21,7 +21,7 @@ ScanGov scores the main text of every page with the Automated Readability Index 
 - Set your own reading level target for each site in Settings. The default is grade 8.
 - Review every page with its ARI and Flesch–Kincaid scores. The ARI card comes first, because ARI decides pass or fail.
 - Score changes show up a few minutes after you save a new target. You do not need to rescan.
-- See how federal, state, county, city, and education sites compare on the new [readability rankings](https://scangov.org/rankings/readability/).
+- See how federal, state, county, city, and education sites compare on the new [readability rankings](https://scangov.org/readability/).
 
 The <a href="https://docs.scangov.org/readability/">readability docs</a> explain how it works.
 
